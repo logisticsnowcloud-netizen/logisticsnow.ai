@@ -88,24 +88,24 @@ const Home = () => {
   return (
     <div>
       {/* HERO */}
-      <section className="min-h-[100vh] flex flex-col items-center justify-center text-center px-[5vw] py-10 bg-background relative overflow-hidden">
+      <section className="min-h-[85vh] flex flex-col items-center justify-center text-center px-[5vw] py-6 bg-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-55 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
         <div className="relative z-[2] max-w-[1000px]">
           <ScrollReveal direction="up" delay={0}>
-            <div className="inline-flex items-center gap-2 rounded-full px-[18px] py-[7px] text-xs font-bold tracking-[0.07em] uppercase text-ln-purple mb-5" style={{ background: 'rgba(57,49,133,0.09)', border: '1px solid rgba(57,49,133,0.2)' }}>
+            <div className="inline-flex items-center gap-2 rounded-full px-[18px] py-[7px] text-xs font-bold tracking-[0.07em] uppercase text-ln-purple mb-3" style={{ background: 'rgba(57,49,133,0.09)', border: '1px solid rgba(57,49,133,0.2)' }}>
               <span className="w-[7px] h-[7px] bg-ln-green rounded-full inline-block" />
               AI Agentic Smart Logistics Grid
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
-            <h1 className="font-display font-extrabold leading-[1.02] tracking-[-0.035em] mb-4" style={{ fontSize: 'clamp(36px, 5.5vw, 72px)' }}>
+            <h1 className="font-display font-extrabold leading-[1.02] tracking-[-0.035em] mb-3" style={{ fontSize: 'clamp(32px, 4.5vw, 60px)' }}>
               The <span className="text-ln-purple">Intelligent</span> Logistics<br />& Procurement Platform for <span className="text-ln-green">Global</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-muted-foreground max-w-[660px] leading-[1.65] mx-auto mb-7" style={{ fontSize: 'clamp(15px, 1.6vw, 18px)' }}>
+            <p className="text-muted-foreground max-w-[660px] leading-[1.55] mx-auto mb-5" style={{ fontSize: 'clamp(14px, 1.4vw, 17px)' }}>
               AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+ companies including 25+ Fortune 500s across 4 continents.
             </p>
           </ScrollReveal>
@@ -116,7 +116,7 @@ const Home = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[880px] w-full relative z-[2] mt-10 mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-[880px] w-full relative z-[2] mt-7 mx-auto">
               {STATS.map((s, i) => (
                 <div
                   key={s.label}
