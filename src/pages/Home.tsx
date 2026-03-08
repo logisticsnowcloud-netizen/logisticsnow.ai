@@ -157,12 +157,7 @@ const Home = () => {
               className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-purple/30 transition-all duration-300 hover:shadow-lg group"
               style={{ minWidth: 180 }}
             >
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
-                style={{ background: c.gradient }}
-              >
-                {c.initials}
-              </div>
+              <img src={c.logo} alt={c.name} className="w-9 h-9 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
               <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
                 {c.name}
               </span>
@@ -178,12 +173,7 @@ const Home = () => {
               className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-green/30 transition-all duration-300 hover:shadow-lg group"
               style={{ minWidth: 180 }}
             >
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
-                style={{ background: c.gradient }}
-              >
-                {c.initials}
-              </div>
+              <img src={c.logo} alt={c.name} className="w-9 h-9 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
               <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
                 {c.name}
               </span>
