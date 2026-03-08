@@ -88,39 +88,39 @@ const Home = () => {
   return (
     <div>
       {/* HERO */}
-      <section className="min-h-[85vh] flex flex-col items-center justify-center text-center px-[5vw] py-6 bg-background relative overflow-hidden">
+      <section className="flex flex-col items-center justify-center text-center px-[5vw] pt-8 pb-6 bg-background relative overflow-hidden" style={{ minHeight: 'calc(100vh - 120px)' }}>
         <div className="absolute inset-0 opacity-55 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
         <div className="relative z-[2] max-w-[1000px]">
           <ScrollReveal direction="up" delay={0}>
-            <div className="inline-flex items-center gap-2 rounded-full px-[18px] py-[7px] text-xs font-bold tracking-[0.07em] uppercase text-ln-purple mb-3" style={{ background: 'rgba(57,49,133,0.09)', border: '1px solid rgba(57,49,133,0.2)' }}>
-              <span className="w-[7px] h-[7px] bg-ln-green rounded-full inline-block" />
+            <div className="inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold tracking-[0.07em] uppercase text-ln-purple mb-2" style={{ background: 'rgba(57,49,133,0.09)', border: '1px solid rgba(57,49,133,0.2)' }}>
+              <span className="w-[6px] h-[6px] bg-ln-green rounded-full inline-block" />
               AI Agentic Smart Logistics Grid
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
-            <h1 className="font-display font-extrabold leading-[1.02] tracking-[-0.035em] mb-3" style={{ fontSize: 'clamp(32px, 4.5vw, 60px)' }}>
+            <h1 className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2" style={{ fontSize: 'clamp(28px, 3.8vw, 52px)' }}>
               The <span className="text-ln-purple">Intelligent</span> Logistics<br />& Procurement Platform for <span className="text-ln-green">Global</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-muted-foreground max-w-[660px] leading-[1.55] mx-auto mb-5" style={{ fontSize: 'clamp(14px, 1.4vw, 17px)' }}>
+            <p className="text-muted-foreground max-w-[600px] leading-[1.5] mx-auto mb-4" style={{ fontSize: 'clamp(13px, 1.3vw, 16px)' }}>
               AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+ companies including 25+ Fortune 500s across 4 continents.
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
-            <div className="flex gap-3.5 flex-wrap justify-center">
-              <Link to="/product" className="btn-primary-ln no-underline">🚛 See the Platform →</Link>
-              <Link to="/about" className="btn-secondary-ln no-underline">Learn About Us</Link>
+            <div className="flex gap-3 flex-wrap justify-center">
+              <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">🚛 See the Platform →</Link>
+              <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[15px]">Learn About Us</Link>
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-[880px] w-full relative z-[2] mt-7 mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 max-w-[820px] w-full relative z-[2] mt-5 mx-auto">
               {STATS.map((s, i) => (
                 <div
                   key={s.label}
-                  className="group relative rounded-2xl p-5 text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden"
+                  className="group relative rounded-xl p-3.5 text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden"
                   style={{
                     background: `linear-gradient(135deg, ${s.color}12, ${s.color}08)`,
                     border: `1px solid ${s.color}25`,
@@ -129,8 +129,8 @@ const Home = () => {
                 >
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: `radial-gradient(circle at 50% 0%, ${s.color}15, transparent 70%)` }} />
                   <div className="relative z-[1]">
-                    <div className="font-display text-[32px] md:text-[36px] font-black tracking-[-0.03em] mb-1" style={{ color: s.color }}>{s.num}</div>
-                    <div className="text-[11px] text-muted-foreground font-semibold leading-tight">{s.label}</div>
+                    <div className="font-display text-[24px] md:text-[28px] font-black tracking-[-0.03em] mb-0.5" style={{ color: s.color }}>{s.num}</div>
+                    <div className="text-[10px] text-muted-foreground font-semibold leading-tight">{s.label}</div>
                   </div>
                 </div>
               ))}
