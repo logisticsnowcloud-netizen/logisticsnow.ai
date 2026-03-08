@@ -68,7 +68,21 @@ const Home = () => {
     return () => { window.removeEventListener('resize', resize); cancelAnimationFrame(animId); };
   }, []);
 
-  const marqueeItems = [...CLIENTS, ...CLIENTS];
+  const CLIENT_LOGOS = [
+    { name: 'Apollo Tyres', initials: 'AT', gradient: 'linear-gradient(135deg, #393185, #1AA6DF)' },
+    { name: 'Perfetti Van Melle', initials: 'PV', gradient: 'linear-gradient(135deg, #e11d48, #fb923c)' },
+    { name: 'Saint-Gobain', initials: 'SG', gradient: 'linear-gradient(135deg, #1AA6DF, #54AF3A)' },
+    { name: 'General Mills', initials: 'GM', gradient: 'linear-gradient(135deg, #1e40af, #393185)' },
+    { name: 'Kimberly-Clark', initials: 'KC', gradient: 'linear-gradient(135deg, #0891b2, #1AA6DF)' },
+    { name: 'CEVA Logistics', initials: 'CL', gradient: 'linear-gradient(135deg, #dc2626, #f97316)' },
+  ];
+  const CLIENT_LOGOS_2 = [
+    { name: 'Jyothy Labs', initials: 'JL', gradient: 'linear-gradient(135deg, #54AF3A, #16a34a)' },
+    { name: 'MIRC Electronics', initials: 'ME', gradient: 'linear-gradient(135deg, #7c3aed, #c084fc)' },
+    { name: 'Bajaj Electricals', initials: 'BE', gradient: 'linear-gradient(135deg, #fb923c, #f59e0b)' },
+    { name: 'Schreiber Foods', initials: 'SF', gradient: 'linear-gradient(135deg, #16a34a, #1AA6DF)' },
+    { name: 'Woolworths AU', initials: 'WW', gradient: 'linear-gradient(135deg, #16a34a, #54AF3A)' },
+  ];
   const caseColors = ['#393185', '#54AF3A', '#1AA6DF', '#393185', '#54AF3A', '#1AA6DF'];
 
   return (
