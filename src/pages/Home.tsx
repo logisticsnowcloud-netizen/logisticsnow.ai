@@ -69,19 +69,19 @@ const Home = () => {
   }, []);
 
   const CLIENT_LOGOS = [
-    { name: 'Apollo Tyres', initials: 'AT', gradient: 'linear-gradient(135deg, #393185, #1AA6DF)' },
-    { name: 'Perfetti Van Melle', initials: 'PV', gradient: 'linear-gradient(135deg, #e11d48, #fb923c)' },
-    { name: 'Saint-Gobain', initials: 'SG', gradient: 'linear-gradient(135deg, #1AA6DF, #54AF3A)' },
-    { name: 'General Mills', initials: 'GM', gradient: 'linear-gradient(135deg, #1e40af, #393185)' },
-    { name: 'Kimberly-Clark', initials: 'KC', gradient: 'linear-gradient(135deg, #0891b2, #1AA6DF)' },
-    { name: 'CEVA Logistics', initials: 'CL', gradient: 'linear-gradient(135deg, #dc2626, #f97316)' },
+    { name: 'Apollo Tyres', logo: '/logos/apollo-tyres.png' },
+    { name: 'Perfetti Van Melle', logo: '/logos/perfetti.png' },
+    { name: 'Saint-Gobain', logo: '/logos/saint-gobain.png' },
+    { name: 'General Mills', logo: '/logos/general-mills.png' },
+    { name: 'Kimberly-Clark', logo: '/logos/kimberly-clark.png' },
+    { name: 'CEVA Logistics', logo: '/logos/ceva.png' },
   ];
   const CLIENT_LOGOS_2 = [
-    { name: 'Jyothy Labs', initials: 'JL', gradient: 'linear-gradient(135deg, #54AF3A, #16a34a)' },
-    { name: 'MIRC Electronics', initials: 'ME', gradient: 'linear-gradient(135deg, #7c3aed, #c084fc)' },
-    { name: 'Bajaj Electricals', initials: 'BE', gradient: 'linear-gradient(135deg, #fb923c, #f59e0b)' },
-    { name: 'Schreiber Foods', initials: 'SF', gradient: 'linear-gradient(135deg, #16a34a, #1AA6DF)' },
-    { name: 'Woolworths AU', initials: 'WW', gradient: 'linear-gradient(135deg, #16a34a, #54AF3A)' },
+    { name: 'Jyothy Labs', logo: '/logos/jyothy-labs.png' },
+    { name: 'MIRC Electronics', logo: '/logos/mirc.png' },
+    { name: 'Bajaj Electricals', logo: '/logos/bajaj.png' },
+    { name: 'Schreiber Foods', logo: '/logos/schreiber.png' },
+    { name: 'Woolworths AU', logo: '/logos/woolworths.png' },
   ];
   const caseColors = ['#393185', '#54AF3A', '#1AA6DF', '#393185', '#54AF3A', '#1AA6DF'];
 
@@ -157,12 +157,7 @@ const Home = () => {
               className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-purple/30 transition-all duration-300 hover:shadow-lg group"
               style={{ minWidth: 180 }}
             >
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
-                style={{ background: c.gradient }}
-              >
-                {c.initials}
-              </div>
+              <img src={c.logo} alt={c.name} className="w-9 h-9 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
               <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
                 {c.name}
               </span>
@@ -178,12 +173,7 @@ const Home = () => {
               className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-green/30 transition-all duration-300 hover:shadow-lg group"
               style={{ minWidth: 180 }}
             >
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
-                style={{ background: c.gradient }}
-              >
-                {c.initials}
-              </div>
+              <img src={c.logo} alt={c.name} className="w-9 h-9 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
               <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
                 {c.name}
               </span>
