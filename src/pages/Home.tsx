@@ -80,7 +80,7 @@ const Home = () => {
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
         <div className="relative z-[2] max-w-[1000px]">
           <ScrollReveal direction="up" delay={0}>
-            <div className="inline-flex items-center gap-2 rounded-full px-[18px] py-[7px] text-xs font-bold tracking-[0.07em] uppercase text-ln-purple mb-7" style={{ background: 'rgba(57,49,133,0.09)', border: '1px solid rgba(57,49,133,0.2)' }}>
+            <div className="inline-flex items-center gap-2 rounded-full px-[18px] py-[7px] text-xs font-bold tracking-[0.07em] uppercase text-ln-purple mb-5" style={{ background: 'rgba(57,49,133,0.09)', border: '1px solid rgba(57,49,133,0.2)' }}>
               <span className="w-[7px] h-[7px] bg-ln-green rounded-full inline-block" />
               India's National Logistics Intelligence Grid
             </div>
