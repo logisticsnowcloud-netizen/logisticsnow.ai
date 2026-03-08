@@ -102,11 +102,11 @@ const Home = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="flex justify-center flex-wrap border border-border rounded-[20px] overflow-hidden bg-card max-w-[820px] w-full relative z-[2] mt-16 mx-auto" style={{ boxShadow: '0 4px 24px rgba(57,49,133,.10)' }}>
+            <div className="flex justify-center flex-wrap border border-border rounded-[16px] overflow-hidden bg-card max-w-[820px] w-full relative z-[2] mt-10 mx-auto" style={{ boxShadow: '0 4px 24px rgba(57,49,133,.10)' }}>
               {STATS.map((s) => (
-                <div key={s.label} className="flex-1 min-w-[150px] px-7 py-6 text-center border-r border-border last:border-r-0">
-                  <div className="font-display text-[34px] font-extrabold tracking-[-0.03em]" style={{ color: s.color }}>{s.num}</div>
-                  <div className="text-xs text-muted-foreground mt-1 font-semibold">{s.label}</div>
+                <div key={s.label} className="flex-1 min-w-[150px] px-5 py-4 text-center border-r border-border last:border-r-0">
+                  <div className="font-display text-[28px] font-extrabold tracking-[-0.03em]" style={{ color: s.color }}>{s.num}</div>
+                  <div className="text-[11px] text-muted-foreground mt-0.5 font-semibold">{s.label}</div>
                 </div>
               ))}
             </div>

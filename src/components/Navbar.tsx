@@ -44,11 +44,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-2.5">
-          <button className="bg-ln-green rounded-full px-5 py-2 text-[13.5px] font-bold border-none cursor-pointer font-body" style={{ color: '#fff' }}>
-            Schedule Demo
-          </button>
-        </div>
 
         {/* Mobile hamburger */}
         <button
