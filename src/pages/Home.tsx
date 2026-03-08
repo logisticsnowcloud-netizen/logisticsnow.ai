@@ -82,7 +82,7 @@ const Home = () => {
           <ScrollReveal direction="up" delay={0}>
             <div className="inline-flex items-center gap-2 rounded-full px-[18px] py-[7px] text-xs font-bold tracking-[0.07em] uppercase text-ln-purple mb-5" style={{ background: 'rgba(57,49,133,0.09)', border: '1px solid rgba(57,49,133,0.2)' }}>
               <span className="w-[7px] h-[7px] bg-ln-green rounded-full inline-block" />
-              India's National Logistics Intelligence Grid
+              AI Agentic Smart Logistics Grid
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
