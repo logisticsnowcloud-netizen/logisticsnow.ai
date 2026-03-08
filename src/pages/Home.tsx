@@ -102,11 +102,22 @@ const Home = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="flex justify-center flex-wrap border border-border rounded-[16px] overflow-hidden bg-card max-w-[820px] w-full relative z-[2] mt-10 mx-auto" style={{ boxShadow: '0 4px 24px rgba(57,49,133,.10)' }}>
-              {STATS.map((s) => (
-                <div key={s.label} className="flex-1 min-w-[150px] px-5 py-4 text-center border-r border-border last:border-r-0">
-                  <div className="font-display text-[28px] font-extrabold tracking-[-0.03em]" style={{ color: s.color }}>{s.num}</div>
-                  <div className="text-[11px] text-muted-foreground mt-0.5 font-semibold">{s.label}</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[880px] w-full relative z-[2] mt-10 mx-auto">
+              {STATS.map((s, i) => (
+                <div
+                  key={s.label}
+                  className="group relative rounded-2xl p-5 text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden"
+                  style={{
+                    background: `linear-gradient(135deg, ${s.color}12, ${s.color}08)`,
+                    border: `1px solid ${s.color}25`,
+                    boxShadow: `0 4px 20px ${s.color}10`,
+                  }}
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: `radial-gradient(circle at 50% 0%, ${s.color}15, transparent 70%)` }} />
+                  <div className="relative z-[1]">
+                    <div className="font-display text-[32px] md:text-[36px] font-black tracking-[-0.03em] mb-1" style={{ color: s.color }}>{s.num}</div>
+                    <div className="text-[11px] text-muted-foreground font-semibold leading-tight">{s.label}</div>
+                  </div>
                 </div>
               ))}
             </div>
