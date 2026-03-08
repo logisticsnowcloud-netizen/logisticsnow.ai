@@ -91,7 +91,7 @@ const Home = () => {
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-muted-foreground max-w-[660px] leading-[1.75] mx-auto mb-9" style={{ fontSize: 'clamp(16px, 1.8vw, 20px)' }}>
+            <p className="text-muted-foreground max-w-[660px] leading-[1.65] mx-auto mb-7" style={{ fontSize: 'clamp(15px, 1.6vw, 18px)' }}>
               AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+ companies including 25+ Fortune 500s across 4 continents.
             </p>
           </ScrollReveal>
