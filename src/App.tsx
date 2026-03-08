@@ -10,6 +10,7 @@ import ChatWidget from "./components/ChatWidget";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
+import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Routes>

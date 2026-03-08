@@ -11,6 +11,7 @@ const Navbar = () => {
     { label: "Home", to: "/" },
     { label: "About Us", to: "/about" },
     { label: "Products", to: "/product" },
+    { label: "Careers", to: "/careers" },
     { label: "News & Events", to: "#" },
     { label: "Contact Us", to: "#" },
   ];
