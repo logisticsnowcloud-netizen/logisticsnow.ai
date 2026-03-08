@@ -68,7 +68,21 @@ const Home = () => {
     return () => { window.removeEventListener('resize', resize); cancelAnimationFrame(animId); };
   }, []);
 
-  const marqueeItems = [...CLIENTS, ...CLIENTS];
+  const CLIENT_LOGOS = [
+    { name: 'Apollo Tyres', initials: 'AT', gradient: 'linear-gradient(135deg, #393185, #1AA6DF)' },
+    { name: 'Perfetti Van Melle', initials: 'PV', gradient: 'linear-gradient(135deg, #e11d48, #fb923c)' },
+    { name: 'Saint-Gobain', initials: 'SG', gradient: 'linear-gradient(135deg, #1AA6DF, #54AF3A)' },
+    { name: 'General Mills', initials: 'GM', gradient: 'linear-gradient(135deg, #1e40af, #393185)' },
+    { name: 'Kimberly-Clark', initials: 'KC', gradient: 'linear-gradient(135deg, #0891b2, #1AA6DF)' },
+    { name: 'CEVA Logistics', initials: 'CL', gradient: 'linear-gradient(135deg, #dc2626, #f97316)' },
+  ];
+  const CLIENT_LOGOS_2 = [
+    { name: 'Jyothy Labs', initials: 'JL', gradient: 'linear-gradient(135deg, #54AF3A, #16a34a)' },
+    { name: 'MIRC Electronics', initials: 'ME', gradient: 'linear-gradient(135deg, #7c3aed, #c084fc)' },
+    { name: 'Bajaj Electricals', initials: 'BE', gradient: 'linear-gradient(135deg, #fb923c, #f59e0b)' },
+    { name: 'Schreiber Foods', initials: 'SF', gradient: 'linear-gradient(135deg, #16a34a, #1AA6DF)' },
+    { name: 'Woolworths AU', initials: 'WW', gradient: 'linear-gradient(135deg, #16a34a, #54AF3A)' },
+  ];
   const caseColors = ['#393185', '#54AF3A', '#1AA6DF', '#393185', '#54AF3A', '#1AA6DF'];
 
   return (
@@ -126,13 +140,54 @@ const Home = () => {
       </section>
 
       {/* MARQUEE */}
-      <div className="overflow-hidden py-7 bg-bg2 border-y border-border">
-        <div className="flex gap-14 items-center animate-marquee w-max">
-          {marqueeItems.map((c, i) => (
-            <span key={i} className="font-display text-[13.5px] font-bold text-muted-foreground whitespace-nowrap flex items-center gap-2.5 opacity-50">
-              <span className="w-1.5 h-1.5 rounded-full bg-ln-purple inline-block" />
-              {c}
-            </span>
+      <div className="relative overflow-hidden py-10 bg-bg2 border-y border-border">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 z-10" style={{ background: 'linear-gradient(to right, hsl(var(--bg2)), transparent)' }} />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 z-10" style={{ background: 'linear-gradient(to left, hsl(var(--bg2)), transparent)' }} />
+        
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">
+          Trusted by Industry Leaders Worldwide
+        </p>
+        
+        {/* Row 1 */}
+        <div className="flex gap-8 items-center animate-marquee w-max mb-4">
+          {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-purple/30 transition-all duration-300 hover:shadow-lg group"
+              style={{ minWidth: 180 }}
+            >
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
+                style={{ background: c.gradient }}
+              >
+                {c.initials}
+              </div>
+              <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
+                {c.name}
+              </span>
+            </div>
+          ))}
+        </div>
+        
+        {/* Row 2 - reverse */}
+        <div className="flex gap-8 items-center animate-marquee-reverse w-max">
+          {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-green/30 transition-all duration-300 hover:shadow-lg group"
+              style={{ minWidth: 180 }}
+            >
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
+                style={{ background: c.gradient }}
+              >
+                {c.initials}
+              </div>
+              <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
+                {c.name}
+              </span>
+            </div>
           ))}
         </div>
       </div>
