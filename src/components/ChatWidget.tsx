@@ -9,8 +9,8 @@ const botReplies: Record<string, string> = {
 
 const ChatWidget = () => {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    { role: "bot" as const, text: "Hello! I'm NowAssist, your AI logistics advisor. What would you like to know?" },
+  const [messages, setMessages] = useState<{ role: "bot" | "usr"; text: string }[]>([
+    { role: "bot", text: "Hello! I'm NowAssist, your AI logistics advisor. What would you like to know?" },
   ]);
   const [input, setInput] = useState("");
 
