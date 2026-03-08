@@ -1,88 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 99.6%;
+    --foreground: 30 2% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 30 2% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 30 2% 16%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 244 44% 36%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 30% 97%;
+    --secondary-foreground: 244 44% 36%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 30% 97%;
+    --muted-foreground: 60 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 240 30% 97%;
+    --accent-foreground: 244 44% 36%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 244 44% 36% / 0.14;
+    --input: 244 44% 36% / 0.14;
+    --ring: 244 44% 36%;
 
     --radius: 0.5rem;
 
+    /* Brand colors */
+    --ln-purple: 244 44% 36%;
+    --ln-green: 107 50% 46%;
+    --ln-blue: 199 76% 49%;
+    --ln-orange: 24 96% 61%;
+    --ln-violet: 270 73% 75%;
+
+    /* Surfaces */
+    --surface: 244 44% 36% / 0.04;
+    --bg2: 237 33% 97%;
+    --bg3: 232 43% 95%;
+    --nav-bg: 0 0% 99.6%;
+
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 260 30% 5%;
+    --foreground: 0 0% 99.6%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 260 30% 5%;
+    --card-foreground: 0 0% 99.6%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 260 30% 5%;
+    --popover-foreground: 0 0% 99.6%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 244 44% 36%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 16% 14%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 16% 14%;
+    --muted-foreground: 0 0% 99.6% / 0.58;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 240 16% 14%;
+    --accent-foreground: 0 0% 96%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 0 0% 100% / 0.09;
+    --input: 0 0% 100% / 0.09;
+    --ring: 0 0% 84%;
+
+    --surface: 0 0% 100% / 0.04;
+    --bg2: 260 25% 8%;
+    --bg3: 260 20% 11%;
+    --nav-bg: 260 25% 8%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -98,8 +109,142 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--ln-purple));
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .text-ln-purple {
+    color: hsl(var(--ln-purple));
+  }
+  .text-ln-green {
+    color: hsl(var(--ln-green));
+  }
+  .text-ln-blue {
+    color: hsl(var(--ln-blue));
+  }
+  .text-ln-orange {
+    color: hsl(var(--ln-orange));
+  }
+  .text-ln-violet {
+    color: hsl(var(--ln-violet));
+  }
+  .bg-ln-purple {
+    background-color: hsl(var(--ln-purple));
+  }
+  .bg-ln-green {
+    background-color: hsl(var(--ln-green));
+  }
+  .bg-ln-blue {
+    background-color: hsl(var(--ln-blue));
+  }
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  .bg-bg2 {
+    background-color: hsl(var(--bg2));
+  }
+  .bg-bg3 {
+    background-color: hsl(var(--bg3));
+  }
+  .border-ln {
+    border-color: hsl(var(--border));
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--ln-purple)), hsl(var(--ln-blue)));
+  }
+  .gradient-lorri {
+    background: linear-gradient(135deg, hsl(var(--ln-purple)) 0%, hsl(var(--ln-blue)) 50%, hsl(var(--ln-green)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(244 44% 36%) 0%, hsl(244 44% 22%) 50%, hsl(215 78% 27%) 100%);
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 text-[11.5px] font-bold tracking-[0.1em] uppercase mb-4;
+    color: hsl(var(--ln-green));
+  }
+  .section-tag::before {
+    content: '';
+    @apply w-6 h-[2.5px] rounded-sm inline-block;
+    background: hsl(var(--ln-green));
+  }
+
+  .btn-primary-ln {
+    @apply px-9 py-4 rounded-full text-base font-bold border-none cursor-pointer;
+    background: hsl(var(--ln-purple));
+    color: #fff;
+    box-shadow: 0 4px 24px hsl(var(--ln-purple) / 0.3);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .btn-secondary-ln {
+    @apply px-8 py-3.5 rounded-full text-base font-semibold cursor-pointer bg-transparent;
+    color: hsl(var(--foreground));
+    border: 2px solid hsl(var(--border));
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .btn-white-ln {
+    @apply px-8 py-4 rounded-full font-bold border-none cursor-pointer;
+    background: #fff;
+    color: hsl(var(--ln-purple));
+    font-size: 15.5px;
+  }
+  .btn-ghost-ln {
+    @apply px-7 py-3 rounded-full font-bold cursor-pointer bg-transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.4);
+    font-size: 15.5px;
+  }
+
+  /* Card hover */
+  .card-hover {
+    @apply transition-all duration-300 cursor-default;
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--border));
+    border-radius: 20px;
+    padding: 32px;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px hsl(var(--ln-purple) / 0.12);
+    border-color: hsl(var(--ln-purple));
+  }
+
+  /* Marquee animation */
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+  .animate-marquee-fast {
+    animation: marquee 22s linear infinite;
+  }
+
+  /* Orbit animations */
+  @keyframes spinCW {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes spinCCW {
+    to { transform: rotate(-360deg); }
   }
 }
