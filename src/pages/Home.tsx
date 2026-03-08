@@ -87,7 +87,7 @@ const Home = () => {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
             <h1 className="font-display font-extrabold leading-[1.02] tracking-[-0.035em] mb-4" style={{ fontSize: 'clamp(36px, 5.5vw, 72px)' }}>
-              The <span className="text-ln-purple">Intelligent</span> Logistics<br />Platform for <span className="text-ln-green">India</span>
+              The <span className="text-ln-purple">Intelligent</span> Logistics<br />& Procurement Platform for <span className="text-ln-green">Global</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
