@@ -74,7 +74,7 @@ const Home = () => {
   return (
     <div>
       {/* HERO */}
-      <section className="min-h-[92vh] flex flex-col items-center justify-center text-center px-[5vw] py-20 bg-background relative overflow-hidden">
+      <section className="min-h-[100vh] flex flex-col items-center justify-center text-center px-[5vw] py-10 bg-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-55 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
