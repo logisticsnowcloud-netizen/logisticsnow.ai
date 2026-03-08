@@ -126,13 +126,54 @@ const Home = () => {
       </section>
 
       {/* MARQUEE */}
-      <div className="overflow-hidden py-7 bg-bg2 border-y border-border">
-        <div className="flex gap-14 items-center animate-marquee w-max">
-          {marqueeItems.map((c, i) => (
-            <span key={i} className="font-display text-[13.5px] font-bold text-muted-foreground whitespace-nowrap flex items-center gap-2.5 opacity-50">
-              <span className="w-1.5 h-1.5 rounded-full bg-ln-purple inline-block" />
-              {c}
-            </span>
+      <div className="relative overflow-hidden py-10 bg-bg2 border-y border-border">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 z-10" style={{ background: 'linear-gradient(to right, hsl(var(--bg2)), transparent)' }} />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 z-10" style={{ background: 'linear-gradient(to left, hsl(var(--bg2)), transparent)' }} />
+        
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">
+          Trusted by Industry Leaders Worldwide
+        </p>
+        
+        {/* Row 1 */}
+        <div className="flex gap-8 items-center animate-marquee w-max mb-4">
+          {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-purple/30 transition-all duration-300 hover:shadow-lg group"
+              style={{ minWidth: 180 }}
+            >
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
+                style={{ background: c.gradient }}
+              >
+                {c.initials}
+              </div>
+              <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
+                {c.name}
+              </span>
+            </div>
+          ))}
+        </div>
+        
+        {/* Row 2 - reverse */}
+        <div className="flex gap-8 items-center animate-marquee-reverse w-max">
+          {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-green/30 transition-all duration-300 hover:shadow-lg group"
+              style={{ minWidth: 180 }}
+            >
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-display font-extrabold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform"
+                style={{ background: c.gradient }}
+              >
+                {c.initials}
+              </div>
+              <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
+                {c.name}
+              </span>
+            </div>
           ))}
         </div>
       </div>
