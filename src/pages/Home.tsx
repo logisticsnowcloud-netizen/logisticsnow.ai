@@ -69,19 +69,19 @@ const Home = () => {
   }, []);
 
   const CLIENT_LOGOS = [
-    { name: 'Apollo Tyres', initials: 'AT', gradient: 'linear-gradient(135deg, #393185, #1AA6DF)' },
-    { name: 'Perfetti Van Melle', initials: 'PV', gradient: 'linear-gradient(135deg, #e11d48, #fb923c)' },
-    { name: 'Saint-Gobain', initials: 'SG', gradient: 'linear-gradient(135deg, #1AA6DF, #54AF3A)' },
-    { name: 'General Mills', initials: 'GM', gradient: 'linear-gradient(135deg, #1e40af, #393185)' },
-    { name: 'Kimberly-Clark', initials: 'KC', gradient: 'linear-gradient(135deg, #0891b2, #1AA6DF)' },
-    { name: 'CEVA Logistics', initials: 'CL', gradient: 'linear-gradient(135deg, #dc2626, #f97316)' },
+    { name: 'Apollo Tyres', logo: '/logos/apollo-tyres.png' },
+    { name: 'Perfetti Van Melle', logo: '/logos/perfetti.png' },
+    { name: 'Saint-Gobain', logo: '/logos/saint-gobain.png' },
+    { name: 'General Mills', logo: '/logos/general-mills.png' },
+    { name: 'Kimberly-Clark', logo: '/logos/kimberly-clark.png' },
+    { name: 'CEVA Logistics', logo: '/logos/ceva.png' },
   ];
   const CLIENT_LOGOS_2 = [
-    { name: 'Jyothy Labs', initials: 'JL', gradient: 'linear-gradient(135deg, #54AF3A, #16a34a)' },
-    { name: 'MIRC Electronics', initials: 'ME', gradient: 'linear-gradient(135deg, #7c3aed, #c084fc)' },
-    { name: 'Bajaj Electricals', initials: 'BE', gradient: 'linear-gradient(135deg, #fb923c, #f59e0b)' },
-    { name: 'Schreiber Foods', initials: 'SF', gradient: 'linear-gradient(135deg, #16a34a, #1AA6DF)' },
-    { name: 'Woolworths AU', initials: 'WW', gradient: 'linear-gradient(135deg, #16a34a, #54AF3A)' },
+    { name: 'Jyothy Labs', logo: '/logos/jyothy-labs.png' },
+    { name: 'MIRC Electronics', logo: '/logos/mirc.png' },
+    { name: 'Bajaj Electricals', logo: '/logos/bajaj.png' },
+    { name: 'Schreiber Foods', logo: '/logos/schreiber.png' },
+    { name: 'Woolworths AU', logo: '/logos/woolworths.png' },
   ];
   const caseColors = ['#393185', '#54AF3A', '#1AA6DF', '#393185', '#54AF3A', '#1AA6DF'];
 
