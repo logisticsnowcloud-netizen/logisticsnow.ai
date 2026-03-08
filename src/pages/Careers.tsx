@@ -284,14 +284,14 @@ const Careers = () => {
       </section>
 
       {/* Perks */}
-      <section className="px-[5vw] pb-14">
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[1100px] mx-auto">
+      <section className="px-[5vw] pb-8">
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-[1100px] mx-auto">
           {PERKS.map((perk) => (
             <StaggerItem key={perk.title}>
-              <div className="card-hover text-center !p-6">
-                <perk.icon size={28} className="mx-auto mb-3 text-ln-purple" />
-                <h3 className="font-display text-sm font-bold text-foreground mb-1">{perk.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">{perk.desc}</p>
+              <div className="card-hover text-center !p-4">
+                <perk.icon size={22} className="mx-auto mb-2 text-ln-purple" />
+                <h3 className="font-display text-xs font-bold text-foreground mb-0.5">{perk.title}</h3>
+                <p className="text-[11px] text-muted-foreground leading-relaxed">{perk.desc}</p>
               </div>
             </StaggerItem>
           ))}
