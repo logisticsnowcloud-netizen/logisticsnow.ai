@@ -1,6 +1,9 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Clock, Tag, ArrowRight, Rocket, Users, TrendingUp, Heart } from "lucide-react";
+import { ChevronDown, MapPin, Clock, Tag, ArrowRight, Rocket, Users, TrendingUp, Heart, X, Upload } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 
 type Job = {
   id: string;
@@ -10,14 +13,13 @@ type Job = {
   domain: string;
   summary: string;
   sections: { heading: string; items: string[] }[];
-  applyUrl: string;
 };
 
 const JOBS: Job[] = [
   {
     id: "data-analyst",
     title: "Passionate Data Analyst",
-    location: "Bangalore",
+    location: "Mumbai",
     type: "Full-time",
     domain: "Data / Analytics",
     summary: "We're hiring founders at heart and data rockstars who want to build new ventures within LogisticsNow, drive impact using data, and scale 10x.",
@@ -43,12 +45,11 @@ const JOBS: Job[] = [
         ],
       },
     ],
-    applyUrl: "https://logisticsnow.in/careers.aspx?cid=3",
   },
   {
     id: "software-builder",
     title: "Entrepreneurial Software Builder",
-    location: "Bangalore",
+    location: "Mumbai",
     type: "Full-time",
     domain: "Engineering",
     summary: "We're building the brain of global logistics. If you've ever dreamed of being a founder, shipping real code, and building products that solve billion-dollar problems — this is your moment.",
@@ -81,7 +82,6 @@ const JOBS: Job[] = [
         ],
       },
     ],
-    applyUrl: "https://logisticsnow.in/careers.aspx?cid=4",
   },
   {
     id: "sales-specialist",
@@ -112,12 +112,11 @@ const JOBS: Job[] = [
         ],
       },
     ],
-    applyUrl: "https://logisticsnow.in/careers.aspx?cid=6",
   },
   {
     id: "customer-success",
     title: "Customer Success — Enterprise / SaaS",
-    location: "Mumbai / Remote",
+    location: "Mumbai",
     type: "Full-time",
     domain: "Customer Success",
     summary: "Own the end-to-end post-sales lifecycle for strategic accounts — from onboarding and adoption to value realization and renewal. Be a trusted advisor and driver of long-term customer health.",
@@ -143,12 +142,11 @@ const JOBS: Job[] = [
         ],
       },
     ],
-    applyUrl: "https://logisticsnow.in/careers.aspx?cid=10",
   },
   {
     id: "product-manager",
     title: "Product Manager — AI Platform",
-    location: "Bangalore",
+    location: "Mumbai",
     type: "Full-time",
     domain: "AI / Platform",
     summary: "Own the end-to-end product lifecycle for LoRRI and the broader LogisticsNow platform. Define product strategy, prioritize the roadmap, and deliver outcomes that improve adoption, retention, and ROI.",
@@ -174,7 +172,6 @@ const JOBS: Job[] = [
         ],
       },
     ],
-    applyUrl: "https://logisticsnow.in/careers.aspx?cid=11",
   },
 ];
 
@@ -185,7 +182,116 @@ const PERKS = [
   { icon: Heart, title: "Comprehensive Benefits", desc: "Health, dental, vision & flexible work arrangements" },
 ];
 
-const JobCard = ({ job }: { job: Job }) => {
+/* ── Apply Modal ── */
+const ApplyModal = ({ job, open, onClose }: { job: Job | null; open: boolean; onClose: () => void }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !email.trim() || !phone.trim()) {
+      toast.error("Please fill all required fields");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.error("Please enter a valid email");
+      return;
+    }
+    if (!/^\+?\d{10,15}$/.test(phone.replace(/[\s-]/g, ""))) {
+      toast.error("Please enter a valid contact number");
+      return;
+    }
+
+    setSubmitting(true);
+    // Simulate submission
+    setTimeout(() => {
+      toast.success("Application submitted successfully! We'll get back to you soon.");
+      setName(""); setEmail(""); setPhone(""); setFile(null);
+      setSubmitting(false);
+      onClose();
+    }, 1200);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
+      <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden rounded-2xl border-border">
+        <div className="px-6 pt-6 pb-2 md:px-8 md:pt-8">
+          <DialogHeader>
+            <DialogTitle className="font-display text-xl font-extrabold text-foreground">APPLY NOW</DialogTitle>
+          </DialogHeader>
+          {job && (
+            <p className="text-sm font-semibold text-muted-foreground mt-1">{job.title}</p>
+          )}
+          <div className="w-full h-px bg-border mt-4" />
+        </div>
+        <form onSubmit={handleSubmit} className="px-6 pb-6 md:px-8 md:pb-8 space-y-4">
+          <Input
+            placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength={100}
+            required
+            className="h-12 rounded-lg border-border bg-secondary/50 text-sm"
+          />
+          <Input
+            type="email"
+            placeholder="Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            maxLength={255}
+            required
+            className="h-12 rounded-lg border-border bg-secondary/50 text-sm"
+          />
+          <Input
+            type="tel"
+            placeholder="Your Contact No."
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            maxLength={15}
+            required
+            className="h-12 rounded-lg border-border bg-secondary/50 text-sm"
+          />
+          <div>
+            <label className="flex items-center gap-3 cursor-pointer rounded-lg border border-dashed border-border px-4 py-3 hover:bg-secondary/30 transition-colors">
+              <Upload size={18} className="text-muted-foreground shrink-0" />
+              <span className="text-sm text-muted-foreground truncate">
+                {file ? file.name : "Upload Resume (.pdf, .doc, .docx)"}
+              </span>
+              <input
+                type="file"
+                accept=".pdf,.doc,.docx"
+                className="hidden"
+                onChange={(e) => setFile(e.target.files?.[0] || null)}
+              />
+            </label>
+          </div>
+          <div className="flex gap-3 pt-2">
+            <button
+              type="submit"
+              disabled={submitting}
+              className="btn-primary-ln !px-7 !py-3 !text-sm flex-1 disabled:opacity-60"
+            >
+              {submitting ? "Submitting..." : "Submit Resume"}
+            </button>
+            <button
+              type="button"
+              onClick={onClose}
+              className="btn-secondary-ln !px-6 !py-3 !text-sm"
+            >
+              Close
+            </button>
+          </div>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+/* ── Job Card ── */
+const JobCard = ({ job, onApply }: { job: Job; onApply: (job: Job) => void }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -212,15 +318,12 @@ const JobCard = ({ job }: { job: Job }) => {
           </div>
         </div>
         <div className="flex items-center gap-3 ml-4 shrink-0">
-          <a
-            href={job.applyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="hidden md:inline-flex items-center gap-1 text-sm font-bold no-underline text-ln-purple hover:underline"
+          <span
+            onClick={(e) => { e.stopPropagation(); onApply(job); }}
+            className="hidden md:inline-flex items-center gap-1 text-sm font-bold text-ln-purple hover:underline cursor-pointer"
           >
             Apply <ArrowRight size={14} />
-          </a>
+          </span>
           <ChevronDown
             size={20}
             className="text-muted-foreground transition-transform duration-300"
@@ -245,14 +348,12 @@ const JobCard = ({ job }: { job: Job }) => {
               </ul>
             </div>
           ))}
-          <a
-            href={job.applyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary-ln no-underline inline-flex items-center gap-2 !px-7 !py-3 !text-sm mt-2"
+          <button
+            onClick={() => onApply(job)}
+            className="btn-primary-ln inline-flex items-center gap-2 !px-7 !py-3 !text-sm mt-2"
           >
             Apply Now <ArrowRight size={16} />
-          </a>
+          </button>
         </div>
       )}
     </div>
@@ -260,8 +361,12 @@ const JobCard = ({ job }: { job: Job }) => {
 };
 
 const Careers = () => {
+  const [applyJob, setApplyJob] = useState<Job | null>(null);
+
   return (
     <div>
+      <ApplyModal job={applyJob} open={!!applyJob} onClose={() => setApplyJob(null)} />
+
       {/* Hero */}
       <section className="relative overflow-hidden py-10 md:py-14 px-[5vw] text-center">
         <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
@@ -318,7 +423,7 @@ const Careers = () => {
           <div className="space-y-3">
             {JOBS.map((job, i) => (
               <ScrollReveal key={job.id} direction="up" delay={i * 0.05}>
-                <JobCard job={job} />
+                <JobCard job={job} onApply={setApplyJob} />
               </ScrollReveal>
             ))}
           </div>
