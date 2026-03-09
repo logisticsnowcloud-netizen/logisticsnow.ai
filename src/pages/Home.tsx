@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { CLIENTS, CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import CtaBanner from "@/components/CtaBanner";
 
 const STATS = [
   { num: '$2.5Bn+', label: 'Supply Chain Spend Analyzed', color: '#393185' },
