@@ -238,7 +238,7 @@ const Product = () => {
 
           {/* Pillar Tabs */}
           <ScrollReveal delay={0.1}>
-            <div className="flex gap-2 justify-center mb-10 flex-wrap">
+            <div className="flex gap-2 justify-center mb-6 flex-wrap">
               {PILLARS.map((p, i) => (
                 <button
                   key={i}
