@@ -20,7 +20,7 @@ const Product = () => {
   return (
     <div>
       {/* PRODUCT HERO */}
-      <div className="px-[5vw] pt-[70px] pb-[40px] relative overflow-hidden bg-background">
+      <div className="px-[5vw] pt-[12px] pb-[28px] relative overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(57,49,133,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(57,49,133,0.07) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(57,49,133,0.22) 0%, transparent 70%)' }} />
         <div className="absolute -bottom-[10%] left-[10%] w-[500px] h-[400px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(26,166,223,0.10) 0%, transparent 70%)' }} />
