@@ -20,42 +20,42 @@ const Product = () => {
   return (
     <div>
       {/* PRODUCT HERO */}
-      <div className="px-[5vw] pt-[70px] pb-[40px] relative overflow-hidden bg-background">
+      <div className="px-[5vw] pt-[12px] pb-[28px] relative overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(57,49,133,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(57,49,133,0.07) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(57,49,133,0.22) 0%, transparent 70%)' }} />
         <div className="absolute -bottom-[10%] left-[10%] w-[500px] h-[400px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(26,166,223,0.10) 0%, transparent 70%)' }} />
         <div className="absolute bottom-0 right-[5%] w-[400px] h-[350px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(84,175,58,0.08) 0%, transparent 70%)' }} />
 
         <div className="max-w-[1280px] mx-auto relative z-[2]">
-          <div className="flex items-center gap-[7px] text-xs font-semibold tracking-[0.07em] uppercase text-muted-foreground mb-7">
+          <div className="flex items-center gap-[7px] text-xs font-semibold tracking-[0.07em] uppercase text-muted-foreground mb-3">
             <Link to="/" className="no-underline text-muted-foreground font-body">Home</Link>
             <span>›</span>
             <span className="text-ln-purple">Products</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <ScrollReveal direction="up">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11.5px] font-bold tracking-[0.09em] uppercase mb-6" style={{ background: 'rgba(26,166,223,.10)', border: '1px solid rgba(26,166,223,.25)', color: '#1AA6DF' }}>
+                <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10.5px] font-bold tracking-[0.09em] uppercase mb-3" style={{ background: 'rgba(26,166,223,.10)', border: '1px solid rgba(26,166,223,.25)', color: '#1AA6DF' }}>
                   <span className="w-[7px] h-[7px] rounded-full" style={{ background: '#1AA6DF', boxShadow: '0 0 8px #1AA6DF' }} />
                   Global Smart Logistics Grid
                 </div>
-                <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-5" style={{ fontSize: 'clamp(42px, 5.5vw, 72px)' }}>
+                <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3" style={{ fontSize: 'clamp(32px, 4vw, 52px)' }}>
                   Meet <span className="gradient-lorri">LoRRI</span><br />— The Brain of<br />Your Logistics
                 </h1>
-                <p className="text-[15px] text-muted-foreground leading-[1.65] max-w-[500px] mb-5">
+                <p className="text-[13.5px] text-muted-foreground leading-[1.6] max-w-[460px] mb-3">
                   <strong className="text-foreground">LoRRI (Logistics Routing & Real-time Intelligence)</strong> is the industry's first end-to-end logistics intelligence platform — powering deep discovery, rapid procurement, digital operations and 10× faster payments.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-1.5 mb-3">
                   {PROD_STATS.map((s) => (
-                    <div key={s.l} className="px-3 py-2 rounded-[12px] bg-surface flex flex-col items-center min-w-[80px]">
-                      <div className="font-display text-lg font-extrabold tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
+                    <div key={s.l} className="px-2.5 py-1.5 rounded-[10px] bg-surface flex flex-col items-center min-w-[72px]">
+                      <div className="font-display text-base font-extrabold tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
                       <div className="text-[10px] text-muted-foreground font-semibold mt-0.5 text-center">{s.l}</div>
                     </div>
                   ))}
                 </div>
                 <div className="flex gap-3.5 flex-wrap">
-                  <button className="btn-primary-ln">🚀 Explore LoRRI →</button>
-                  <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-muted-foreground bg-surface border border-border px-6 py-3 rounded-full text-[15px] font-semibold no-underline">🌐 Visit lorri.ai ↗</a>
+                  <button className="btn-primary-ln !px-5 !py-2.5 !text-[13px]">🚀 Explore LoRRI →</button>
+                  <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-muted-foreground bg-surface border border-border px-5 py-2.5 rounded-full text-[13px] font-semibold no-underline">🌐 Visit lorri.ai ↗</a>
                 </div>
               </div>
             </ScrollReveal>
