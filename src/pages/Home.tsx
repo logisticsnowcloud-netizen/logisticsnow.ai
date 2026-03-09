@@ -269,8 +269,6 @@ const Home = () => {
               { tag: 'ROUTING', tagColor: 'hsl(var(--ln-purple))', name: 'AI Route Optimization Engine', desc: 'Intelligent route planning considering distance, time, cost, delivery windows, and vehicle capacity — with dynamic re-routing and continuous learning.' },
               { tag: 'CONSOLIDATION', tagColor: 'hsl(var(--ln-green))', name: 'Load Consolidation Engine', desc: 'AI-powered shipment grouping that maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios to reduce trips and emissions.' },
               { tag: 'ESG', tagColor: 'hsl(var(--ln-blue))', name: 'Carbon Tracker Agent', desc: 'Estimates shipment-level carbon emissions, tracks emission trends across lanes, identifies reduction opportunities, and provides sustainability analytics dashboards.' },
-              { tag: 'INTELLIGENCE', tagColor: 'hsl(var(--ln-orange))', name: 'LoRRI.AI Platform', desc: 'AI-native logistics intelligence platform — autonomous freight procurement, optimization, sustainability insights, and global data positioning in one unified experience.' },
-              { tag: 'DATA', tagColor: 'hsl(var(--ln-purple))', name: 'Lane Intelligence Builder', desc: 'The Data Cleaner agent — structures, validates, and enriches lane-level logistics data to power all downstream AI systems with clean, reliable intelligence.' },
             ].map((ai) => (
               <StaggerItem key={ai.name}>
                 <div className="card-hover !p-6 h-full">
