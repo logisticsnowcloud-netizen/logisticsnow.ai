@@ -245,6 +245,45 @@ const Home = () => {
         </div>
       </section>
 
+      {/* AI SUITE */}
+      <section className="py-[88px] px-[5vw] bg-background">
+        <div className="max-w-[1280px] mx-auto">
+          <ScrollReveal>
+            <div className="section-tag">AI Suite</div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+            <ScrollReveal direction="up" delay={0.05}>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
+                Not AI as a Feature.<br /><span className="text-ln-blue">AI as the Foundation.</span>
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.15}>
+              <p className="text-muted-foreground text-[17px] leading-[1.75]">Seven proprietary AI systems built ground-up for Indian logistics — each trained, tested and deployed at national scale.</p>
+            </ScrollReveal>
+          </div>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { tag: 'ROUTING', tagColor: 'hsl(var(--ln-green))', name: 'LoRRI GNN', desc: "Graph Neural Network routing across India's road, rail, and air networks — updated every 4 minutes from live telemetry." },
+              { tag: 'FORECASTING', tagColor: 'hsl(var(--ln-blue))', name: 'DemandPulse™', desc: 'Transformer-based demand forecasting at SKU × district granularity with 94.2% accuracy across 3M+ product lines.' },
+              { tag: 'PRICING', tagColor: 'hsl(var(--ln-orange))', name: 'RateIQ Engine', desc: 'Dynamic carrier rate negotiation using reinforcement learning — optimizes across 400+ carrier lanes in real time.' },
+              { tag: 'VISION', tagColor: 'hsl(var(--ln-purple))', name: 'DocVision AI', desc: 'OCR + NLP pipeline extracting, validating, and routing logistics documents — invoices, PODs, manifests — in 800ms.' },
+              { tag: 'LANGUAGE', tagColor: 'hsl(var(--ln-green))', name: 'NowAssist LLM', desc: 'Fine-tuned logistics language model powering natural language queries, automated exception responses, and customer updates.' },
+              { tag: 'ANOMALY', tagColor: 'hsl(var(--ln-blue))', name: 'SentinelML', desc: 'Real-time anomaly detection across 200+ logistics signals — from GPS drift to unusual dwell times — with sub-60s alerts.' },
+              { tag: 'SIMULATION', tagColor: 'hsl(var(--ln-orange))', name: 'GridSim Engine', desc: 'Digital twin of the national logistics network for what-if scenario planning on infrastructure, contracts, and disruptions.' },
+              { tag: 'ESG', tagColor: 'hsl(var(--ln-purple))', name: 'CarbonTrace AI', desc: 'Scope 3 emissions tracking, carbon-optimized routing, and automated ESG reporting aligned to GHG Protocol standards.' },
+            ].map((ai) => (
+              <StaggerItem key={ai.name}>
+                <div className="card-hover !p-6 h-full">
+                  <span className="inline-block text-[10px] font-bold tracking-[0.1em] uppercase px-2.5 py-1 rounded-full mb-3" style={{ color: ai.tagColor, background: `${ai.tagColor}15`, border: `1px solid ${ai.tagColor}30` }}>{ai.tag}</span>
+                  <div className="font-display text-[17px] font-bold mb-2.5">{ai.name}</div>
+                  <div className="text-[13px] text-muted-foreground leading-[1.7]">{ai.desc}</div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
       {/* CASE STUDIES */}
       <section className="py-[88px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
