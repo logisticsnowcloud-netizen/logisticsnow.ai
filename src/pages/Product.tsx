@@ -91,8 +91,8 @@ const Product = () => {
                     </g>
                     <circle cx="180" cy="180" r="32" fill="rgba(57,49,133,0.2)" stroke="#393185" strokeWidth="1.5" />
                   </svg>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[3] pointer-events-none w-20">
-                    <div className="font-display text-lg font-extrabold gradient-lorri leading-[1.1] tracking-[-0.02em]">LoRRI</div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[3] pointer-events-none w-16">
+                    <div className="font-display text-base font-extrabold gradient-lorri leading-[1.1] tracking-[-0.02em]">LoRRI</div>
                     <div className="text-[7px] font-bold tracking-[0.15em] uppercase text-muted-foreground mt-0.5">INTELLIGENCE</div>
                   </div>
                   {PILLARS.map((p, i) => {
