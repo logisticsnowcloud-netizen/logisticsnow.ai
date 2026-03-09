@@ -16,6 +16,12 @@ const Product = () => {
 
   const features = audience === 'mfr' ? MFR_FEATURES : CARRIER_FEATURES;
   const valItems = [...VAL_DRIVERS, ...VAL_DRIVERS, ...VAL_DRIVERS];
+  const orbitLabels = [
+    "1. Deep Discovery",
+    "2. Rapid Procurement",
+    "3. Digitalize Operation (in days)",
+    "4. LoRRI Pay (10x faster!)",
+  ];
 
   return (
     <div>
