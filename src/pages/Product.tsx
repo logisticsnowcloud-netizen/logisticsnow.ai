@@ -361,7 +361,7 @@ const Product = () => {
             <h2 className="font-display font-extrabold tracking-[-0.025em] mb-4" style={{ fontSize: 'clamp(30px, 5vw, 58px)', color: '#fff' }}>
               Start Your <span className="text-ln-green">LoRRI Journey</span> Today
             </h2>
-            <p className="text-lg max-w-[520px] mx-auto mb-9" style={{ color: 'rgba(255,255,255,.72)' }}>Join 120+ companies that have transformed their freight operations. Onboarding in 5 business days. Free 30-day pilot.</p>
+            <p className="text-base max-w-[520px] mx-auto mb-6" style={{ color: 'rgba(255,255,255,.72)' }}>Join 120+ companies that have transformed their freight operations. Onboarding in 5 business days. Free 30-day pilot.</p>
             <div className="flex gap-3.5 justify-center flex-wrap">
               <button className="btn-white-ln">🚛 Schedule a Demo →</button>
               <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold no-underline" style={{ color: 'rgba(255,255,255,.7)', border: '1px solid rgba(255,255,255,.15)' }}>🌐 Explore lorri.ai ↗</a>
