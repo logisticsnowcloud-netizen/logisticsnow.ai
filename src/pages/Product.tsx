@@ -42,7 +42,7 @@ const Product = () => {
                 <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-5" style={{ fontSize: 'clamp(42px, 5.5vw, 72px)' }}>
                   Meet <span className="gradient-lorri">LoRRI</span><br />— The Brain of<br />Your Logistics
                 </h1>
-                <p className="text-[17px] text-muted-foreground leading-[1.78] max-w-[500px] mb-9">
+                <p className="text-[15px] text-muted-foreground leading-[1.65] max-w-[500px] mb-5">
                   <strong className="text-foreground">LoRRI (Logistics Routing & Real-time Intelligence)</strong> is the industry's first end-to-end logistics intelligence platform — powering deep discovery, rapid procurement, digital operations and 10× faster payments.
                 </p>
                 <div className="flex flex-wrap gap-2.5 mb-9">
