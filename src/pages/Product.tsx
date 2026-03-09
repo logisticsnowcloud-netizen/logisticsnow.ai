@@ -268,7 +268,7 @@ const Product = () => {
                   </div>
                   <div className="font-mono text-sm font-bold tracking-[0.04em] mb-1.5" style={{ color: p.color }}>{p.num} / 04</div>
                   <div className="font-display font-extrabold tracking-[-0.025em] mb-4" style={{ fontSize: 'clamp(28px, 3vw, 44px)' }}>{p.title}</div>
-                  <p className="text-base text-muted-foreground leading-[1.78] mb-7">{p.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-[1.7] mb-5">{p.desc}</p>
                   <div className="flex flex-col gap-2.5">
                     {p.bullets.map((b) => (
                       <div key={b} className="flex items-start gap-2.5 text-sm text-muted-foreground">
