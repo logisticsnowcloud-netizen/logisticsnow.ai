@@ -104,7 +104,7 @@ const Product = () => {
                     return (
                       <div
                         key={i}
-                        className="absolute w-16 h-16 z-[4] cursor-pointer -translate-x-1/2 -translate-y-1/2"
+                        className="absolute w-14 h-14 z-[4] cursor-pointer -translate-x-1/2 -translate-y-1/2"
                         style={{ left: nx, top: ny }}
                         onClick={() => setActivePillar(i)}
                       >
