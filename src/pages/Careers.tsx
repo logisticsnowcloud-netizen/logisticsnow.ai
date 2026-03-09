@@ -427,18 +427,6 @@ const Careers = () => {
               </ScrollReveal>
             ))}
           </div>
-          <ScrollReveal direction="up" delay={0.2}>
-            <div className="text-center mt-10">
-              <a
-                href="https://logisticsnow.in/careers.aspx"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary-ln no-underline inline-flex items-center gap-2"
-              >
-                View All {JOBS.length}+ Open Roles <ArrowRight size={16} />
-              </a>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
