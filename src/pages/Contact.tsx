@@ -48,28 +48,6 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen bg-background font-body">
-      {/* Hero Banner */}
-      <section className="relative gradient-cta py-12 md:py-16 px-[5vw] overflow-hidden">
-        <div className="max-w-[1200px] mx-auto relative z-10">
-          <h1 className="font-display text-3xl md:text-4xl font-extrabold text-primary-foreground mb-0">
-            Contact Us
-          </h1>
-        </div>
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: "radial-gradient(circle at 20% 80%, hsl(var(--ln-blue)) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--ln-green)) 0%, transparent 50%)"
-        }} />
-      </section>
-
-      {/* Breadcrumb */}
-      <div className="px-[5vw] py-4 border-b border-border">
-        <div className="max-w-[1200px] mx-auto flex items-center gap-2 text-sm text-muted-foreground">
-          <MapPin size={16} className="text-ln-green" />
-          <span>You are here:</span>
-          <Link to="/" className="text-ln-purple font-semibold hover:underline no-underline">Home</Link>
-          <span>/</span>
-          <span className="text-foreground font-medium">Contact Us</span>
-        </div>
-      </div>
 
       {/* Main Content */}
       <section className="px-[5vw] py-12 md:py-16">
