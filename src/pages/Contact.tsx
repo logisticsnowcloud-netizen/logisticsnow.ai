@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
+import CtaBanner from "@/components/CtaBanner";
 
 const HELP_OPTIONS = [
   "Product Discovery",
@@ -223,6 +224,8 @@ const Contact = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      <CtaBanner />
     </main>
   );
 };

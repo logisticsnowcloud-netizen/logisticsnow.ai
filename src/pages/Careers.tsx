@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, MapPin, Clock, Tag, ArrowRight, Rocket, Users, TrendingUp, Heart, X, Upload } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import CtaBanner from "@/components/CtaBanner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
@@ -458,6 +459,8 @@ const Careers = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      <CtaBanner />
     </div>
   );
 };

@@ -32,10 +32,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Routes>
-          <Route path="/product" element={null} />
-          <Route path="*" element={<Footer />} />
-        </Routes>
+        <Footer />
         <ChatWidget />
       </BrowserRouter>
     </TooltipProvider>
