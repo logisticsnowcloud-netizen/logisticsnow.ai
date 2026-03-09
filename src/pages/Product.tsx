@@ -224,10 +224,10 @@ const Product = () => {
       </section>
 
       {/* 4 PILLARS */}
-      <section className="py-[88px] px-[5vw] bg-background">
+      <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <div className="section-tag justify-center">The Platform</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 4 Pillars. <span className="text-ln-blue">Infinite Value.</span>
