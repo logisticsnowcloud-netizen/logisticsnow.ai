@@ -72,24 +72,24 @@ const Product = () => {
                         <stop offset="100%" stopColor="#393185" stopOpacity="0" />
                       </radialGradient>
                     </defs>
-                    <circle cx="220" cy="220" r="200" fill="url(#orbGlow)" />
-                    <circle cx="220" cy="220" r="168" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1.5" strokeDasharray="5 8" />
-                    <circle cx="220" cy="220" r="90" fill="none" stroke="rgba(57,49,133,0.2)" strokeWidth="1" strokeDasharray="3 5" />
-                    <circle cx="220" cy="220" r="44" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1" />
+                    <circle cx="180" cy="180" r="160" fill="url(#orbGlow)" />
+                    <circle cx="180" cy="180" r="135" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1.5" strokeDasharray="5 8" />
+                    <circle cx="180" cy="180" r="72" fill="none" stroke="rgba(57,49,133,0.2)" strokeWidth="1" strokeDasharray="3 5" />
+                    <circle cx="180" cy="180" r="36" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1" />
                     {PILLARS.map((p, i) => {
                       const angles = [-90, 0, 90, 180];
                       const rad = (angles[i] * Math.PI) / 180;
-                      const x2 = 220 + 168 * Math.cos(rad);
-                      const y2 = 220 + 168 * Math.sin(rad);
-                      return <line key={i} x1="220" y1="220" x2={x2} y2={y2} stroke={p.color} strokeWidth="1" strokeOpacity={i === activePillar ? 0.45 : 0.15} strokeDasharray="4 6" />;
+                      const x2 = 180 + 135 * Math.cos(rad);
+                      const y2 = 180 + 135 * Math.sin(rad);
+                      return <line key={i} x1="180" y1="180" x2={x2} y2={y2} stroke={p.color} strokeWidth="1" strokeOpacity={i === activePillar ? 0.45 : 0.15} strokeDasharray="4 6" />;
                     })}
-                    <g style={{ transformOrigin: '220px 220px', animation: 'spinCW 8s linear infinite' }}>
-                      <circle cx="220" cy="52" r="5" fill="#1AA6DF" opacity="0.9" style={{ filter: 'drop-shadow(0 0 8px #1AA6DF)' }} />
+                    <g style={{ transformOrigin: '180px 180px', animation: 'spinCW 8s linear infinite' }}>
+                      <circle cx="180" cy="45" r="4" fill="#1AA6DF" opacity="0.9" style={{ filter: 'drop-shadow(0 0 8px #1AA6DF)' }} />
                     </g>
-                    <g style={{ transformOrigin: '220px 220px', animation: 'spinCCW 14s linear infinite' }}>
-                      <circle cx="220" cy="130" r="3.5" fill="#54AF3A" opacity="0.7" style={{ filter: 'drop-shadow(0 0 6px #54AF3A)' }} />
+                    <g style={{ transformOrigin: '180px 180px', animation: 'spinCCW 14s linear infinite' }}>
+                      <circle cx="180" cy="108" r="3" fill="#54AF3A" opacity="0.7" style={{ filter: 'drop-shadow(0 0 6px #54AF3A)' }} />
                     </g>
-                    <circle cx="220" cy="220" r="40" fill="rgba(57,49,133,0.2)" stroke="#393185" strokeWidth="1.5" />
+                    <circle cx="180" cy="180" r="32" fill="rgba(57,49,133,0.2)" stroke="#393185" strokeWidth="1.5" />
                   </svg>
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[3] pointer-events-none w-20">
                     <div className="font-display text-lg font-extrabold gradient-lorri leading-[1.1] tracking-[-0.02em]">LoRRI</div>
