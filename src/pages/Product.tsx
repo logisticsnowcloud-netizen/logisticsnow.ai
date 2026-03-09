@@ -35,7 +35,7 @@ const Product = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <ScrollReveal direction="up">
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11.5px] font-bold tracking-[0.09em] uppercase mb-6" style={{ background: 'rgba(26,166,223,.10)', border: '1px solid rgba(26,166,223,.25)', color: '#1AA6DF' }}>
+                <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10.5px] font-bold tracking-[0.09em] uppercase mb-3" style={{ background: 'rgba(26,166,223,.10)', border: '1px solid rgba(26,166,223,.25)', color: '#1AA6DF' }}>
                   <span className="w-[7px] h-[7px] rounded-full" style={{ background: '#1AA6DF', boxShadow: '0 0 8px #1AA6DF' }} />
                   Global Smart Logistics Grid
                 </div>
