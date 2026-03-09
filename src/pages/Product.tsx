@@ -137,7 +137,7 @@ const Product = () => {
                 <p className="text-muted-foreground text-[15px] leading-[1.65] mb-5 max-w-[480px]">
                   Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in under 3 minutes.
                 </p>
-                <div className="flex flex-col gap-4 mb-8">
+                <div className="flex flex-col gap-2.5 mb-5">
                   {[
                     { icon: '🔍', title: 'Deep Discovery', desc: 'AI-powered carrier matching across 80K+ routes' },
                     { icon: '⚡', title: 'Rapid Procurement', desc: 'From indent to award in minutes, not days' },
