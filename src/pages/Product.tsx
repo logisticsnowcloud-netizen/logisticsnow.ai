@@ -32,7 +32,7 @@ const Product = () => {
             <span>›</span>
             <span className="text-ln-purple">Products</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <ScrollReveal direction="up">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11.5px] font-bold tracking-[0.09em] uppercase mb-6" style={{ background: 'rgba(26,166,223,.10)', border: '1px solid rgba(26,166,223,.25)', color: '#1AA6DF' }}>
