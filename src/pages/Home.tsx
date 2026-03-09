@@ -258,19 +258,19 @@ const Home = () => {
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">Seven proprietary AI systems built ground-up for Indian logistics — each trained, tested and deployed at national scale.</p>
+              <p className="text-muted-foreground text-[17px] leading-[1.75]">Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical industry problem at national scale.</p>
             </ScrollReveal>
           </div>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { tag: 'ROUTING', tagColor: 'hsl(var(--ln-green))', name: 'LoRRI GNN', desc: "Graph Neural Network routing across India's road, rail, and air networks — updated every 4 minutes from live telemetry." },
-              { tag: 'FORECASTING', tagColor: 'hsl(var(--ln-blue))', name: 'DemandPulse™', desc: 'Transformer-based demand forecasting at SKU × district granularity with 94.2% accuracy across 3M+ product lines.' },
-              { tag: 'PRICING', tagColor: 'hsl(var(--ln-orange))', name: 'RateIQ Engine', desc: 'Dynamic carrier rate negotiation using reinforcement learning — optimizes across 400+ carrier lanes in real time.' },
-              { tag: 'VISION', tagColor: 'hsl(var(--ln-purple))', name: 'DocVision AI', desc: 'OCR + NLP pipeline extracting, validating, and routing logistics documents — invoices, PODs, manifests — in 800ms.' },
-              { tag: 'LANGUAGE', tagColor: 'hsl(var(--ln-green))', name: 'NowAssist LLM', desc: 'Fine-tuned logistics language model powering natural language queries, automated exception responses, and customer updates.' },
-              { tag: 'ANOMALY', tagColor: 'hsl(var(--ln-blue))', name: 'SentinelML', desc: 'Real-time anomaly detection across 200+ logistics signals — from GPS drift to unusual dwell times — with sub-60s alerts.' },
-              { tag: 'SIMULATION', tagColor: 'hsl(var(--ln-orange))', name: 'GridSim Engine', desc: 'Digital twin of the national logistics network for what-if scenario planning on infrastructure, contracts, and disruptions.' },
-              { tag: 'ESG', tagColor: 'hsl(var(--ln-purple))', name: 'CarbonTrace AI', desc: 'Scope 3 emissions tracking, carbon-optimized routing, and automated ESG reporting aligned to GHG Protocol standards.' },
+              { tag: 'PROCUREMENT', tagColor: 'hsl(var(--ln-green))', name: 'Carrier Selection Agent', desc: 'AI-powered Procurement Co-Pilot that evaluates carriers, scores performance per lane, normalizes bids, predicts service reliability, and recommends optimal award strategies.' },
+              { tag: 'DOCUMENT AI', tagColor: 'hsl(var(--ln-blue))', name: 'Document Intelligence Agent', desc: 'Intelligent LR-POD-Invoice matching system — extracts structured data via OCR, auto-matches documents, detects discrepancies, and assigns risk scores.' },
+              { tag: 'NEGOTIATION', tagColor: 'hsl(var(--ln-orange))', name: 'Autonomous Negotiation Agent', desc: 'Autonomously negotiates with multiple LSPs in parallel — generates counter-offers, adapts strategy based on responses, and optimizes procurement costs.' },
+              { tag: 'ROUTING', tagColor: 'hsl(var(--ln-purple))', name: 'AI Route Optimization Engine', desc: 'Intelligent route planning considering distance, time, cost, delivery windows, and vehicle capacity — with dynamic re-routing and continuous learning.' },
+              { tag: 'CONSOLIDATION', tagColor: 'hsl(var(--ln-green))', name: 'Load Consolidation Engine', desc: 'AI-powered shipment grouping that maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios to reduce trips and emissions.' },
+              { tag: 'ESG', tagColor: 'hsl(var(--ln-blue))', name: 'Carbon Tracker Agent', desc: 'Estimates shipment-level carbon emissions, tracks emission trends across lanes, identifies reduction opportunities, and provides sustainability analytics dashboards.' },
+              { tag: 'INTELLIGENCE', tagColor: 'hsl(var(--ln-orange))', name: 'LoRRI.AI Platform', desc: 'AI-native logistics intelligence platform — autonomous freight procurement, optimization, sustainability insights, and global data positioning in one unified experience.' },
+              { tag: 'DATA', tagColor: 'hsl(var(--ln-purple))', name: 'Lane Intelligence Builder', desc: 'The Data Cleaner agent — structures, validates, and enriches lane-level logistics data to power all downstream AI systems with clean, reliable intelligence.' },
             ].map((ai) => (
               <StaggerItem key={ai.name}>
                 <div className="card-hover !p-6 h-full">
