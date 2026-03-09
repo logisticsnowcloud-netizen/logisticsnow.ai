@@ -54,8 +54,8 @@ const Product = () => {
                   ))}
                 </div>
                 <div className="flex gap-3.5 flex-wrap">
-                  <button className="btn-primary-ln">🚀 Explore LoRRI →</button>
-                  <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-muted-foreground bg-surface border border-border px-6 py-3 rounded-full text-[15px] font-semibold no-underline">🌐 Visit lorri.ai ↗</a>
+                  <button className="btn-primary-ln !px-5 !py-2.5 !text-[13px]">🚀 Explore LoRRI →</button>
+                  <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-muted-foreground bg-surface border border-border px-5 py-2.5 rounded-full text-[13px] font-semibold no-underline">🌐 Visit lorri.ai ↗</a>
                 </div>
               </div>
             </ScrollReveal>
