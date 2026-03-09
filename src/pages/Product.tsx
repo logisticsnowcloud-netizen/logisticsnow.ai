@@ -45,7 +45,7 @@ const Product = () => {
                 <p className="text-[13.5px] text-muted-foreground leading-[1.6] max-w-[460px] mb-3">
                   <strong className="text-foreground">LoRRI (Logistics Routing & Real-time Intelligence)</strong> is the industry's first end-to-end logistics intelligence platform — powering deep discovery, rapid procurement, digital operations and 10× faster payments.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-1.5 mb-3">
                   {PROD_STATS.map((s) => (
                     <div key={s.l} className="px-3 py-2 rounded-[12px] bg-surface flex flex-col items-center min-w-[80px]">
                       <div className="font-display text-lg font-extrabold tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
