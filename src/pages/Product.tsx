@@ -64,8 +64,8 @@ const Product = () => {
             <ScrollReveal direction="up" delay={0.2}>
               <div className="flex items-center justify-center relative min-h-[360px]">
                 <div className="absolute inset-0 rounded-[28px] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(57,49,133,0.12) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-                <div className="relative w-[440px] h-[440px]">
-                  <svg className="absolute inset-0 overflow-visible" width="440" height="440" viewBox="0 0 440 440">
+                <div className="relative w-[360px] h-[360px]">
+                  <svg className="absolute inset-0 overflow-visible" width="360" height="360" viewBox="0 0 360 360">
                     <defs>
                       <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stopColor="#393185" stopOpacity="0.2" />
