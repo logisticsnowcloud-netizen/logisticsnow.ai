@@ -354,7 +354,7 @@ const Product = () => {
 
       {/* PRODUCT CTA */}
       <ScrollReveal direction="none" duration={0.8}>
-        <div className="gradient-cta py-[90px] px-[5vw] text-center relative overflow-hidden">
+        <div className="gradient-cta py-[56px] px-[5vw] text-center relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(84,175,58,.15), transparent 60%)' }} />
           <div className="relative z-[1]">
             <div className="font-mono text-[11px] tracking-[0.12em] uppercase mb-4" style={{ color: 'rgba(255,255,255,.3)' }}>{'// Ready to go live?'}</div>
