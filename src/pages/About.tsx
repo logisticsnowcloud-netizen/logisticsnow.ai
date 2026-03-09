@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { TESTIMONIALS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import CtaBanner from "@/components/CtaBanner";
 
 const JOURNEY = [
   { num: 1, color: '#393185', tag: 'The Beginning', title: 'Vision Articulated at ISB Hyderabad', body: "Raj Saxena articulates the founding vision of a National Logistics Grid at the Indian School of Business — the idea that would reshape India's freight intelligence landscape." },
