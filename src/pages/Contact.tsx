@@ -224,6 +224,8 @@ const Contact = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      <CtaBanner />
     </main>
   );
 };

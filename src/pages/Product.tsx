@@ -371,33 +371,7 @@ const Product = () => {
         </div>
       </section>
 
-      {/* PRODUCT CTA */}
-      <ScrollReveal direction="none" duration={0.8}>
-        <div className="gradient-cta py-[56px] px-[5vw] text-center relative overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(84,175,58,.15), transparent 60%)' }} />
-          <div className="relative z-[1]">
-            <div className="font-mono text-[11px] tracking-[0.12em] uppercase mb-4" style={{ color: 'rgba(255,255,255,.3)' }}>{'// Ready to go live?'}</div>
-            <h2 className="font-display font-extrabold tracking-[-0.025em] mb-4" style={{ fontSize: 'clamp(30px, 5vw, 58px)', color: '#fff' }}>
-              Start Your <span className="text-ln-green">LoRRI Journey</span> Today
-            </h2>
-            <p className="text-base max-w-[520px] mx-auto mb-6" style={{ color: 'rgba(255,255,255,.72)' }}>Join 120+ companies that have transformed their freight operations. Onboarding in 5 business days. Free 30-day pilot.</p>
-            <div className="flex gap-3.5 justify-center flex-wrap">
-              <button className="btn-white-ln">🚛 Schedule a Demo →</button>
-              <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold no-underline" style={{ color: 'rgba(255,255,255,.7)', border: '1px solid rgba(255,255,255,.15)' }}>🌐 Explore lorri.ai ↗</a>
-            </div>
-            <p className="font-mono text-[13px] mt-4" style={{ color: 'rgba(255,255,255,.45)' }}>No credit card required · No lock-in · Deploy in days</p>
-          </div>
-        </div>
-      </ScrollReveal>
-
-      {/* Mini Footer */}
-      <footer className="flex items-center justify-between flex-wrap gap-3 px-[5vw] py-7" style={{ background: '#07060f', borderTop: '1px solid rgba(255,255,255,.06)' }}>
-        <p className="text-[12.5px]" style={{ color: 'rgba(255,255,255,.25)' }}>© 2025 LogisticsNow Technologies Pvt. Ltd. All rights reserved.</p>
-        <div className="flex items-center gap-2 font-mono text-[11px]" style={{ color: 'rgba(255,255,255,.25)' }}>
-          <div className="w-[7px] h-[7px] bg-ln-green rounded-full" style={{ boxShadow: '0 0 6px #54AF3A' }} />
-          api.logisticsnow.ai · All systems operational
-        </div>
-      </footer>
+      <CtaBanner />
     </div>
   );
 };

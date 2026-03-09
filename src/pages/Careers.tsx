@@ -459,6 +459,8 @@ const Careers = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      <CtaBanner />
     </div>
   );
 };
