@@ -145,7 +145,7 @@ const Product = () => {
                     { icon: '🤖', title: 'AI Agents at Work', desc: 'Autonomous negotiation, routing & optimization' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-3.5 group">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0 transition-transform group-hover:scale-110" style={{ background: 'rgba(57,49,133,0.08)', border: '1px solid rgba(57,49,133,0.15)' }}>
+                      <div className="w-8 h-8 rounded-lg flex items-center justify-center text-base shrink-0 transition-transform group-hover:scale-110" style={{ background: 'rgba(57,49,133,0.08)', border: '1px solid rgba(57,49,133,0.15)' }}>
                         {item.icon}
                       </div>
                       <div>
