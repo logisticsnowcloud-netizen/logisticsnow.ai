@@ -162,54 +162,22 @@ const Product = () => {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="relative group cursor-pointer">
+              <div className="relative">
                 {/* Video Container */}
                 <div className="relative rounded-[20px] overflow-hidden border border-border/50" style={{ boxShadow: '0 20px 60px rgba(57,49,133,0.15), 0 0 0 1px rgba(57,49,133,0.08)' }}>
-                  <div className="aspect-video bg-gradient-to-br from-ln-purple/10 via-ln-blue/5 to-ln-green/10 flex items-center justify-center relative">
-                    {/* Animated grid background */}
-                    <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'linear-gradient(rgba(57,49,133,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(57,49,133,0.1) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-                    
-                    {/* Mock UI elements */}
-                    <div className="absolute top-4 left-4 right-4">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-3 h-3 rounded-full bg-destructive/60" />
-                        <div className="w-3 h-3 rounded-full bg-ln-orange/60" />
-                        <div className="w-3 h-3 rounded-full bg-ln-green/60" />
-                        <div className="flex-1 h-6 rounded-md bg-foreground/5 mx-4" />
-                      </div>
-                      <div className="flex gap-3">
-                        <div className="w-[30%] space-y-2">
-                          {[...Array(5)].map((_, i) => (
-                            <div key={i} className="h-5 rounded bg-foreground/5" style={{ width: `${70 + Math.random() * 30}%` }} />
-                          ))}
-                        </div>
-                        <div className="flex-1 rounded-lg bg-foreground/[0.03] p-3 space-y-2">
-                          <div className="flex gap-2">
-                            {[...Array(3)].map((_, i) => (
-                              <div key={i} className="flex-1 h-16 rounded-lg" style={{ background: ['rgba(57,49,133,0.1)', 'rgba(26,166,223,0.1)', 'rgba(84,175,58,0.1)'][i] }} />
-                            ))}
-                          </div>
-                          <div className="h-24 rounded-lg bg-foreground/[0.03]" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Play Button */}
-                    <div className="relative z-10 w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110" style={{ background: 'linear-gradient(135deg, #393185, #1AA6DF)', boxShadow: '0 8px 32px rgba(57,49,133,0.4)' }}>
-                      <svg width="28" height="32" viewBox="0 0 28 32" fill="none">
-                        <path d="M4 2.5L26 16L4 29.5V2.5Z" fill="white" />
-                      </svg>
-                    </div>
-                    
-                    {/* Duration badge */}
-                    <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full text-[11px] font-bold" style={{ background: 'rgba(0,0,0,0.6)', color: '#fff' }}>
-                      2:47
-                    </div>
+                  <div className="aspect-video">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+                      title="LoRRI Platform Demo"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   </div>
                 </div>
 
-                {/* Floating badges */}
-                <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.08em] uppercase" style={{ background: 'linear-gradient(135deg, #393185, #1AA6DF)', color: '#fff', boxShadow: '0 4px 16px rgba(57,49,133,0.3)' }}>
+                {/* Floating badge */}
+                <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.08em] uppercase z-10" style={{ background: 'linear-gradient(135deg, #393185, #1AA6DF)', color: '#fff', boxShadow: '0 4px 16px rgba(57,49,133,0.3)' }}>
                   ▶ Watch Demo
                 </div>
               </div>
