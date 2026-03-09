@@ -16,6 +16,12 @@ const Product = () => {
 
   const features = audience === 'mfr' ? MFR_FEATURES : CARRIER_FEATURES;
   const valItems = [...VAL_DRIVERS, ...VAL_DRIVERS, ...VAL_DRIVERS];
+  const orbitLabels = [
+    "1. Deep Discovery",
+    "2. Rapid Procurement",
+    "3. Digitalize Operation (in days)",
+    "4. LoRRI Pay (10x faster!)",
+  ];
 
   return (
     <div>
@@ -101,6 +107,14 @@ const Product = () => {
                      const nx = 180 + 135 * Math.cos(rad);
                      const ny = 180 + 135 * Math.sin(rad);
                     const isActive = i === activePillar;
+                    // Label positioning based on angle
+                    const labelStyle: React.CSSProperties = i === 0 
+                      ? { top: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
+                      : i === 1 
+                      ? { left: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' }
+                      : i === 2 
+                      ? { bottom: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
+                      : { right: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' };
                     return (
                       <div
                         key={i}
@@ -113,6 +127,10 @@ const Product = () => {
                           {p.icon}
                         </div>
                         <div className="absolute -top-1 -right-1 w-[18px] h-[18px] rounded-full flex items-center justify-center text-[8px] font-extrabold font-mono" style={{ background: p.color, color: '#fff' }}>{p.num}</div>
+                        {/* Label */}
+                        <div className="absolute text-[10px] font-bold" style={{ ...labelStyle, color: p.color }}>
+                          {orbitLabels[i]}
+                        </div>
                       </div>
                     );
                   })}
