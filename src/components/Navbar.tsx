@@ -13,7 +13,7 @@ const Navbar = () => {
     { label: "Products", to: "/product" },
     { label: "Careers", to: "/careers" },
     { label: "News & Events", to: "#" },
-    { label: "Contact Us", to: "#" },
+    { label: "Contact Us", to: "/contact" },
   ];
 
   return (
