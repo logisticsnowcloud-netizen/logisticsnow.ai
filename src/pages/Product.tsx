@@ -209,7 +209,7 @@ const Product = () => {
               </button>
             </div>
           </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10" key={audience}>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6" key={audience}>
             {features.map((f) => (
               <StaggerItem key={f.title}>
                 <div className="card-hover">
