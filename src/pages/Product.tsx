@@ -98,8 +98,8 @@ const Product = () => {
                   {PILLARS.map((p, i) => {
                     const angles = [-90, 0, 90, 180];
                     const rad = (angles[i] * Math.PI) / 180;
-                    const nx = 220 + 168 * Math.cos(rad);
-                    const ny = 220 + 168 * Math.sin(rad);
+                     const nx = 180 + 135 * Math.cos(rad);
+                     const ny = 180 + 135 * Math.sin(rad);
                     const isActive = i === activePillar;
                     return (
                       <div
