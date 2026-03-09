@@ -1,54 +1,112 @@
 import { Link } from "react-router-dom";
+import { Linkedin, Twitter, Youtube, MapPin, Mail, Phone, Globe, ArrowUpRight } from "lucide-react";
 
 const Footer = () => (
-  <footer className="py-16 px-[5vw]" style={{ background: '#2B2A29', color: 'rgba(255,255,255,.75)' }}>
-    <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 mb-12 max-w-[1280px] mx-auto">
-      <div>
-        <div className="font-display text-xl font-extrabold mb-3.5" style={{ color: '#fff' }}>
-          LogisticsNow<span className="text-ln-green">.</span>ai
+  <footer className="relative overflow-hidden">
+    {/* Gradient top edge */}
+    <div className="h-1 w-full bg-gradient-to-r from-ln-blue via-ln-green to-ln-purple" />
+
+    <div className="py-16 px-[5vw]" style={{ background: 'linear-gradient(180deg, #1a1a2e 0%, #16162a 100%)', color: 'rgba(255,255,255,.75)' }}>
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: "radial-gradient(circle at 15% 85%, hsl(var(--ln-blue)) 0%, transparent 40%), radial-gradient(circle at 85% 15%, hsl(var(--ln-green)) 0%, transparent 40%)"
+      }} />
+
+      <div className="relative z-10 max-w-[1280px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 mb-14">
+          {/* Brand */}
+          <div>
+            <div className="font-display text-2xl font-extrabold mb-4" style={{ color: '#fff' }}>
+              LogisticsNow<span className="text-ln-green">.</span>ai
+            </div>
+            <p className="text-sm leading-[1.8] max-w-[300px] mb-6" style={{ color: 'rgba(255,255,255,.5)' }}>
+              India's national logistics intelligence grid — making every supply chain smarter, faster, and more resilient with AI.
+            </p>
+            <div className="flex gap-3">
+              {[
+                { icon: <Linkedin size={16} />, label: "LinkedIn" },
+                { icon: <Twitter size={16} />, label: "Twitter" },
+                { icon: <Youtube size={16} />, label: "YouTube" },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href="#"
+                  aria-label={s.label}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  style={{
+                    background: 'rgba(255,255,255,.06)',
+                    border: '1px solid rgba(255,255,255,.1)',
+                    color: 'rgba(255,255,255,.6)',
+                  }}
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Platform */}
+          <div>
+            <h5 className="text-xs font-bold tracking-[0.15em] uppercase mb-5 text-ln-green">Platform</h5>
+            {["LoRRI for Shippers", "LoRRI for Carriers", "Command Center", "Predict Engine"].map((l) => (
+              <a key={l} href="#" className="group flex items-center gap-1 text-sm mb-3 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                {l}
+                <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+            ))}
+          </div>
+
+          {/* Company */}
+          <div>
+            <h5 className="text-xs font-bold tracking-[0.15em] uppercase mb-5 text-ln-green">Company</h5>
+            {[
+              { label: "About Us", to: "/about" },
+              { label: "Vision", to: "#" },
+              { label: "Investors", to: "#" },
+              { label: "Careers", to: "/careers" },
+              { label: "Contact Us", to: "/contact" },
+            ].map((l) => (
+              <Link key={l.label} to={l.to} className="group flex items-center gap-1 text-sm mb-3 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                {l.label}
+                <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+              </Link>
+            ))}
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h5 className="text-xs font-bold tracking-[0.15em] uppercase mb-5 text-ln-green">Get in Touch</h5>
+            <div className="space-y-3">
+              <a href="mailto:connect@logisticsnow.in" className="flex items-center gap-2.5 text-sm no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                <Mail size={14} className="text-ln-green flex-shrink-0" />
+                connect@logisticsnow.in
+              </a>
+              <a href="tel:+919867773508" className="flex items-center gap-2.5 text-sm no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                <Phone size={14} className="text-ln-green flex-shrink-0" />
+                +91-9867773508
+              </a>
+              <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 text-sm no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                <Globe size={14} className="text-ln-green flex-shrink-0" />
+                www.lorri.ai
+              </a>
+              <div className="flex items-start gap-2.5 text-sm" style={{ color: 'rgba(255,255,255,.45)' }}>
+                <MapPin size={14} className="text-ln-green flex-shrink-0 mt-0.5" />
+                <span>Mumbai, Maharashtra, India</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p className="text-sm leading-[1.7] max-w-[280px]" style={{ color: 'rgba(255,255,255,.55)' }}>
-          India's national logistics intelligence grid — making every supply chain smarter, faster, and more resilient with AI.
-        </p>
-        <div className="flex gap-2 mt-4">
-          {["in", "X", "▶"].map((s) => (
-            <a key={s} href="#" className="w-[34px] h-[34px] rounded-lg flex items-center justify-center text-sm no-underline" style={{ background: 'rgba(255,255,255,.08)', border: '1px solid rgba(255,255,255,.1)', color: 'rgba(255,255,255,.6)' }}>
-              {s}
-            </a>
-          ))}
+
+        {/* Bottom bar */}
+        <div className="border-t pt-6 flex justify-between items-center flex-wrap gap-4" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
+          <p className="text-[13px]" style={{ color: 'rgba(255,255,255,.35)' }}>
+            © 2026 LogisticsNow Technologies Pvt. Ltd. All rights reserved. | Developed with <span className="text-red-400">❤</span> in India
+          </p>
+          <div className="flex items-center gap-2 font-mono text-[11.5px]" style={{ color: 'rgba(255,255,255,.35)' }}>
+            <div className="w-[7px] h-[7px] bg-ln-green rounded-full animate-pulse" style={{ boxShadow: '0 0 8px hsl(107 50% 46%)' }} />
+            All systems operational
+          </div>
         </div>
-      </div>
-      <div>
-        <h5 className="text-xs font-bold tracking-[0.1em] uppercase mb-4" style={{ color: 'rgba(255,255,255,.35)' }}>Platform</h5>
-        {["LoRRI for Shippers", "LoRRI for Carriers", "Command Center", "Predict Engine"].map((l) => (
-          <a key={l} href="#" className="block text-sm mb-2.5 no-underline hover:!text-white" style={{ color: 'rgba(255,255,255,.6)' }}>{l}</a>
-        ))}
-      </div>
-      <div>
-        <h5 className="text-xs font-bold tracking-[0.1em] uppercase mb-4" style={{ color: 'rgba(255,255,255,.35)' }}>Company</h5>
-        {[
-          { label: "About Us", to: "/about" },
-          { label: "Vision", to: "#" },
-          { label: "Investors", to: "#" },
-          { label: "Careers", to: "#" },
-          { label: "News & Events", to: "#" },
-        ].map((l) => (
-          <Link key={l.label} to={l.to} className="block text-sm mb-2.5 no-underline hover:!text-white" style={{ color: 'rgba(255,255,255,.6)' }}>{l.label}</Link>
-        ))}
-      </div>
-      <div>
-        <h5 className="text-xs font-bold tracking-[0.1em] uppercase mb-4" style={{ color: 'rgba(255,255,255,.35)' }}>Contact</h5>
-        <a href="mailto:connect@logisticsnow.in" className="block text-sm mb-2.5 no-underline" style={{ color: 'rgba(255,255,255,.6)' }}>connect@logisticsnow.in</a>
-        <a href="tel:+919867773508" className="block text-sm mb-2.5 no-underline" style={{ color: 'rgba(255,255,255,.6)' }}>+91-9867773508</a>
-        <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="block text-sm mb-2.5 no-underline" style={{ color: 'rgba(255,255,255,.6)' }}>www.lorri.ai</a>
-        <Link to="/product" className="block text-sm mb-2.5 no-underline" style={{ color: 'rgba(255,255,255,.6)' }}>Products</Link>
-      </div>
-    </div>
-    <div className="border-t pt-6 flex justify-between items-center flex-wrap gap-3 max-w-[1280px] mx-auto" style={{ borderColor: 'rgba(255,255,255,.1)' }}>
-      <p className="text-[13px]" style={{ color: 'rgba(255,255,255,.35)' }}>© 2025 LogisticsNow Technologies Pvt. Ltd. All rights reserved. | Developed with ❤ in India</p>
-      <div className="flex items-center gap-2 font-mono text-[11.5px]" style={{ color: 'rgba(255,255,255,.35)' }}>
-        <div className="w-[7px] h-[7px] bg-ln-green rounded-full" style={{ boxShadow: '0 0 6px hsl(107 50% 46%)' }} />
-        All systems operational · api.logisticsnow.ai
       </div>
     </div>
   </footer>
