@@ -349,7 +349,7 @@ const Product = () => {
             </div>
           </ScrollReveal>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 relative">
-            <div className="absolute top-[52px] left-[12.5%] right-[12.5%] h-0.5 opacity-25 rounded-sm hidden lg:block" style={{ background: 'linear-gradient(90deg,#1AA6DF,#54AF3A,#c084fc,#fb923c)' }} />
+            <div className="absolute top-[32px] left-[12.5%] right-[12.5%] h-0.5 opacity-25 rounded-sm hidden lg:block" style={{ background: 'linear-gradient(90deg,#1AA6DF,#54AF3A,#c084fc,#fb923c)' }} />
             {PILLARS.map((p) => (
               <StaggerItem key={p.num}>
                 <div className="text-center px-5 relative z-[1]">

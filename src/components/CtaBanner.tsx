@@ -10,10 +10,10 @@ const CtaBanner = () => (
       </h2>
       <p className="text-lg max-w-[520px] mx-auto mb-9 relative z-[1]" style={{ color: 'rgba(255,255,255,.72)' }}>See how LogisticsNow transforms freight costs, carrier relationships and supply chain visibility.</p>
       <div className="flex gap-3.5 justify-center flex-wrap relative z-[1]">
-        <Link to="/contact" className="btn-white-ln no-underline">🚛 Schedule a Free Demo →</Link>
-        <Link to="/" className="btn-ghost-ln no-underline">← Back to Home</Link>
+        <Link to="/contact" className="btn-white-ln no-underline">🚛 Schedule Demo →</Link>
+        {/* <Link to="/" className="btn-ghost-ln no-underline">← Back to Home</Link> */}
       </div>
-      <p className="font-mono text-[13px] mt-4 relative z-[1]" style={{ color: 'rgba(255,255,255,.45)' }}>No credit card required · Free 30-day pilot · Onboarding in 5 business days</p>
+      <p className="font-mono text-[13px] mt-4 relative z-[1]" style={{ color: 'rgba(255,255,255,.45)' }}>Onboarding in 5 business days</p>
     </div>
   </ScrollReveal>
 );

@@ -70,19 +70,42 @@ const Home = () => {
   }, []);
 
   const CLIENT_LOGOS = [
-    { name: 'Apollo Tyres', logo: '/logos/apollo-tyres.png' },
+    { name: 'Apollo Tyres', logo: '/logos/apollo.jpeg' },
+    { name: 'CEAT', logo: '/logos/ceat.png' },
     { name: 'Perfetti Van Melle', logo: '/logos/perfetti.png' },
     { name: 'Saint-Gobain', logo: '/logos/saint-gobain.png' },
     { name: 'General Mills', logo: '/logos/general-mills.png' },
     { name: 'Kimberly-Clark', logo: '/logos/kimberly-clark.png' },
-    { name: 'CEVA Logistics', logo: '/logos/ceva.png' },
-  ];
-  const CLIENT_LOGOS_2 = [
     { name: 'Jyothy Labs', logo: '/logos/jyothy-labs.png' },
-    { name: 'MIRC Electronics', logo: '/logos/mirc.png' },
+    { name: 'Hidromas', logo: '/logos/hidromas.png' },
+    { name: 'Onida MIRC Electronics', logo: '/logos/mirc.png' },
     { name: 'Bajaj Electricals', logo: '/logos/bajaj.png' },
     { name: 'Schreiber Foods', logo: '/logos/schreiber.png' },
-    { name: 'Woolworths AU', logo: '/logos/woolworths.png' },
+    { name: 'Shell', logo: '/logos/shell.png' },
+    { name: 'Kimbal', logo: '/logos/kimbal.png' },
+    { name: 'Pernod Ricard', logo: '/logos/pernod.png' },
+    { name: 'Paper Boat', logo: '/logos/paperboat.jpeg' },
+    { name: 'Sundrop', logo: '/logos/sundrop.png' },
+    { name: 'Vredestein', logo: '/logos/' },
+    { name: 'Zydus Wellness', logo: '/logos/zydus.jpeg' },
+    
+  ];
+  const CLIENT_LOGOS_2 = [
+    { name: 'DHL', logo: '/logos/' },
+    { name: 'Maersk', logo: '/logos/' },
+    { name: 'DSV ', logo: '/logos/' },
+    { name: 'Delhivery', logo: '/' },
+    { name: 'CCI Group', logo: '/' },
+    { name: 'Western Carriers ', logo: '/logos/' },
+    { name: 'CEVA Logistics', logo: '/logos/ceva.png' },
+    { name: 'FM Logistics', logo: '/logos/' },
+    { name: 'RCI Logistics', logo: '/logos/' },
+    { name: 'CJ Darcl', logo: '/logos/' },
+    { name: 'TCI Freight', logo: '/logos/' },
+    { name: 'TOLL', logo: '/logos/' },
+    { name: 'Fiege', logo: '/logos/' },
+    { name: 'Rhenus Logistics', logo: '/logos/' },
+    { name: 'SCC India', logo: '/logos/' },
   ];
   const caseColors = ['#393185', '#54AF3A', '#1AA6DF', '#393185', '#54AF3A', '#1AA6DF'];
 
@@ -151,14 +174,14 @@ const Home = () => {
         </p>
         
         {/* Row 1 */}
-        <div className="flex gap-8 items-center animate-marquee w-max mb-4">
+        <div className="flex gap-4 items-center animate-marquee w-max mb-4">
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => (
             <div
               key={i}
               className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-purple/30 transition-all duration-300 hover:shadow-lg group"
               style={{ minWidth: 180 }}
             >
-              <img src={c.logo} alt={c.name} className="w-9 h-9 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
+              <img src={c.logo} alt={c.name} className="w-25 h-10 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
               <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
                 {c.name}
               </span>
@@ -262,7 +285,7 @@ const Home = () => {
               <p className="text-muted-foreground text-[17px] leading-[1.75]">Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical industry problem at national scale.</p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               { tag: 'PROCUREMENT', tagColor: 'hsl(var(--ln-green))', name: 'Carrier Selection Agent', desc: 'AI-powered Procurement Co-Pilot that evaluates carriers, scores performance per lane, normalizes bids, predicts service reliability, and recommends optimal award strategies.' },
               { tag: 'DOCUMENT AI', tagColor: 'hsl(var(--ln-blue))', name: 'Document Intelligence Agent', desc: 'Intelligent LR-POD-Invoice matching system — extracts structured data via OCR, auto-matches documents, detects discrepancies, and assigns risk scores.' },
