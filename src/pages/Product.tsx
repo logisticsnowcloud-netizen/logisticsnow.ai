@@ -123,6 +123,101 @@ const Product = () => {
         </div>
       </div>
 
+      {/* INTERACTIVE DEMO / VIDEO */}
+      <section className="py-[88px] px-[5vw] bg-bg2 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 20%, rgba(57,49,133,0.08), transparent)' }} />
+        <div className="max-w-[1280px] mx-auto relative z-[1]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <ScrollReveal direction="up">
+              <div>
+                <div className="section-tag">Platform Walkthrough</div>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-5" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
+                  See LoRRI <span className="text-ln-blue">in Action</span>
+                </h2>
+                <p className="text-muted-foreground text-[17px] leading-[1.78] mb-8 max-w-[480px]">
+                  Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in under 3 minutes.
+                </p>
+                <div className="flex flex-col gap-4 mb-8">
+                  {[
+                    { icon: '🔍', title: 'Deep Discovery', desc: 'AI-powered carrier matching across 80K+ routes' },
+                    { icon: '⚡', title: 'Rapid Procurement', desc: 'From indent to award in minutes, not days' },
+                    { icon: '📊', title: 'Live Intelligence', desc: 'Real-time dashboards with actionable insights' },
+                    { icon: '🤖', title: 'AI Agents at Work', desc: 'Autonomous negotiation, routing & optimization' },
+                  ].map((item) => (
+                    <div key={item.title} className="flex items-start gap-3.5 group">
+                      <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0 transition-transform group-hover:scale-110" style={{ background: 'rgba(57,49,133,0.08)', border: '1px solid rgba(57,49,133,0.15)' }}>
+                        {item.icon}
+                      </div>
+                      <div>
+                        <div className="font-display text-[15px] font-bold">{item.title}</div>
+                        <div className="text-[13px] text-muted-foreground">{item.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <Link to="/contact" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
+                  🎯 Schedule a Live Demo →
+                </Link>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="relative group cursor-pointer">
+                {/* Video Container */}
+                <div className="relative rounded-[20px] overflow-hidden border border-border/50" style={{ boxShadow: '0 20px 60px rgba(57,49,133,0.15), 0 0 0 1px rgba(57,49,133,0.08)' }}>
+                  <div className="aspect-video bg-gradient-to-br from-ln-purple/10 via-ln-blue/5 to-ln-green/10 flex items-center justify-center relative">
+                    {/* Animated grid background */}
+                    <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'linear-gradient(rgba(57,49,133,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(57,49,133,0.1) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                    
+                    {/* Mock UI elements */}
+                    <div className="absolute top-4 left-4 right-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="w-3 h-3 rounded-full bg-destructive/60" />
+                        <div className="w-3 h-3 rounded-full bg-ln-orange/60" />
+                        <div className="w-3 h-3 rounded-full bg-ln-green/60" />
+                        <div className="flex-1 h-6 rounded-md bg-foreground/5 mx-4" />
+                      </div>
+                      <div className="flex gap-3">
+                        <div className="w-[30%] space-y-2">
+                          {[...Array(5)].map((_, i) => (
+                            <div key={i} className="h-5 rounded bg-foreground/5" style={{ width: `${70 + Math.random() * 30}%` }} />
+                          ))}
+                        </div>
+                        <div className="flex-1 rounded-lg bg-foreground/[0.03] p-3 space-y-2">
+                          <div className="flex gap-2">
+                            {[...Array(3)].map((_, i) => (
+                              <div key={i} className="flex-1 h-16 rounded-lg" style={{ background: ['rgba(57,49,133,0.1)', 'rgba(26,166,223,0.1)', 'rgba(84,175,58,0.1)'][i] }} />
+                            ))}
+                          </div>
+                          <div className="h-24 rounded-lg bg-foreground/[0.03]" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Play Button */}
+                    <div className="relative z-10 w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110" style={{ background: 'linear-gradient(135deg, #393185, #1AA6DF)', boxShadow: '0 8px 32px rgba(57,49,133,0.4)' }}>
+                      <svg width="28" height="32" viewBox="0 0 28 32" fill="none">
+                        <path d="M4 2.5L26 16L4 29.5V2.5Z" fill="white" />
+                      </svg>
+                    </div>
+                    
+                    {/* Duration badge */}
+                    <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full text-[11px] font-bold" style={{ background: 'rgba(0,0,0,0.6)', color: '#fff' }}>
+                      2:47
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating badges */}
+                <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.08em] uppercase" style={{ background: 'linear-gradient(135deg, #393185, #1AA6DF)', color: '#fff', boxShadow: '0 4px 16px rgba(57,49,133,0.3)' }}>
+                  ▶ Watch Demo
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* AUDIENCE TOGGLE */}
       <section className="py-[88px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto text-center">
