@@ -288,7 +288,7 @@ const Product = () => {
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-[20px] p-7" style={{ background: `linear-gradient(135deg, ${p.color}12, transparent)`, border: `1px solid ${p.color}22` }}>
+                  <div className="rounded-[16px] p-5" style={{ background: `linear-gradient(135deg, ${p.color}12, transparent)`, border: `1px solid ${p.color}22` }}>
                     <div className="font-mono text-[11px] text-muted-foreground tracking-[0.05em] mb-3">// PLATFORM IMPACT</div>
                     <div className="grid grid-cols-2 gap-3.5">
                       {p.impact.map((cell) => (
