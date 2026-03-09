@@ -187,7 +187,7 @@ const Product = () => {
       </section>
 
       {/* AUDIENCE TOGGLE */}
-      <section className="py-[88px] px-[5vw] bg-bg2">
+      <section className="py-[48px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto text-center">
           <ScrollReveal>
             <div className="section-tag justify-center">One Platform, Two Ecosystems</div>
