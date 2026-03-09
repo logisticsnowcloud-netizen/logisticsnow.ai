@@ -242,26 +242,26 @@ const Product = () => {
       </section>
 
       {/* 4 PILLARS */}
-      <section className="py-[48px] px-[5vw] bg-background">
+      <section className="py-[24px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <div className="section-tag justify-center">The Platform</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
                 4 Pillars. <span className="text-ln-blue">Infinite Value.</span>
               </h2>
-              <p className="text-muted-foreground text-[17px] leading-[1.75] max-w-[540px] mx-auto mt-2.5">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
+              <p className="text-muted-foreground text-[14px] leading-[1.6] max-w-[500px] mx-auto mt-1.5">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
             </div>
           </ScrollReveal>
 
           {/* Pillar Tabs */}
           <ScrollReveal delay={0.1}>
-            <div className="flex gap-2 justify-center mb-6 flex-wrap">
+            <div className="flex gap-1.5 justify-center mb-4 flex-wrap">
               {PILLARS.map((p, i) => (
                 <button
                   key={i}
                   onClick={() => setActivePillar(i)}
-                  className="flex items-center gap-2 px-5 py-2.5 rounded-full text-[13.5px] font-bold cursor-pointer transition-all duration-300 font-body"
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[12px] font-bold cursor-pointer transition-all duration-300 font-body"
                   style={{
                     border: `1.5px solid ${i === activePillar ? p.color : 'rgba(57,49,133,0.2)'}`,
                     color: i === activePillar ? p.color : 'hsl(var(--muted-foreground))',
@@ -278,41 +278,41 @@ const Product = () => {
           {/* Active Pillar Detail */}
           {PILLARS.map((p, i) => i === activePillar && (
             <ScrollReveal key={i} direction="none">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-surface border border-border rounded-[22px] p-8" style={{ borderColor: `${p.color}22`, boxShadow: `0 0 60px ${p.glow}18` }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start bg-surface border border-border rounded-[18px] p-5" style={{ borderColor: `${p.color}22`, boxShadow: `0 0 60px ${p.glow}18` }}>
                 <div>
-                  <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full mb-5" style={{ background: `${p.color}15`, border: `1px solid ${p.color}30` }}>
-                    <span className="text-lg">{p.icon}</span>
-                    <span className="text-[11px] font-bold tracking-[0.1em] uppercase" style={{ color: p.color }}>{p.sub}</span>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3" style={{ background: `${p.color}15`, border: `1px solid ${p.color}30` }}>
+                    <span className="text-base">{p.icon}</span>
+                    <span className="text-[10px] font-bold tracking-[0.1em] uppercase" style={{ color: p.color }}>{p.sub}</span>
                   </div>
-                  <div className="font-mono text-sm font-bold tracking-[0.04em] mb-1.5" style={{ color: p.color }}>{p.num} / 04</div>
-                  <div className="font-display font-extrabold tracking-[-0.025em] mb-4" style={{ fontSize: 'clamp(28px, 3vw, 44px)' }}>{p.title}</div>
-                  <p className="text-sm text-muted-foreground leading-[1.7] mb-5">{p.desc}</p>
-                  <div className="flex flex-col gap-2.5">
+                  <div className="font-mono text-xs font-bold tracking-[0.04em] mb-1" style={{ color: p.color }}>{p.num} / 04</div>
+                  <div className="font-display font-extrabold tracking-[-0.025em] mb-2" style={{ fontSize: 'clamp(22px, 2.5vw, 32px)' }}>{p.title}</div>
+                  <p className="text-[13px] text-muted-foreground leading-[1.6] mb-3">{p.desc}</p>
+                  <div className="flex flex-col gap-1.5">
                     {p.bullets.map((b) => (
-                      <div key={b} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <div key={b} className="flex items-start gap-2 text-[12.5px] text-muted-foreground leading-[1.5]">
                         <span className="font-bold flex-shrink-0 mt-px" style={{ color: p.color }}>✓</span>{b}
                       </div>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <div className="mb-6">
-                    <div className="text-[10.5px] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3.5">Platform Modules</div>
-                    <div className="flex flex-wrap gap-2.5">
+                  <div className="mb-4">
+                    <div className="text-[10px] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-2">Platform Modules</div>
+                    <div className="flex flex-wrap gap-2">
                       {p.tags.map((t) => (
-                        <div key={t} className="px-4 py-2 rounded-full text-[13px] font-bold flex items-center gap-1.5" style={{ background: `${p.color}12`, border: `1px solid ${p.color}30`, color: p.color }}>
+                        <div key={t} className="px-3 py-1.5 rounded-full text-[12px] font-bold flex items-center gap-1.5" style={{ background: `${p.color}12`, border: `1px solid ${p.color}30`, color: p.color }}>
                           <span className="w-1.5 h-1.5 rounded-full" style={{ background: p.color, boxShadow: `0 0 8px ${p.color}` }} />{t}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-[16px] p-5" style={{ background: `linear-gradient(135deg, ${p.color}12, transparent)`, border: `1px solid ${p.color}22` }}>
-                    <div className="font-mono text-[11px] text-muted-foreground tracking-[0.05em] mb-3">// PLATFORM IMPACT</div>
-                    <div className="grid grid-cols-2 gap-3.5">
+                  <div className="rounded-[12px] p-3.5" style={{ background: `linear-gradient(135deg, ${p.color}12, transparent)`, border: `1px solid ${p.color}22` }}>
+                    <div className="font-mono text-[10px] text-muted-foreground tracking-[0.05em] mb-2">// PLATFORM IMPACT</div>
+                    <div className="grid grid-cols-2 gap-2.5">
                       {p.impact.map((cell) => (
-                        <div key={cell[1]} className="text-center p-3.5 rounded-xl" style={{ background: 'rgba(57,49,133,.05)' }}>
-                          <div className="font-display text-[22px] font-extrabold" style={{ color: cell[2] }}>{cell[0]}</div>
-                          <div className="text-[10.5px] text-muted-foreground mt-0.5">{cell[1]}</div>
+                        <div key={cell[1]} className="text-center p-2.5 rounded-lg" style={{ background: 'rgba(57,49,133,.05)' }}>
+                          <div className="font-display text-[18px] font-extrabold" style={{ color: cell[2] }}>{cell[0]}</div>
+                          <div className="text-[9.5px] text-muted-foreground mt-0.5">{cell[1]}</div>
                         </div>
                       ))}
                     </div>
