@@ -20,7 +20,7 @@ const Product = () => {
   return (
     <div>
       {/* PRODUCT HERO */}
-      <div className="px-[5vw] pt-[90px] pb-[70px] relative overflow-hidden bg-background">
+      <div className="px-[5vw] pt-[70px] pb-[40px] relative overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(57,49,133,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(57,49,133,0.07) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(57,49,133,0.22) 0%, transparent 70%)' }} />
         <div className="absolute -bottom-[10%] left-[10%] w-[500px] h-[400px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(26,166,223,0.10) 0%, transparent 70%)' }} />
@@ -42,14 +42,14 @@ const Product = () => {
                 <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-5" style={{ fontSize: 'clamp(42px, 5.5vw, 72px)' }}>
                   Meet <span className="gradient-lorri">LoRRI</span><br />— The Brain of<br />Your Logistics
                 </h1>
-                <p className="text-[17px] text-muted-foreground leading-[1.78] max-w-[500px] mb-9">
+                <p className="text-[15px] text-muted-foreground leading-[1.65] max-w-[500px] mb-5">
                   <strong className="text-foreground">LoRRI (Logistics Routing & Real-time Intelligence)</strong> is the industry's first end-to-end logistics intelligence platform — powering deep discovery, rapid procurement, digital operations and 10× faster payments.
                 </p>
-                <div className="flex flex-wrap gap-2.5 mb-9">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {PROD_STATS.map((s) => (
-                    <div key={s.l} className="px-4 py-2.5 rounded-[14px] bg-surface flex flex-col items-center min-w-[90px]">
-                      <div className="font-display text-xl font-extrabold tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
-                      <div className="text-[10.5px] text-muted-foreground font-semibold mt-0.5 text-center">{s.l}</div>
+                    <div key={s.l} className="px-3 py-2 rounded-[12px] bg-surface flex flex-col items-center min-w-[80px]">
+                      <div className="font-display text-lg font-extrabold tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
+                      <div className="text-[10px] text-muted-foreground font-semibold mt-0.5 text-center">{s.l}</div>
                     </div>
                   ))}
                 </div>
@@ -62,54 +62,54 @@ const Product = () => {
 
             {/* ORBIT DIAGRAM */}
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="flex items-center justify-center relative min-h-[460px]">
+              <div className="flex items-center justify-center relative min-h-[360px]">
                 <div className="absolute inset-0 rounded-[28px] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(57,49,133,0.12) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-                <div className="relative w-[440px] h-[440px]">
-                  <svg className="absolute inset-0 overflow-visible" width="440" height="440" viewBox="0 0 440 440">
+                <div className="relative w-[360px] h-[360px]">
+                  <svg className="absolute inset-0 overflow-visible" width="360" height="360" viewBox="0 0 360 360">
                     <defs>
                       <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stopColor="#393185" stopOpacity="0.2" />
                         <stop offset="100%" stopColor="#393185" stopOpacity="0" />
                       </radialGradient>
                     </defs>
-                    <circle cx="220" cy="220" r="200" fill="url(#orbGlow)" />
-                    <circle cx="220" cy="220" r="168" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1.5" strokeDasharray="5 8" />
-                    <circle cx="220" cy="220" r="90" fill="none" stroke="rgba(57,49,133,0.2)" strokeWidth="1" strokeDasharray="3 5" />
-                    <circle cx="220" cy="220" r="44" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1" />
+                    <circle cx="180" cy="180" r="160" fill="url(#orbGlow)" />
+                    <circle cx="180" cy="180" r="135" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1.5" strokeDasharray="5 8" />
+                    <circle cx="180" cy="180" r="72" fill="none" stroke="rgba(57,49,133,0.2)" strokeWidth="1" strokeDasharray="3 5" />
+                    <circle cx="180" cy="180" r="36" fill="none" stroke="rgba(57,49,133,0.15)" strokeWidth="1" />
                     {PILLARS.map((p, i) => {
                       const angles = [-90, 0, 90, 180];
                       const rad = (angles[i] * Math.PI) / 180;
-                      const x2 = 220 + 168 * Math.cos(rad);
-                      const y2 = 220 + 168 * Math.sin(rad);
-                      return <line key={i} x1="220" y1="220" x2={x2} y2={y2} stroke={p.color} strokeWidth="1" strokeOpacity={i === activePillar ? 0.45 : 0.15} strokeDasharray="4 6" />;
+                      const x2 = 180 + 135 * Math.cos(rad);
+                      const y2 = 180 + 135 * Math.sin(rad);
+                      return <line key={i} x1="180" y1="180" x2={x2} y2={y2} stroke={p.color} strokeWidth="1" strokeOpacity={i === activePillar ? 0.45 : 0.15} strokeDasharray="4 6" />;
                     })}
-                    <g style={{ transformOrigin: '220px 220px', animation: 'spinCW 8s linear infinite' }}>
-                      <circle cx="220" cy="52" r="5" fill="#1AA6DF" opacity="0.9" style={{ filter: 'drop-shadow(0 0 8px #1AA6DF)' }} />
+                    <g style={{ transformOrigin: '180px 180px', animation: 'spinCW 8s linear infinite' }}>
+                      <circle cx="180" cy="45" r="4" fill="#1AA6DF" opacity="0.9" style={{ filter: 'drop-shadow(0 0 8px #1AA6DF)' }} />
                     </g>
-                    <g style={{ transformOrigin: '220px 220px', animation: 'spinCCW 14s linear infinite' }}>
-                      <circle cx="220" cy="130" r="3.5" fill="#54AF3A" opacity="0.7" style={{ filter: 'drop-shadow(0 0 6px #54AF3A)' }} />
+                    <g style={{ transformOrigin: '180px 180px', animation: 'spinCCW 14s linear infinite' }}>
+                      <circle cx="180" cy="108" r="3" fill="#54AF3A" opacity="0.7" style={{ filter: 'drop-shadow(0 0 6px #54AF3A)' }} />
                     </g>
-                    <circle cx="220" cy="220" r="40" fill="rgba(57,49,133,0.2)" stroke="#393185" strokeWidth="1.5" />
+                    <circle cx="180" cy="180" r="32" fill="rgba(57,49,133,0.2)" stroke="#393185" strokeWidth="1.5" />
                   </svg>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[3] pointer-events-none w-20">
-                    <div className="font-display text-lg font-extrabold gradient-lorri leading-[1.1] tracking-[-0.02em]">LoRRI</div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[3] pointer-events-none w-16">
+                    <div className="font-display text-base font-extrabold gradient-lorri leading-[1.1] tracking-[-0.02em]">LoRRI</div>
                     <div className="text-[7px] font-bold tracking-[0.15em] uppercase text-muted-foreground mt-0.5">INTELLIGENCE</div>
                   </div>
                   {PILLARS.map((p, i) => {
                     const angles = [-90, 0, 90, 180];
                     const rad = (angles[i] * Math.PI) / 180;
-                    const nx = 220 + 168 * Math.cos(rad);
-                    const ny = 220 + 168 * Math.sin(rad);
+                     const nx = 180 + 135 * Math.cos(rad);
+                     const ny = 180 + 135 * Math.sin(rad);
                     const isActive = i === activePillar;
                     return (
                       <div
                         key={i}
-                        className="absolute w-16 h-16 z-[4] cursor-pointer -translate-x-1/2 -translate-y-1/2"
+                        className="absolute w-14 h-14 z-[4] cursor-pointer -translate-x-1/2 -translate-y-1/2"
                         style={{ left: nx, top: ny }}
                         onClick={() => setActivePillar(i)}
                       >
                         <div className="absolute -inset-2 rounded-full transition-all duration-300" style={{ border: `2px solid ${p.color}`, opacity: isActive ? 0.75 : 0.3, boxShadow: isActive ? `0 0 20px ${p.color}` : 'none' }} />
-                        <div className="w-16 h-16 rounded-full bg-card flex items-center justify-center text-[22px] transition-all duration-300" style={{ border: `2px solid ${p.color}`, boxShadow: isActive ? `0 0 28px rgba(0,0,0,.3)` : 'none' }}>
+                        <div className="w-14 h-14 rounded-full bg-card flex items-center justify-center text-[20px] transition-all duration-300" style={{ border: `2px solid ${p.color}`, boxShadow: isActive ? `0 0 28px rgba(0,0,0,.3)` : 'none' }}>
                           {p.icon}
                         </div>
                         <div className="absolute -top-1 -right-1 w-[18px] h-[18px] rounded-full flex items-center justify-center text-[8px] font-extrabold font-mono" style={{ background: p.color, color: '#fff' }}>{p.num}</div>
@@ -124,20 +124,20 @@ const Product = () => {
       </div>
 
       {/* INTERACTIVE DEMO / VIDEO */}
-      <section className="py-[88px] px-[5vw] bg-bg2 relative overflow-hidden">
+      <section className="py-[48px] px-[5vw] bg-bg2 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 20%, rgba(57,49,133,0.08), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <ScrollReveal direction="up">
               <div>
                 <div className="section-tag">Platform Walkthrough</div>
                 <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-5" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                   See LoRRI <span className="text-ln-blue">in Action</span>
                 </h2>
-                <p className="text-muted-foreground text-[17px] leading-[1.78] mb-8 max-w-[480px]">
+                <p className="text-muted-foreground text-[15px] leading-[1.65] mb-5 max-w-[480px]">
                   Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in under 3 minutes.
                 </p>
-                <div className="flex flex-col gap-4 mb-8">
+                <div className="flex flex-col gap-2.5 mb-5">
                   {[
                     { icon: '🔍', title: 'Deep Discovery', desc: 'AI-powered carrier matching across 80K+ routes' },
                     { icon: '⚡', title: 'Rapid Procurement', desc: 'From indent to award in minutes, not days' },
@@ -145,7 +145,7 @@ const Product = () => {
                     { icon: '🤖', title: 'AI Agents at Work', desc: 'Autonomous negotiation, routing & optimization' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-3.5 group">
-                      <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0 transition-transform group-hover:scale-110" style={{ background: 'rgba(57,49,133,0.08)', border: '1px solid rgba(57,49,133,0.15)' }}>
+                      <div className="w-8 h-8 rounded-lg flex items-center justify-center text-base shrink-0 transition-transform group-hover:scale-110" style={{ background: 'rgba(57,49,133,0.08)', border: '1px solid rgba(57,49,133,0.15)' }}>
                         {item.icon}
                       </div>
                       <div>
@@ -187,7 +187,7 @@ const Product = () => {
       </section>
 
       {/* AUDIENCE TOGGLE */}
-      <section className="py-[88px] px-[5vw] bg-bg2">
+      <section className="py-[48px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto text-center">
           <ScrollReveal>
             <div className="section-tag justify-center">One Platform, Two Ecosystems</div>
@@ -209,7 +209,7 @@ const Product = () => {
               </button>
             </div>
           </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10" key={audience}>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6" key={audience}>
             {features.map((f) => (
               <StaggerItem key={f.title}>
                 <div className="card-hover">
@@ -224,10 +224,10 @@ const Product = () => {
       </section>
 
       {/* 4 PILLARS */}
-      <section className="py-[88px] px-[5vw] bg-background">
+      <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <div className="section-tag justify-center">The Platform</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 4 Pillars. <span className="text-ln-blue">Infinite Value.</span>
@@ -238,7 +238,7 @@ const Product = () => {
 
           {/* Pillar Tabs */}
           <ScrollReveal delay={0.1}>
-            <div className="flex gap-2 justify-center mb-10 flex-wrap">
+            <div className="flex gap-2 justify-center mb-6 flex-wrap">
               {PILLARS.map((p, i) => (
                 <button
                   key={i}
@@ -260,7 +260,7 @@ const Product = () => {
           {/* Active Pillar Detail */}
           {PILLARS.map((p, i) => i === activePillar && (
             <ScrollReveal key={i} direction="none">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-surface border border-border rounded-[28px] p-12" style={{ borderColor: `${p.color}22`, boxShadow: `0 0 60px ${p.glow}18` }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-surface border border-border rounded-[22px] p-8" style={{ borderColor: `${p.color}22`, boxShadow: `0 0 60px ${p.glow}18` }}>
                 <div>
                   <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full mb-5" style={{ background: `${p.color}15`, border: `1px solid ${p.color}30` }}>
                     <span className="text-lg">{p.icon}</span>
@@ -268,7 +268,7 @@ const Product = () => {
                   </div>
                   <div className="font-mono text-sm font-bold tracking-[0.04em] mb-1.5" style={{ color: p.color }}>{p.num} / 04</div>
                   <div className="font-display font-extrabold tracking-[-0.025em] mb-4" style={{ fontSize: 'clamp(28px, 3vw, 44px)' }}>{p.title}</div>
-                  <p className="text-base text-muted-foreground leading-[1.78] mb-7">{p.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-[1.7] mb-5">{p.desc}</p>
                   <div className="flex flex-col gap-2.5">
                     {p.bullets.map((b) => (
                       <div key={b} className="flex items-start gap-2.5 text-sm text-muted-foreground">
@@ -288,7 +288,7 @@ const Product = () => {
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-[20px] p-7" style={{ background: `linear-gradient(135deg, ${p.color}12, transparent)`, border: `1px solid ${p.color}22` }}>
+                  <div className="rounded-[16px] p-5" style={{ background: `linear-gradient(135deg, ${p.color}12, transparent)`, border: `1px solid ${p.color}22` }}>
                     <div className="font-mono text-[11px] text-muted-foreground tracking-[0.05em] mb-3">// PLATFORM IMPACT</div>
                     <div className="grid grid-cols-2 gap-3.5">
                       {p.impact.map((cell) => (
@@ -318,10 +318,10 @@ const Product = () => {
       </div>
 
       {/* FLOW SECTION */}
-      <section className="py-[88px] px-[5vw] bg-bg2">
+      <section className="py-[48px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-[52px]">
+            <div className="text-center mb-8">
               <div className="section-tag justify-center">Circular Intelligence</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 Everything Flows. <span className="text-ln-green">Everything Connects.</span>
@@ -354,14 +354,14 @@ const Product = () => {
 
       {/* PRODUCT CTA */}
       <ScrollReveal direction="none" duration={0.8}>
-        <div className="gradient-cta py-[90px] px-[5vw] text-center relative overflow-hidden">
+        <div className="gradient-cta py-[56px] px-[5vw] text-center relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(84,175,58,.15), transparent 60%)' }} />
           <div className="relative z-[1]">
             <div className="font-mono text-[11px] tracking-[0.12em] uppercase mb-4" style={{ color: 'rgba(255,255,255,.3)' }}>{'// Ready to go live?'}</div>
             <h2 className="font-display font-extrabold tracking-[-0.025em] mb-4" style={{ fontSize: 'clamp(30px, 5vw, 58px)', color: '#fff' }}>
               Start Your <span className="text-ln-green">LoRRI Journey</span> Today
             </h2>
-            <p className="text-lg max-w-[520px] mx-auto mb-9" style={{ color: 'rgba(255,255,255,.72)' }}>Join 120+ companies that have transformed their freight operations. Onboarding in 5 business days. Free 30-day pilot.</p>
+            <p className="text-base max-w-[520px] mx-auto mb-6" style={{ color: 'rgba(255,255,255,.72)' }}>Join 120+ companies that have transformed their freight operations. Onboarding in 5 business days. Free 30-day pilot.</p>
             <div className="flex gap-3.5 justify-center flex-wrap">
               <button className="btn-white-ln">🚛 Schedule a Demo →</button>
               <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold no-underline" style={{ color: 'rgba(255,255,255,.7)', border: '1px solid rgba(255,255,255,.15)' }}>🌐 Explore lorri.ai ↗</a>
