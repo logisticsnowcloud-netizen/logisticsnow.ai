@@ -260,7 +260,7 @@ const Product = () => {
           {/* Active Pillar Detail */}
           {PILLARS.map((p, i) => i === activePillar && (
             <ScrollReveal key={i} direction="none">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-surface border border-border rounded-[28px] p-12" style={{ borderColor: `${p.color}22`, boxShadow: `0 0 60px ${p.glow}18` }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-surface border border-border rounded-[22px] p-8" style={{ borderColor: `${p.color}22`, boxShadow: `0 0 60px ${p.glow}18` }}>
                 <div>
                   <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full mb-5" style={{ background: `${p.color}15`, border: `1px solid ${p.color}30` }}>
                     <span className="text-lg">{p.icon}</span>
