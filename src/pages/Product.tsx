@@ -47,9 +47,9 @@ const Product = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-5">
                   {PROD_STATS.map((s) => (
-                    <div key={s.l} className="px-4 py-2.5 rounded-[14px] bg-surface flex flex-col items-center min-w-[90px]">
-                      <div className="font-display text-xl font-extrabold tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
-                      <div className="text-[10.5px] text-muted-foreground font-semibold mt-0.5 text-center">{s.l}</div>
+                    <div key={s.l} className="px-3 py-2 rounded-[12px] bg-surface flex flex-col items-center min-w-[80px]">
+                      <div className="font-display text-lg font-extrabold tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
+                      <div className="text-[10px] text-muted-foreground font-semibold mt-0.5 text-center">{s.l}</div>
                     </div>
                   ))}
                 </div>
