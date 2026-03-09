@@ -124,7 +124,7 @@ const Product = () => {
       </div>
 
       {/* INTERACTIVE DEMO / VIDEO */}
-      <section className="py-[88px] px-[5vw] bg-bg2 relative overflow-hidden">
+      <section className="py-[48px] px-[5vw] bg-bg2 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 20%, rgba(57,49,133,0.08), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
