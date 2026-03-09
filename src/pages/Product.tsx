@@ -27,7 +27,7 @@ const Product = () => {
         <div className="absolute bottom-0 right-[5%] w-[400px] h-[350px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(84,175,58,0.08) 0%, transparent 70%)' }} />
 
         <div className="max-w-[1280px] mx-auto relative z-[2]">
-          <div className="flex items-center gap-[7px] text-xs font-semibold tracking-[0.07em] uppercase text-muted-foreground mb-7">
+          <div className="flex items-center gap-[7px] text-xs font-semibold tracking-[0.07em] uppercase text-muted-foreground mb-3">
             <Link to="/" className="no-underline text-muted-foreground font-body">Home</Link>
             <span>›</span>
             <span className="text-ln-purple">Products</span>
