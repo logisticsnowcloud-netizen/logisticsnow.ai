@@ -62,7 +62,7 @@ const Product = () => {
 
             {/* ORBIT DIAGRAM */}
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="flex items-center justify-center relative min-h-[460px]">
+              <div className="flex items-center justify-center relative min-h-[360px]">
                 <div className="absolute inset-0 rounded-[28px] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(57,49,133,0.12) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
                 <div className="relative w-[440px] h-[440px]">
                   <svg className="absolute inset-0 overflow-visible" width="440" height="440" viewBox="0 0 440 440">
