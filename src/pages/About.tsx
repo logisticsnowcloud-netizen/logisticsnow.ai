@@ -19,7 +19,7 @@ const WHY_US = [
 const About = () => (
   <div>
     {/* HERO */}
-    <div className="px-[5vw] pt-20 pb-[72px] bg-background relative overflow-hidden border-b border-border">
+    <div className="px-[5vw] pt-14 pb-[40px] bg-background relative overflow-hidden border-b border-border">
       <div className="absolute inset-0 opacity-45 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 70% at 15% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
       <div className="relative z-[2] max-w-[1280px] mx-auto">
