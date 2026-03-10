@@ -235,7 +235,7 @@ const Home = () => {
       </section>
 
       {/* METHODOLOGY */}
-      <section className="py-[88px] px-[5vw] bg-bg2">
+      <section className="py-[48px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal><div className="section-tag">6-Step Methodology</div></ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
