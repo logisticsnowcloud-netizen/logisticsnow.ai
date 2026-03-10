@@ -191,7 +191,7 @@ const Home = () => {
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS_2].filter(c => c.logo && c.logo.length > 7).map((c, i) => (
             <div
               key={i}
-              className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-border/60 hover:shadow-xl transition-all duration-300 group"
+              className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-primary/40 hover:shadow-[0_0_20px_hsl(var(--ln-purple)/0.15)] transition-all duration-300 group"
               style={{ width: 140, height: 70 }}
             >
               <img src={c.logo} alt={c.name} className="w-[80px] h-[40px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
