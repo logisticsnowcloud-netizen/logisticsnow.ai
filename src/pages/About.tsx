@@ -19,7 +19,7 @@ const WHY_US = [
 const About = () => (
   <div>
     {/* HERO */}
-    <div className="px-[5vw] pt-20 pb-[72px] bg-background relative overflow-hidden border-b border-border">
+    <div className="px-[5vw] pt-14 pb-[40px] bg-background relative overflow-hidden border-b border-border">
       <div className="absolute inset-0 opacity-45 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 70% at 15% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
       <div className="relative z-[2] max-w-[1280px] mx-auto">
@@ -72,9 +72,9 @@ const About = () => (
     </div>
 
     {/* VISION */}
-    <section className="py-[88px] px-[5vw] bg-background">
+    <section className="py-[48px] px-[5vw] bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[72px] items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
           <ScrollReveal direction="up">
             <div>
               <div className="section-tag">Our Vision</div>
@@ -135,9 +135,9 @@ const About = () => (
     </section>
 
     {/* WHY US */}
-    <section className="py-[88px] px-[5vw] bg-bg2">
+    <section className="py-[48px] px-[5vw] bg-bg2">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">Why LogisticsNow</div>
@@ -167,9 +167,9 @@ const About = () => (
     </section>
 
     {/* JOURNEY */}
-    <section className="py-[88px] px-[5vw] bg-background">
+    <section className="py-[48px] px-[5vw] bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">Our Journey</div>
@@ -245,9 +245,9 @@ const About = () => (
     </section>
 
     {/* INVESTORS */}
-    <section className="py-[88px] px-[5vw] bg-bg2">
+    <section className="py-[48px] px-[5vw] bg-bg2">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">Investors & Partners</div>
@@ -298,9 +298,9 @@ const About = () => (
     </section>
 
     {/* TESTIMONIALS */}
-    <section className="py-[88px] px-[5vw] bg-background">
+    <section className="py-[48px] px-[5vw] bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">What Clients Say</div>

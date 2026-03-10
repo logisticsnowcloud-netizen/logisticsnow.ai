@@ -201,10 +201,10 @@ const Home = () => {
       </div>
 
       {/* VISION */}
-      <section className="py-[88px] px-[5vw] bg-background">
+      <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal><div className="section-tag">Our Purpose</div></ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
             <ScrollReveal direction="up" delay={0.05}>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 The Trusted, Neutral<br /><span className="text-ln-purple">Logistics Intelligence Platform</span>
@@ -235,10 +235,10 @@ const Home = () => {
       </section>
 
       {/* METHODOLOGY */}
-      <section className="py-[88px] px-[5vw] bg-bg2">
+      <section className="py-[48px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal><div className="section-tag">6-Step Methodology</div></ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
             <ScrollReveal>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 From Data to <span className="text-ln-green">Savings</span> in 90 Days
@@ -264,12 +264,12 @@ const Home = () => {
       </section>
 
       {/* AI SUITE */}
-      <section className="py-[88px] px-[5vw] bg-background">
+      <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">AI Suite</div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
             <ScrollReveal direction="up" delay={0.05}>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 Not AI as a Feature.<br /><span className="text-ln-purple">AI as the Foundation.</span>
@@ -301,10 +301,10 @@ const Home = () => {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="py-[88px] px-[5vw] bg-background">
+      <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal><div className="section-tag">Case Studies</div></ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
             <ScrollReveal>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 Real Results, <span className="text-ln-purple">Real Clients</span>
@@ -340,10 +340,10 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-[88px] px-[5vw] bg-bg2">
+      <section className="py-[48px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-[52px]">
+            <div className="text-center mb-[28px]">
               <div className="section-tag justify-center">Client Testimonials</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>What Our Clients Say</h2>
             </div>
