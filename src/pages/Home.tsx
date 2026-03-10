@@ -340,7 +340,7 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-[88px] px-[5vw] bg-bg2">
+      <section className="py-[48px] px-[5vw] bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="text-center mb-[52px]">
