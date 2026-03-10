@@ -264,7 +264,7 @@ const Home = () => {
       </section>
 
       {/* AI SUITE */}
-      <section className="py-[88px] px-[5vw] bg-background">
+      <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">AI Suite</div>
