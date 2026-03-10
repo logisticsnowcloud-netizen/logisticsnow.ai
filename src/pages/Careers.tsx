@@ -432,7 +432,7 @@ const Careers = () => {
       </section>
 
       {/* Life @ LogisticsNow */}
-      <section className="px-[5vw] py-14 md:py-20 bg-bg2">
+      <section className="px-[5vw] py-10 md:py-14 bg-bg2">
         <div className="max-w-[900px] mx-auto text-center">
           <ScrollReveal direction="up">
             <div className="section-tag justify-center">Life @ LogisticsNow</div>

@@ -8,7 +8,7 @@ const CtaBanner = () => (
       <h2 className="font-display font-extrabold tracking-[-0.025em] mb-4 relative z-[1]" style={{ fontSize: 'clamp(30px, 5vw, 58px)', color: '#fff' }}>
         Ready to Join the<br /><span className="text-ln-green">Logistics Intelligence Revolution?</span>
       </h2>
-      <p className="text-lg max-w-[520px] mx-auto mb-9 relative z-[1]" style={{ color: 'rgba(255,255,255,.72)' }}>See how LogisticsNow transforms freight costs, carrier relationships and supply chain visibility.</p>
+      <p className="text-lg max-w-[520px] mx-auto mb-6 relative z-[1]" style={{ color: 'rgba(255,255,255,.72)' }}>See how LogisticsNow transforms freight costs, carrier relationships and supply chain visibility.</p>
       <div className="flex gap-3.5 justify-center flex-wrap relative z-[1]">
         <Link to="/contact" className="btn-white-ln no-underline">🚛 Schedule Demo →</Link>
         {/* <Link to="/" className="btn-ghost-ln no-underline">← Back to Home</Link> */}
