@@ -164,43 +164,37 @@ const Home = () => {
       </section>
 
       {/* MARQUEE */}
-      <div className="relative overflow-hidden py-10 bg-bg2 border-y border-border">
+      <div className="relative overflow-hidden py-12 bg-bg2 border-y border-border">
         {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 z-10" style={{ background: 'linear-gradient(to right, hsl(var(--bg2)), transparent)' }} />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 z-10" style={{ background: 'linear-gradient(to left, hsl(var(--bg2)), transparent)' }} />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-40 z-10" style={{ background: 'linear-gradient(to right, hsl(var(--bg2)), transparent)' }} />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-40 z-10" style={{ background: 'linear-gradient(to left, hsl(var(--bg2)), transparent)' }} />
         
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground mb-8">
           Trusted by Industry Leaders Worldwide
         </p>
         
         {/* Row 1 */}
-        <div className="flex gap-4 items-center animate-marquee w-max mb-4">
-          {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => (
+        <div className="flex gap-10 items-center animate-marquee w-max mb-5">
+          {[...CLIENT_LOGOS, ...CLIENT_LOGOS].filter(c => c.logo && c.logo.length > 7).map((c, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-purple/30 transition-all duration-300 hover:shadow-lg group"
-              style={{ minWidth: 180 }}
+              className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-border/60 hover:shadow-xl transition-all duration-300 group"
+              style={{ minWidth: 120, height: 64 }}
             >
-              <img src={c.logo} alt={c.name} className="w-25 h-10 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
-              <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
-                {c.name}
-              </span>
+              <img src={c.logo} alt={c.name} className="max-w-[100px] max-h-[40px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
             </div>
           ))}
         </div>
         
-        {/* Row 2 - reverse */}
-        <div className="flex gap-8 items-center animate-marquee-reverse w-max">
-          {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => (
+        {/* Row 2 - reverse (only logos with valid paths) */}
+        <div className="flex gap-10 items-center animate-marquee-reverse w-max">
+          {[...CLIENT_LOGOS, ...CLIENT_LOGOS_2].filter(c => c.logo && c.logo.length > 7).map((c, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm hover:border-ln-green/30 transition-all duration-300 hover:shadow-lg group"
-              style={{ minWidth: 180 }}
+              className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-border/60 hover:shadow-xl transition-all duration-300 group"
+              style={{ minWidth: 120, height: 64 }}
             >
-              <img src={c.logo} alt={c.name} className="w-9 h-9 rounded-lg object-contain shrink-0 group-hover:scale-110 transition-transform" />
-              <span className="font-display text-[13px] font-bold text-foreground/80 whitespace-nowrap group-hover:text-foreground transition-colors">
-                {c.name}
-              </span>
+              <img src={c.logo} alt={c.name} className="max-w-[100px] max-h-[40px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
             </div>
           ))}
         </div>
