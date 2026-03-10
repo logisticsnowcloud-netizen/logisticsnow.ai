@@ -179,9 +179,9 @@ const Home = () => {
             <div
               key={i}
               className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-border/60 hover:shadow-xl transition-all duration-300 group"
-              style={{ minWidth: 120, height: 64 }}
+              style={{ width: 140, height: 70 }}
             >
-              <img src={c.logo} alt={c.name} className="max-w-[100px] max-h-[40px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
+              <img src={c.logo} alt={c.name} className="w-[80px] h-[40px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
             </div>
           ))}
         </div>
@@ -192,9 +192,9 @@ const Home = () => {
             <div
               key={i}
               className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-border/60 hover:shadow-xl transition-all duration-300 group"
-              style={{ minWidth: 120, height: 64 }}
+              style={{ width: 140, height: 70 }}
             >
-              <img src={c.logo} alt={c.name} className="max-w-[100px] max-h-[40px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
+              <img src={c.logo} alt={c.name} className="w-[80px] h-[40px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
             </div>
           ))}
         </div>
