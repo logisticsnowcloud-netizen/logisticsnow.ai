@@ -137,7 +137,7 @@ const About = () => (
     {/* WHY US */}
     <section className="py-[48px] px-[5vw] bg-bg2">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-[52px] items-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">Why LogisticsNow</div>
