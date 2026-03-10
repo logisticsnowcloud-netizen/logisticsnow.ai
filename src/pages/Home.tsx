@@ -304,7 +304,7 @@ const Home = () => {
       <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal><div className="section-tag">Case Studies</div></ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
             <ScrollReveal>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
                 Real Results, <span className="text-ln-purple">Real Clients</span>
