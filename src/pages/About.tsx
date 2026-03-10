@@ -74,7 +74,7 @@ const About = () => (
     {/* VISION */}
     <section className="py-[48px] px-[5vw] bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[72px] items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
           <ScrollReveal direction="up">
             <div>
               <div className="section-tag">Our Vision</div>
