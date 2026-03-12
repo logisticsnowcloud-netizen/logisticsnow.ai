@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Youtube, MapPin, Mail, Phone, Globe, ArrowUpRight } from "lucide-react";
+import { Linkedin, Twitter, Youtube, MapPin, Mail, Phone, Globe, ArrowUpRight, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => (
   <footer className="relative overflow-hidden">
@@ -24,13 +24,15 @@ const Footer = () => (
             </p>
             <div className="flex gap-3">
               {[
-                { icon: <Linkedin size={16} />, label: "LinkedIn" },
-                { icon: <Twitter size={16} />, label: "Twitter" },
-                { icon: <Youtube size={16} />, label: "YouTube" },
+                { icon: <Linkedin size={16} />, label: "LinkedIn", to: "https://www.linkedin.com/company/logisticsnow/?originalSubdomain=in" },
+                { icon: <Facebook size={16} />, label: "Facebook", to: "https://www.facebook.com/logisticsnow/" },
+                { icon: <Instagram size={16} />, label: "Instagram", to: "https://www.instagram.com/logisticsnowln/?hl=en" },
+                { icon: <Youtube size={16} />, label: "Youtube", to: "https://www.youtube.com/@logisticsnowpvtltd1252" },
               ].map((s) => (
                 <a
                   key={s.label}
-                  href="#"
+                  href={s.to}
+                  target="_blank"
                   aria-label={s.label}
                   className="w-9 h-9 rounded-lg flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   style={{

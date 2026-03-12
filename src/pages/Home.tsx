@@ -15,7 +15,7 @@ const VISION_CARDS = [
   {
     icon: "💰",
     title: "Cost Control & Savings",
-    desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops and intelligent route optimization.",
+    desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops & intelligent route optimization.",
   },
   {
     icon: "🗺️",
@@ -121,25 +121,27 @@ const Home = () => {
     { name: "Pernod Ricard", logo: "/logos/pernod.png" },
     { name: "Paper Boat", logo: "/logos/paperboat.jpeg" },
     { name: "Sundrop", logo: "/logos/sundrop.png" },
-    { name: "Vredestein", logo: "/logos/" },
+    { name: "Vredestein", logo: "/logos/vredestein.jpg" },
     { name: "Zydus Wellness", logo: "/logos/zydus.jpeg" },
   ];
   const CLIENT_LOGOS_2 = [
-    { name: "DHL", logo: "/logos/" },
-    { name: "Maersk", logo: "/logos/" },
-    { name: "DSV ", logo: "/logos/" },
-    { name: "Delhivery", logo: "/" },
-    { name: "CCI Group", logo: "/" },
-    { name: "Western Carriers ", logo: "/logos/" },
+    { name: "CJ Darcl", logo: "/logos/cjdarcl.png" },
+    // { name: "CCI Group", logo: "/cci.png" },
     { name: "CEVA Logistics", logo: "/logos/ceva.png" },
-    { name: "FM Logistics", logo: "/logos/" },
-    { name: "RCI Logistics", logo: "/logos/" },
-    { name: "CJ Darcl", logo: "/logos/" },
-    { name: "TCI Freight", logo: "/logos/" },
-    { name: "TOLL", logo: "/logos/" },
-    { name: "Fiege", logo: "/logos/" },
-    { name: "Rhenus Logistics", logo: "/logos/" },
-    { name: "SCC India", logo: "/logos/" },
+    { name: "DHL", logo: "/logos/dhl.png" },
+    { name: "DSV ", logo: "/logos/dsv.png" },
+    // { name: "Delhivery", logo: "/delhivery.png" },
+    { name: "FM Logistics", logo: "/logos/fm.png" },
+    { name: "Fiege", logo: "/logos/fiege.png" },
+    { name: "Maersk", logo: "/logos/Maersk.png" },
+    { name: "RCI Logistics", logo: "/logos/rci.jpeg" },
+    { name: "Rhenus Logistics", logo: "/logos/rhenus.png" },
+    { name: "Sennder", logo: "/logos/sennder.png" },
+    { name: "SCC India", logo: "/logos/scc.jpeg" },
+    { name: "TCI Freight", logo: "/logos/tci.png" },
+    { name: "TOLL", logo: "/logos/toll.png" },
+    { name: "Western Carriers ", logo: "/logos/wc.png" },
+    { name: "Quehenberger", logo: "/logos/quehenberger.png" },
   ];
   const caseColors = ["#393185", "#54AF3A", "#1AA6DF", "#393185", "#54AF3A", "#1AA6DF"];
 
@@ -375,50 +377,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* METHODOLOGY */}
-      <section className="py-[48px] px-[5vw] bg-bg2">
-        <div className="max-w-[1280px] mx-auto">
-          <ScrollReveal>
-            <div className="section-tag">6-Step Methodology</div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
-            <ScrollReveal>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
-                From Data to <span className="text-ln-green">Savings</span> in 90 Days
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">
-                A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
-                enterprises.
-              </p>
-            </ScrollReveal>
-          </div>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {METHODOLOGY_STEPS.map((s) => (
-              <StaggerItem key={s.num}>
-                <div className="card-hover relative overflow-hidden">
-                  <div className="absolute right-4 top-2 font-mono text-5xl font-bold text-ln-purple opacity-[0.07]">
-                    {s.num}
-                  </div>
-                  <div
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-[10px] text-ln-purple font-display text-sm font-extrabold mb-4"
-                    style={{ background: "rgba(57,49,133,.1)" }}
-                  >
-                    {s.num}
-                  </div>
-                  <div className="font-display text-lg font-bold mb-2">{s.title}</div>
-                  <div className="text-sm text-muted-foreground leading-[1.7]">{s.desc}</div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
       {/* AI SUITE */}
       <section className="py-[48px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
@@ -497,6 +455,50 @@ const Home = () => {
             ))}
           </StaggerContainer>
         </div>
+      </section>  
+
+      {/* METHODOLOGY */}
+      <section className="py-[48px] px-[5vw] bg-bg2">
+        <div className="max-w-[1280px] mx-auto">
+          <ScrollReveal>
+            <div className="section-tag">6-Step Methodology</div>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
+            <ScrollReveal>
+              <h2
+                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
+                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
+              >
+                From Data to <span className="text-ln-green">Savings</span> in 90 Days
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <p className="text-muted-foreground text-[17px] leading-[1.75]">
+                A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
+                enterprises.
+              </p>
+            </ScrollReveal>
+          </div>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {METHODOLOGY_STEPS.map((s) => (
+              <StaggerItem key={s.num}>
+                <div className="card-hover relative overflow-hidden">
+                  <div className="absolute right-4 top-2 font-mono text-5xl font-bold text-ln-purple opacity-[0.07]">
+                    {s.num}
+                  </div>
+                  <div
+                    className="inline-flex items-center justify-center w-9 h-9 rounded-[10px] text-ln-purple font-display text-sm font-extrabold mb-4"
+                    style={{ background: "rgba(57,49,133,.1)" }}
+                  >
+                    {s.num}
+                  </div>
+                  <div className="font-display text-lg font-bold mb-2">{s.title}</div>
+                  <div className="text-sm text-muted-foreground leading-[1.7]">{s.desc}</div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
       </section>
 
       {/* CASE STUDIES */}
@@ -541,12 +543,12 @@ const Home = () => {
                     </div>
                   </div>
                   {cs.extra && <div className="text-[12.5px] text-muted-foreground mb-1">📊 {cs.extra}</div>}
-                  <button
+                  {/* <button
                     className="bg-ln-purple rounded-full px-4 py-2 text-[12.5px] font-bold border-none cursor-pointer mt-2"
                     style={{ color: "#fff" }}
                   >
                     ▶ Watch Case Study
-                  </button>
+                  </button> */}
                 </div>
               </StaggerItem>
             ))}

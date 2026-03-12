@@ -20,11 +20,21 @@ const Navbar = () => {
     <nav className="sticky top-0 z-[190] border-b border-border transition-colors duration-300" style={{ background: 'hsl(var(--nav-bg))', boxShadow: '0 2px 20px hsl(var(--ln-purple) / 0.12)' }}>
       <div className="flex items-center justify-between px-[5vw] h-[68px] max-w-[1400px] mx-auto">
         <Link to="/" className="flex items-center gap-2.5 no-underline">
-          <div className="w-10 h-10 rounded-[10px] gradient-primary flex items-center justify-center font-display text-lg font-extrabold" style={{ color: '#fff' }}>
+          {/* <div className="w-10 h-10 rounded-[10px] gradient-primary flex items-center justify-center font-display text-lg font-extrabold" style={{ color: '#fff' }}>
             LN
           </div>
           <div className="font-display text-xl font-extrabold tracking-[-0.02em] text-ln-purple">
-            LogisticsNow<span className="text-ln-green">.</span><span className="text-ln-blue text-sm align-super">ai</span>
+            LogisticsNoww<span className="text-ln-green">.</span><span className="text-ln-blue text-sm align-super">ai</span>
+          </div> */}
+          {/* <div className="w-10 h-10 rounded-[10px] gradient-primary flex items-center justify-center font-display text-lg font-extrabold" style={{ color: '#fff' }}>
+            LN
+          </div> */}
+          <div className="font-display text-xl font-extrabold tracking-[-0.02em] text-ln-purple">
+              <span style={{display: 'inline-flex'}}>
+                <img src="/logos/ln.png" alt="LogisticsNow.ai" width="200" height="800" />
+                <span style={{marginTop: '09%'}} className="text-ln-green">.</span>
+                <span style={{marginTop: '12%', marginLeft: '1%'}} className="text-ln-green text-sm align-super">ai</span>
+              </span>
           </div>
         </Link>
 

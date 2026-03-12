@@ -13,7 +13,7 @@ const CtaBanner = () => (
         <Link to="/contact" className="btn-white-ln no-underline">🚛 Schedule Demo →</Link>
         {/* <Link to="/" className="btn-ghost-ln no-underline">← Back to Home</Link> */}
       </div>
-      <p className="font-mono text-[13px] mt-4 relative z-[1]" style={{ color: 'rgba(255,255,255,.45)' }}>Onboarding in 5 business days</p>
+      <p className="font-mono text-[13px] mt-4 relative z-[1]" style={{ color: 'rgba(255,255,255,.45)' }}>Onboarding in 5 days | Go-Live in 30 days</p>
     </div>
   </ScrollReveal>
 );
