@@ -174,20 +174,20 @@ const About = () => (
     {/* JOURNEY */}
     <section className="py-[36px] px-[5vw] bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <ScrollReveal>
-          <div className="mb-4">
-            <div className="section-tag">Our Journey</div>
-            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-1.5" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
-              From ISB to a <span className="text-ln-green">Global Logistics Grid</span>
-            </h2>
-            <p className="text-muted-foreground text-[15px] leading-[1.7]">Building trust, one shipper and carrier at a time — now across 4 continents.</p>
-          </div>
-        </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 items-start">
           <div>
+            <ScrollReveal>
+              <div className="mb-5">
+                <div className="section-tag">Our Journey</div>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-1.5" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+                  From ISB to a <span className="text-ln-green">Global Logistics Grid</span>
+                </h2>
+                <p className="text-muted-foreground text-[15px] leading-[1.7]">Building trust, one shipper and carrier at a time — now across 4 continents.</p>
+              </div>
+            </ScrollReveal>
             {JOURNEY.map((j, i) => (
               <ScrollReveal key={j.num} delay={i * 0.08}>
-                <div className="flex gap-3 pb-4 relative last:pb-0">
+                <div className="flex gap-3 pb-6 relative last:pb-0">
                   {i < JOURNEY.length - 1 && (
                     <div className="absolute left-[14px] top-[30px] bottom-0 w-0.5" style={{ background: 'linear-gradient(180deg,#393185,rgba(57,49,133,.08))' }} />
                   )}
@@ -201,7 +201,7 @@ const About = () => (
               </ScrollReveal>
             ))}
           </div>
-          <ScrollReveal direction="up" delay={0.2}>
+          <ScrollReveal direction="up" delay={0.1}>
             <div>
               <div className="bg-surface border border-border rounded-[14px] p-3.5 mb-2.5">
                 <div className="text-[9px] font-bold tracking-[0.1em] uppercase text-muted-foreground mb-2">Platform at a Glance</div>
