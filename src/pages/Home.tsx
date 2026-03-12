@@ -196,7 +196,7 @@ const Home = () => {
           <ScrollReveal direction="up" delay={0.3}>
             <div className="flex gap-3 flex-wrap justify-center">
               <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
-                🚛 See the Platform →
+                🚛 Try AI Logistics Copilot →
               </Link>
               <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[15px]">
                 Learn About Us
