@@ -236,7 +236,7 @@ const Home = () => {
       </section>
 
       {/* MARQUEE */}
-      <div className="relative overflow-hidden py-12 bg-bg2 border-y border-border">
+      <div className="relative overflow-hidden py-14 bg-bg2 border-y border-border">
         {/* Fade edges */}
         <div
           className="pointer-events-none absolute inset-y-0 left-0 w-40 z-10"
@@ -247,46 +247,80 @@ const Home = () => {
           style={{ background: "linear-gradient(to left, hsl(var(--bg2)), transparent)" }}
         />
 
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground mb-8">
-          Trusted by Industry Leaders Worldwide
-        </p>
-
-        {/* Row 1 */}
-        <div className="flex gap-10 items-center animate-marquee w-max mb-5">
-          {[...CLIENT_LOGOS, ...CLIENT_LOGOS]
-            .filter((c) => c.logo && c.logo.length > 7)
-            .map((c, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-primary/40 hover:shadow-[0_0_20px_hsl(var(--ln-purple)/0.15)] transition-all duration-300 group"
-                style={{ width: 140, height: 70 }}
-              >
-                <img
-                  src={c.logo}
-                  alt={c.name}
-                  className="w-[80px] h-[40px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
-                />
-              </div>
-            ))}
+        <div className="text-center mb-10">
+          <h2
+            className="font-display font-extrabold tracking-[-0.03em] leading-[1.1]"
+            style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
+          >
+            Trusted by <span className="text-ln-purple">Industry Leaders</span> Worldwide
+          </h2>
+          <p className="text-muted-foreground text-sm mt-2">
+            Powering logistics for 120+ companies including 25+ Fortune 500s
+          </p>
         </div>
 
-        {/* Row 2 - reverse (only logos with valid paths) */}
-        <div className="flex gap-10 items-center animate-marquee-reverse w-max">
-          {[...CLIENT_LOGOS, ...CLIENT_LOGOS_2]
-            .filter((c) => c.logo && c.logo.length > 7)
-            .map((c, i) => (
+        {/* Row 1 */}
+        <div className="flex gap-8 items-center animate-marquee w-max mb-5">
+          {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => {
+            const hasLogo = c.logo && c.logo.length > 7;
+            return (
               <div
                 key={i}
-                className="flex items-center justify-center px-6 py-4 rounded-2xl bg-card/60 border border-border/30 backdrop-blur-sm hover:bg-card hover:border-primary/40 hover:shadow-[0_0_20px_hsl(var(--ln-purple)/0.15)] transition-all duration-300 group"
-                style={{ width: 140, height: 70 }}
+                className="relative flex items-center justify-center rounded-2xl bg-card/80 border border-border/40 backdrop-blur-sm hover:bg-card hover:border-primary/50 hover:shadow-[0_0_24px_hsl(var(--ln-purple)/0.2)] transition-all duration-300 group cursor-pointer"
+                style={{ width: 150, height: 75 }}
               >
-                <img
-                  src={c.logo}
-                  alt={c.name}
-                  className="w-[80px] h-[40px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
-                />
+                {hasLogo ? (
+                  <img
+                    src={c.logo}
+                    alt={c.name}
+                    className="max-w-[100px] max-h-[45px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                  />
+                ) : (
+                  <span className="font-display font-bold text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    {c.name}
+                  </span>
+                )}
+                {/* Tooltip */}
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-20"
+                  style={{ background: "hsl(var(--ln-purple))", color: "#fff" }}
+                >
+                  {c.name}
+                </div>
               </div>
-            ))}
+            );
+          })}
+        </div>
+
+        {/* Row 2 - reverse */}
+        <div className="flex gap-8 items-center animate-marquee-reverse w-max">
+          {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => {
+            const hasLogo = c.logo && c.logo.length > 7;
+            return (
+              <div
+                key={i}
+                className="relative flex items-center justify-center rounded-2xl bg-card/80 border border-border/40 backdrop-blur-sm hover:bg-card hover:border-primary/50 hover:shadow-[0_0_24px_hsl(var(--ln-purple)/0.2)] transition-all duration-300 group cursor-pointer"
+                style={{ width: 150, height: 75 }}
+              >
+                {hasLogo ? (
+                  <img
+                    src={c.logo}
+                    alt={c.name}
+                    className="max-w-[100px] max-h-[45px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                  />
+                ) : (
+                  <span className="font-display font-bold text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    {c.name}
+                  </span>
+                )}
+                {/* Tooltip */}
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-20"
+                  style={{ background: "hsl(var(--ln-purple))", color: "#fff" }}
+                >
+                  {c.name}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
