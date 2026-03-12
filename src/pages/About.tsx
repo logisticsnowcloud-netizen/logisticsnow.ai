@@ -111,6 +111,18 @@ const About = () => (
               <p className="text-[13px] text-muted-foreground leading-[1.7] mb-2">The inaugural event at ISB Hyderabad laid the foundation for India's most ambitious logistics intelligence platform. Shell's Demo Day was <strong className="text-foreground">widely acclaimed</strong>.</p>
               <a href="https://yourstory.com/2019/01/shell-second-e4-startups-india" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-ln-purple text-[12.5px] font-bold no-underline" style={{ borderBottom: '2px solid rgba(57,49,133,.15)', paddingBottom: 1 }}>Read Our Story on YourStory →</a>
             </div>
+            {/* YouTube Video */}
+            <div className="mt-3 rounded-[18px] overflow-hidden border border-border" style={{ aspectRatio: '16/9' }}>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/woXiLVkKSpQ?start=11"
+                title="LogisticsNow Vision"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="block"
+              />
+            </div>
           </ScrollReveal>
         </div>
 
