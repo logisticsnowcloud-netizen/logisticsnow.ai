@@ -18,10 +18,10 @@ const Product = () => {
   const features = audience === 'mfr' ? MFR_FEATURES : CARRIER_FEATURES;
   const valItems = [...VAL_DRIVERS, ...VAL_DRIVERS, ...VAL_DRIVERS];
   const orbitLabels = [
-    "1. Deep Discovery",
-    "2. Rapid Procurement",
-    "3. Digitalize Operation (in days)",
-    "4. LoRRI Pay (10x faster!)",
+    "Deep Discovery",
+    "Rapid Procurement",
+    "Digitalize Operation (in days)",
+    "LoRRI Pay (10x faster!)",
   ];
 
   return (
@@ -130,7 +130,7 @@ const Product = () => {
                         <div className="absolute -top-1 -right-1 w-[18px] h-[18px] rounded-full flex items-center justify-center text-[8px] font-extrabold font-mono" style={{ background: p.color, color: '#fff' }}>{p.num}</div>
                         {/* Label */}
                         <div className="absolute text-[10px] font-bold" style={{ ...labelStyle, color: p.color }}>
-                          {orbitLabels[i]}
+                          <span style={{margin: '-2%'}}>{orbitLabels[i]}</span>
                         </div>
                       </div>
                     );

@@ -59,7 +59,7 @@ export const MFR_FEATURES = [
   { icon: '🧠', title: 'Logistics Intelligence', desc: 'Truck-to-Network visibility — benchmark every lane against the market before negotiating.' },
   { icon: '📊', title: 'Freight Benchmarks', desc: 'Real freight rate data from $2.5Bn+ of analyzed spend across 50K+ lanes.' },
   { icon: '⭐', title: 'Verified Carrier Ratings', desc: 'Peer-verified ratings from Fortune 500 shippers — no fake reviews, no bias.' },
-  { icon: '🗺️', title: 'Best Carrier: Long Haul to Last Mile', desc: 'AI matches the best carrier for every leg — FTL, LTL, multimodal, last mile.' },
+  { icon: '🗺️', title: 'Long Haul to Last Mile', desc: 'AI matches the best carrier for every leg — FTL, LTL, multimodal, last mile.' },
 ];
 
 export const CARRIER_FEATURES = [

@@ -46,7 +46,7 @@ const About = () => (
                 LogisticsNow uses Data Science to organize the logistics industry — optimizing operations, time and revenue across 4 continents.
               </p>
               <div className="flex gap-3 flex-wrap">
-                <button className="btn-primary-ln !px-6 !py-2.5 !text-[13.5px]">Our Vision →</button>
+                {/* <button className="btn-primary-ln !px-6 !py-2.5 !text-[13.5px]">Our Vision →</button> */}
                 <a href="https://yourstory.com/2019/01/shell-second-e4-startups-india" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-ln-purple font-bold text-[13.5px] no-underline rounded-full px-5 py-2" style={{ border: '2px solid #393185' }}>▶ Read Our Story</a>
               </div>
             </div>
@@ -67,11 +67,11 @@ const About = () => (
                   </div>
                 ))}
               </div>
-              <div className="flex gap-2 flex-wrap">
+              {/* <div className="flex gap-2 flex-wrap">
                 {['🐚 Shell', '🛒 Flipkart / Walmart', '🏆 GITEX 2025'].map((b) => (
                   <div key={b} className="flex items-center gap-1.5 px-3 py-1.5 bg-background border border-border rounded-full text-[11px] font-semibold text-muted-foreground">{b}</div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </ScrollReveal>
         </div>
@@ -222,12 +222,14 @@ const About = () => (
               <div className="bg-surface border border-border rounded-[14px] p-3.5">
                 <div className="text-[9px] font-bold tracking-[0.1em] uppercase text-muted-foreground mb-2">Recognition & Backing</div>
                 {[
-                  { icon: '🏆', title: 'GITEX Dubai 2025', sub: 'Sustainability Leaders — Supernova Winner' },
-                  { icon: '🐚', title: 'Shell E4 Program', sub: "Incubated by Shell's innovation arm" },
-                  { icon: '🛒', title: 'Flipkart Leap Ahead', sub: 'Investment by Flipkart / Walmart' },
+                  { icon: '/logos/gitex.png', title: 'GITEX Dubai 2025', sub: 'Sustainability Leaders — Supernova Winner' },
+                  { icon: '/logos/nasscom.jpeg', title: 'InnoTrek ME 2024 Startups', sub: "Selected for Nesscom InnoTrek Startup Program" },
+                  { icon: '/logos/flipkart.jpeg', title: 'Flipkart Leap Ahead', sub: 'Investment by Flipkart / Walmart' },
+                  { icon: '/logos/microsoft.png', title: 'Microsoft Leap Program', sub: "Part of the Microsoft Leap Program" },
+                  { icon: '/logos/shell.png', title: 'Shell E4 Program', sub: "Incubated by Shell's innovation arm" },
                 ].map((r) => (
                   <div key={r.title} className="flex items-center gap-2 p-1.5 bg-card border border-border rounded-lg mb-1 last:mb-0">
-                    <div className="text-base flex-shrink-0">{r.icon}</div>
+                    <div className="text-base flex-shrink-0"><img width={"50px"} height={"50px"} src={r.icon}/> </div>
                     <div>
                       <div className="text-[11.5px] font-bold leading-tight">{r.title}</div>
                       <div className="text-[10px] text-muted-foreground leading-tight">{r.sub}</div>
@@ -259,15 +261,17 @@ const About = () => (
         </div>
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            { icon: '🐚', name: 'Shell', type: 'Incubator & Investor', desc: "Selected for Shell's prestigious E4 program. Demo Day was widely acclaimed — the moment that put LogisticsNow on the global map.", badge: '🌍 Energy · Environment · Entrepreneurship', badgeBg: 'rgba(57,49,133,.07)', badgeColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)', link: 'https://yourstory.com/2019/01/shell-second-e4-startups-india' },
-            { icon: '🛒', name: 'Flipkart / Walmart', type: 'Investor · Leap Ahead Program', desc: "Flipkart selected LogisticsNow for its Leap Ahead program — providing investment and direct mentorship by top leadership.", badge: '🚀 Investment + Mentorship + Scale Access', badgeBg: 'rgba(26,166,223,.07)', badgeColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#54AF3A)', link: '#' },
+            { icon: '/logos/shell.png', name: 'Shell', type: 'Incubator & Investor', desc: "Selected for Shell's prestigious E4 program. Demo Day was widely acclaimed — the moment that put LogisticsNow on the global map.", badge: '🌍 Energy · Environment · Entrepreneurship', badgeBg: 'rgba(57,49,133,.07)', badgeColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)', link: 'https://yourstory.com/2019/01/shell-second-e4-startups-india' },
+            { icon: '/logos/flipkart.jpeg', name: 'Flipkart / Walmart', type: 'Investor · Leap Ahead Program', desc: "Flipkart selected LogisticsNow for its Leap Ahead program — providing investment and direct mentorship by top leadership.", badge: '🚀 Investment + Mentorship + Scale Access', badgeBg: 'rgba(26,166,223,.07)', badgeColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#54AF3A)', link: '#' },
           ].map((inv) => (
             <StaggerItem key={inv.name}>
               <div className="bg-card border border-border rounded-[22px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="h-[4px]" style={{ background: inv.strip }} />
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-[42px] h-[42px] rounded-xl border border-border bg-surface flex items-center justify-center text-xl flex-shrink-0">{inv.icon}</div>
+                    <div className="w-[42px] h-[42px] rounded-xl border border-border bg-surface flex items-center justify-center text-xl flex-shrink-0">
+                      <img width={"30px"} height={"30px"} src={inv.icon} />
+                    </div>
                     <div>
                       <div className="font-display text-[19px] font-extrabold tracking-[-0.02em]">{inv.name}</div>
                       <div className="text-[10.5px] font-semibold tracking-[0.07em] uppercase text-muted-foreground">{inv.type}</div>
@@ -285,7 +289,7 @@ const About = () => (
         <ScrollReveal delay={0.2}>
           <div className="mt-4 p-4 bg-card border border-border rounded-[22px] flex items-center gap-3 flex-wrap">
             <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-muted-foreground flex-shrink-0">Also Associated With</div>
-            {['🏛️ Wadhwani Foundation', '🇬🇧 UK Government', '🎓 ISB Hyderabad', '🇮🇳 National Logistics Policy'].map((p) => (
+            {['🎓 Carnegie Mellon University Alumni', '🏛️ Wadhwani Foundation', '🇬🇧 UK Government', '🇮🇳 National Logistics Policy'].map((p) => (
               <div key={p} className="px-3.5 py-1.5 bg-surface border border-border rounded-full text-[11.5px] font-semibold text-muted-foreground">{p}</div>
             ))}
           </div>
