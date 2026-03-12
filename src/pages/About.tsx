@@ -183,19 +183,19 @@ const About = () => (
             <p className="text-muted-foreground text-[15px] leading-[1.7]">Building trust, one shipper and carrier at a time — now across 4 continents.</p>
           </div>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 items-start">
           <div>
             {JOURNEY.map((j, i) => (
               <ScrollReveal key={j.num} delay={i * 0.08}>
-                <div className="flex gap-4 pb-6 relative last:pb-0">
+                <div className="flex gap-3 pb-4 relative last:pb-0">
                   {i < JOURNEY.length - 1 && (
-                    <div className="absolute left-[16px] top-[34px] bottom-0 w-0.5" style={{ background: 'linear-gradient(180deg,#393185,rgba(57,49,133,.08))' }} />
+                    <div className="absolute left-[14px] top-[30px] bottom-0 w-0.5" style={{ background: 'linear-gradient(180deg,#393185,rgba(57,49,133,.08))' }} />
                   )}
-                  <div className="w-[34px] h-[34px] rounded-full flex-shrink-0 flex items-center justify-center font-display text-xs font-extrabold relative z-[1]" style={{ background: j.color, color: '#fff' }}>{j.num}</div>
+                  <div className="w-[28px] h-[28px] rounded-full flex-shrink-0 flex items-center justify-center font-display text-[10px] font-extrabold relative z-[1]" style={{ background: j.color, color: '#fff' }}>{j.num}</div>
                   <div>
-                    <div className="font-mono text-[10px] tracking-[0.07em] text-muted-foreground uppercase mb-0.5">{j.tag}</div>
-                    <div className="font-display text-[16px] font-bold mb-1 tracking-[-0.012em]">{j.title}</div>
-                    <p className="text-[13px] text-muted-foreground leading-[1.65]">{j.body}</p>
+                    <div className="font-mono text-[9px] tracking-[0.07em] text-muted-foreground uppercase mb-0">{j.tag}</div>
+                    <div className="font-display text-[14px] font-bold mb-0.5 tracking-[-0.012em]">{j.title}</div>
+                    <p className="text-[12px] text-muted-foreground leading-[1.6]">{j.body}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -203,34 +203,34 @@ const About = () => (
           </div>
           <ScrollReveal direction="up" delay={0.2}>
             <div>
-              <div className="bg-surface border border-border rounded-[18px] p-5 mb-3">
-                <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-muted-foreground mb-3">Platform at a Glance</div>
-                <div className="grid grid-cols-2 gap-2">
+              <div className="bg-surface border border-border rounded-[14px] p-3.5 mb-2.5">
+                <div className="text-[9px] font-bold tracking-[0.1em] uppercase text-muted-foreground mb-2">Platform at a Glance</div>
+                <div className="grid grid-cols-2 gap-1.5">
                   {[
                     { n: '350+', l: 'Winning LSPs', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                     { n: '1Mn+', l: 'Truckloads', c: '#54AF3A', bg: 'rgba(84,175,58,.07)' },
                     { n: '$500Mn+', l: 'Freight Procured', c: '#1AA6DF', bg: 'rgba(26,166,223,.07)' },
                     { n: '25+', l: 'Fortune 500', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                   ].map((s) => (
-                    <div key={s.l} className="p-4 rounded-xl text-center" style={{ background: s.bg }}>
-                      <div className="font-display text-[22px] font-extrabold leading-none tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
-                      <div className="text-[10.5px] text-muted-foreground mt-1 font-medium">{s.l}</div>
+                    <div key={s.l} className="p-2.5 rounded-lg text-center" style={{ background: s.bg }}>
+                      <div className="font-display text-[18px] font-extrabold leading-none tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>
+                      <div className="text-[9.5px] text-muted-foreground mt-0.5 font-medium">{s.l}</div>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="bg-surface border border-border rounded-[18px] p-5">
-                <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-muted-foreground mb-3">Recognition & Backing</div>
+              <div className="bg-surface border border-border rounded-[14px] p-3.5">
+                <div className="text-[9px] font-bold tracking-[0.1em] uppercase text-muted-foreground mb-2">Recognition & Backing</div>
                 {[
                   { icon: '🏆', title: 'GITEX Dubai 2025', sub: 'Sustainability Leaders — Supernova Winner' },
                   { icon: '🐚', title: 'Shell E4 Program', sub: "Incubated by Shell's innovation arm" },
                   { icon: '🛒', title: 'Flipkart Leap Ahead', sub: 'Investment by Flipkart / Walmart' },
                 ].map((r) => (
-                  <div key={r.title} className="flex items-center gap-2.5 p-2 bg-card border border-border rounded-xl mb-1.5 last:mb-0">
-                    <div className="text-lg flex-shrink-0">{r.icon}</div>
+                  <div key={r.title} className="flex items-center gap-2 p-1.5 bg-card border border-border rounded-lg mb-1 last:mb-0">
+                    <div className="text-base flex-shrink-0">{r.icon}</div>
                     <div>
-                      <div className="text-[12.5px] font-bold">{r.title}</div>
-                      <div className="text-[11px] text-muted-foreground">{r.sub}</div>
+                      <div className="text-[11.5px] font-bold leading-tight">{r.title}</div>
+                      <div className="text-[10px] text-muted-foreground leading-tight">{r.sub}</div>
                     </div>
                   </div>
                 ))}
