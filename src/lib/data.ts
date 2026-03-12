@@ -15,9 +15,9 @@ export const CASES = [
 ];
 
 export const TESTIMONIALS = [
-  { q: '"Year on year we have learned from Team LoRRI — it has given our company immense savings as well as better service."', name: 'Head of Operations', role: 'Fortune 500 Client', grad: 'linear-gradient(135deg,#393185,#1AA6DF)' },
-  { q: '"This was the shortest time period in which we have completed an annual procurement cycle. Good result and experience."', name: 'Associate Director, Supply Chain', role: 'Global FMCG Company', grad: 'linear-gradient(135deg,#54AF3A,#1AA6DF)' },
-  { q: '"Success was possible because of Team LoRRI\'s excellent support enabling change management among all key stakeholders."', name: 'Parmeshwaran Iyer', role: 'CSCO, Apollo Tyres', grad: 'linear-gradient(135deg,#1AA6DF,#393185)' },
+  { q: '"Year on year we have learned from Team LoRRI, …it has given our company immense savings as well as better service."', name: 'Head of Operations', role: 'Jyothy Labs', logo: '/logos/jyothy-labs.png', grad: 'linear-gradient(135deg,#393185,#1AA6DF)' },
+  { q: '"This was the shortest time period in which we have completed annual procurement cycle. It was good result & experience which we got from LoRRI."', name: 'Associate Director, Supply Chain', role: 'Perfetti Van Melle', logo: '/logos/perfetti.png', grad: 'linear-gradient(135deg,#54AF3A,#1AA6DF)' },
+  { q: '"Success was possible because of Team LoRRI\'s excellent support enabling change management among all key stakeholders."', name: 'Chief Supply Chain Officer', role: 'Paperboat (Hector Beverages)', logo: '/logos/paperboat.jpeg', grad: 'linear-gradient(135deg,#1AA6DF,#393185)' },
 ];
 
 export const PILLARS = [

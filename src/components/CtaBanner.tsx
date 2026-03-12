@@ -3,7 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const CtaBanner = () => (
   <ScrollReveal direction="none" duration={0.8}>
-    <div className="gradient-cta py-[56px] px-[5vw] text-center relative overflow-hidden">
+    <div className="gradient-cta py-[36px] px-[5vw] text-center relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(84,175,58,.15), transparent 60%)' }} />
       <h2 className="font-display font-extrabold tracking-[-0.025em] mb-4 relative z-[1]" style={{ fontSize: 'clamp(30px, 5vw, 58px)', color: '#fff' }}>
         Ready to Join the<br /><span className="text-ln-green">Logistics Intelligence Revolution?</span>
