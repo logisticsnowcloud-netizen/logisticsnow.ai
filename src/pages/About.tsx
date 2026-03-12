@@ -174,19 +174,15 @@ const About = () => (
     {/* JOURNEY */}
     <section className="py-[36px] px-[5vw] bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 items-end">
-          <ScrollReveal>
-            <div>
-              <div className="section-tag">Our Journey</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
-                From ISB to a<br /><span className="text-ln-green">Global Logistics Grid</span>
-              </h2>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
+        <ScrollReveal>
+          <div className="mb-4">
+            <div className="section-tag">Our Journey</div>
+            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-1.5" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+              From ISB to a <span className="text-ln-green">Global Logistics Grid</span>
+            </h2>
             <p className="text-muted-foreground text-[15px] leading-[1.7]">Building trust, one shipper and carrier at a time — now across 4 continents.</p>
-          </ScrollReveal>
-        </div>
+          </div>
+        </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
             {JOURNEY.map((j, i) => (
