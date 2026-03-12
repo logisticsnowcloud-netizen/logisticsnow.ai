@@ -81,7 +81,7 @@ const About = () => (
     {/* VISION — Visual Cards Layout */}
     <section className="py-[36px] px-[5vw] bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <ScrollReveal direction="up">
             <div>
               <div className="section-tag">Our Vision</div>
@@ -98,9 +98,21 @@ const About = () => (
                   ISB Hyderabad
                 </div>
               </div>
-              <p className="text-[14px] leading-[1.7] text-muted-foreground pl-6">
+              <p className="text-[14px] leading-[1.7] text-muted-foreground pl-6 mb-5">
                 LogisticsNow is building the <strong className="text-foreground">Digital Backbone of Logistics</strong> — a trusted, neutral platform helping 25+ Fortune 500 companies drive visibility and prepare for upcoming logistics challenges.
               </p>
+              {/* Vision Pillars moved here to fill left whitespace */}
+              <div className="grid grid-cols-2 gap-3 pl-6">
+                {VISION_PILLARS.map((v) => (
+                  <div key={v.title} className="group bg-surface border border-border rounded-[16px] p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default">
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center text-[20px] mx-auto mb-2 transition-transform group-hover:scale-110" style={{ background: `${v.color}14`, border: `1.5px solid ${v.color}30` }}>
+                      {v.icon}
+                    </div>
+                    <div className="font-display text-[13px] font-extrabold mb-0.5" style={{ color: v.color }}>{v.title}</div>
+                    <p className="text-[11px] text-muted-foreground leading-[1.5]">{v.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.15}>
@@ -125,21 +137,6 @@ const About = () => (
             </div>
           </ScrollReveal>
         </div>
-
-        {/* Vision Pillars — Visual Grid */}
-        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-          {VISION_PILLARS.map((v) => (
-            <StaggerItem key={v.title}>
-              <div className="group bg-surface border border-border rounded-[18px] p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-[22px] mx-auto mb-3 transition-transform group-hover:scale-110" style={{ background: `${v.color}14`, border: `1.5px solid ${v.color}30` }}>
-                  {v.icon}
-                </div>
-                <div className="font-display text-[15px] font-extrabold mb-1" style={{ color: v.color }}>{v.title}</div>
-                <p className="text-[12px] text-muted-foreground leading-[1.6]">{v.desc}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
       </div>
     </section>
 
