@@ -210,7 +210,12 @@ const Product = () => {
         <div className="max-w-[1280px] mx-auto text-center">
           <ScrollReveal>
             <div className="section-tag justify-center">One Platform, Two Ecosystems</div>
-            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">Built for Both Sides of Logistics</h2>
+            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
+              Built for Both Sides of <span className="text-ln-blue">Logistics</span>
+            </h2>
+            <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px] mx-auto">
+              One unified platform serving manufacturers and carriers with tailored experiences.
+            </p>
             <div className="inline-flex mt-6 bg-surface border border-border rounded-full p-1 gap-1">
               <button
                 onClick={() => setAudience('mfr')}
