@@ -446,39 +446,37 @@ const Home = () => {
       </section>
 
       {/* METHODOLOGY */}
-      <section className="section-std bg-bg2">
+      <section className="px-[5vw] py-5 bg-bg2">
         <div className="max-w-[1280px] mx-auto">
-          <ScrollReveal>
-            <div className="section-tag">6-Step Methodology</div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
             <ScrollReveal>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+              <div className="section-tag !mb-1">6-Step Methodology</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
                 From Data to <span className="text-ln-green">Savings</span> in 90 Days
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-body-lg">
+              <p className="text-muted-foreground text-[13px] leading-[1.5]">
                 A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
                 enterprises.
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             {METHODOLOGY_STEPS.map((s) => (
               <StaggerItem key={s.num}>
-                <div className="card-hover relative overflow-hidden">
-                  <div className="absolute right-4 top-2 font-mono text-5xl font-bold text-ln-purple opacity-[0.07]">
+                <div className="card-hover !p-4 !rounded-2xl relative overflow-hidden">
+                  <div className="absolute right-3 top-1 font-mono text-4xl font-bold text-ln-purple opacity-[0.07]">
                     {s.num}
                   </div>
                   <div
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-[10px] text-ln-purple font-display text-sm font-extrabold mb-4"
+                    className="inline-flex items-center justify-center w-7 h-7 rounded-lg text-ln-purple font-display text-xs font-extrabold mb-2"
                     style={{ background: "rgba(57,49,133,.1)" }}
                   >
                     {s.num}
                   </div>
-                  <div className="font-display text-lg font-bold mb-2">{s.title}</div>
-                  <div className="text-sm text-muted-foreground leading-[1.7]">{s.desc}</div>
+                  <div className="font-display text-[14px] font-bold mb-1">{s.title}</div>
+                  <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{s.desc}</div>
                 </div>
               </StaggerItem>
             ))}
@@ -487,50 +485,42 @@ const Home = () => {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="section-std bg-background">
+      <section className="px-[5vw] py-5 bg-background">
         <div className="max-w-[1280px] mx-auto">
-          <ScrollReveal>
-            <div className="section-tag">Case Studies</div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
             <ScrollReveal>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+              <div className="section-tag !mb-1">Case Studies</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
                 Real Results, <span className="text-ln-purple">Real Clients</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-body-lg">
+              <p className="text-muted-foreground text-[13px] leading-[1.5]">
                 Proven savings across geographies, industries and freight types — from India to Europe to Australia.
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             {CASES.map((cs, i) => (
               <StaggerItem key={cs.client}>
-                <div className="card-hover !p-7">
-                  <div className="font-mono text-[11px] font-bold tracking-[0.08em] uppercase text-ln-green mb-2.5">
+                <div className="card-hover !p-4 !rounded-2xl">
+                  <div className="font-mono text-[9px] font-bold tracking-[0.08em] uppercase text-ln-green mb-1.5">
                     {cs.tag}
                   </div>
-                  <div className="font-display text-lg font-bold mb-3.5 leading-[1.3]">{cs.client}</div>
-                  <div className="grid grid-cols-2 gap-2.5 mb-3">
-                    <div className="p-3 bg-background rounded-xl text-center">
-                      <div className="font-display text-xl font-extrabold" style={{ color: caseColors[i] }}>
+                  <div className="font-display text-[14px] font-bold mb-2 leading-[1.3]">{cs.client}</div>
+                  <div className="grid grid-cols-2 gap-2 mb-2">
+                    <div className="p-2 bg-background rounded-lg text-center">
+                      <div className="font-display text-[16px] font-extrabold" style={{ color: caseColors[i] }}>
                         {cs.spend}
                       </div>
-                      <div className="text-[11px] text-muted-foreground mt-0.5">Spend</div>
+                      <div className="text-[9px] text-muted-foreground">Spend</div>
                     </div>
-                    <div className="p-3 rounded-xl text-center" style={{ background: "rgba(84,175,58,.08)" }}>
-                      <div className="font-display text-xl font-extrabold text-ln-green">{cs.saving}</div>
-                      <div className="text-[11px] text-muted-foreground mt-0.5">Savings ({cs.pct})</div>
+                    <div className="p-2 rounded-lg text-center" style={{ background: "rgba(84,175,58,.08)" }}>
+                      <div className="font-display text-[16px] font-extrabold text-ln-green">{cs.saving}</div>
+                      <div className="text-[9px] text-muted-foreground">Savings ({cs.pct})</div>
                     </div>
                   </div>
-                  {cs.extra && <div className="text-[12.5px] text-muted-foreground mb-1">📊 {cs.extra}</div>}
-                  {/* <button
-                    className="bg-ln-purple rounded-full px-4 py-2 text-[12.5px] font-bold border-none cursor-pointer mt-2"
-                    style={{ color: "#fff" }}
-                  >
-                    ▶ Watch Case Study
-                  </button> */}
+                  {cs.extra && <div className="text-[11px] text-muted-foreground">📊 {cs.extra}</div>}
                 </div>
               </StaggerItem>
             ))}
@@ -539,39 +529,39 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="section-std bg-bg2">
+      <section className="px-[5vw] py-5 bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-4">
-              <div className="section-tag justify-center">Client Testimonials</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+            <div className="text-center mb-3">
+              <div className="section-tag justify-center !mb-1">Client Testimonials</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
                 What Our Clients Say
               </h2>
             </div>
           </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {TESTIMONIALS.map((t, i) => (
               <StaggerItem key={i}>
-                <div className="card-hover relative overflow-hidden !p-8">
+                <div className="card-hover !p-5 !rounded-2xl relative overflow-hidden">
                   <div
-                    className="text-[56px] text-ln-purple opacity-10 absolute top-1.5 left-4 leading-none"
+                    className="text-[40px] text-ln-purple opacity-10 absolute top-0.5 left-3 leading-none"
                     style={{ fontFamily: "Georgia, serif" }}
                   >
                     "
                   </div>
-                  <div className="text-[14.5px] text-muted-foreground leading-[1.78] italic mb-5 relative z-[1]">
+                  <div className="text-[12px] text-muted-foreground leading-[1.6] italic mb-3 relative z-[1]">
                     {t.q}
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
                     <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-base"
+                      className="w-8 h-8 rounded-full flex items-center justify-center text-sm"
                       style={{ background: t.grad }}
                     >
                       👤
                     </div>
                     <div>
-                      <div className="text-[13.5px] font-bold">{t.name}</div>
-                      <div className="text-xs text-muted-foreground">{t.role}</div>
+                      <div className="text-[12px] font-bold">{t.name}</div>
+                      <div className="text-[10px] text-muted-foreground">{t.role}</div>
                     </div>
                   </div>
                 </div>
