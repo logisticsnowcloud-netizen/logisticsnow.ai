@@ -136,6 +136,10 @@ const News = () => (
               ))}
             </div>
 
+            <div className="mt-6 mb-6">
+              <img src={supernovaAward} alt="LogisticsNow team receiving Sustainability Leaders Award at Supernova Challenge Dubai 2025" className="rounded-lg w-full object-cover" />
+            </div>
+
             <div className="mt-6">
               <h3 className="font-display font-bold text-foreground mb-3">Impact at Scale</h3>
               <ul className="list-disc list-inside space-y-1 text-sm text-foreground/80">
