@@ -207,10 +207,15 @@ const Product = () => {
 
       {/* AUDIENCE TOGGLE */}
       <section className="section-std bg-bg2">
-        <div className="max-w-[1280px] mx-auto text-center">
+        <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="section-tag justify-center">One Platform, Two Ecosystems</div>
-            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">Built for Both Sides of Logistics</h2>
+            <div className="section-tag">One Platform, Two Ecosystems</div>
+            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
+              Built for Both Sides of <span className="text-ln-blue">Logistics</span>
+            </h2>
+            <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
+              One unified platform serving manufacturers and carriers with tailored experiences.
+            </p>
             <div className="inline-flex mt-6 bg-surface border border-border rounded-full p-1 gap-1">
               <button
                 onClick={() => setAudience('mfr')}
@@ -246,12 +251,12 @@ const Product = () => {
       <section className="py-[24px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-4">
-              <div className="section-tag justify-center">The Platform</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
+            <div className="mb-4">
+              <div className="section-tag">The Platform</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
                 4 Pillars. <span className="text-ln-blue">Infinite Value.</span>
               </h2>
-              <p className="text-muted-foreground text-[14px] leading-[1.6] max-w-[500px] mx-auto mt-1.5">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
+              <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
             </div>
           </ScrollReveal>
 
