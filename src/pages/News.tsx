@@ -188,10 +188,10 @@ const News = () => (
     </section>
 
     {/* More Coverage */}
-    <section className="section-std py-10">
-      <div className="container mx-auto px-6">
+    <section className="section-std py-6">
+      <div className="max-w-[1280px] mx-auto">
         <ScrollReveal>
-          <h2 className="heading-section max-w-2xl mb-6">More Coverage</h2>
+          <h2 className="font-display font-extrabold heading-section tracking-[-0.03em] mb-4">More Coverage</h2>
         </ScrollReveal>
 
         <StaggerContainer className="grid sm:grid-cols-2 gap-3">
