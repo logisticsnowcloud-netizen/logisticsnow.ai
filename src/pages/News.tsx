@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ExternalLink, Newspaper, Calendar } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
+import supernovaAward from "@/assets/supernova-award.png";
 
 const FEATURED_ARTICLE = {
   title: "LogisticsNow Wins Sustainability Leaders Track at Supernova Challenge Dubai 2025",
