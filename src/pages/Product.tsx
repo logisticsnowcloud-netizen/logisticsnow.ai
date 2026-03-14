@@ -182,25 +182,7 @@ const Product = () => {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="relative">
-                {/* Video Container */}
-                <div className="relative rounded-[20px] overflow-hidden border border-border/50" style={{ boxShadow: '0 20px 60px rgba(57,49,133,0.15), 0 0 0 1px rgba(57,49,133,0.08)' }}>
-                  <div className="aspect-video">
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
-                      title="LoRRI Platform Demo"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                </div>
-
-                {/* Floating badge */}
-                <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.08em] uppercase z-10" style={{ background: 'linear-gradient(135deg, #393185, #1AA6DF)', color: '#fff', boxShadow: '0 4px 16px rgba(57,49,133,0.3)' }}>
-                  ▶ Watch Demo
-                </div>
-              </div>
+              <PlatformWalkthrough />
             </ScrollReveal>
           </div>
         </div>
