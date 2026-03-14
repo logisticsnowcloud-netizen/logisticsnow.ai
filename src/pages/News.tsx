@@ -55,6 +55,19 @@ const MORE_COVERAGE = [
 
 const EVENTS = [
   {
+    title: "Shell Demo Day",
+    location: "Bangalore",
+    date: "July 18, 2019",
+    description: [
+      "LogisticsNow participated in Shell Demo Day in Bangalore, India's leading startup and innovation hub. The event brought together startups, investors, and industry leaders to explore innovative technologies transforming global industries.",
+      "During the event, LogisticsNow Founder Mr. Raj Saxena presented the company's vision for LoRRI (Logistics Rate & Route Intelligence) — a platform designed to build the National Logistics Map for India and bring greater transparency, efficiency, and intelligence to the logistics sector.",
+      "The presentation highlighted how LoRRI leverages data, analytics, and technology to map freight routes, benchmark logistics costs, and enable enterprises to make smarter supply chain decisions.",
+      "The LogisticsNow solution received strong interest and positive feedback from the Shell and investor community, reinforcing the growing importance of digital platforms and freight intelligence in transforming the logistics industry.",
+      "Participation in Shell Demo Day marked an important milestone in LogisticsNow's journey to build the digital backbone for logistics in India and globally.",
+    ],
+    photos: [shellDemoBooth, shellDemoSpeaking, shellDemoTeam, shellDemoStage, shellDemoBooth2, shellDemoBooth3, shellDemoPanel, shellDemoAudience],
+  },
+  {
     title: "Global Supply Chain Summit",
     location: "Mumbai",
     date: "February 22, 2018",
