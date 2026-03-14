@@ -211,7 +211,7 @@ const Product = () => {
           <ScrollReveal>
             <div className="section-tag">One Platform, Two Ecosystems</div>
             <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
-              Built for Both Sides of <span className="text-ln-blue">Logistics</span>
+              Built for Both Sides of <span className="text-ln-green">Logistics</span>
             </h2>
             <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
               One unified platform serving manufacturers and carriers with tailored experiences.
@@ -254,7 +254,7 @@ const Product = () => {
             <div className="mb-4">
               <div className="section-tag">The Platform</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
-                4 Pillars. <span className="text-ln-blue">Infinite Value.</span>
+                4 Pillars. <span className="text-ln-green">Infinite Value.</span>
               </h2>
               <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
             </div>
