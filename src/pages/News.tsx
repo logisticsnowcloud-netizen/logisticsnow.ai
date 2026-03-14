@@ -293,6 +293,41 @@ const EventsContent = () => (
                 ))}
               </div>
 
+              {event.bulletPoints && (
+                <div className="mt-4">
+                  <p className="text-sm text-foreground/80 mb-2 font-semibold">Industry leaders showed strong interest in LoRRI's ability to:</p>
+                  <ul className="list-disc list-inside space-y-1 text-sm text-foreground/80">
+                    {event.bulletPoints.map((bp, i) => (
+                      <li key={i}>{bp}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {event.descriptionAfterBullets && (
+                <div className="space-y-4 text-foreground/80 text-sm leading-relaxed mt-4">
+                  {event.descriptionAfterBullets.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+
+              {/* Event Video */}
+              {event.videoUrl && (
+                <div className="mt-8">
+                  <h3 className="font-display font-bold text-foreground mb-4">Event Video</h3>
+                  <div className="aspect-video rounded-lg overflow-hidden border border-border">
+                    <iframe
+                      src={event.videoUrl}
+                      title={`${event.title} video`}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              )}
+
               {/* Event Photos */}
               <div className="mt-8">
                 <h3 className="font-display font-bold text-foreground mb-4">Event Photos</h3>
