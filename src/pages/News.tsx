@@ -15,6 +15,13 @@ import shellDemoBooth2 from "@/assets/events/shell-demo-booth2.png";
 import shellDemoBooth3 from "@/assets/events/shell-demo-booth3.png";
 import shellDemoPanel from "@/assets/events/shell-demo-panel.png";
 import shellDemoAudience from "@/assets/events/shell-demo-audience.png";
+import elscBoothTeam from "@/assets/events/elsc-booth-team.png";
+import elscSpeaking from "@/assets/events/elsc-speaking.png";
+import elscTeam from "@/assets/events/elsc-team.png";
+import elscAwards from "@/assets/events/elsc-awards.png";
+import elscPodium from "@/assets/events/elsc-podium.png";
+import elscStage from "@/assets/events/elsc-stage.png";
+import elscStage2 from "@/assets/events/elsc-stage2.png";
 
 const FEATURED_ARTICLE = {
   title: "LogisticsNow Wins Sustainability Leaders Track at Supernova Challenge Dubai 2025",
@@ -54,6 +61,28 @@ const MORE_COVERAGE = [
 ];
 
 const EVENTS = [
+  {
+    title: "ELSC, Taj Land's End",
+    location: "Mumbai",
+    date: "October 3, 2019",
+    description: [
+      "LogisticsNow formally unveiled its flagship product LoRRI (Logistics Rate & Route Intelligence) at the ELSC Conference held at Taj Land's End, Mumbai, one of India's leading industry gatherings for logistics and supply chain leaders.",
+      "The launch marked a significant milestone for LogisticsNow as the company introduced LoRRI — a digital logistics intelligence platform designed to bring transparency, efficiency, and data-driven decision-making to freight procurement and logistics operations.",
+      "During the event, the LogisticsNow team hosted live demonstrations of the platform at the LogisticsNow booth, where more than 40 leading Indian and global companies participated in product walkthroughs and discussions on the future of digital logistics.",
+    ],
+    bulletPoints: [
+      "Benchmark freight rates across routes and regions",
+      "Improve freight procurement and planning",
+      "Enhance visibility across logistics networks",
+      "Enable smarter supply chain decision-making using data intelligence",
+    ],
+    descriptionAfterBullets: [
+      "The launch received wide appreciation from logistics professionals, enterprise leaders, and technology stakeholders, reinforcing LogisticsNow's vision of building the digital backbone for logistics through its Smart Logistics Grid.",
+      "The event marked an important step in LogisticsNow's mission to transform logistics with technology, data intelligence, and a connected freight ecosystem.",
+    ],
+    photos: [elscBoothTeam, elscSpeaking, elscTeam, elscAwards, elscPodium, elscStage, elscStage2],
+    videoUrl: "https://www.youtube.com/embed/IY6UxSKd0ps",
+  },
   {
     title: "Shell Demo Day",
     location: "Bangalore",
@@ -263,6 +292,41 @@ const EventsContent = () => (
                   <p key={i}>{p}</p>
                 ))}
               </div>
+
+              {event.bulletPoints && (
+                <div className="mt-4">
+                  <p className="text-sm text-foreground/80 mb-2 font-semibold">Industry leaders showed strong interest in LoRRI's ability to:</p>
+                  <ul className="list-disc list-inside space-y-1 text-sm text-foreground/80">
+                    {event.bulletPoints.map((bp, i) => (
+                      <li key={i}>{bp}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {event.descriptionAfterBullets && (
+                <div className="space-y-4 text-foreground/80 text-sm leading-relaxed mt-4">
+                  {event.descriptionAfterBullets.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              )}
+
+              {/* Event Video */}
+              {event.videoUrl && (
+                <div className="mt-8">
+                  <h3 className="font-display font-bold text-foreground mb-4">Event Video</h3>
+                  <div className="aspect-video rounded-lg overflow-hidden border border-border">
+                    <iframe
+                      src={event.videoUrl}
+                      title={`${event.title} video`}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              )}
 
               {/* Event Photos */}
               <div className="mt-8">
