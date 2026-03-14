@@ -7,6 +7,14 @@ import supernovaAward from "@/assets/supernova-award.png";
 import gscsPanel2018 from "@/assets/events/gscs-panel-2018.png";
 import gscsPanel2019 from "@/assets/events/gscs-panel-2019.png";
 import gscsAward2019 from "@/assets/events/gscs-award-2019.png";
+import shellDemoBooth from "@/assets/events/shell-demo-booth.png";
+import shellDemoSpeaking from "@/assets/events/shell-demo-speaking.png";
+import shellDemoTeam from "@/assets/events/shell-demo-team.png";
+import shellDemoStage from "@/assets/events/shell-demo-stage.png";
+import shellDemoBooth2 from "@/assets/events/shell-demo-booth2.png";
+import shellDemoBooth3 from "@/assets/events/shell-demo-booth3.png";
+import shellDemoPanel from "@/assets/events/shell-demo-panel.png";
+import shellDemoAudience from "@/assets/events/shell-demo-audience.png";
 
 const FEATURED_ARTICLE = {
   title: "LogisticsNow Wins Sustainability Leaders Track at Supernova Challenge Dubai 2025",
@@ -46,6 +54,19 @@ const MORE_COVERAGE = [
 ];
 
 const EVENTS = [
+  {
+    title: "Shell Demo Day",
+    location: "Bangalore",
+    date: "July 18, 2019",
+    description: [
+      "LogisticsNow participated in Shell Demo Day in Bangalore, India's leading startup and innovation hub. The event brought together startups, investors, and industry leaders to explore innovative technologies transforming global industries.",
+      "During the event, LogisticsNow Founder Mr. Raj Saxena presented the company's vision for LoRRI (Logistics Rate & Route Intelligence) — a platform designed to build the National Logistics Map for India and bring greater transparency, efficiency, and intelligence to the logistics sector.",
+      "The presentation highlighted how LoRRI leverages data, analytics, and technology to map freight routes, benchmark logistics costs, and enable enterprises to make smarter supply chain decisions.",
+      "The LogisticsNow solution received strong interest and positive feedback from the Shell and investor community, reinforcing the growing importance of digital platforms and freight intelligence in transforming the logistics industry.",
+      "Participation in Shell Demo Day marked an important milestone in LogisticsNow's journey to build the digital backbone for logistics in India and globally.",
+    ],
+    photos: [shellDemoBooth, shellDemoSpeaking, shellDemoTeam, shellDemoStage, shellDemoBooth2, shellDemoBooth3, shellDemoPanel, shellDemoAudience],
+  },
   {
     title: "Global Supply Chain Summit",
     location: "Mumbai",
