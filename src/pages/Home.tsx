@@ -505,7 +505,7 @@ const Home = () => {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">
+              <p className="text-muted-foreground text-body-lg">
                 Proven savings across geographies, industries and freight types — from India to Europe to Australia.
               </p>
             </ScrollReveal>
