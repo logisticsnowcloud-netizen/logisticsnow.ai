@@ -47,10 +47,10 @@ const Product = () => {
                   Global Smart Logistics Grid
                 </div>
                 <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
-                  Meet <span className="gradient-lorri">LoRRI</span><br />— The Brain of<br />Your Logistics
+                  Meet <span className="text-ln-green">LoRRI AI</span><br />— The Brain of<br />Your Logistics
                 </h1>
                 <p className="text-[13.5px] text-muted-foreground leading-[1.6] max-w-[460px] mb-3">
-                  <strong className="text-foreground">LoRRI (Logistics Routing & Real-time Intelligence)</strong> is the industry's first end-to-end logistics intelligence platform — powering deep discovery, rapid procurement, digital operations and 10× faster payments.
+                  <strong className="text-foreground">LoRRI AI</strong> is the industry's first end-to-end logistics intelligence platform — powering deep discovery, rapid procurement, digital operations and 10× faster payments.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
                   {PROD_STATS.map((s) => (
@@ -151,7 +151,7 @@ const Product = () => {
               <div>
                 <div className="section-tag">Platform Walkthrough</div>
                 <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
-                  See LoRRI <span className="text-ln-blue">in Action</span>
+                  See LoRRI <span className="text-ln-green">in Action</span>
                 </h2>
                 <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
                   Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in under 3 minutes.
@@ -337,7 +337,7 @@ const Product = () => {
       </div>
 
       {/* FLOW SECTION */}
-      <section className="section-std bg-bg2">
+      {/* <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="text-center mb-6">
@@ -369,7 +369,7 @@ const Product = () => {
             ))}
           </StaggerContainer>
         </div>
-      </section>
+      </section> */}
 
       <CtaBanner />
     </div>
