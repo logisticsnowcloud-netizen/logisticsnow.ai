@@ -1,0 +1,4 @@
+project_id = "alcdeqrspuufgpouuhrk"
+
+[functions.ai-logistics-analyzer]
+verify_jwt = false
