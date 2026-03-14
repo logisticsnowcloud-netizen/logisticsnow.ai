@@ -369,12 +369,12 @@ const Careers = () => {
       <ApplyModal job={applyJob} open={!!applyJob} onClose={() => setApplyJob(null)} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-10 md:py-14 px-[5vw] text-center">
+      <section className="relative overflow-hidden py-10 md:py-14 px-[5vw]">
         <div className="absolute inset-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 60% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
-        <div className="relative z-[2] max-w-[720px] mx-auto">
+        <div className="relative z-[2] max-w-[1100px] mx-auto">
           <ScrollReveal direction="up" delay={0}>
-            <div className="section-tag justify-center">Careers</div>
+            <div className="section-tag">Careers</div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
             <h1 className="font-display font-extrabold tracking-[-0.035em] mb-2" style={{ fontSize: 'clamp(28px, 3.8vw, 46px)', lineHeight: 1.1 }}>
@@ -382,7 +382,7 @@ const Careers = () => {
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-muted-foreground max-w-[520px] mx-auto leading-relaxed text-sm">
+            <p className="text-muted-foreground max-w-[520px] leading-relaxed text-sm">
               Join a team of passionate builders, data rockstars, and hustlers shaping a $Trillion industry. This isn't a job — it's a launchpad.
             </p>
           </ScrollReveal>
