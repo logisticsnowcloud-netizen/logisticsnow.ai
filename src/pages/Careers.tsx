@@ -5,6 +5,7 @@ import CtaBanner from "@/components/CtaBanner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 type Job = {
   id: string;
