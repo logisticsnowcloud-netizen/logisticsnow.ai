@@ -10,7 +10,7 @@ const FEATURED_ARTICLE = {
   paragraphs: [
     <>LogisticsNow, a vertical AI logistics-tech platform, has been recognized as the <strong>Winner of the Sustainability Leaders Track at the Supernova Challenge Dubai 2025</strong>, part of Expand North Star — one of the world's largest global startup events.</>,
     <>The recognition highlights LogisticsNow's work in building <strong>AI-powered freight intelligence systems that help enterprises optimize logistics networks, reduce costs, and lower carbon emissions</strong> across global supply chains.</>,
-    <>Through its platform <strong>LoRRI.ai</strong>, LogisticsNow enables companies to make <strong>data-driven freight decisions</strong>, improving load efficiency, reducing empty miles, and creating more sustainable logistics operations.</>,
+    <>Through its platform <a href="https://www.lorri.ai/" target="_blank" rel="noopener noreferrer" className="text-primary font-bold underline hover:text-primary/80 transition-colors">LoRRI.ai</a>, LogisticsNow enables companies to make <strong>data-driven freight decisions</strong>, improving load efficiency, reducing empty miles, and creating more sustainable logistics operations.</>,
   ],
   impact: [
     "$2.5B+ freight intelligence analyzed",
