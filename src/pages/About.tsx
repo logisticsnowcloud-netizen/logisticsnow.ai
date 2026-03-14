@@ -141,7 +141,7 @@ const About = () => (
     </section>
 
     {/* WHY US */}
-    <section className="py-[36px] px-[5vw] bg-bg2">
+    <section className="section-std bg-bg2">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 items-end">
           <ScrollReveal>
