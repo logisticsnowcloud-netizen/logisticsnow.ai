@@ -319,14 +319,15 @@ const Product = () => {
               <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
                 Trusted by Industry Leaders
               </div>
-              <div className="flex flex-wrap justify-center items-center gap-6">
+              <div className="flex flex-wrap justify-center items-center gap-8">
                 {TRUSTED_LOGOS.map((logo) => (
-                  <div key={logo.name} className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                  <div key={logo.name} className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex items-center justify-center w-[100px] h-[40px]">
                     <img
                       src={logo.src}
                       alt={logo.name}
-                      className="h-8 w-auto object-contain"
+                      className="max-h-[36px] max-w-[90px] w-auto h-auto object-contain"
                       loading="lazy"
+                      style={{ mixBlendMode: 'multiply' }}
                     />
                   </div>
                 ))}
