@@ -192,7 +192,7 @@ const ApplyModal = ({ job, open, onClose }: { job: Job | null; open: boolean; on
   const [file, setFile] = useState<File | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !phone.trim()) {
       toast.error("Please fill all required fields");
@@ -208,13 +208,52 @@ const ApplyModal = ({ job, open, onClose }: { job: Job | null; open: boolean; on
     }
 
     setSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
+    try {
+      // Upload resume if provided
+      let resumePath = "";
+      if (file) {
+        const fileExt = file.name.split(".").pop();
+        const fileName = `${Date.now()}-${name.replace(/\s+/g, "_")}.${fileExt}`;
+        const { error: uploadError } = await supabase.storage
+          .from("resumes")
+          .upload(fileName, file);
+        if (uploadError) {
+          console.error("Upload error:", uploadError);
+          toast.error("Failed to upload resume. Please try again.");
+          setSubmitting(false);
+          return;
+        }
+        resumePath = fileName;
+      }
+
+      // Save to database
+      await supabase.from("job_applications").insert({
+        job_title: job?.title || "",
+        applicant_name: name,
+        applicant_email: email,
+        applicant_phone: phone,
+        resume_path: resumePath || null,
+      });
+
+      // Send email notification
+      const { error: fnError } = await supabase.functions.invoke("send-job-application", {
+        body: { name, email, phone, jobTitle: job?.title || "", resumePath },
+      });
+
+      if (fnError) {
+        console.error("Email error:", fnError);
+        // Still show success since data is saved
+      }
+
       toast.success("Application submitted successfully! We'll get back to you soon.");
       setName(""); setEmail(""); setPhone(""); setFile(null);
-      setSubmitting(false);
       onClose();
-    }, 1200);
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
