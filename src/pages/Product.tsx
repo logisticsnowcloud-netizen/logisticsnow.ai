@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { PILLARS, MFR_FEATURES, CARRIER_FEATURES, VAL_DRIVERS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
+import PlatformWalkthrough from "@/components/PlatformWalkthrough";
 
 const PROD_STATS = [
   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185' },
