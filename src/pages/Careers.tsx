@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Clock, Tag, ArrowRight, Rocket, Users, TrendingUp, Heart, X, Upload } from "lucide-react";
+import { ChevronDown, MapPin, Clock, Tag, ArrowRight, Rocket, Users, TrendingUp, Heart, X, Upload, DollarSign } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -177,10 +177,10 @@ const JOBS: Job[] = [
 ];
 
 const PERKS = [
-  { icon: Rocket, title: "High-Impact ESOPs", desc: "Generous equity so you grow as the company grows" },
-  { icon: TrendingUp, title: "Fast-Track Growth", desc: "Direct exposure to leadership and global expansion" },
-  { icon: Users, title: "Startup Culture", desc: "Autonomy, ownership, and a bias for action" },
-  { icon: Heart, title: "Comprehensive Benefits", desc: "Health, dental, vision & flexible work arrangements" },
+  { icon: Users, title: "Operate like a founder", desc: "Own initiatives end-to-end, drive strategic decisions with real impact." },
+  { icon: DollarSign, title: "Solve trillion-dollar logistics problems.", desc: "Work in enterprise platforms transforming global supply chains across continents." },
+  { icon: Rocket, title: "Generous ESOPs with real upside.", desc: "Be part of a company with the potential to create long-term wealth." },
+  { icon: Heart, title: "Builder-First Culture", desc: "High ownership, fast execution, and the freedom to build what matters." },
 ];
 
 /* ── Apply Modal ── */
@@ -376,7 +376,7 @@ const Careers = () => {
           <ScrollReveal direction="up" delay={0}>
             <p className="text-xs text-muted-foreground flex items-center gap-1.5 mb-4">
               <a href="/" className="text-ln-purple no-underline hover:underline font-semibold">HOME</a>
-              <span>/</span>
+              <span>›</span>
               <span className="text-foreground font-semibold">CAREERS</span>
             </p>
           </ScrollReveal>
