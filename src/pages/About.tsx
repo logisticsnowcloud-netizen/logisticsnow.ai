@@ -298,7 +298,7 @@ const About = () => (
     </section>
 
     {/* TESTIMONIALS with Client Logos */}
-    <section className="py-[36px] px-[5vw] bg-background">
+    <section className="section-std bg-background">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 items-end">
           <ScrollReveal>
