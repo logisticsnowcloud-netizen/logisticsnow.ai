@@ -179,8 +179,8 @@ const JOBS: Job[] = [
 const PERKS = [
   { icon: Rocket, title: "High-Impact ESOPs", desc: "Generous equity so you grow as the company grows" },
   { icon: TrendingUp, title: "Fast-Track Growth", desc: "Direct exposure to leadership and global expansion" },
-  { icon: Users, title: "Startup Culture", desc: "Autonomy, ownership, and a bias for action" },
-  { icon: Heart, title: "Comprehensive Benefits", desc: "Health, dental, vision & flexible work arrangements" },
+  { icon: Users, title: "Startup Culture", desc: "Small team energy — move fast, own outcomes, ship what matters" },
+  { icon: Heart, title: "People-First Perks", desc: "Health coverage, flexible hours & remote-friendly work" },
 ];
 
 /* ── Apply Modal ── */
