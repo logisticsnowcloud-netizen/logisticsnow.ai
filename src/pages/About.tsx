@@ -39,7 +39,7 @@ const About = () => (
           <ScrollReveal direction="up">
             <div>
               <div className="section-tag">Company</div>
-              <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3" style={{ fontSize: 'clamp(34px, 5vw, 62px)' }}>
+              <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
                 Building the <span className="text-ln-purple">Digital</span><br /><span className="text-ln-green">Backbone</span> of Logistics
               </h1>
               <p className="text-muted-foreground leading-[1.7] mb-5 max-w-[500px]" style={{ fontSize: 'clamp(14px, 1.5vw, 16px)' }}>
@@ -79,7 +79,7 @@ const About = () => (
     </div>
 
     {/* VISION — Visual Cards Layout */}
-    <section className="py-[36px] px-[5vw] bg-background">
+    <section className="section-std bg-background">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <ScrollReveal direction="up">
@@ -141,19 +141,19 @@ const About = () => (
     </section>
 
     {/* WHY US */}
-    <section className="py-[36px] px-[5vw] bg-bg2">
+    <section className="section-std bg-bg2">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">Why LogisticsNow</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Uniquely Positioned with<br /><span className="text-ln-purple">Trust, Technology & Data</span>
               </h2>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-muted-foreground text-[15px] leading-[1.7]">Three pillars no other logistics platform combines — the reason India's most reputed companies trust us.</p>
+            <p className="text-muted-foreground text-body-lg">Three pillars no other logistics platform combines — the reason India's most reputed companies trust us.</p>
           </ScrollReveal>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -172,17 +172,17 @@ const About = () => (
     </section>
 
     {/* JOURNEY */}
-    <section className="py-[36px] px-[5vw] bg-background">
+    <section className="section-std bg-background">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 items-start">
           <div>
             <ScrollReveal>
               <div className="mb-5">
                 <div className="section-tag">Our Journey</div>
-                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-1.5" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-1.5 heading-section">
                   From ISB to a <span className="text-ln-green">Global Logistics Grid</span>
                 </h2>
-                <p className="text-muted-foreground text-[15px] leading-[1.7]">Building trust, one shipper and carrier at a time — now across 4 continents.</p>
+                <p className="text-muted-foreground text-body-lg">Building trust, one shipper and carrier at a time — now across 4 continents.</p>
               </div>
             </ScrollReveal>
             {JOURNEY.map((j, i) => (
@@ -244,19 +244,19 @@ const About = () => (
     </section>
 
     {/* INVESTORS */}
-    <section className="py-[36px] px-[5vw] bg-bg2">
+    <section className="section-std bg-bg2">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">Investors & Partners</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Backed by the World's<br /><span className="text-ln-purple">Most Respected Names</span>
               </h2>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-muted-foreground text-[15px] leading-[1.7]">Strategic believers who accelerated our journey from founding vision to global platform.</p>
+            <p className="text-muted-foreground text-body-lg">Strategic believers who accelerated our journey from founding vision to global platform.</p>
           </ScrollReveal>
         </div>
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -298,19 +298,19 @@ const About = () => (
     </section>
 
     {/* TESTIMONIALS with Client Logos */}
-    <section className="py-[36px] px-[5vw] bg-background">
+    <section className="section-std bg-background">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 items-end">
           <ScrollReveal>
             <div>
               <div className="section-tag">What Clients Say</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Trusted by Those Who<br /><span className="text-ln-green">Know Logistics Best</span>
               </h2>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-muted-foreground text-[15px] leading-[1.7]">Direct quotes from supply chain leaders who rely on Team LoRRI every day.</p>
+            <p className="text-muted-foreground text-body-lg">Direct quotes from supply chain leaders who rely on Team LoRRI every day.</p>
           </ScrollReveal>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

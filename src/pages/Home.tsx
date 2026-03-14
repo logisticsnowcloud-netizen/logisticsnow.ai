@@ -179,8 +179,7 @@ const Home = () => {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
             <h1
-              className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2"
-              style={{ fontSize: "clamp(28px, 3.8vw, 52px)" }}
+              className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero"
             >
               The <span className="text-ln-purple">Intelligent</span> Logistics
               <br />& Procurement Platform for <span className="text-ln-green">Global</span>
@@ -249,10 +248,9 @@ const Home = () => {
           style={{ background: "linear-gradient(to left, hsl(var(--bg2)), transparent)" }}
         />
 
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <h2
-            className="font-display font-extrabold tracking-[-0.03em] leading-[1.1]"
-            style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
+            className="font-display font-extrabold tracking-[-0.03em] leading-[1.1] heading-section"
           >
             Trusted by <span className="text-ln-purple">Industry Leaders</span> Worldwide
           </h2>
@@ -327,17 +325,14 @@ const Home = () => {
       </div>
 
       {/* VISION */}
-      <section className="py-[48px] px-[5vw] bg-background">
+      <section className="section-std bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">Our Purpose</div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
             <ScrollReveal direction="up" delay={0.05}>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 The Trusted, Neutral
                 <br />
                 <span className="text-ln-purple">Logistics Intelligence Platform</span>
@@ -345,7 +340,7 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
               <div>
-                <p className="text-muted-foreground text-[17px] leading-[1.75]">
+                <p className="text-muted-foreground text-body-lg">
                   LogisticsNow is uniquely positioned with trust, technology & data to enable your digital logistics
                   ecosystem.
                 </p>
@@ -378,24 +373,21 @@ const Home = () => {
       </section>
 
       {/* AI SUITE */}
-      <section className="py-[48px] px-[5vw] bg-background">
+      <section className="section-std bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">AI Suite</div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
             <ScrollReveal direction="up" delay={0.05}>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Not AI as a Feature.
                 <br />
                 <span className="text-ln-purple">AI as the Foundation.</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">
+              <p className="text-muted-foreground text-body-lg">
                 Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical
                 industry problem at national scale.
               </p>
@@ -458,22 +450,19 @@ const Home = () => {
       </section>  
 
       {/* METHODOLOGY */}
-      <section className="py-[48px] px-[5vw] bg-bg2">
+      <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">6-Step Methodology</div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
             <ScrollReveal>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 From Data to <span className="text-ln-green">Savings</span> in 90 Days
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">
+              <p className="text-muted-foreground text-body-lg">
                 A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
                 enterprises.
               </p>
@@ -502,22 +491,19 @@ const Home = () => {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="py-[48px] px-[5vw] bg-background">
+      <section className="section-std bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">Case Studies</div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
             <ScrollReveal>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Real Results, <span className="text-ln-purple">Real Clients</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">
+              <p className="text-muted-foreground text-body-lg">
                 Proven savings across geographies, industries and freight types — from India to Europe to Australia.
               </p>
             </ScrollReveal>
@@ -557,15 +543,12 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-[48px] px-[5vw] bg-bg2">
+      <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-[28px]">
+            <div className="text-center mb-4">
               <div className="section-tag justify-center">Client Testimonials</div>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 What Our Clients Say
               </h2>
             </div>

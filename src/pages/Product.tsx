@@ -46,7 +46,7 @@ const Product = () => {
                   <span className="w-[7px] h-[7px] rounded-full" style={{ background: '#1AA6DF', boxShadow: '0 0 8px #1AA6DF' }} />
                   Global Smart Logistics Grid
                 </div>
-                <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3" style={{ fontSize: 'clamp(32px, 4vw, 52px)' }}>
+                <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
                   Meet <span className="gradient-lorri">LoRRI</span><br />— The Brain of<br />Your Logistics
                 </h1>
                 <p className="text-[13.5px] text-muted-foreground leading-[1.6] max-w-[460px] mb-3">
@@ -143,17 +143,17 @@ const Product = () => {
       </div>
 
       {/* INTERACTIVE DEMO / VIDEO */}
-      <section className="py-[48px] px-[5vw] bg-bg2 relative overflow-hidden">
+      <section className="section-std bg-bg2 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 20%, rgba(57,49,133,0.08), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <ScrollReveal direction="up">
               <div>
                 <div className="section-tag">Platform Walkthrough</div>
-                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-5" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
                   See LoRRI <span className="text-ln-blue">in Action</span>
                 </h2>
-                <p className="text-muted-foreground text-[15px] leading-[1.65] mb-5 max-w-[480px]">
+                <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
                   Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in under 3 minutes.
                 </p>
                 <div className="flex flex-col gap-2.5 mb-5">
@@ -206,11 +206,11 @@ const Product = () => {
       </section>
 
       {/* AUDIENCE TOGGLE */}
-      <section className="py-[48px] px-[5vw] bg-bg2">
+      <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto text-center">
           <ScrollReveal>
             <div className="section-tag justify-center">One Platform, Two Ecosystems</div>
-            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>Built for Both Sides of Logistics</h2>
+            <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">Built for Both Sides of Logistics</h2>
             <div className="inline-flex mt-6 bg-surface border border-border rounded-full p-1 gap-1">
               <button
                 onClick={() => setAudience('mfr')}
@@ -337,15 +337,15 @@ const Product = () => {
       </div>
 
       {/* FLOW SECTION */}
-      <section className="py-[48px] px-[5vw] bg-bg2">
+      <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-8">
+            <div className="text-center mb-6">
               <div className="section-tag justify-center">Circular Intelligence</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Everything Flows. <span className="text-ln-green">Everything Connects.</span>
               </h2>
-              <p className="text-muted-foreground text-[17px] leading-[1.75] max-w-[520px] mx-auto mt-3">LoRRI is a closed-loop system — each pillar feeds intelligence back into the others, compounding value continuously.</p>
+              <p className="text-muted-foreground text-body-lg max-w-[520px] mx-auto mt-2">LoRRI is a closed-loop system — each pillar feeds intelligence back into the others, compounding value continuously.</p>
             </div>
           </ScrollReveal>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 relative">
