@@ -342,7 +342,7 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
               <div>
-                <p className="text-muted-foreground text-[17px] leading-[1.75]">
+                <p className="text-muted-foreground text-body-lg">
                   LogisticsNow is uniquely positioned with trust, technology & data to enable your digital logistics
                   ecosystem.
                 </p>
