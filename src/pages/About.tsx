@@ -153,7 +153,7 @@ const About = () => (
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-muted-foreground text-[15px] leading-[1.7]">Three pillars no other logistics platform combines — the reason India's most reputed companies trust us.</p>
+            <p className="text-muted-foreground text-body-lg">Three pillars no other logistics platform combines — the reason India's most reputed companies trust us.</p>
           </ScrollReveal>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-4">
