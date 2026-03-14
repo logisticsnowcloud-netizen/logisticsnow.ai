@@ -469,9 +469,9 @@ const Careers = () => {
 
       {/* Life @ LogisticsNow */}
       <section className="px-[5vw] py-10 md:py-14 bg-bg2">
-        <div className="max-w-[900px] mx-auto text-center">
+        <div className="max-w-[900px] mx-auto text-left">
           <ScrollReveal direction="up">
-            <div className="section-tag justify-center">Life @ LogisticsNow</div>
+            <div className="section-tag">Life @ LogisticsNow</div>
             <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground mb-4">
               Where Passion Meets <span className="text-ln-purple">Purpose</span>
             </h2>
