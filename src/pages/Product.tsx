@@ -46,7 +46,7 @@ const Product = () => {
                   <span className="w-[7px] h-[7px] rounded-full" style={{ background: '#1AA6DF', boxShadow: '0 0 8px #1AA6DF' }} />
                   Global Smart Logistics Grid
                 </div>
-                <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3" style={{ fontSize: 'clamp(32px, 4vw, 52px)' }}>
+                <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
                   Meet <span className="gradient-lorri">LoRRI</span><br />— The Brain of<br />Your Logistics
                 </h1>
                 <p className="text-[13.5px] text-muted-foreground leading-[1.6] max-w-[460px] mb-3">
