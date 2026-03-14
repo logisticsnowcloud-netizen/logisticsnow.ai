@@ -4,12 +4,37 @@ import { PILLARS, MFR_FEATURES, CARRIER_FEATURES, VAL_DRIVERS } from "@/lib/data
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
 import PlatformWalkthrough from "@/components/PlatformWalkthrough";
+import AiDemo from "@/components/AiDemo";
 
 const PROD_STATS = [
   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185' },
   { n: '2200+', l: 'Carriers', c: '#1AA6DF' },
   { n: '80K+', l: 'Routes', c: '#54AF3A' },
   { n: '100+', l: 'Truck Types', c: '#fb923c' },
+];
+
+const CREDIBILITY_STATS = [
+  { n: '120+', l: 'Countries', icon: '🌍' },
+  { n: '500M+', l: 'Shipment Records', icon: '📦' },
+  { n: '2B+', l: 'Trade Data Points', icon: '📊' },
+  { n: '300+', l: 'Commodities Tracked', icon: '🏷️' },
+  { n: '$2.5Bn+', l: 'Freight Analyzed', icon: '💰' },
+  { n: '50K+', l: 'Lanes Benchmarked', icon: '🛤️' },
+];
+
+const TRUSTED_LOGOS = [
+  { name: 'Maersk', src: '/logos/Maersk.png' },
+  { name: 'DHL', src: '/logos/dhl.png' },
+  { name: 'CEVA', src: '/logos/ceva.png' },
+  { name: 'DSV', src: '/logos/dsv.png' },
+  { name: 'Apollo Tyres', src: '/logos/apollo-tyres.png' },
+  { name: 'Perfetti', src: '/logos/perfetti.png' },
+  { name: 'Saint-Gobain', src: '/logos/saint-gobain.png' },
+  { name: 'Kimberly-Clark', src: '/logos/kimberly-clark.png' },
+  { name: 'General Mills', src: '/logos/general-mills.png' },
+  { name: 'Shell', src: '/logos/shell.png' },
+  { name: 'Bajaj', src: '/logos/bajaj.png' },
+  { name: 'Jyothy Labs', src: '/logos/jyothy-labs.png' },
 ];
 
 const Product = () => {
@@ -27,7 +52,7 @@ const Product = () => {
 
   return (
     <div>
-      {/* PRODUCT HERO */}
+      {/* ═══════════════ HERO ═══════════════ */}
       <div className="px-[5vw] pt-[12px] pb-[28px] relative overflow-hidden bg-background">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(57,49,133,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(57,49,133,0.07) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(ellipse, rgba(57,49,133,0.22) 0%, transparent 70%)' }} />
@@ -45,13 +70,13 @@ const Product = () => {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10.5px] font-bold tracking-[0.09em] uppercase mb-3" style={{ background: 'rgba(26,166,223,.10)', border: '1px solid rgba(26,166,223,.25)', color: '#1AA6DF' }}>
                   <span className="w-[7px] h-[7px] rounded-full" style={{ background: '#1AA6DF', boxShadow: '0 0 8px #1AA6DF' }} />
-                  Global Smart Logistics Grid
+                  AI Copilot for Global Logistics
                 </div>
                 <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
-                  Meet <span className="text-ln-green">LoRRI AI</span><br />— The Brain of<br />Your Logistics
+                  AI Intelligence Layer<br />for <span className="text-ln-green">Global Supply Chains</span>
                 </h1>
                 <p className="text-[13.5px] text-muted-foreground leading-[1.6] max-w-[460px] mb-3">
-                  <strong className="text-foreground">LoRRI AI</strong> is the industry's first end-to-end logistics intelligence platform — powering deep discovery, rapid procurement, digital operations and 10× faster payments.
+                  Predict freight rates, analyze global trade flows, and automate logistics decisions — all powered by <strong className="text-foreground">LoRRI AI</strong>, the industry's first end-to-end logistics intelligence platform.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
                   {PROD_STATS.map((s) => (
@@ -62,8 +87,8 @@ const Product = () => {
                   ))}
                 </div>
                 <div className="flex gap-3.5 flex-wrap">
-                  <button className="btn-primary-ln !px-5 !py-2.5 !text-[13px]">🚀 Explore LoRRI →</button>
-                  <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-muted-foreground bg-surface border border-border px-5 py-2.5 rounded-full text-[13px] font-semibold no-underline">🌐 Visit lorri.ai ↗</a>
+                  <button className="btn-primary-ln !px-5 !py-2.5 !text-[13px]">🤖 Try AI Demo ↓</button>
+                  <button className="btn-secondary-ln !px-5 !py-2.5 !text-[13px]">🚀 Explore Platform →</button>
                 </div>
               </div>
             </ScrollReveal>
@@ -101,7 +126,7 @@ const Product = () => {
                   </svg>
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[3] pointer-events-none w-16">
                     <div className="font-display text-base font-extrabold gradient-lorri leading-[1.1] tracking-[-0.02em]">LoRRI</div>
-                    <div className="text-[7px] font-bold tracking-[0.15em] uppercase text-muted-foreground mt-0.5">INTELLIGENCE</div>
+                    <div className="text-[7px] font-bold tracking-[0.15em] uppercase text-muted-foreground mt-0.5">AI COPILOT</div>
                   </div>
                   {PILLARS.map((p, i) => {
                     const angles = [-90, 0, 90, 180];
@@ -109,7 +134,6 @@ const Product = () => {
                      const nx = 180 + 135 * Math.cos(rad);
                      const ny = 180 + 135 * Math.sin(rad);
                     const isActive = i === activePillar;
-                    // Label positioning based on angle
                     const labelStyle: React.CSSProperties = i === 0 
                       ? { top: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
                       : i === 1 
@@ -129,7 +153,6 @@ const Product = () => {
                           {p.icon}
                         </div>
                         <div className="absolute -top-1 -right-1 w-[18px] h-[18px] rounded-full flex items-center justify-center text-[8px] font-extrabold font-mono" style={{ background: p.color, color: '#fff' }}>{p.num}</div>
-                        {/* Label */}
                         <div className="absolute text-[10px] font-bold" style={{ ...labelStyle, color: p.color }}>
                           <span style={{margin: '-2%'}}>{orbitLabels[i]}</span>
                         </div>
@@ -143,8 +166,81 @@ const Product = () => {
         </div>
       </div>
 
-      {/* INTERACTIVE DEMO / VIDEO */}
+      {/* ═══════════════ PROBLEM → SOLUTION ═══════════════ */}
       <section className="section-std bg-bg2 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 60% at 80% 30%, rgba(251,146,60,0.06), transparent)' }} />
+        <div className="max-w-[1280px] mx-auto relative z-[1]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            {/* The Problem */}
+            <ScrollReveal direction="up">
+              <div>
+                <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.1em] uppercase mb-3" style={{ color: '#ef4444' }}>
+                  <span className="w-6 h-[2.5px] rounded-sm inline-block" style={{ background: '#ef4444' }} />
+                  The Problem
+                </div>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-3 heading-section">
+                  Logistics Data is <span style={{ color: '#ef4444' }}>Broken</span>
+                </h2>
+                <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
+                  Global logistics data is fragmented across silos, freight pricing is unpredictable, and supply chain decisions are painfully slow.
+                </p>
+                <div className="space-y-2.5">
+                  {[
+                    { icon: '📊', pain: 'Fragmented Data', desc: 'Rates scattered across emails, spreadsheets & broker calls' },
+                    { icon: '💸', pain: 'Unpredictable Pricing', desc: 'No visibility into market rates — you overpay without knowing' },
+                    { icon: '🐌', pain: 'Slow Decisions', desc: 'Procurement cycles take weeks; the market moves in hours' },
+                    { icon: '🔒', pain: 'Information Asymmetry', desc: 'Carriers know more about rates than you do' },
+                  ].map((item) => (
+                    <div key={item.pain} className="flex items-start gap-3 group">
+                      <div className="w-9 h-9 rounded-lg flex items-center justify-center text-base shrink-0" style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.15)' }}>
+                        {item.icon}
+                      </div>
+                      <div>
+                        <div className="font-display text-[14px] font-bold">{item.pain}</div>
+                        <div className="text-[12.5px] text-muted-foreground">{item.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* The Solution */}
+            <ScrollReveal direction="up" delay={0.15}>
+              <div>
+                <div className="section-tag">The Solution</div>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-3 heading-section">
+                  LoRRI AI — Your <span className="text-ln-green">Logistics Copilot</span>
+                </h2>
+                <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
+                  LoRRI AI combines real-time trade data, predictive analytics, and autonomous agents to give logistics teams instant intelligence.
+                </p>
+                <div className="space-y-2.5">
+                  {[
+                    { icon: '🧠', solve: 'Unified Intelligence', desc: 'All freight data in one platform — benchmarks, rates & carrier insights', color: '#393185' },
+                    { icon: '📈', solve: 'Predictive Pricing', desc: 'AI-powered rate forecasting across routes and markets', color: '#1AA6DF' },
+                    { icon: '⚡', solve: 'Instant Procurement', desc: 'From RFQ to award in hours — not weeks', color: '#54AF3A' },
+                    { icon: '🤖', solve: 'Autonomous AI Agents', desc: 'Agents that monitor, negotiate and optimize 24/7', color: '#fb923c' },
+                  ].map((item) => (
+                    <div key={item.solve} className="flex items-start gap-3 group">
+                      <div className="w-9 h-9 rounded-lg flex items-center justify-center text-base shrink-0" style={{ background: `${item.color}12`, border: `1px solid ${item.color}25` }}>
+                        {item.icon}
+                      </div>
+                      <div>
+                        <div className="font-display text-[14px] font-bold">{item.solve}</div>
+                        <div className="text-[12.5px] text-muted-foreground">{item.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ PLATFORM WALKTHROUGH ═══════════════ */}
+      <section className="section-std bg-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 20%, rgba(57,49,133,0.08), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -188,7 +284,100 @@ const Product = () => {
         </div>
       </section>
 
-      {/* AUDIENCE TOGGLE */}
+      {/* ═══════════════ DATA CREDIBILITY ═══════════════ */}
+      <section className="py-[28px] px-[5vw] bg-bg2 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 70% at 30% 50%, rgba(26,166,223,0.06), transparent)' }} />
+        <div className="max-w-[1280px] mx-auto relative z-[1]">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-5">
+              <div className="section-tag justify-center">Global Data Coverage</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+                The <span className="text-ln-green">Bloomberg Terminal</span> for Logistics
+              </h2>
+              <p className="text-muted-foreground text-body-lg max-w-[520px] mx-auto mt-2">
+                Powered by the world's largest logistics intelligence dataset — real data, real insights, real decisions.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Stats Grid */}
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+            {CREDIBILITY_STATS.map((stat) => (
+              <StaggerItem key={stat.l}>
+                <div className="bg-card border border-border rounded-[14px] p-4 text-center hover:shadow-lg transition-shadow">
+                  <div className="text-[22px] mb-1.5">{stat.icon}</div>
+                  <div className="font-display text-[20px] font-extrabold text-ln-purple">{stat.n}</div>
+                  <div className="text-[11px] text-muted-foreground font-semibold mt-1">{stat.l}</div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* Trusted By Logos */}
+          <ScrollReveal direction="up" delay={0.2}>
+            <div className="text-center">
+              <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
+                Trusted by Industry Leaders
+              </div>
+              <div className="flex flex-wrap justify-center items-center gap-6">
+                {TRUSTED_LOGOS.map((logo) => (
+                  <div key={logo.name} className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      className="h-8 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══════════════ AI DEMO ═══════════════ */}
+      <section className="section-std bg-background relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 60% at 70% 40%, rgba(84,175,58,0.06), transparent)' }} />
+        <div className="max-w-[1280px] mx-auto relative z-[1]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <ScrollReveal direction="up">
+              <div>
+                <div className="section-tag">Interactive AI Demo</div>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-3 heading-section">
+                  Try the <span className="text-ln-green">AI Supply Chain Analyzer</span>
+                </h2>
+                <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
+                  Experience LoRRI's intelligence firsthand. Select a trade route and watch AI analyze freight rates, trade flows, and supply chain risks in real-time.
+                </p>
+                <div className="space-y-3 mb-4">
+                  {[
+                    { icon: '📈', title: 'Freight Rate Forecasting', desc: 'Predict rate changes across routes and markets before they happen' },
+                    { icon: '🌐', title: 'Trade Flow Analysis', desc: 'Analyze commodity flows, identify risks and discover new markets' },
+                    { icon: '🤖', title: 'AI Agent Monitoring', desc: 'Autonomous agents that monitor freight markets 24/7 for opportunities' },
+                  ].map((item) => (
+                    <div key={item.title} className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-lg flex items-center justify-center text-base shrink-0" style={{ background: 'rgba(84,175,58,0.08)', border: '1px solid rgba(84,175,58,0.15)' }}>
+                        {item.icon}
+                      </div>
+                      <div>
+                        <div className="font-display text-[14px] font-bold">{item.title}</div>
+                        <div className="text-[12.5px] text-muted-foreground">{item.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.15}>
+              <AiDemo />
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ AUDIENCE TOGGLE ═══════════════ */}
       <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
@@ -230,7 +419,7 @@ const Product = () => {
         </div>
       </section>
 
-      {/* 4 PILLARS */}
+      {/* ═══════════════ 4 PILLARS ═══════════════ */}
       <section className="py-[24px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
@@ -243,7 +432,6 @@ const Product = () => {
             </div>
           </ScrollReveal>
 
-          {/* Pillar Tabs */}
           <ScrollReveal delay={0.1}>
             <div className="flex gap-1.5 justify-center mb-4 flex-wrap">
               {PILLARS.map((p, i) => (
@@ -264,7 +452,6 @@ const Product = () => {
             </div>
           </ScrollReveal>
 
-          {/* Active Pillar Detail */}
           {PILLARS.map((p, i) => i === activePillar && (
             <ScrollReveal key={i} direction="none">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start bg-surface border border-border rounded-[18px] p-5" style={{ borderColor: `${p.color}22`, boxShadow: `0 0 60px ${p.glow}18` }}>
@@ -323,41 +510,6 @@ const Product = () => {
           ))}
         </div>
       </div>
-
-      {/* FLOW SECTION */}
-      {/* <section className="section-std bg-bg2">
-        <div className="max-w-[1280px] mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-6">
-              <div className="section-tag justify-center">Circular Intelligence</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
-                Everything Flows. <span className="text-ln-green">Everything Connects.</span>
-              </h2>
-              <p className="text-muted-foreground text-body-lg max-w-[520px] mx-auto mt-2">LoRRI is a closed-loop system — each pillar feeds intelligence back into the others, compounding value continuously.</p>
-            </div>
-          </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 relative">
-            <div className="absolute top-[32px] left-[12.5%] right-[12.5%] h-0.5 opacity-25 rounded-sm hidden lg:block" style={{ background: 'linear-gradient(90deg,#1AA6DF,#54AF3A,#c084fc,#fb923c)' }} />
-            {PILLARS.map((p) => (
-              <StaggerItem key={p.num}>
-                <div className="text-center px-5 relative z-[1]">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center text-[26px] mx-auto mb-4 transition-transform hover:scale-110" style={{ background: `linear-gradient(135deg, ${p.color}22, ${p.color}08)`, border: `2px solid ${p.color}40`, boxShadow: `0 0 24px ${p.glow}` }}>
-                    {p.icon}
-                  </div>
-                  <div className="font-mono text-[10px] font-bold tracking-[0.1em] mb-1.5" style={{ color: p.color }}>{p.num}</div>
-                  <div className="font-display text-[15px] font-extrabold mb-2 leading-[1.2]">{p.title}</div>
-                  <div className="text-[12.5px] text-muted-foreground leading-[1.65]">{p.desc.split('—')[0]}</div>
-                  <div className="mt-3 flex flex-col gap-1">
-                    {p.tags.map((t) => (
-                      <div key={t} className="text-[11px] rounded-full px-2.5 py-0.5 inline-block" style={{ color: p.color, background: `${p.color}10`, border: `1px solid ${p.color}20` }}>{t}</div>
-                    ))}
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section> */}
 
       <CtaBanner />
     </div>
