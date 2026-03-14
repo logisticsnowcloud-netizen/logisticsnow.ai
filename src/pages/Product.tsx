@@ -143,14 +143,14 @@ const Product = () => {
       </div>
 
       {/* INTERACTIVE DEMO / VIDEO */}
-      <section className="py-[48px] px-[5vw] bg-bg2 relative overflow-hidden">
+      <section className="section-std bg-bg2 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 20%, rgba(57,49,133,0.08), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <ScrollReveal direction="up">
               <div>
                 <div className="section-tag">Platform Walkthrough</div>
-                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-5" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
                   See LoRRI <span className="text-ln-blue">in Action</span>
                 </h2>
                 <p className="text-muted-foreground text-[15px] leading-[1.65] mb-5 max-w-[480px]">
