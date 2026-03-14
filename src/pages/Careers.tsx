@@ -374,7 +374,11 @@ const Careers = () => {
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 60% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
         <div className="relative z-[2] max-w-[1100px] mx-auto">
           <ScrollReveal direction="up" delay={0}>
-            <div className="section-tag">Careers</div>
+            <p className="text-xs text-muted-foreground flex items-center gap-1.5 mb-4">
+              <a href="/" className="text-ln-purple no-underline hover:underline font-semibold">HOME</a>
+              <span>/</span>
+              <span className="text-foreground font-semibold">CAREERS</span>
+            </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
             <h1 className="font-display font-extrabold tracking-[-0.035em] mb-2" style={{ fontSize: 'clamp(28px, 3.8vw, 46px)', lineHeight: 1.1 }}>
@@ -404,14 +408,6 @@ const Careers = () => {
         </StaggerContainer>
       </section>
 
-      {/* Breadcrumb */}
-      <section className="px-[5vw]">
-        <div className="max-w-[1100px] mx-auto border-t border-border pt-4 pb-2">
-          <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-            <MapPin size={12} /> <a href="/" className="text-ln-purple no-underline hover:underline">Home</a> / <span className="text-foreground font-semibold">Careers</span>
-          </p>
-        </div>
-      </section>
 
       {/* Open Positions */}
       <section className="px-[5vw] py-10 md:py-14">
