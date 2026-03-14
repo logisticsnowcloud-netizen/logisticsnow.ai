@@ -7,6 +7,14 @@ import supernovaAward from "@/assets/supernova-award.png";
 import gscsPanel2018 from "@/assets/events/gscs-panel-2018.png";
 import gscsPanel2019 from "@/assets/events/gscs-panel-2019.png";
 import gscsAward2019 from "@/assets/events/gscs-award-2019.png";
+import shellDemoBooth from "@/assets/events/shell-demo-booth.png";
+import shellDemoSpeaking from "@/assets/events/shell-demo-speaking.png";
+import shellDemoTeam from "@/assets/events/shell-demo-team.png";
+import shellDemoStage from "@/assets/events/shell-demo-stage.png";
+import shellDemoBooth2 from "@/assets/events/shell-demo-booth2.png";
+import shellDemoBooth3 from "@/assets/events/shell-demo-booth3.png";
+import shellDemoPanel from "@/assets/events/shell-demo-panel.png";
+import shellDemoAudience from "@/assets/events/shell-demo-audience.png";
 
 const FEATURED_ARTICLE = {
   title: "LogisticsNow Wins Sustainability Leaders Track at Supernova Challenge Dubai 2025",
