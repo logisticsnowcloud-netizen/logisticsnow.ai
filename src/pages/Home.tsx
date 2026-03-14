@@ -325,14 +325,12 @@ const Home = () => {
       </div>
 
       {/* VISION */}
-      <section className="section-std bg-background">
+      <section className="px-[5vw] py-5 bg-background">
         <div className="max-w-[1280px] mx-auto">
-          <ScrollReveal>
-            <div className="section-tag">Our Purpose</div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
             <ScrollReveal direction="up" delay={0.05}>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+              <div className="section-tag !mb-1">Our Purpose</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
                 The Trusted, Neutral
                 <br />
                 <span className="text-ln-purple">Logistics Intelligence Platform</span>
@@ -340,17 +338,17 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
               <div>
-                <p className="text-muted-foreground text-body-lg">
+                <p className="text-muted-foreground text-[13px] leading-[1.5]">
                   LogisticsNow is uniquely positioned with trust, technology & data to enable your digital logistics
                   ecosystem.
                 </p>
-                <div className="flex gap-3.5 mt-5">
-                  <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[14.5px]">
+                <div className="flex gap-3 mt-3">
+                  <Link to="/product" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
                     Explore Platform →
                   </Link>
                   <Link
                     to="/product"
-                    className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[14.5px] !text-ln-purple !border-ln-purple"
+                    className="btn-secondary-ln no-underline !px-5 !py-2 !text-[13px] !text-ln-purple !border-ln-purple"
                   >
                     Meet LoRRI
                   </Link>
@@ -358,13 +356,13 @@ const Home = () => {
               </div>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             {VISION_CARDS.map((c) => (
               <StaggerItem key={c.title}>
-                <div className="card-hover">
-                  <div className="text-[28px] mb-3.5">{c.icon}</div>
-                  <div className="font-display text-lg font-bold mb-2">{c.title}</div>
-                  <div className="text-sm text-muted-foreground leading-[1.7]">{c.desc}</div>
+                <div className="card-hover !p-4 !rounded-2xl">
+                  <div className="text-[20px] mb-1.5">{c.icon}</div>
+                  <div className="font-display text-[14px] font-bold mb-1">{c.title}</div>
+                  <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{c.desc}</div>
                 </div>
               </StaggerItem>
             ))}
