@@ -153,16 +153,16 @@ const News = () => (
     </section>
 
     {/* Media Coverage */}
-    <section className="section-std py-10 bg-[hsl(var(--bg2))]">
-      <div className="container mx-auto px-6">
+    <section className="section-std py-6 bg-[hsl(var(--bg2))]">
+      <div className="max-w-[1280px] mx-auto">
         <ScrollReveal>
-          <div className="section-tag mb-3">
+          <div className="section-tag mb-2">
             <Newspaper className="w-4 h-4" /> Media Coverage
           </div>
-          <h2 className="heading-section max-w-2xl">Featured in Global Media</h2>
+          <h2 className="font-display font-extrabold heading-section tracking-[-0.03em] mb-1">Featured in Global Media</h2>
         </ScrollReveal>
 
-        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
           {MEDIA_COVERAGE.map((item, i) => (
             <StaggerItem key={i}>
               <a
