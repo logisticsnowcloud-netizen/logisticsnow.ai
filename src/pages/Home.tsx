@@ -464,7 +464,7 @@ const Home = () => {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">
+              <p className="text-muted-foreground text-body-lg">
                 A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
                 enterprises.
               </p>
