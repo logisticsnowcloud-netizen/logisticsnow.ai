@@ -94,25 +94,30 @@ const MORE_COVERAGE = [
 const News = () => (
   <main className="overflow-x-hidden">
     {/* Hero */}
-    <section className="section-std pt-28 pb-10">
-      <div className="container mx-auto px-6">
-        <ScrollReveal>
-          <div className="section-tag mb-3">
-            <Newspaper className="w-4 h-4" /> News & Events
-          </div>
-          <h1 className="heading-section max-w-3xl">
-            Latest from LogisticsNow
+    <div className="px-[5vw] pt-10 pb-[28px] bg-background relative overflow-hidden border-b border-border">
+      <div className="absolute inset-0 opacity-45 pointer-events-none" style={{ backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)', backgroundSize: '52px 52px' }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 70% at 15% 50%, transparent 30%, hsl(var(--background)) 100%)' }} />
+      <div className="relative z-[2] max-w-[1280px] mx-auto">
+        <div className="flex items-center gap-[7px] text-xs font-semibold tracking-[0.07em] uppercase text-muted-foreground mb-5">
+          <Link to="/" className="no-underline text-muted-foreground">Home</Link>
+          <span>›</span>
+          <span className="text-ln-purple">News & Events</span>
+        </div>
+        <ScrollReveal direction="up">
+          <div className="section-tag">News & Events</div>
+          <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
+            Latest from <span className="text-ln-purple">LogisticsNow</span>
           </h1>
-          <p className="text-body-lg max-w-2xl mt-2">
+          <p className="text-muted-foreground leading-[1.7] mb-2 max-w-[500px]" style={{ fontSize: 'clamp(14px, 1.5vw, 16px)' }}>
             Award wins, media features, and industry insights from our journey transforming global logistics with AI.
           </p>
         </ScrollReveal>
       </div>
-    </section>
+    </div>
 
     {/* Featured Article */}
-    <section className="section-std py-10">
-      <div className="container mx-auto px-6">
+    <section className="section-std py-6">
+      <div className="max-w-[1280px] mx-auto">
         <ScrollReveal>
           <div className="rounded-xl border border-border bg-card p-6 md:p-10 max-w-4xl">
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
