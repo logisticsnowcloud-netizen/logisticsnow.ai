@@ -277,13 +277,13 @@ const ApplyModal = ({ job, open, onClose }: { job: Job | null; open: boolean; on
             >
               {submitting ? "Submitting..." : "Submit Resume"}
             </button>
-            <button
+            {/* <button
               type="button"
               onClick={onClose}
               className="btn-secondary-ln !px-6 !py-3 !text-sm"
             >
               Close
-            </button>
+            </button> */}
           </div>
         </form>
       </DialogContent>
