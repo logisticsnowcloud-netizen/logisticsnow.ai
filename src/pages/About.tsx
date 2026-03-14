@@ -310,7 +310,7 @@ const About = () => (
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-muted-foreground text-[15px] leading-[1.7]">Direct quotes from supply chain leaders who rely on Team LoRRI every day.</p>
+            <p className="text-muted-foreground text-body-lg">Direct quotes from supply chain leaders who rely on Team LoRRI every day.</p>
           </ScrollReveal>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

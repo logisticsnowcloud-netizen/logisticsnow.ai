@@ -337,15 +337,15 @@ const Product = () => {
       </div>
 
       {/* FLOW SECTION */}
-      <section className="py-[48px] px-[5vw] bg-bg2">
+      <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-8">
+            <div className="text-center mb-6">
               <div className="section-tag justify-center">Circular Intelligence</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(30px, 4.2vw, 54px)' }}>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Everything Flows. <span className="text-ln-green">Everything Connects.</span>
               </h2>
-              <p className="text-muted-foreground text-[17px] leading-[1.75] max-w-[520px] mx-auto mt-3">LoRRI is a closed-loop system — each pillar feeds intelligence back into the others, compounding value continuously.</p>
+              <p className="text-muted-foreground text-body-lg max-w-[520px] mx-auto mt-2">LoRRI is a closed-loop system — each pillar feeds intelligence back into the others, compounding value continuously.</p>
             </div>
           </ScrollReveal>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 relative">
