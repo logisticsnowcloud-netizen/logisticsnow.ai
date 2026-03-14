@@ -475,7 +475,7 @@ const Careers = () => {
             <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground mb-4">
               Where Passion Meets <span className="text-ln-purple">Purpose</span>
             </h2>
-            <p className="text-muted-foreground max-w-[600px] mx-auto leading-relaxed mb-8" style={{ fontSize: 'clamp(14px, 1.4vw, 17px)' }}>
+            <p className="text-muted-foreground max-w-[600px] leading-relaxed mb-8" style={{ fontSize: 'clamp(14px, 1.4vw, 17px)' }}>
               We are a team of enthusiastic, passionate, hardworking and self-driven people who truly want to address the inefficiencies in the global logistics space. We dream of shaping a simpler way to manage the complexities of logistics.
             </p>
           </ScrollReveal>
