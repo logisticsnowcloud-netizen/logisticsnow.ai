@@ -179,7 +179,7 @@ const About = () => (
             <ScrollReveal>
               <div className="mb-5">
                 <div className="section-tag">Our Journey</div>
-                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-1.5" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-1.5 heading-section">
                   From ISB to a <span className="text-ln-green">Global Logistics Grid</span>
                 </h2>
                 <p className="text-muted-foreground text-[15px] leading-[1.7]">Building trust, one shipper and carrier at a time — now across 4 continents.</p>
