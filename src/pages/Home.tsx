@@ -493,17 +493,14 @@ const Home = () => {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="py-[48px] px-[5vw] bg-background">
+      <section className="section-std bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">Case Studies</div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[28px] items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
             <ScrollReveal>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Real Results, <span className="text-ln-purple">Real Clients</span>
               </h2>
             </ScrollReveal>
