@@ -172,7 +172,7 @@ const About = () => (
     </section>
 
     {/* JOURNEY */}
-    <section className="py-[36px] px-[5vw] bg-background">
+    <section className="section-std bg-background">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-6 items-start">
           <div>
