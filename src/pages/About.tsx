@@ -250,7 +250,7 @@ const About = () => (
           <ScrollReveal>
             <div>
               <div className="section-tag">Investors & Partners</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Backed by the World's<br /><span className="text-ln-purple">Most Respected Names</span>
               </h2>
             </div>
