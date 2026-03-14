@@ -39,7 +39,7 @@ const About = () => (
           <ScrollReveal direction="up">
             <div>
               <div className="section-tag">Company</div>
-              <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3" style={{ fontSize: 'clamp(34px, 5vw, 62px)' }}>
+              <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
                 Building the <span className="text-ln-purple">Digital</span><br /><span className="text-ln-green">Backbone</span> of Logistics
               </h1>
               <p className="text-muted-foreground leading-[1.7] mb-5 max-w-[500px]" style={{ fontSize: 'clamp(14px, 1.5vw, 16px)' }}>
