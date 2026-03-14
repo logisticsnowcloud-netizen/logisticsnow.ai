@@ -179,6 +179,32 @@
     background: linear-gradient(135deg, hsl(244 44% 36%) 0%, hsl(244 44% 22%) 50%, hsl(215 78% 27%) 100%);
   }
 
+  /* Standardized Typography Scale */
+  .heading-hero {
+    font-size: clamp(28px, 3.8vw, 48px);
+  }
+  .heading-section {
+    font-size: clamp(24px, 3vw, 38px);
+  }
+  .heading-card {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+  .text-body-lg {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .text-body {
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+  /* Standard section spacing */
+  .section-std {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
   .section-tag {
     @apply inline-flex items-center gap-2 text-[11.5px] font-bold tracking-[0.1em] uppercase mb-4;
     color: hsl(var(--ln-green));

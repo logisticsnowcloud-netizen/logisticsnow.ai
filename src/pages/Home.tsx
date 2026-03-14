@@ -545,15 +545,12 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-[48px] px-[5vw] bg-bg2">
+      <section className="section-std bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-[28px]">
+            <div className="text-center mb-4">
               <div className="section-tag justify-center">Client Testimonials</div>
-              <h2
-                className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]"
-                style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
-              >
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 What Our Clients Say
               </h2>
             </div>
