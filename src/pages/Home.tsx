@@ -371,81 +371,79 @@ const Home = () => {
       </section>
 
       {/* AI SUITE */}
-      <section className="section-std bg-background">
+      <section className="px-[5vw] py-5 bg-background">
         <div className="max-w-[1280px] mx-auto">
-          <ScrollReveal>
-            <div className="section-tag">AI Suite</div>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
             <ScrollReveal direction="up" delay={0.05}>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+              <div className="section-tag !mb-1">AI Suite</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
                 Not AI as a Feature.
                 <br />
                 <span className="text-ln-purple">AI as the Foundation.</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
-              <p className="text-muted-foreground text-body-lg">
+              <p className="text-muted-foreground text-[13px] leading-[1.5]">
                 Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical
                 industry problem at national scale.
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
             {[
               {
                 tag: "PROCUREMENT",
                 tagColor: "hsl(var(--ln-green))",
                 name: "Carrier Selection Agent",
-                desc: "AI-powered Procurement Co-Pilot that evaluates carriers, scores performance per lane, normalizes bids, predicts service reliability, and recommends optimal award strategies.",
+                desc: "Evaluates carriers, scores performance per lane, normalizes bids, and recommends optimal award strategies.",
               },
               {
                 tag: "DOCUMENT AI",
                 tagColor: "hsl(var(--ln-blue))",
                 name: "Document Intelligence Agent",
-                desc: "Intelligent LR-POD-Invoice matching system — extracts structured data via OCR, auto-matches documents, detects discrepancies, and assigns risk scores.",
+                desc: "LR-POD-Invoice matching — extracts data via OCR, auto-matches documents, and detects discrepancies.",
               },
               {
                 tag: "NEGOTIATION",
                 tagColor: "hsl(var(--ln-orange))",
                 name: "Autonomous Negotiation Agent",
-                desc: "Autonomously negotiates with multiple LSPs in parallel — generates counter-offers, adapts strategy based on responses, and optimizes procurement costs.",
+                desc: "Negotiates with multiple LSPs in parallel — generates counter-offers and optimizes procurement costs.",
               },
               {
                 tag: "ROUTING",
                 tagColor: "hsl(var(--ln-purple))",
                 name: "AI Route Optimization Engine",
-                desc: "Intelligent route planning considering distance, time, cost, delivery windows, and vehicle capacity — with dynamic re-routing and continuous learning.",
+                desc: "Route planning considering distance, time, cost, delivery windows — with dynamic re-routing.",
               },
               {
                 tag: "CONSOLIDATION",
                 tagColor: "hsl(var(--ln-green))",
                 name: "Load Consolidation Engine",
-                desc: "AI-powered shipment grouping that maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios to reduce trips and emissions.",
+                desc: "Maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios.",
               },
               {
                 tag: "ESG",
                 tagColor: "hsl(var(--ln-blue))",
                 name: "Carbon Tracker Agent",
-                desc: "Estimates shipment-level carbon emissions, tracks emission trends across lanes, identifies reduction opportunities, and provides sustainability analytics dashboards.",
+                desc: "Tracks shipment-level carbon emissions, identifies reduction opportunities & sustainability analytics.",
               },
             ].map((ai) => (
               <StaggerItem key={ai.name}>
-                <div className="card-hover !p-6 h-full">
+                <div className="card-hover !p-4 !rounded-2xl h-full">
                   <span
-                    className="inline-block text-[10px] font-bold tracking-[0.1em] uppercase px-2.5 py-1 rounded-full mb-3"
+                    className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full mb-1.5"
                     style={{ color: ai.tagColor, background: `${ai.tagColor}15`, border: `1px solid ${ai.tagColor}30` }}
                   >
                     {ai.tag}
                   </span>
-                  <div className="font-display text-[17px] font-bold mb-2.5">{ai.name}</div>
-                  <div className="text-[13px] text-muted-foreground leading-[1.7]">{ai.desc}</div>
+                  <div className="font-display text-[14px] font-bold mb-1">{ai.name}</div>
+                  <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{ai.desc}</div>
                 </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
         </div>
-      </section>  
+      </section>
 
       {/* METHODOLOGY */}
       <section className="section-std bg-bg2">
