@@ -153,7 +153,7 @@ const Product = () => {
                 <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
                   See LoRRI <span className="text-ln-blue">in Action</span>
                 </h2>
-                <p className="text-muted-foreground text-[15px] leading-[1.65] mb-5 max-w-[480px]">
+                <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
                   Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in under 3 minutes.
                 </p>
                 <div className="flex flex-col gap-2.5 mb-5">
