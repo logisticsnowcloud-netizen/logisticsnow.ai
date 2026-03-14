@@ -258,7 +258,7 @@ const ApplyModal = ({ job, open, onClose }: { job: Job | null; open: boolean; on
 
   return (
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
-      <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden rounded-2xl border-border">
+      <DialogContent className="sm:max-w-[500px] p-0 rounded-2xl border-border [&>button]:z-10 [&>button]:bg-secondary [&>button]:rounded-full [&>button]:p-1 [&>button]:right-3 [&>button]:top-3">
         <div className="px-6 pt-6 pb-2 md:px-8 md:pt-8">
           <DialogHeader>
             <DialogTitle className="font-display text-xl font-extrabold text-foreground">APPLY NOW</DialogTitle>
