@@ -251,12 +251,12 @@ const Product = () => {
       <section className="py-[24px] px-[5vw] bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-4">
-              <div className="section-tag justify-center">The Platform</div>
+            <div className="mb-4">
+              <div className="section-tag">The Platform</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
                 4 Pillars. <span className="text-ln-blue">Infinite Value.</span>
               </h2>
-              <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px] mx-auto">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
+              <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
             </div>
           </ScrollReveal>
 
