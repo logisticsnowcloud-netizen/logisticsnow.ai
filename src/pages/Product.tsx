@@ -337,7 +337,7 @@ const Product = () => {
       </section>
 
       {/* ═══════════════ AI DEMO ═══════════════ */}
-      <section className="section-std bg-background relative overflow-hidden">
+      {/* <section className="section-std bg-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 60% at 70% 40%, rgba(84,175,58,0.06), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -375,7 +375,7 @@ const Product = () => {
             </ScrollReveal>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ═══════════════ AUDIENCE TOGGLE ═══════════════ */}
       <section className="section-std bg-bg2">
