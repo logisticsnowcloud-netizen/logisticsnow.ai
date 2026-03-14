@@ -389,7 +389,7 @@ const Home = () => {
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
-              <p className="text-muted-foreground text-[17px] leading-[1.75]">
+              <p className="text-muted-foreground text-body-lg">
                 Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical
                 industry problem at national scale.
               </p>
