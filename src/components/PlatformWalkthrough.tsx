@@ -687,9 +687,9 @@ const PlatformWalkthrough = () => {
       </div>
 
       {/* Floating badge */}
-      <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.08em] uppercase z-10" style={{ background: "linear-gradient(135deg, #393185, #1AA6DF)", color: "#fff", boxShadow: "0 4px 16px rgba(57,49,133,0.3)" }}>
+      {/* <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full text-[10px] font-bold tracking-[0.08em] uppercase z-10" style={{ background: "linear-gradient(135deg, #393185, #1AA6DF)", color: "#fff", boxShadow: "0 4px 16px rgba(57,49,133,0.3)" }}>
         Interactive Demo
-      </div>
+      </div> */}
     </div>
   );
 };
