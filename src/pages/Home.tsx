@@ -248,10 +248,9 @@ const Home = () => {
           style={{ background: "linear-gradient(to left, hsl(var(--bg2)), transparent)" }}
         />
 
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <h2
-            className="font-display font-extrabold tracking-[-0.03em] leading-[1.1]"
-            style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
+            className="font-display font-extrabold tracking-[-0.03em] leading-[1.1] heading-section"
           >
             Trusted by <span className="text-ln-purple">Industry Leaders</span> Worldwide
           </h2>
