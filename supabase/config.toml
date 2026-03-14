@@ -2,3 +2,6 @@ project_id = "alcdeqrspuufgpouuhrk"
 
 [functions.ai-logistics-analyzer]
 verify_jwt = false
+
+[functions.send-job-application]
+verify_jwt = false
