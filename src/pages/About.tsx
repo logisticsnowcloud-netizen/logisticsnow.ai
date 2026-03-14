@@ -147,7 +147,7 @@ const About = () => (
           <ScrollReveal>
             <div>
               <div className="section-tag">Why LogisticsNow</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em]" style={{ fontSize: 'clamp(26px, 3.8vw, 48px)' }}>
+               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 Uniquely Positioned with<br /><span className="text-ln-purple">Trust, Technology & Data</span>
               </h2>
             </div>
