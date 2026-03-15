@@ -88,15 +88,14 @@ const About = () => (
               <div className="section-tag">Our Vision</div>
               <div className="relative pl-6 mb-4">
                 <div className="absolute left-0 top-1 bottom-1 w-1 rounded-full" style={{ background: 'linear-gradient(180deg,#393185,#54AF3A)' }} />
-                <div className="font-display font-bold leading-[1.16] tracking-[-0.025em]" style={{ fontSize: 'clamp(20px, 3vw, 36px)' }}>
-                  "Build world class logistics ecosystems leveraging <span className="px-0.5 rounded-sm" style={{ background: 'rgba(84,175,58,.15)' }}>data and trust</span>"
-                </div>
-              </div>
-              <div className="flex items-center gap-2.5 pl-6 mb-4">
-                <div className="w-[18px] h-0.5 bg-ln-green rounded-sm flex-shrink-0" />
-                <div className="text-[12.5px] text-muted-foreground">
-                  <strong className="block text-foreground font-bold text-[13px]">Raj Saxena, Founder & CEO</strong>
-                  {/* ISB Hyderabad */}
+                <div className="flex items-end gap-3 flex-wrap">
+                  <div className="font-display font-bold leading-[1.16] tracking-[-0.025em]" style={{ fontSize: 'clamp(20px, 3vw, 36px)' }}>
+                    "Build world class logistics ecosystems leveraging <span className="px-0.5 rounded-sm" style={{ background: 'rgba(84,175,58,.15)' }}>data and trust</span>"
+                  </div>
+                  <div className="flex items-center gap-2 mb-1 flex-shrink-0">
+                    <div className="w-[18px] h-0.5 bg-ln-green rounded-sm" />
+                    <strong className="text-foreground font-bold text-[13px] whitespace-nowrap">Raj Saxena, Founder & CEO</strong>
+                  </div>
                 </div>
               </div>
               {/* <p className="text-[14px] leading-[1.7] text-muted-foreground pl-6 mb-5">
