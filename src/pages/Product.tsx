@@ -289,8 +289,8 @@ const Product = () => {
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 70% at 30% 50%, rgba(26,166,223,0.06), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <ScrollReveal direction="up">
-            <div className="text-center mb-5">
-              <div className="section-tag justify-center">Global Data Coverage</div>
+            <div className="text-left mb-5">
+              <div className="section-tag">Global Data Coverage</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 The <span className="text-ln-green">Bloomberg Terminal</span> for Logistics
               </h2>
