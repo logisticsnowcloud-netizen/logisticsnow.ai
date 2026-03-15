@@ -281,7 +281,7 @@ const Home = () => {
                   </span>
                 )}
                 {/* Tooltip */}
-                <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50"
+                <div className="absolute -top-9 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50"
                   style={{ background: "hsl(var(--ln-purple))", color: "#fff" }}
                 >
                   {c.name}
