@@ -16,10 +16,10 @@ const Footer = () => (
         <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-5 mb-5">
           {/* Brand */}
           <div>
-            <div className="font-display text-2xl font-extrabold mb-4" style={{ color: '#fff' }}>
+            <div className="font-display text-xl font-extrabold mb-2" style={{ color: '#fff' }}>
               LogisticsNow<span className="text-ln-green">.</span>ai
             </div>
-            <p className="text-xs leading-[1.7] max-w-[280px] mb-4" style={{ color: 'rgba(255,255,255,.5)' }}>
+            <p className="text-[11px] leading-[1.6] max-w-[260px] mb-3" style={{ color: 'rgba(255,255,255,.5)' }}>
               India's national logistics intelligence grid — making every supply chain smarter, faster, and more resilient with AI.
             </p>
             <div className="flex gap-3">
