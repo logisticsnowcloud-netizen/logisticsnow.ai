@@ -294,7 +294,7 @@ const Product = () => {
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 The <span className="text-ln-green">Bloomberg Terminal</span> for Logistics
               </h2>
-              <p className="text-muted-foreground text-body-lg max-w-[520px] mx-auto mt-2">
+              <p className="text-left text-muted-foreground text-body-lg mt-2">
                 Powered by the world's largest logistics intelligence dataset — real data, real insights, real decisions.
               </p>
             </div>
