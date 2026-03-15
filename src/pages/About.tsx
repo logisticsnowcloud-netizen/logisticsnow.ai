@@ -12,16 +12,16 @@ const JOURNEY = [
 ];
 
 const WHY_US = [
-  { icon: '🤝', title: 'Trusted & Neutral', desc: 'Completely neutral, independent platform. No conflicts of interest — ever.', proof: '🏛️ Shell · Flipkart / Walmart', proofBg: 'rgba(57,49,133,.07)', proofColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)' },
+  { icon: '🤝', title: 'Trusted & Neutral', desc: 'Completely neutral, independent platform. No conflicts of interest — ever.', proof: '🏛️ Shell · Flipkart · Carnegie Mellon University Alumni', proofBg: 'rgba(57,49,133,.07)', proofColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)' },
   { icon: '🌍', title: 'Global Scale', desc: 'Multi-billion dollar spend data spanning 4 continents. 80,000+ routes, 2,200+ carriers.', proof: '📊 $2.5Bn+ · 90K+ routes', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
   { icon: '🧠', title: 'AI-Powered Intelligence', desc: 'Proprietary AI delivering multi-million dollar savings while improving service levels.', proof: '💰 $21Mn+ savings · 20%+ reduction', proofBg: 'rgba(26,166,223,.06)', proofColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#393185)' },
 ];
 
 const VISION_PILLARS = [
   { icon: '🏗️', title: 'Digital Backbone', desc: 'Building the infrastructure that powers modern logistics', color: '#393185' },
-  { icon: '🌐', title: 'Smart Logistics Grid', desc: 'Connecting every route, carrier & shipper in India and globally', color: '#1AA6DF' },
+  { icon: '🌐', title: 'Smart Logistics Grid', desc: 'Connecting every route, carrier & shipper in India and globally', color: '#54AF3A' },
   { icon: '🤖', title: 'AI-First Approach', desc: 'Data science organizing the logistics industry at scale', color: '#54AF3A' },
-  { icon: '🌱', title: 'Sustainability', desc: 'Lower emissions, better utilization, greener supply chains', color: '#fb923c' },
+  { icon: '🌱', title: 'Sustainability', desc: 'Lower emissions, better utilization, greener supply chains', color: '#393185' },
 ];
 
 const About = () => (
@@ -69,7 +69,7 @@ const About = () => (
                 ))}
               </div>
               {/* <div className="flex gap-2 flex-wrap">
-                {['🐚 Shell', '🛒 Flipkart / Walmart', '🏆 GITEX 2025'].map((b) => (
+                {['🐚 Shell', '🛒 Flipkart (Walmart)', '🏆 GITEX 2025'].map((b) => (
                   <div key={b} className="flex items-center gap-1.5 px-3 py-1.5 bg-background border border-border rounded-full text-[11px] font-semibold text-muted-foreground">{b}</div>
                 ))}
               </div> */}
@@ -90,12 +90,14 @@ const About = () => (
                 <div className="absolute left-0 top-1 bottom-1 w-1 rounded-full" style={{ background: 'linear-gradient(180deg,#393185,#54AF3A)' }} />
                 <div className="flex items-end gap-3 flex-wrap">
                   <div className="font-display font-bold leading-[1.16] tracking-[-0.025em]" style={{ fontSize: 'clamp(20px, 3vw, 36px)' }}>
-                    "Build world class logistics ecosystems leveraging <span className="px-0.5 rounded-sm" style={{ background: 'rgba(84,175,58,.15)' }}>data and trust</span>"
+                    "Build world class logistics ecosystems leveraging <span className="px-0.5 rounded-sm" style={{ background: 'rgba(84,175,58,.15)' }}>data and trust</span>"                     
+                    <span className="w-[18px] h-0.5 bg-ln-green rounded-sm" />
+                    <strong className="text-foreground font-bold text-[13px] whitespace-nowrap" style={{marginLeft: '3%'}}>----- Raj Saxena, Founder & CEO</strong>
                   </div>
-                  <div className="flex items-center gap-2 mb-1 flex-shrink-0">
+                  {/* <div className="flex items-center gap-2 mb-1 flex-shrink-0">
                     <div className="w-[18px] h-0.5 bg-ln-green rounded-sm" />
                     <strong className="text-foreground font-bold text-[13px] whitespace-nowrap">Raj Saxena, Founder & CEO</strong>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               {/* <p className="text-[14px] leading-[1.7] text-muted-foreground pl-6 mb-5">
@@ -187,7 +189,7 @@ const About = () => (
             </ScrollReveal>
             {JOURNEY.map((j, i) => (
               <ScrollReveal key={j.num} delay={i * 0.08}>
-                <div className="flex gap-3 pb-6 relative last:pb-0">
+                <div className="flex gap-3 pb-6 relative last:pb-0" style={{paddingTop: '1%'}}>
                   {i < JOURNEY.length - 1 && (
                     <div className="absolute left-[14px] top-[30px] bottom-0 w-0.5" style={{ background: 'linear-gradient(180deg,#393185,rgba(57,49,133,.08))' }} />
                   )}
@@ -224,7 +226,7 @@ const About = () => (
                 {[
                   { icon: '/logos/gitex.png', title: 'GITEX Dubai 2025', sub: 'Sustainability Leaders — Supernova Winner' },
                   { icon: '/logos/nasscom.jpeg', title: 'InnoTrek ME 2024 Startups', sub: "Selected for Nasscom InnoTrek Startup Program" },
-                  { icon: '/logos/flipkart.jpeg', title: 'Flipkart Leap Ahead', sub: 'Investment by Flipkart / Walmart' },
+                  { icon: '/logos/flipkart.jpeg', title: 'Flipkart Leap Ahead', sub: 'Investment by Flipkart (Walmart)' },
                   { icon: '/logos/microsoft.png', title: 'Microsoft Leap Program', sub: "Part of the Microsoft Leap Program" },
                   { icon: '/logos/shell.png', title: 'Shell E4 Program', sub: "Incubated by Shell's innovation arm" },
                 ].map((r) => (
@@ -262,7 +264,7 @@ const About = () => (
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
             { icon: '/logos/shell.png', name: 'Shell', type: 'Incubator & Investor', desc: "Selected for Shell's prestigious E4 program. Demo Day was widely acclaimed — the moment that put LogisticsNow on the global map.", badge: '🌍 Energy · Environment · Entrepreneurship', badgeBg: 'rgba(57,49,133,.07)', badgeColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)', link: 'https://yourstory.com/2019/01/shell-second-e4-startups-india' },
-            { icon: '/logos/flipkart.jpeg', name: 'Flipkart / Walmart', type: 'Investor · Leap Ahead Program', desc: "Flipkart selected LogisticsNow for its Leap Ahead program — providing investment and direct mentorship by top leadership.", badge: '🚀 Investment + Mentorship + Scale Access', badgeBg: 'rgba(26,166,223,.07)', badgeColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#54AF3A)', link: '#' },
+            { icon: '/logos/flipkart.jpeg', name: 'Flipkart (Walmart)', type: 'Investor · Leap Ahead Program', desc: "Flipkart selected LogisticsNow for its Leap Ahead program — providing investment and direct mentorship by top leadership.", badge: '🚀 Investment + Mentorship + Scale Access', badgeBg: 'rgba(26,166,223,.07)', badgeColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#54AF3A)', link: '#' },
           ].map((inv) => (
             <StaggerItem key={inv.name}>
               <div className="bg-card border border-border rounded-[22px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">

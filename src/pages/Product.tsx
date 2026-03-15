@@ -251,7 +251,7 @@ const Product = () => {
                   See LoRRI <span className="text-ln-green">in Action</span>
                 </h2>
                 <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
-                  Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in under 3 minutes.
+                  Watch how LoRRI transforms freight procurement from fragmented spreadsheets into an intelligent, AI-driven workflow — in minutes.
                 </p>
                 <div className="flex flex-col gap-2.5 mb-5">
                   {[
@@ -395,7 +395,7 @@ const Product = () => {
                 className={`px-7 py-2.5 rounded-full text-sm font-bold border-none cursor-pointer transition-all duration-300 font-body ${audience === 'mfr' ? 'text-white' : 'text-muted-foreground bg-transparent'}`}
                 style={audience === 'mfr' ? { background: 'linear-gradient(135deg,#393185,#1AA6DF)', boxShadow: '0 4px 16px rgba(57,49,133,.4)' } : {}}
               >
-                🏭 Manufacturers / Clients
+                🏭 Manufacturers / Shippers
               </button>
               <button
                 onClick={() => setAudience('carrier')}
