@@ -100,7 +100,7 @@ const Footer = () => (
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t pt-6 flex justify-between items-center flex-wrap gap-4" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
+        <div className="border-t pt-4 flex justify-between items-center flex-wrap gap-3" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
           <p className="text-[13px]" style={{ color: 'rgba(255,255,255,.35)' }}>
             © 2026 LogisticsNow Technologies Pvt. Ltd. All rights reserved. 
             {/* | Developed with <span className="text-red-400">❤</span> in India */}
