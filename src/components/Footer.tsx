@@ -6,7 +6,7 @@ const Footer = () => (
     {/* Gradient top edge */}
     <div className="h-1 w-full bg-gradient-to-r from-ln-blue via-ln-green to-ln-purple" />
 
-    <div className="py-8 px-[5vw]" style={{ background: 'linear-gradient(180deg, #1a1a2e 0%, #16162a 100%)', color: 'rgba(255,255,255,.75)' }}>
+    <div className="py-5 px-[5vw]" style={{ background: 'linear-gradient(180deg, #1a1a2e 0%, #16162a 100%)', color: 'rgba(255,255,255,.75)' }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: "radial-gradient(circle at 15% 85%, hsl(var(--ln-blue)) 0%, transparent 40%), radial-gradient(circle at 85% 15%, hsl(var(--ln-green)) 0%, transparent 40%)"
