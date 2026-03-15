@@ -22,19 +22,19 @@ const Footer = () => (
             <p className="text-[11px] leading-[1.6] max-w-[260px] mb-3" style={{ color: 'rgba(255,255,255,.5)' }}>
               India's national logistics intelligence grid — making every supply chain smarter, faster, and more resilient with AI.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               {[
-                { icon: <Linkedin size={16} />, label: "LinkedIn", to: "https://www.linkedin.com/company/logisticsnow/?originalSubdomain=in" },
-                { icon: <Facebook size={16} />, label: "Facebook", to: "https://www.facebook.com/logisticsnow/" },
-                { icon: <Instagram size={16} />, label: "Instagram", to: "https://www.instagram.com/logisticsnowln/?hl=en" },
-                { icon: <Youtube size={16} />, label: "Youtube", to: "https://www.youtube.com/@logisticsnowpvtltd1252" },
+                { icon: <Linkedin size={14} />, label: "LinkedIn", to: "https://www.linkedin.com/company/logisticsnow/?originalSubdomain=in" },
+                { icon: <Facebook size={14} />, label: "Facebook", to: "https://www.facebook.com/logisticsnow/" },
+                { icon: <Instagram size={14} />, label: "Instagram", to: "https://www.instagram.com/logisticsnowln/?hl=en" },
+                { icon: <Youtube size={14} />, label: "Youtube", to: "https://www.youtube.com/@logisticsnowpvtltd1252" },
               ].map((s) => (
                 <a
                   key={s.label}
                   href={s.to}
                   target="_blank"
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-lg flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  className="w-8 h-8 rounded-md flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   style={{
                     background: 'rgba(255,255,255,.06)',
                     border: '1px solid rgba(255,255,255,.1)',
