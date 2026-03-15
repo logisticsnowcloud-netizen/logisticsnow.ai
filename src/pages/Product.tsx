@@ -386,7 +386,7 @@ const Product = () => {
             <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
               Built for Both Sides of <span className="text-ln-green">Logistics</span>
             </h2>
-            <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
+            <p className="text-muted-foreground text-body-lg mb-4 max-w-[580px]">
               One unified platform serving manufacturers and carriers with tailored experiences.
             </p>
             <div className="inline-flex mt-6 bg-surface border border-border rounded-full p-1 gap-1">
@@ -429,7 +429,7 @@ const Product = () => {
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-4 heading-section">
                 4 Pillars. <span className="text-ln-green">Infinite Value.</span>
               </h2>
-              <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
+              <p className="text-muted-foreground text-body-lg mb-4 max-w-[580px]">Industry-first logistics intelligence powering next-level value creation end-to-end.</p>
             </div>
           </ScrollReveal>
 
