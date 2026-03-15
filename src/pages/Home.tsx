@@ -266,7 +266,7 @@ const Home = () => {
             return (
               <div
                 key={i}
-                className="relative flex items-center justify-center rounded-2xl bg-card/80 border border-border/40 backdrop-blur-sm hover:bg-card hover:border-primary/50 hover:shadow-[0_0_24px_hsl(var(--ln-purple)/0.2)] transition-all duration-300 group cursor-pointer"
+                className="relative flex items-center justify-center rounded-lg bg-card/80 border border-border/40 backdrop-blur-sm hover:bg-card hover:border-primary/50 hover:shadow-[0_0_24px_hsl(var(--ln-purple)/0.2)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
                 style={{ width: 150, height: 75 }}
               >
                 {hasLogo ? (
@@ -281,7 +281,7 @@ const Home = () => {
                   </span>
                 )}
                 {/* Tooltip */}
-                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-20"
+                <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50"
                   style={{ background: "hsl(var(--ln-purple))", color: "#fff" }}
                 >
                   {c.name}
