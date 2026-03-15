@@ -13,7 +13,7 @@ const JOURNEY = [
 
 const WHY_US = [
   { icon: '🤝', title: 'Trusted & Neutral', desc: 'Completely neutral, independent platform. No conflicts of interest — ever.', proof: '🏛️ Shell · Flipkart · Carnegie Mellon University Alumni', proofBg: 'rgba(57,49,133,.07)', proofColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)' },
-  { icon: '🌍', title: 'Global Scale', desc: 'Multi-billion dollar spend data spanning 4 continents. 80,000+ routes, 2,200+ carriers.', proof: '📊 $2.5Bn+ · 90K+ routes', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
+  { icon: '🌍', title: 'Global Scale', desc: 'Multi-billion dollar spend data spanning 4 continents. 80,000+ routes, 2,200+ carriers.', proof: '📊 $2.5Bn+ · 80K+ routes', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
   { icon: '🧠', title: 'AI-Powered Intelligence', desc: 'Proprietary AI delivering multi-million dollar savings while improving service levels.', proof: '💰 $21Mn+ savings · 20%+ reduction', proofBg: 'rgba(26,166,223,.06)', proofColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#393185)' },
 ];
 
@@ -60,7 +60,7 @@ const About = () => (
                   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                   { n: '$21Mn+', l: 'Savings Locked-in', c: '#54AF3A', bg: 'rgba(84,175,58,.07)' },
                   { n: '2200+', l: 'Carriers Onboarded', c: '#54af3a', bg: 'rgba(26,166,223,.07)' },
-                  { n: '90K+', l: 'Routes Globally', c: '#393185', bg: 'rgba(57,49,133,.07)' },
+                  { n: '80K+', l: 'Routes Globally', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                 ].map((s) => (
                   <div key={s.l} className="p-4 rounded-xl text-center" style={{ background: s.bg }}>
                     <div className="font-display text-[22px] font-extrabold leading-none tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>

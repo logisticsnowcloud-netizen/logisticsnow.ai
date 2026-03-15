@@ -30,7 +30,7 @@ const VISION_CARDS = [
   {
     icon: "🗺️",
     title: "Enabling Reach & Service",
-    desc: "90K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
+    desc: "80K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
   },
   {
     icon: "⚡",
