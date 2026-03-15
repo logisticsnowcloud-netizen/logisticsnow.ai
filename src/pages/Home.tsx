@@ -237,7 +237,7 @@ const Home = () => {
       </section>
 
       {/* MARQUEE */}
-      <div className="relative overflow-hidden py-14 bg-bg2 border-y border-border">
+      <div className="relative overflow-visible py-14 bg-bg2 border-y border-border" style={{ clipPath: 'inset(-20px 0 -20px 0)' }}>
         {/* Fade edges */}
         <div
           className="pointer-events-none absolute inset-y-0 left-0 w-40 z-10"
