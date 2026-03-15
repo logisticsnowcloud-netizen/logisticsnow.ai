@@ -50,7 +50,7 @@ const Footer = () => (
           {/* Platform */}
           <div>
             <h5 className="text-xs font-bold tracking-[0.15em] uppercase mb-5 text-ln-green">Platform</h5>
-            {["LoRRI for Shippers", "LoRRI for Carriers", "Command Center", "Predict Engine"].map((l) => (
+            {["LoRRI for Shippers", "LoRRI for Carriers"].map((l) => (
               <a key={l} href="#" className="group flex items-center gap-1 text-sm mb-3 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 {l}
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -102,11 +102,12 @@ const Footer = () => (
         {/* Bottom bar */}
         <div className="border-t pt-6 flex justify-between items-center flex-wrap gap-4" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
           <p className="text-[13px]" style={{ color: 'rgba(255,255,255,.35)' }}>
-            © 2026 LogisticsNow Technologies Pvt. Ltd. All rights reserved. | Developed with <span className="text-red-400">❤</span> in India
+            © 2026 LogisticsNow Technologies Pvt. Ltd. All rights reserved. 
+            {/* | Developed with <span className="text-red-400">❤</span> in India */}
           </p>
           <div className="flex items-center gap-2 font-mono text-[11.5px]" style={{ color: 'rgba(255,255,255,.35)' }}>
             <div className="w-[7px] h-[7px] bg-ln-green rounded-full animate-pulse" style={{ boxShadow: '0 0 8px hsl(107 50% 46%)' }} />
-            All systems operational
+            {/* All systems operational */}
           </div>
         </div>
       </div>

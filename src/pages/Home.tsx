@@ -13,14 +13,14 @@ const STATS = [
 
 const VISION_CARDS = [
   {
+    icon: "🤖",
+    title: "AI-Powered Intelligence",
+    desc: "Industry-first logistics intelligence platform combining benchmarks, procurement, TMS and AI agents — all in one integrated ecosystem.",
+  },
+  {
     icon: "💰",
     title: "Cost Control & Savings",
     desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops & intelligent route optimization.",
-  },
-  {
-    icon: "🗺️",
-    title: "Enabling Reach & Service",
-    desc: "80K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal.",
   },
   {
     icon: "🌱",
@@ -28,14 +28,14 @@ const VISION_CARDS = [
     desc: "Create the Global Smart Logistics Grid for green capacities. Better vehicle utilization, lower emissions per ton, efficient distribution.",
   },
   {
+    icon: "🗺️",
+    title: "Enabling Reach & Service",
+    desc: "90K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
+  },
+  {
     icon: "⚡",
     title: "Resilience & Speed",
     desc: "During COVID's first lockdown, LoRRI kept plants running by rapidly aligning capacities. Digital indents answered in <30 minutes.",
-  },
-  {
-    icon: "🤖",
-    title: "AI-Powered Intelligence",
-    desc: "Industry-first logistics intelligence platform combining benchmarks, procurement, TMS and AI agents — all in one integrated ecosystem.",
   },
   {
     icon: "😊",
@@ -470,12 +470,12 @@ const Home = () => {
                   <div className="absolute right-3 top-1 font-mono text-4xl font-bold text-ln-purple opacity-[0.07]">
                     {s.num}
                   </div>
-                  <div
+                  {/* <div
                     className="inline-flex items-center justify-center w-7 h-7 rounded-lg text-ln-purple font-display text-xs font-extrabold mb-2"
                     style={{ background: "rgba(57,49,133,.1)" }}
                   >
                     {s.num}
-                  </div>
+                  </div> */}
                   <div className="font-display text-[14px] font-bold mb-1">{s.title}</div>
                   <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{s.desc}</div>
                 </div>
@@ -530,7 +530,7 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="px-[5vw] py-5 bg-bg2">
+      {/* <section className="px-[5vw] py-5 bg-bg2">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="text-center mb-3">
@@ -570,7 +570,7 @@ const Home = () => {
             ))}
           </StaggerContainer>
         </div>
-      </section>
+      </section> */}
 
       <CtaBanner />
     </div>

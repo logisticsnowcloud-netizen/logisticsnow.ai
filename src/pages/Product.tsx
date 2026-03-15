@@ -255,7 +255,7 @@ const Product = () => {
                 </p>
                 <div className="flex flex-col gap-2.5 mb-5">
                   {[
-                    { icon: '🔍', title: 'Deep Discovery', desc: 'AI-powered carrier matching across 80K+ routes' },
+                    { icon: '🔍', title: 'Deep Discovery', desc: 'AI-powered carrier matching across 90K+ routes' },
                     { icon: '⚡', title: 'Rapid Procurement', desc: 'From indent to award in minutes, not days' },
                     { icon: '📊', title: 'Live Intelligence', desc: 'Real-time dashboards with actionable insights' },
                     { icon: '🤖', title: 'AI Agents at Work', desc: 'Autonomous negotiation, routing & optimization' },
