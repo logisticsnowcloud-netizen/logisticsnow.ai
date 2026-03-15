@@ -40,6 +40,40 @@ const TRUSTED_LOGOS = [
 const Product = () => {
   const [activePillar, setActivePillar] = useState(0);
   const [audience, setAudience] = useState<'mfr' | 'carrier'>('mfr');
+  const [pillarPaused, setPillarPaused] = useState(false);
+  const [pillarProgress, setPillarProgress] = useState(0);
+  const pillarIntervalRef = useRef<number | null>(null);
+  const pillarProgressRef = useRef<number | null>(null);
+
+  const PILLAR_INTERVAL = 5000; // 5 seconds per tab
+
+  const advancePillar = useCallback(() => {
+    setActivePillar((prev) => (prev + 1) % PILLARS.length);
+    setPillarProgress(0);
+  }, []);
+
+  useEffect(() => {
+    if (pillarPaused) {
+      if (pillarIntervalRef.current) clearInterval(pillarIntervalRef.current);
+      if (pillarProgressRef.current) clearInterval(pillarProgressRef.current);
+      return;
+    }
+
+    setPillarProgress(0);
+    const progressStep = 50; // update every 50ms
+    pillarProgressRef.current = window.setInterval(() => {
+      setPillarProgress((prev) => Math.min(prev + (progressStep / PILLAR_INTERVAL) * 100, 100));
+    }, progressStep);
+
+    pillarIntervalRef.current = window.setInterval(() => {
+      advancePillar();
+    }, PILLAR_INTERVAL);
+
+    return () => {
+      if (pillarIntervalRef.current) clearInterval(pillarIntervalRef.current);
+      if (pillarProgressRef.current) clearInterval(pillarProgressRef.current);
+    };
+  }, [pillarPaused, activePillar, advancePillar]);
 
   const features = audience === 'mfr' ? MFR_FEATURES : CARRIER_FEATURES;
   const valItems = [...VAL_DRIVERS, ...VAL_DRIVERS, ...VAL_DRIVERS];
