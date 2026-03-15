@@ -13,7 +13,7 @@ const Footer = () => (
       }} />
 
       <div className="relative z-10 max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="font-display text-2xl font-extrabold mb-4" style={{ color: '#fff' }}>
