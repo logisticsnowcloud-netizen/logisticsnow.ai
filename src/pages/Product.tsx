@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { PILLARS, MFR_FEATURES, CARRIER_FEATURES, VAL_DRIVERS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
