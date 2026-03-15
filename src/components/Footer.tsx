@@ -6,20 +6,20 @@ const Footer = () => (
     {/* Gradient top edge */}
     <div className="h-1 w-full bg-gradient-to-r from-ln-blue via-ln-green to-ln-purple" />
 
-    <div className="py-16 px-[5vw]" style={{ background: 'linear-gradient(180deg, #1a1a2e 0%, #16162a 100%)', color: 'rgba(255,255,255,.75)' }}>
+    <div className="py-8 px-[5vw]" style={{ background: 'linear-gradient(180deg, #1a1a2e 0%, #16162a 100%)', color: 'rgba(255,255,255,.75)' }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: "radial-gradient(circle at 15% 85%, hsl(var(--ln-blue)) 0%, transparent 40%), radial-gradient(circle at 85% 15%, hsl(var(--ln-green)) 0%, transparent 40%)"
       }} />
 
       <div className="relative z-10 max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="font-display text-2xl font-extrabold mb-4" style={{ color: '#fff' }}>
               LogisticsNow<span className="text-ln-green">.</span>ai
             </div>
-            <p className="text-sm leading-[1.8] max-w-[300px] mb-6" style={{ color: 'rgba(255,255,255,.5)' }}>
+            <p className="text-xs leading-[1.7] max-w-[280px] mb-4" style={{ color: 'rgba(255,255,255,.5)' }}>
               India's national logistics intelligence grid — making every supply chain smarter, faster, and more resilient with AI.
             </p>
             <div className="flex gap-3">
