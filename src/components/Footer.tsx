@@ -49,9 +49,9 @@ const Footer = () => (
 
           {/* Platform */}
           <div>
-            <h5 className="text-xs font-bold tracking-[0.15em] uppercase mb-5 text-ln-green">Platform</h5>
+            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Platform</h5>
             {["LoRRI for Shippers", "LoRRI for Carriers"].map((l) => (
-              <a key={l} href="#" className="group flex items-center gap-1 text-sm mb-3 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+              <a key={l} href="#" className="group flex items-center gap-1 text-[13px] mb-2 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 {l}
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
