@@ -60,7 +60,7 @@ const Footer = () => (
 
           {/* Company */}
           <div>
-            <h5 className="text-xs font-bold tracking-[0.15em] uppercase mb-5 text-ln-green">Company</h5>
+            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Company</h5>
             {[
               { label: "About Us", to: "/about" },
               { label: "Vision", to: "#" },
@@ -68,31 +68,31 @@ const Footer = () => (
               { label: "Careers", to: "/careers" },
               { label: "Contact Us", to: "/contact" },
             ].map((l) => (
-              <Link key={l.label} to={l.to} className="group flex items-center gap-1 text-sm mb-3 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+              <Link key={l.label} to={l.to} className="group flex items-center gap-1 text-[13px] mb-2 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 {l.label}
-                <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ArrowUpRight size={11} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
             ))}
           </div>
 
           {/* Contact */}
           <div>
-            <h5 className="text-xs font-bold tracking-[0.15em] uppercase mb-5 text-ln-green">Get in Touch</h5>
-            <div className="space-y-3">
-              <a href="mailto:connect@logisticsnow.in" className="flex items-center gap-2.5 text-sm no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
-                <Mail size={14} className="text-ln-green flex-shrink-0" />
+            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Get in Touch</h5>
+            <div className="space-y-2">
+              <a href="mailto:connect@logisticsnow.in" className="flex items-center gap-2 text-[13px] no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                <Mail size={13} className="text-ln-green flex-shrink-0" />
                 connect@logisticsnow.in
               </a>
-              <a href="tel:+919867773508" className="flex items-center gap-2.5 text-sm no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
-                <Phone size={14} className="text-ln-green flex-shrink-0" />
+              <a href="tel:+919867773508" className="flex items-center gap-2 text-[13px] no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                <Phone size={13} className="text-ln-green flex-shrink-0" />
                 +91-9867773508
               </a>
-              <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 text-sm no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
-                <Globe size={14} className="text-ln-green flex-shrink-0" />
+              <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[13px] no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                <Globe size={13} className="text-ln-green flex-shrink-0" />
                 www.lorri.ai
               </a>
-              <div className="flex items-start gap-2.5 text-sm" style={{ color: 'rgba(255,255,255,.45)' }}>
-                <MapPin size={14} className="text-ln-green flex-shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2 text-[13px]" style={{ color: 'rgba(255,255,255,.45)' }}>
+                <MapPin size={13} className="text-ln-green flex-shrink-0 mt-0.5" />
                 <span>Mumbai, Maharashtra, India</span>
               </div>
             </div>
