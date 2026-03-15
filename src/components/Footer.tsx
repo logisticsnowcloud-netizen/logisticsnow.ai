@@ -19,7 +19,7 @@ const Footer = () => (
             <div className="font-display text-2xl font-extrabold mb-4" style={{ color: '#fff' }}>
               LogisticsNow<span className="text-ln-green">.</span>ai
             </div>
-            <p className="text-sm leading-[1.8] max-w-[300px] mb-6" style={{ color: 'rgba(255,255,255,.5)' }}>
+            <p className="text-xs leading-[1.7] max-w-[280px] mb-4" style={{ color: 'rgba(255,255,255,.5)' }}>
               India's national logistics intelligence grid — making every supply chain smarter, faster, and more resilient with AI.
             </p>
             <div className="flex gap-3">
