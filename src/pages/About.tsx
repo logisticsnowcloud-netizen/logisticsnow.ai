@@ -4,21 +4,22 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/Scroll
 import CtaBanner from "@/components/CtaBanner";
 
 const JOURNEY = [
-  { num: 1, color: '#393185', tag: 'The Beginning', title: 'Vision Articulated at ISB Hyderabad', body: "Raj Saxena articulates the founding vision of a National Logistics Grid at the Indian School of Business." },
+  { num: 1, color: '#393185', tag: 'The Beginning', title: 'Vision Articulated at ISB Hyderabad', body: "Raj Saxena articulates the founding vision of a Smart Logistics Grid at the Indian School of Business." },
   { num: 2, color: '#54AF3A', tag: 'Early Validation', title: 'Shell E4 Incubation & Acclaimed Demo Day', body: "Selected for Shell's prestigious E4 program. Demo Day earned Shell's investment and global attention." },
-  { num: 3, color: '#1AA6DF', tag: 'Scale-Up', title: 'Flipkart Leap Ahead + Fortune 500 Clients', body: "Selected for Flipkart/Walmart's Leap Ahead program. First major clients: Apollo Tyres, Jyothy Labs, Perfetti." },
-  { num: 4, color: 'linear-gradient(135deg,#393185,#1AA6DF)', tag: 'Today & Beyond', title: 'Global Smart Logistics Grid — 4 Continents', body: "$2.5Bn+ analyzed, $21Mn+ savings, 120+ companies including 25+ Fortune 500." },
+  { num: 3, color: '#393185', tag: 'Scale-Up', title: 'Flipkart Leap Ahead + Fortune 500 Clients', body: "Selected for Flipkart/Walmart's Leap Ahead program. First major clients: Apollo Tyres, Jyothy Labs, Perfetti." },
+  // { num: 4, color: 'linear-gradient(135deg,#393185,#1AA6DF)', tag: 'Today & Beyond', title: 'Global Smart Logistics Grid — 4 Continents', body: "$2.5Bn+ analyzed, $21Mn+ savings, 120+ companies including 25+ Fortune 500." },
+  { num: 4, color: '#54AF3A', tag: 'Today & Beyond', title: 'Global Smart Logistics Grid — 4 Continents', body: "$2.5Bn+ analyzed, $21Mn+ savings, 120+ companies including 25+ Fortune 500." },
 ];
 
 const WHY_US = [
   { icon: '🤝', title: 'Trusted & Neutral', desc: 'Completely neutral, independent platform. No conflicts of interest — ever.', proof: '🏛️ Shell · Flipkart / Walmart', proofBg: 'rgba(57,49,133,.07)', proofColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)' },
-  { icon: '🌍', title: 'Global Scale', desc: 'Multi-billion dollar spend data spanning 4 continents. 80,000+ routes, 2,200+ carriers.', proof: '📊 $2.5Bn+ · 80K+ routes', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
+  { icon: '🌍', title: 'Global Scale', desc: 'Multi-billion dollar spend data spanning 4 continents. 80,000+ routes, 2,200+ carriers.', proof: '📊 $2.5Bn+ · 90K+ routes', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
   { icon: '🧠', title: 'AI-Powered Intelligence', desc: 'Proprietary AI delivering multi-million dollar savings while improving service levels.', proof: '💰 $21Mn+ savings · 20%+ reduction', proofBg: 'rgba(26,166,223,.06)', proofColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#393185)' },
 ];
 
 const VISION_PILLARS = [
   { icon: '🏗️', title: 'Digital Backbone', desc: 'Building the infrastructure that powers modern logistics', color: '#393185' },
-  { icon: '🌐', title: 'National Logistics Grid', desc: 'Connecting every route, carrier & shipper in India and globally', color: '#1AA6DF' },
+  { icon: '🌐', title: 'Smart Logistics Grid', desc: 'Connecting every route, carrier & shipper in India and globally', color: '#1AA6DF' },
   { icon: '🤖', title: 'AI-First Approach', desc: 'Data science organizing the logistics industry at scale', color: '#54AF3A' },
   { icon: '🌱', title: 'Sustainability', desc: 'Lower emissions, better utilization, greener supply chains', color: '#fb923c' },
 ];
@@ -59,7 +60,7 @@ const About = () => (
                   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                   { n: '$21Mn+', l: 'Savings Locked-in', c: '#54AF3A', bg: 'rgba(84,175,58,.07)' },
                   { n: '2200+', l: 'Carriers Onboarded', c: '#54af3a', bg: 'rgba(26,166,223,.07)' },
-                  { n: '80K+', l: 'Routes Globally', c: '#393185', bg: 'rgba(57,49,133,.07)' },
+                  { n: '90K+', l: 'Routes Globally', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                 ].map((s) => (
                   <div key={s.l} className="p-4 rounded-xl text-center" style={{ background: s.bg }}>
                     <div className="font-display text-[22px] font-extrabold leading-none tracking-[-0.03em]" style={{ color: s.c }}>{s.n}</div>

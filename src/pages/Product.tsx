@@ -9,7 +9,7 @@ import AiDemo from "@/components/AiDemo";
 const PROD_STATS = [
   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185' },
   { n: '2200+', l: 'Carriers', c: '#1AA6DF' },
-  { n: '80K+', l: 'Routes', c: '#54AF3A' },
+  { n: '90K+', l: 'Routes', c: '#54AF3A' },
   { n: '100+', l: 'Truck Types', c: '#fb923c' },
 ];
 

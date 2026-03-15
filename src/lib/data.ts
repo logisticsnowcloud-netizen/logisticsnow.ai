@@ -24,10 +24,10 @@ export const PILLARS = [
   {
     num: '01', icon: '🔍', color: '#1AA6DF', glow: 'rgba(26,166,223,0.3)',
     title: 'Deep Discovery', sub: 'Know before you go',
-    desc: 'Logistics Intelligence that maps best-fit capacities, modes and carriers across 80K+ routes before you spend a rupee.',
+    desc: 'Logistics Intelligence that maps best-fit capacities, modes and carriers across 90K+ routes before you spend a rupee.',
     tags: ['LoRRI Benchmark', 'DiscoverNow', 'LoRRI Synergy'],
     bullets: ['Industry-first freight benchmarks on 50K+ lanes', 'AI-matched carrier recommendations by lane', 'Synergy map: backhaul & multi-stop optimization', '100+ truck types indexed by payload & route'],
-    impact: [['$2.5Bn+', 'Spend Analyzed', '#393185'], ['2200+', 'Carriers', '#1AA6DF'], ['80K+', 'Routes', '#54AF3A'], ['50K+', 'Lanes', '#fb923c']],
+    impact: [['$2.5Bn+', 'Spend Analyzed', '#393185'], ['2200+', 'Carriers', '#1AA6DF'], ['90K+', 'Routes', '#54AF3A'], ['50K+', 'Lanes', '#fb923c']],
   },
   {
     num: '02', icon: '⚡', color: '#54AF3A', glow: 'rgba(84,175,58,0.3)',
