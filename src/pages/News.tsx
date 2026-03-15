@@ -197,7 +197,7 @@ const NewsroomContent = () => (
               ))}
             </div>
             <div className="mt-6 mb-6">
-              <img src={supernovaAward} alt="LogisticsNow team receiving Sustainability Leaders Award at Supernova Challenge Dubai 2025" className="rounded-lg w-full object-cover" />
+              <img style={{width: '65%'}} src={supernovaAward} alt="LogisticsNow team receiving Sustainability Leaders Award at Supernova Challenge Dubai 2025" className="rounded-lg w-full object-cover" />
             </div>
             <div className="mt-6">
               <h3 className="font-display font-bold text-foreground mb-3">Impact at Scale</h3>

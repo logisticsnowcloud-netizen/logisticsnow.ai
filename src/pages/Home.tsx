@@ -6,8 +6,8 @@ import CtaBanner from "@/components/CtaBanner";
 
 const STATS = [
   { num: "$2.5Bn+", label: "Supply Chain Spend Analyzed", color: "#393185" },
-  { num: "120+", label: "Companies incl. 25+ Fortune 500", color: "#54AF3A" },
-  { num: "$500Mn+", label: "Freight Procured on Platform", color: "#1AA6DF" },
+  { num: "2300+", label: "Carriers incl. Global", color: "#54AF3A" },
+  { num: "$500Mn+", label: "Freight Procured on Platform", color: "#54AF3A" },
   { num: "1Mn+", label: "Truckloads Procured", color: "#393185" },
 ];
 
@@ -181,8 +181,9 @@ const Home = () => {
             <h1
               className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero"
             >
-              The <span className="text-ln-purple">Intelligent</span> Logistics
-              <br />& Procurement Platform for <span className="text-ln-green">Global</span>
+               AI-Powered <span className="text-ln-purple">Intelligence</span> for <br /><span className="text-ln-green">Global Logistics & Procurement</span>
+                {/* Logistics
+              <br />& Procurement Platform for <span className="text-ln-green">Global</span> */}
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>

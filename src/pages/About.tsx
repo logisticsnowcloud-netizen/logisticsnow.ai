@@ -58,7 +58,7 @@ const About = () => (
                 {[
                   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                   { n: '$21Mn+', l: 'Savings Locked-in', c: '#54AF3A', bg: 'rgba(84,175,58,.07)' },
-                  { n: '2200+', l: 'Carriers Onboarded', c: '#1AA6DF', bg: 'rgba(26,166,223,.07)' },
+                  { n: '2200+', l: 'Carriers Onboarded', c: '#54af3a', bg: 'rgba(26,166,223,.07)' },
                   { n: '80K+', l: 'Routes Globally', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                 ].map((s) => (
                   <div key={s.l} className="p-4 rounded-xl text-center" style={{ background: s.bg }}>
@@ -95,12 +95,12 @@ const About = () => (
                 <div className="w-[18px] h-0.5 bg-ln-green rounded-sm flex-shrink-0" />
                 <div className="text-[12.5px] text-muted-foreground">
                   <strong className="block text-foreground font-bold text-[13px]">Raj Saxena, Founder & CEO</strong>
-                  ISB Hyderabad
+                  {/* ISB Hyderabad */}
                 </div>
               </div>
-              <p className="text-[14px] leading-[1.7] text-muted-foreground pl-6 mb-5">
+              {/* <p className="text-[14px] leading-[1.7] text-muted-foreground pl-6 mb-5">
                 LogisticsNow is building the <strong className="text-foreground">Digital Backbone of Logistics</strong> — a trusted, neutral platform helping 25+ Fortune 500 companies drive visibility and prepare for upcoming logistics challenges.
-              </p>
+              </p> */}
               {/* Vision Pillars moved here to fill left whitespace */}
               <div className="grid grid-cols-2 gap-3 pl-6">
                 {VISION_PILLARS.map((v) => (
@@ -121,7 +121,7 @@ const About = () => (
               <div className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 mb-3 text-[10px] font-bold tracking-[0.04em] text-ln-purple" style={{ background: 'rgba(57,49,133,.08)', border: '1px solid rgba(57,49,133,.15)' }}>🎓 Founding Moment</div>
               <h3 className="font-display text-[17px] font-extrabold mb-2">The Vision That Started It All</h3>
               <p className="text-[13px] text-muted-foreground leading-[1.7] mb-2">The inaugural event at ISB Hyderabad laid the foundation for India's most ambitious logistics intelligence platform. Shell's Demo Day was <strong className="text-foreground">widely acclaimed</strong>.</p>
-              <a href="https://yourstory.com/2019/01/shell-second-e4-startups-india" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-ln-purple text-[12.5px] font-bold no-underline" style={{ borderBottom: '2px solid rgba(57,49,133,.15)', paddingBottom: 1 }}>Read Our Story on YourStory →</a>
+              {/* <a href="https://yourstory.com/2019/01/shell-second-e4-startups-india" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-ln-purple text-[12.5px] font-bold no-underline" style={{ borderBottom: '2px solid rgba(57,49,133,.15)', paddingBottom: 1 }}>Read Our Story on YourStory →</a> */}
             </div>
             {/* YouTube Video */}
             <div className="mt-3 rounded-[18px] overflow-hidden border border-border" style={{ aspectRatio: '16/9' }}>
@@ -223,7 +223,7 @@ const About = () => (
                 <div className="text-[9px] font-bold tracking-[0.1em] uppercase text-muted-foreground mb-2">Recognition & Backing</div>
                 {[
                   { icon: '/logos/gitex.png', title: 'GITEX Dubai 2025', sub: 'Sustainability Leaders — Supernova Winner' },
-                  { icon: '/logos/nasscom.jpeg', title: 'InnoTrek ME 2024 Startups', sub: "Selected for Nesscom InnoTrek Startup Program" },
+                  { icon: '/logos/nasscom.jpeg', title: 'InnoTrek ME 2024 Startups', sub: "Selected for Nasscom InnoTrek Startup Program" },
                   { icon: '/logos/flipkart.jpeg', title: 'Flipkart Leap Ahead', sub: 'Investment by Flipkart / Walmart' },
                   { icon: '/logos/microsoft.png', title: 'Microsoft Leap Program', sub: "Part of the Microsoft Leap Program" },
                   { icon: '/logos/shell.png', title: 'Shell E4 Program', sub: "Incubated by Shell's innovation arm" },
@@ -289,7 +289,7 @@ const About = () => (
         <ScrollReveal delay={0.2}>
           <div className="mt-4 p-4 bg-card border border-border rounded-[22px] flex items-center gap-3 flex-wrap">
             <div className="text-[10px] font-bold tracking-[0.1em] uppercase text-muted-foreground flex-shrink-0">Also Associated With</div>
-            {['🎓 Carnegie Mellon University Alumni', '🏛️ Wadhwani Foundation', '🇬🇧 UK Government', '🇮🇳 National Logistics Policy'].map((p) => (
+            {['🎓 Carnegie Mellon University Alumni', '🏛️ Wadhwani Foundation', '🇮🇳 National Logistics Policy'].map((p) => (
               <div key={p} className="px-3.5 py-1.5 bg-surface border border-border rounded-full text-[11.5px] font-semibold text-muted-foreground">{p}</div>
             ))}
           </div>

@@ -272,7 +272,7 @@ const Product = () => {
                   ))}
                 </div>
                 <Link to="/contact" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
-                  🎯 Schedule a Live Demo →
+                  Schedule a Live Demo →
                 </Link>
               </div>
             </ScrollReveal>
