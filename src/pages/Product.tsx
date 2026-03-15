@@ -468,12 +468,16 @@ const Product = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="flex gap-1.5 justify-center mb-4 flex-wrap">
+            <div
+              className="flex gap-1.5 justify-center mb-4 flex-wrap"
+              onMouseEnter={() => setPillarPaused(true)}
+              onMouseLeave={() => setPillarPaused(false)}
+            >
               {PILLARS.map((p, i) => (
                 <button
                   key={i}
-                  onClick={() => setActivePillar(i)}
-                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[12px] font-bold cursor-pointer transition-all duration-300 font-body"
+                  onClick={() => { setActivePillar(i); setPillarProgress(0); }}
+                  className="relative flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[12px] font-bold cursor-pointer transition-all duration-300 font-body overflow-hidden"
                   style={{
                     border: `1.5px solid ${i === activePillar ? p.color : 'rgba(57,49,133,0.2)'}`,
                     color: i === activePillar ? p.color : 'hsl(var(--muted-foreground))',
@@ -481,6 +485,15 @@ const Product = () => {
                     boxShadow: i === activePillar ? `0 0 20px ${p.glow}` : 'none',
                   }}
                 >
+                  {i === activePillar && (
+                    <span
+                      className="absolute bottom-0 left-0 h-[2px] transition-none"
+                      style={{
+                        width: `${pillarProgress}%`,
+                        background: p.color,
+                      }}
+                    />
+                  )}
                   {p.icon} {p.num} — {p.title}
                 </button>
               ))}
