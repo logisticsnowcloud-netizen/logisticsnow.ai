@@ -7,6 +7,7 @@ const Navbar = () => {
   const location = useLocation();
   const path = location.pathname;
   const [open, setOpen] = useState(false);
+  const { setOpen: setDemoOpen } = useScheduleDemo();
 
   const navItems = [
     { label: "Home", to: "/" },
