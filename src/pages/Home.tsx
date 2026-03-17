@@ -88,7 +88,7 @@ const Home = () => {
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(57,49,133,${0.05 * (1 - d / 110)})`;
+            ctx.strokeStyle = `rgba(106,169,255,${0.04 * (1 - d / 110)})`;
             ctx.lineWidth = 0.7;
             ctx.stroke();
           }
