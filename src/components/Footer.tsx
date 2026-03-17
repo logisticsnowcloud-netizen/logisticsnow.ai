@@ -67,8 +67,8 @@ const Footer = () => (
             {[
               { label: "About Us", to: "/about" },
               { label: "Careers", to: "/careers" },
-              { label: "Investors", to: "#" },
-              { label: "Vision", to: "#" },
+              { label: "Investors", to: "/about#investors-partners" },
+              { label: "Vision", to: "/about#our-vision" },
               { label: "Contact Us", to: "/contact" },
             ].map((l) => (
               <Link key={l.label} to={l.to} className="group flex items-center gap-1 text-[13px] mb-2 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
