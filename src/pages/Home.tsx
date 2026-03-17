@@ -637,9 +637,9 @@ const Home = () => {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="px-[5vw] py-5 bg-background">
+      <section className="px-[5vw] py-5 mb-16 bg-background">
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-end">
             <ScrollReveal>
               <div className="section-tag !mb-1">Case Studies</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
@@ -648,32 +648,35 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-muted-foreground text-[13px] leading-[1.5]">
-                {/* Proven savings across geographies, industries and freight types — from India to Europe to Australia. */}
                 Proven freight procurement savings across geographies, industries and transportation modes.
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {CASES.map((cs, i) => (
               <StaggerItem key={cs.client}>
-                <div className="card-hover !p-4 !rounded-2xl">
-                  <div className="font-mono text-[9px] font-bold tracking-[0.08em] uppercase text-ln-green mb-1.5">
+                <div className="card-hover !p-6 !rounded-2xl h-full flex flex-col">
+                  <div className="font-mono text-[10px] font-bold tracking-[0.08em] uppercase text-ln-green mb-2 flex items-center gap-1.5">
                     {cs.tag}
                   </div>
-                  <div className="font-display text-[14px] font-bold mb-2 leading-[1.3]">{cs.client}</div>
-                  <div className="grid grid-cols-2 gap-2 mb-2">
-                    <div className="p-2 bg-background rounded-lg text-center">
-                      <div className="font-display text-[16px] font-extrabold" style={{ color: caseColors[i] }}>
+                  <div className="font-display text-[14px] font-bold mb-3 leading-[1.3]">{cs.client}</div>
+                  <div className="grid grid-cols-2 gap-3 mb-3">
+                    <div className="p-2.5 bg-muted/50 rounded-xl text-center">
+                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Spend</div>
+                      <div className="font-display text-[14px] font-bold text-foreground/70">
                         {cs.spend}
                       </div>
-                      <div className="text-[9px] text-muted-foreground">Spend</div>
                     </div>
-                    <div className="p-2 rounded-lg text-center" style={{ background: "rgba(84,175,58,.08)" }}>
-                      <div className="font-display text-[16px] font-extrabold text-ln-green">{cs.saving}</div>
-                      <div className="text-[9px] text-muted-foreground">Savings ({cs.pct})</div>
+                    <div className="p-2.5 rounded-xl text-center border border-ln-green/20" style={{ background: "hsl(var(--ln-green) / 0.08)" }}>
+                      <div className="text-[9px] text-ln-green uppercase tracking-wider font-semibold mb-0.5">Savings ({cs.pct})</div>
+                      <div className="font-display text-[20px] font-extrabold text-ln-green leading-none">{cs.saving}</div>
                     </div>
                   </div>
-                  {cs.extra && <div className="text-[11px] text-muted-foreground">📊 {cs.extra}</div>}
+                  {cs.extra && (
+                    <div className="text-[10px] text-muted-foreground mt-auto flex items-center gap-1">
+                      <span className="text-[10px]">📊</span> {cs.extra}
+                    </div>
+                  )}
                 </div>
               </StaggerItem>
             ))}
