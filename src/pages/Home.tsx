@@ -179,26 +179,24 @@ const Home = () => {
         <div className="relative z-[2] max-w-[1000px]">
           <ScrollReveal direction="up" delay={0}>
             <div
-              className="inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold tracking-[0.07em] uppercase text-ln-purple mb-2"
-              style={{ background: "rgba(57,49,133,0.09)", border: "1px solid rgba(57,49,133,0.2)" }}
+              className="inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold tracking-[0.07em] uppercase mb-2"
+              style={{ background: "rgba(106,169,255,0.12)", border: "1px solid rgba(106,169,255,0.25)", color: "#6AA9FF" }}
             >
-              <span className="w-[6px] h-[6px] bg-ln-green rounded-full inline-block" />
+              <span className="w-[6px] h-[6px] rounded-full inline-block" style={{ background: "#54AF3A" }} />
               The AI Brain for Global Logistics
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
             <h1
-              className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero"
+              className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero text-white"
             >
-               AI-Powered <span className="text-ln-purple">Intelligence</span> for <br /><span className="text-ln-green">Global Logistics & Procurement</span>
-                {/* Logistics
-              <br />& Procurement Platform for <span className="text-ln-green">Global</span> */}
+               AI-Powered <span style={{ color: "#6AA9FF" }}>Intelligence</span> for <br /><span style={{ color: "#54AF3A" }}>Global Logistics & Procurement</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
             <p
-              className="text-muted-foreground max-w-[600px] leading-[1.5] mx-auto mb-4"
-              style={{ fontSize: "clamp(13px, 1.3vw, 16px)" }}
+              className="max-w-[600px] leading-[1.5] mx-auto mb-4"
+              style={{ fontSize: "clamp(13px, 1.3vw, 16px)", color: "rgba(255,255,255,0.65)" }}
             >
               AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+
               companies including 25+ Fortune 500s across 4 continents.
@@ -206,38 +204,46 @@ const Home = () => {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
             <div className="flex gap-3 flex-wrap justify-center">
-              <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
+              <Link
+                to="/product"
+                className="no-underline !px-7 !py-3 !text-[15px] rounded-full font-bold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                style={{ background: "linear-gradient(135deg, #6AA9FF, #4A8FE7)", color: "#fff", boxShadow: "0 4px 24px rgba(106,169,255,0.35)" }}
+              >
                 🚛 Try AI Logistics Copilot →
               </Link>
-              <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[15px]">
+              <Link
+                to="/about"
+                className="no-underline !px-6 !py-2.5 !text-[15px] rounded-full font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                style={{ background: "transparent", color: "rgba(255,255,255,0.85)", border: "2px solid rgba(255,255,255,0.25)" }}
+              >
                 Learn About Us
               </Link>
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 max-w-[820px] w-full relative z-[2] mt-5 mx-auto">
-              {STATS.map((s, i) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[860px] w-full relative z-[2] mt-7 mx-auto">
+              {STATS.map((s) => (
                 <div
                   key={s.label}
-                  className="group relative rounded-xl p-3.5 text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden"
+                  className="group relative rounded-2xl p-5 text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden backdrop-blur-sm"
                   style={{
-                    background: `linear-gradient(135deg, ${s.color}12, ${s.color}08)`,
-                    border: `1px solid ${s.color}25`,
-                    boxShadow: `0 4px 20px ${s.color}10`,
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    boxShadow: "0 4px 30px rgba(0,0,0,0.2)",
                   }}
                 >
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{ background: `radial-gradient(circle at 50% 0%, ${s.color}15, transparent 70%)` }}
+                    style={{ background: "radial-gradient(circle at 50% 0%, rgba(106,169,255,0.12), transparent 70%)" }}
                   />
                   <div className="relative z-[1]">
                     <div
-                      className="font-display text-[24px] md:text-[28px] font-black tracking-[-0.03em] mb-0.5"
-                      style={{ color: s.color }}
+                      className="font-display text-[24px] md:text-[28px] font-black tracking-[-0.03em] mb-1"
+                      style={{ color: "#6AA9FF" }}
                     >
                       {s.num}
                     </div>
-                    <div className="text-[10px] text-muted-foreground font-semibold leading-tight">{s.label}</div>
+                    <div className="text-[10.5px] font-semibold leading-tight" style={{ color: "rgba(255,255,255,0.6)" }}>{s.label}</div>
                   </div>
                 </div>
               ))}
