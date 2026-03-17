@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { CLIENTS, CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
-import { Bot, Coins, Leaf, Map, Zap, Users } from "lucide-react";
+import { Bot, Coins, Leaf, Map, Zap, Users, DollarSign, User } from "lucide-react";
 
 const STATS = [
   { num: "$2.5Bn+", label: "Freight Spend Analyzed", color: "#393185" },
@@ -20,7 +20,7 @@ const VISION_CARDS = [
     // desc: "Industry-first logistics intelligence platform combining benchmarks, procurement, TMS and AI agents — all in one integrated ecosystem.",
   },
   {
-    icon: "💰",
+    icon: DollarSign,
     title: "Cost Control & Savings",
     desc: "Deliver upto 20%+ freight savings with AI-driven benchmarking, carrier synergies, backhaul optimization, and smart routing.",
     // desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops & intelligent route optimization.",
@@ -32,7 +32,7 @@ const VISION_CARDS = [
     // desc: "Create the Global Smart Logistics Grid for green capacities. Better vehicle utilization, lower emissions per ton, efficient distribution.",
   },
   {
-    icon: "🗺️",
+    icon: Map,
     title: "Enabling Reach & Service",
     desc: "Cover 80K+ global routes with deep carrier networks at plants, depots, and distribution centers, supporting local to multimodal shipping."
     // desc: "80K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
@@ -44,7 +44,7 @@ const VISION_CARDS = [
     // desc: "During COVID's first lockdown, LoRRI kept plants running by rapidly aligning capacities. Digital indents answered in <30 minutes.",
   },
   {
-    icon: "😊",
+    icon: User,
     title: "Happy Users & Ecosystem",
     desc: "Rate, benchmark, and share feedback on carriers with industry peers, driving continuous improvements across the logistics network."
     // desc: "Rate, benchmark and share feedback on carriers with industry peers — driving continuous improvement across the logistics network.",
@@ -417,7 +417,7 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="px-[5vw] py-10" style={{ background: "hsl(var(--bg2))" }}>
+      <section className="px-[5vw] py-10" style={{ background: "hsl(var(--bg2))", paddingTop: '1%' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
             <ScrollReveal direction="up" delay={0.05}>
@@ -431,20 +431,19 @@ const Home = () => {
             <ScrollReveal direction="up" delay={0.15}>
               <div>
                 <p className="text-[13.5px] leading-[1.65] mb-4" style={{ color: "hsl(60,0%,35%)" }}>
-                  LogisticsNow is uniquely positioned with trust, technology, and data to power your digital logistics
-                  ecosystem — enabling smarter decisions, lower costs, and greener supply chains.
+                  LogisticsNow combines trusted expertise, advanced technology, and data to power your digital logistics ecosystem.
                 </p>
                 <div className="flex gap-3">
                   <Link to="/product" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
                     Explore Platform →
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/product"
                     className="btn-secondary-ln no-underline !px-5 !py-2 !text-[13px]"
                     style={{ color: "hsl(var(--ln-purple))", borderColor: "hsl(var(--ln-purple))" }}
                   >
                     Meet LoRRI
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </ScrollReveal>
