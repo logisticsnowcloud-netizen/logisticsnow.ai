@@ -60,12 +60,12 @@ const Home = () => {
     resize();
     window.addEventListener("resize", resize);
 
-    const pts = Array.from({ length: 50 }, () => ({
+    const pts = Array.from({ length: 40 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      r: Math.random() * 2 + 1,
+      vx: (Math.random() - 0.5) * 0.18,
+      vy: (Math.random() - 0.5) * 0.18,
+      r: Math.random() * 1.8 + 0.8,
     }));
 
     let animId: number;
