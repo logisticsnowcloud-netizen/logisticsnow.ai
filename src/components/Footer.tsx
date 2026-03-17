@@ -80,7 +80,7 @@ const Footer = () => (
 
           {/* Contact */}
           <div>
-            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Get in Touch</h5>
+            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Contact Us</h5>
             <div className="space-y-2">
               <a href="mailto:connect@logisticsnow.in" className="flex items-center gap-2 text-[13px] no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <Mail size={13} className="text-ln-green flex-shrink-0" />
@@ -88,7 +88,7 @@ const Footer = () => (
               </a>
               <a href="tel:+919867773508" className="flex items-center gap-2 text-[13px] no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <Phone size={13} className="text-ln-green flex-shrink-0" />
-                +91-9867773508
+                +91 9867773508
               </a>
               <a href="https://www.lorri.ai" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[13px] no-underline transition-colors hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 <Globe size={13} className="text-ln-green flex-shrink-0" />

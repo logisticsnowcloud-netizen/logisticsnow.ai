@@ -600,7 +600,7 @@ const Home = () => {
           </div>
 
           {/* Progress bar */}
-          <div className="hidden lg:flex items-center justify-between mb-6 px-4">
+          {/* <div className="hidden lg:flex items-center justify-between mb-6 px-4">
             {[1,2,3,4,5,6].map((n, i) => (
               <div key={n} className="flex items-center flex-1 last:flex-none">
                 <div className="w-7 h-7 rounded-full flex items-center justify-center font-mono text-[11px] font-bold text-white" style={{ background: "hsl(var(--ln-purple))" }}>
@@ -611,7 +611,7 @@ const Home = () => {
                 )}
               </div>
             ))}
-          </div>
+          </div> */}
 
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {(METHODOLOGY_STEPS as Array<{num: string; title: string; desc: string}>).map((s, i) => {

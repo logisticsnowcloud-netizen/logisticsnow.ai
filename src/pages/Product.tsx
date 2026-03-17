@@ -23,18 +23,22 @@ const CREDIBILITY_STATS = [
 ];
 
 const TRUSTED_LOGOS = [
-  { name: 'Maersk', src: '/logos/Maersk.png' },
-  { name: 'DHL', src: '/logos/dhl.png' },
-  { name: 'CEVA', src: '/logos/ceva.png' },
-  { name: 'DSV', src: '/logos/dsv.png' },
-  { name: 'Apollo Tyres', src: '/logos/apollo-tyres.png' },
-  { name: 'Perfetti', src: '/logos/perfetti.png' },
-  { name: 'Saint-Gobain', src: '/logos/saint-gobain.png' },
-  { name: 'Kimberly-Clark', src: '/logos/kimberly-clark.png' },
-  { name: 'General Mills', src: '/logos/general-mills.png' },
-  { name: 'Shell', src: '/logos/shell.png' },
-  { name: 'Bajaj', src: '/logos/bajaj.png' },
-  { name: 'Jyothy Labs', src: '/logos/jyothy-labs.png' },
+  { name: 'Apollo Tyres', src: '/logo/Apollo.png' },
+  { name: 'CEAT', src: '/logos/ceat.png' },
+  { name: 'CJ Darcl', src: '/logo/CJ_Darcl.png' },
+  { name: 'DHL', src: '/logo/dhl-logo.png' },
+  { name: 'Fiege', src: '/logo/fiege-logo.png' },
+  { name: 'General Mills', src: '/logo/general-mills.png' },
+  { name: 'Jyothy Labs', src: '/logo/Jyothy_Labs_Logo.png' },
+  { name: 'Kimberly-Clark', src: '/logo/kimberly+clark.png' },
+  { name: 'Maersk', src: '/logo/maersk.png' },
+  { name: 'Rhenus', src: '/logo/Rhenus_Logistics.png' },
+  { name: 'Saint-Gobain', src: '/logo/Saint-Gobain-Logo.png' },
+  { name: 'Sennder', src: '/logos/sennder.png' },
+  { name: 'Shell', src: '/logo/Shell.png' },
+  { name: 'TOLL', src: '/logo/toll-group.png' },
+  { name: 'Quehenberger', src: '/logo/Quehenberger.png' },
+  { name: 'Vredestein', src: '/logo/Vredestein.png' },
 ];
 
 const Product = () => {

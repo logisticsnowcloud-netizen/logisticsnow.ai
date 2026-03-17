@@ -4,24 +4,24 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/Scroll
 import CtaBanner from "@/components/CtaBanner";
 
 const JOURNEY = [
-  { num: 1, color: '#393185', tag: 'The Beginning', title: 'Vision Articulated at ISB Hyderabad', body: "Raj Saxena articulates the founding vision of a Smart Logistics Grid at the Indian School of Business." },
-  { num: 2, color: '#54AF3A', tag: 'Early Validation', title: 'Shell E4 Incubation & Acclaimed Demo Day', body: "Selected for Shell's prestigious E4 program. Demo Day earned Shell's investment and global attention." },
-  { num: 3, color: '#393185', tag: 'Scale-Up', title: 'Flipkart Leap Ahead + Fortune 500 Clients', body: "Selected for Flipkart/Walmart's Leap Ahead program. First major clients: Apollo Tyres, Jyothy Labs, Perfetti." },
+  { num: 1, color: '#393185', tag: 'The Beginning', title: 'Vision Articulated at ISB Hyderabad', body: "Raj Saxena presents the vision for a Smart Logistics Grid at the Indian School of Business, laying the foundation for LogisticsNow." },
+  { num: 2, color: '#54AF3A', tag: 'Early Validation', title: 'Shell E4 Incubation & Acclaimed Demo Day', body: "LogisticsNow is selected for Shell’s prestigious E4 incubation program, gaining early industry validation and global exposure." },
+  { num: 3, color: '#393185', tag: 'Scale-Up', title: 'Flipkart Leap Ahead + Fortune 500 Clients', body: "LogisticsNow joins Flipkart/Walmart’s Leap Ahead program, receiving strategic investment and access to large enterprise logistics networks." },
   // { num: 4, color: 'linear-gradient(135deg,#393185,#1AA6DF)', tag: 'Today & Beyond', title: 'Global Smart Logistics Grid — 4 Continents', body: "$2.5Bn+ analyzed, $21Mn+ savings, 120+ companies including 25+ Fortune 500." },
-  { num: 4, color: '#54AF3A', tag: 'Today & Beyond', title: 'Global Smart Logistics Grid — 4 Continents', body: "$2.5Bn+ analyzed, $21Mn+ savings, 120+ companies including 25+ Fortune 500." },
+  { num: 4, color: '#54AF3A', tag: 'Today & Beyond', title: 'Global Smart Logistics Grid — 4 Continents', body: "LogisticsNow expands globally, analyzing billions in logistics spend and delivering measurable savings for enterprises across industries." },
 ];
 
 const WHY_US = [
-  { icon: '🤝', title: 'Trusted & Neutral', desc: 'Completely neutral, independent platform. No conflicts of interest — ever.', proof: '🏛️ Shell · Flipkart · Carnegie Mellon University Alumni', proofBg: 'rgba(57,49,133,.07)', proofColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)' },
-  { icon: '🌍', title: 'Global Scale', desc: 'Multi-billion dollar spend data spanning 4 continents. 80,000+ routes, 2,200+ carriers.', proof: '📊 $2.5Bn+ · 80K+ routes', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
-  { icon: '🧠', title: 'AI-Powered Intelligence', desc: 'Proprietary AI delivering multi-million dollar savings while improving service levels.', proof: '💰 $21Mn+ savings · 20%+ reduction', proofBg: 'rgba(26,166,223,.06)', proofColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#393185)' },
+  { icon: '🤝', title: 'Trusted & Neutral', desc: 'An independent and neutral platform designed to provide unbiased logistics intelligence and procurement insights.', proof: '🏛️ Shell · Flipkart · Carnegie Mellon University Alumni', proofBg: 'rgba(57,49,133,.07)', proofColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)' },
+  { icon: '🌍', title: 'Global Scale', desc: 'A intelligence platform analyzing billions in freight spend across thousands of routes networks worldwide.', proof: '📊 $2.5Bn+ · 80K+ routes', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
+  { icon: '🧠', title: 'AI-Powered Intelligence', desc: 'Proprietary AI models that identify cost optimization opportunities and improve logistics performance.', proof: '💰 $21Mn+ savings · 20%+ reduction', proofBg: 'rgba(26,166,223,.06)', proofColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#393185)' },
 ];
 
 const VISION_PILLARS = [
-  { icon: '🏗️', title: 'Digital Backbone', desc: 'Building the infrastructure that powers modern logistics', color: '#393185' },
-  { icon: '🌐', title: 'Smart Logistics Grid', desc: 'Connecting every route, carrier & shipper in India and globally', color: '#54AF3A' },
-  { icon: '🤖', title: 'AI-First Approach', desc: 'Data science organizing the logistics industry at scale', color: '#54AF3A' },
-  { icon: '🌱', title: 'Sustainability', desc: 'Lower emissions, better utilization, greener supply chains', color: '#393185' },
+  { icon: '🏗️', title: 'Digital Backbone', desc: 'Building the digital infrastructure that enables intelligent logistics operations across carriers, shippers, and supply chains.', color: '#393185' },
+  { icon: '🌐', title: 'Smart Logistics Grid', desc: 'Connecting carriers, shippers, and logistics routes into a unified global logistics intelligence network.', color: '#54AF3A' },
+  { icon: '🤖', title: 'AI-First Approach', desc: 'AI-powered analytics transforming logistics data into actionable insights and optimization opportunities.', color: '#54AF3A' },
+  { icon: '🌱', title: 'Sustainability', desc: 'Optimizing logistics networks to reduce emissions, improve asset utilization, and enable more sustainable supply chains.', color: '#393185' },
 ];
 
 const About = () => (
@@ -44,7 +44,9 @@ const About = () => (
                 Building the <span className="text-ln-purple">Digital</span><br /><span className="text-ln-green">Backbone</span> of Logistics
               </h1>
               <p className="text-muted-foreground leading-[1.7] mb-5 max-w-[500px]" style={{ fontSize: 'clamp(14px, 1.5vw, 16px)' }}>
-                LogisticsNow uses Data Science to organize the logistics industry — optimizing operations, time and revenue across 4 continents.
+                {/* LogisticsNow uses Data Science to organize the logistics industry — optimizing operations, time and revenue across 4 continents. */}
+                LogisticsNow helps enterprises optimize logistics procurement and operations using AI-driven analytics and real-time freight intelligence. 
+                Our platform enables organizations to reduce freight costs, improve procurement decisions, and drive more efficient supply chain performance.
               </p>
               <div className="flex gap-3 flex-wrap">
                 {/* <button className="btn-primary-ln !px-6 !py-2.5 !text-[13.5px]">Our Vision →</button> */}
@@ -59,7 +61,7 @@ const About = () => (
                 {[
                   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                   { n: '$21Mn+', l: 'Savings Locked-in', c: '#54AF3A', bg: 'rgba(84,175,58,.07)' },
-                  { n: '2200+', l: 'Carriers Onboarded', c: '#54af3a', bg: 'rgba(26,166,223,.07)' },
+                  { n: '2300+', l: 'Carriers Onboarded', c: '#54af3a', bg: 'rgba(26,166,223,.07)' },
                   { n: '80K+', l: 'Routes Globally', c: '#393185', bg: 'rgba(57,49,133,.07)' },
                 ].map((s) => (
                   <div key={s.l} className="p-4 rounded-xl text-center" style={{ background: s.bg }}>
@@ -90,7 +92,7 @@ const About = () => (
                 <div className="absolute left-0 top-1 bottom-1 w-1 rounded-full" style={{ background: 'linear-gradient(180deg,#393185,#54AF3A)' }} />
                 <div className="flex items-end gap-3 flex-wrap">
                   <div className="font-display font-bold leading-[1.16] tracking-[-0.025em]" style={{ fontSize: 'clamp(20px, 3vw, 36px)' }}>
-                    "Build world class logistics ecosystems leveraging <span className="px-0.5 rounded-sm" style={{ background: 'rgba(84,175,58,.15)' }}>data and trust</span>"                     
+                    "Building world-class logistics ecosystems powered by <span className="px-0.5 rounded-sm" style={{ background: 'rgba(84,175,58,.15)' }}>data, intelligence, and trust.</span>"                     
                     <span className="w-[18px] h-0.5 bg-ln-green rounded-sm" />
                     <strong className="text-foreground font-bold text-[13px] whitespace-nowrap" style={{marginLeft: '3%'}}>----- Raj Saxena, Founder & CEO</strong>
                   </div>
@@ -121,8 +123,12 @@ const About = () => (
             <div className="bg-surface border border-border rounded-[22px] p-5 relative overflow-hidden">
               <div className="absolute right-[-10px] bottom-[-12px] font-display text-[90px] font-extrabold text-ln-purple opacity-5 leading-none pointer-events-none tracking-[-0.04em]">ISB</div>
               <div className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 mb-3 text-[10px] font-bold tracking-[0.04em] text-ln-purple" style={{ background: 'rgba(57,49,133,.08)', border: '1px solid rgba(57,49,133,.15)' }}>🎓 Founding Moment</div>
-              <h3 className="font-display text-[17px] font-extrabold mb-2">The Vision That Started It All</h3>
-              <p className="text-[13px] text-muted-foreground leading-[1.7] mb-2">The inaugural event at ISB Hyderabad laid the foundation for India's most ambitious logistics intelligence platform. Shell's Demo Day was <strong className="text-foreground">widely acclaimed</strong>.</p>
+              <h3 className="font-display text-[17px] font-extrabold mb-2">Where the Vision Began</h3>
+              <p className="text-[13px] text-muted-foreground leading-[1.7] mb-2">
+                The idea behind LogisticsNow first emerged at ISB Hyderabad, where Raj Saxena presented the vision for a data-driven logistics intelligence platform designed to transform how logistics decisions are made.
+                {/* The inaugural event at ISB Hyderabad laid the foundation for India's most ambitious logistics intelligence platform. Shell's Demo Day was 
+                <strong className="text-foreground">widely acclaimed</strong>. */}
+                </p>
               {/* <a href="https://yourstory.com/2019/01/shell-second-e4-startups-india" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-ln-purple text-[12.5px] font-bold no-underline" style={{ borderBottom: '2px solid rgba(57,49,133,.15)', paddingBottom: 1 }}>Read Our Story on YourStory →</a> */}
             </div>
             {/* YouTube Video */}
@@ -155,7 +161,10 @@ const About = () => (
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-muted-foreground text-body-lg">Three pillars no other logistics platform combines — the reason India's most reputed companies trust us.</p>
+            <p className="text-muted-foreground text-body-lg">
+              {/* Three pillars no other logistics platform combines — the reason India's most reputed companies trust us. */}
+              LogisticsNow combines three core capabilities that enable enterprises to make smarter logistics procurement and network decisions.  
+            </p>
           </ScrollReveal>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -189,7 +198,7 @@ const About = () => (
             </ScrollReveal>
             {JOURNEY.map((j, i) => (
               <ScrollReveal key={j.num} delay={i * 0.08}>
-                <div className="flex gap-3 pb-6 relative last:pb-0" style={{paddingTop: '1%'}}>
+                <div className="flex gap-3 pb-6 relative last:pb-0" style={{paddingTop: '1%', paddingBottom: '2%'}}>
                   {i < JOURNEY.length - 1 && (
                     <div className="absolute left-[14px] top-[30px] bottom-0 w-0.5" style={{ background: 'linear-gradient(180deg,#393185,rgba(57,49,133,.08))' }} />
                   )}
@@ -263,8 +272,8 @@ const About = () => (
         </div>
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            { icon: '/logos/shell.png', name: 'Shell', type: 'Incubator & Investor', desc: "Selected for Shell's prestigious E4 program. Demo Day was widely acclaimed — the moment that put LogisticsNow on the global map.", badge: '🌍 Energy · Environment · Entrepreneurship', badgeBg: 'rgba(57,49,133,.07)', badgeColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)', link: 'https://yourstory.com/2019/01/shell-second-e4-startups-india' },
-            { icon: '/logos/flipkart.jpeg', name: 'Flipkart (Walmart)', type: 'Investor · Leap Ahead Program', desc: "Flipkart selected LogisticsNow for its Leap Ahead program — providing investment and direct mentorship by top leadership.", badge: '🚀 Investment + Mentorship + Scale Access', badgeBg: 'rgba(26,166,223,.07)', badgeColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#54AF3A)', link: '#' },
+            { icon: '/logos/shell.png', name: 'Shell', type: 'Incubator & Investor', desc: "Shell selected LogisticsNow for its E4 innovation program, providing mentorship, industry validation, and global exposure.", badge: '🌍 Energy · Environment · Entrepreneurship', badgeBg: 'rgba(57,49,133,.07)', badgeColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)', link: 'https://yourstory.com/2019/01/shell-second-e4-startups-india' },
+            { icon: '/logos/flipkart.jpeg', name: 'Flipkart (Walmart)', type: 'Investor · Leap Ahead Program', desc: "Flipkart selected LogisticsNow for its Leap Ahead program, providing investment, mentorship, and access to large-scale logistics operations.", badge: '🚀 Investment + Mentorship + Scale Access', badgeBg: 'rgba(26,166,223,.07)', badgeColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#54AF3A)', link: '#' },
           ].map((inv) => (
             <StaggerItem key={inv.name}>
               <div className="bg-card border border-border rounded-[22px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -312,7 +321,7 @@ const About = () => (
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-muted-foreground text-body-lg">Direct quotes from supply chain leaders who rely on Team LoRRI every day.</p>
+            <p className="text-muted-foreground text-body-lg">Insights from supply chain leaders who rely on LogisticsNow to optimize their logistics operations.</p>
           </ScrollReveal>
         </div>
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
