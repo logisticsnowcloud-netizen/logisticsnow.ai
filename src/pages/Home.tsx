@@ -585,9 +585,16 @@ const Home = () => {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-[13px] leading-[1.6]">
-                A proven logistics transformation methodology that has delivered over $21M in savings for enterprise supply chains.
-              </p>
+              <div>
+                <p className="text-muted-foreground text-[13px] leading-[1.6] mb-4">
+                  A proven logistics transformation methodology that has delivered over $21M in savings for enterprise supply chains.
+                </p>
+                <div className="flex gap-3">
+                  <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
+                    Talk to a Procurement Expert →
+                  </Link>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
 
@@ -625,16 +632,6 @@ const Home = () => {
               );
             })}
           </StaggerContainer>
-
-          {/* CTA */}
-          <ScrollReveal>
-            <div className="flex justify-center mt-10">
-              <Link to="/contact" className="inline-flex items-center gap-2 font-display font-bold text-sm px-7 py-3 rounded-xl text-white transition-all hover:scale-[1.03]" style={{ background: "hsl(var(--ln-purple))" }}>
-                Talk to a Procurement Expert
-                <ChevronRight size={16} />
-              </Link>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
