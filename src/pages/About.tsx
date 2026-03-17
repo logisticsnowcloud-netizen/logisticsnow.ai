@@ -80,7 +80,7 @@ const About = () => (
     </div>
 
     {/* VISION — Visual Cards Layout */}
-    <section className="section-std bg-background">
+    <section id="our-vision" className="section-std bg-background">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <ScrollReveal direction="up">
@@ -246,7 +246,7 @@ const About = () => (
     </section>
 
     {/* INVESTORS */}
-    <section className="section-std bg-bg2">
+    <section id="investors-partners" className="section-std bg-bg2">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5 items-end">
           <ScrollReveal>
