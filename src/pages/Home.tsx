@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { CLIENTS, CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
+import { Bot, Coins, Leaf, Map, Zap, Users } from "lucide-react";
 
 const STATS = [
   { num: "$2.5Bn+", label: "Supply Chain Spend Analyzed" },
