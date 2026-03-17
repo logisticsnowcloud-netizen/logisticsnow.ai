@@ -85,7 +85,7 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <button className="bg-ln-green rounded-full px-5 py-2.5 mt-2 text-[13.5px] font-bold border-none cursor-pointer font-body w-full" style={{ color: '#fff' }}>
+          <button onClick={() => { setOpen(false); setDemoOpen(true); }} className="bg-ln-green rounded-full px-5 py-2.5 mt-2 text-[13.5px] font-bold border-none cursor-pointer font-body w-full" style={{ color: '#fff' }}>
             Schedule Demo
           </button>
         </div>
