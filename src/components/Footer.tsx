@@ -50,9 +50,12 @@ const Footer = () => (
           {/* Platform */}
           <div>
             <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Products/ Solutions</h5>
-            {["LoRRI Platform for Shippers", "LoRRI Platform for Carriers"].map((l) => (
-              <a key={l} href="#" className="group flex items-center gap-1 text-[13px] mb-2 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
-                {l}
+            {[
+              { label: "LoRRI Platform for Shippers", to: "https://company.lorri.in" },
+              { label: "LoRRI Platform for Carriers", to: "https://transporter.lorri.in" },
+            ].map((l) => (
+              <a key={l.label} href={l.to} target="_blank" rel="noreferrer" className="group flex items-center gap-1 text-[13px] mb-2 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
+                {l.label}
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             ))}
