@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useScheduleDemo } from "@/hooks/useScheduleDemo";
 
 const Navbar = () => {
   const location = useLocation();
   const path = location.pathname;
   const [open, setOpen] = useState(false);
+  const { setOpen: setDemoOpen } = useScheduleDemo();
 
   const navItems = [
     { label: "Home", to: "/" },
@@ -83,7 +85,7 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <button className="bg-ln-green rounded-full px-5 py-2.5 mt-2 text-[13.5px] font-bold border-none cursor-pointer font-body w-full" style={{ color: '#fff' }}>
+          <button onClick={() => { setOpen(false); setDemoOpen(true); }} className="bg-ln-green rounded-full px-5 py-2.5 mt-2 text-[13.5px] font-bold border-none cursor-pointer font-body w-full" style={{ color: '#fff' }}>
             Schedule Demo
           </button>
         </div>

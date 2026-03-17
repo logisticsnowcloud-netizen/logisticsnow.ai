@@ -14,6 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
+      demo_requests: {
+        Row: {
+          company_name: string | null
+          contact_number: string
+          created_at: string
+          designation: string | null
+          email: string
+          heard_from: string | null
+          id: string
+          name: string
+          newsletter_opt_in: boolean | null
+          preferred_date: string
+          preferred_time: string
+        }
+        Insert: {
+          company_name?: string | null
+          contact_number: string
+          created_at?: string
+          designation?: string | null
+          email: string
+          heard_from?: string | null
+          id?: string
+          name: string
+          newsletter_opt_in?: boolean | null
+          preferred_date: string
+          preferred_time: string
+        }
+        Update: {
+          company_name?: string | null
+          contact_number?: string
+          created_at?: string
+          designation?: string | null
+          email?: string
+          heard_from?: string | null
+          id?: string
+          name?: string
+          newsletter_opt_in?: boolean | null
+          preferred_date?: string
+          preferred_time?: string
+        }
+        Relationships: []
+      }
       job_applications: {
         Row: {
           applicant_email: string
