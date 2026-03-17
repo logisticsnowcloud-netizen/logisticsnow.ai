@@ -574,7 +574,7 @@ const Home = () => {
       </section>
 
       {/* METHODOLOGY */}
-      <section className="px-[5vw] py-16 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
+      <section className="px-[5vw] py-16 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)", paddingTop: '1%' }}>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--ln-purple)) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
         <div className="max-w-[1280px] mx-auto relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 items-end">
@@ -587,7 +587,8 @@ const Home = () => {
             <ScrollReveal delay={0.1}>
               <div>
                 <p className="text-muted-foreground text-[13px] leading-[1.6] mb-4">
-                  A proven logistics transformation methodology that has delivered over $21M in savings for enterprise supply chains.
+                  {/* A proven logistics transformation methodology that has delivered over $21M in savings for enterprise supply chains. */}
+                  A proven freight procurement transformation framework that has delivered <strong>$21Mn+ in savings across 120+ global enterprises.</strong>
                 </p>
                 <div className="flex gap-3">
                   <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
@@ -647,7 +648,8 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-muted-foreground text-[13px] leading-[1.5]">
-                Proven savings across geographies, industries and freight types — from India to Europe to Australia.
+                {/* Proven savings across geographies, industries and freight types — from India to Europe to Australia. */}
+                Proven freight procurement savings across geographies, industries and transportation modes.
               </p>
             </ScrollReveal>
           </div>

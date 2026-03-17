@@ -6,9 +6,9 @@ export const CLIENTS = [
 ];
 
 export const CASES = [
-  { tag: '🇪🇺 Europe', client: 'European Tyre Co.', spend: '€18Mn+', saving: '€4Mn+', pct: '20%+', extra: '100+ carriers' },
-  { tag: '🇮🇳 India', client: 'Indian Tyre Company', spend: '$38Mn', saving: '$2.6Mn', pct: '7%+', extra: '920 MT GHG reduced · 26K+ dispatches' },
-  { tag: '🇦🇺 Australia', client: 'Fortune 500 Australia', spend: 'AUD 25Mn', saving: 'AUD 911K', pct: '~4%', extra: '' },
+  { tag: '🇪🇺 Europe', client: 'Leading European Tyre Manufacturer', spend: '€18Mn+', saving: '€4Mn+', pct: '20%+', extra: '100+ carriers' },
+  { tag: '🇮🇳 India', client: 'Top Indian Tyre Manufacturer', spend: '$38Mn', saving: '$2.6Mn', pct: '7%+', extra: '920 MT GHG reduced · 26K+ dispatches' },
+  { tag: '🇦🇺 Australia', client: 'Fortune 500 Industrial Company (Australia)', spend: 'AUD 25Mn', saving: 'AUD 911K', pct: '~4%', extra: '' },
   { tag: '🌏 FMCG', client: 'Indian FMCG (10yr)', spend: '$70Mn', saving: '$3Mn', pct: '4.3%+', extra: '50+ carriers · 30K+ dispatches' },
   { tag: '🍭 FMCG', client: 'Indian FMCG Company', spend: '$26Mn', saving: '$0.6Mn', pct: '~2.5%', extra: '438 MT GHG · 85 e-auctions in <3 days' },
   { tag: '📺 Electronics', client: 'Indian Electronics Company', spend: '$3Mn', saving: '$0.24Mn', pct: '8%', extra: '26 MT GHG · 2.5K+ dispatches' },
@@ -76,9 +76,9 @@ export const VAL_DRIVERS = [
 
 export const METHODOLOGY_STEPS = [
   { num: '01', title: 'Master Data Creation', desc: 'Organize carrier, lane and rate data into a unified intelligence layer.' },
-  { num: '02', title: 'Procurement Process Mapping', desc: 'Map current freight procurement workflows and identify optimization levers.' },
-  { num: '03', title: 'Managed Procurement Execution', desc: 'Run AI-powered e-auctions and carrier negotiations on your behalf.' },
-  { num: '04', title: 'Contract Closure & Integration', desc: 'Close contracts and integrate rates directly into your ERP/TMS platform.' },
-  { num: '05', title: 'Automation Prioritisation', desc: 'Identify top automation opportunities with ROI-ranked PRD creation.' },
-  { num: '06', title: 'AI Agent Deployment', desc: 'Deploy LoRRI AI agents for continuous optimization on a 90-day rolling cadence.' },
+  { num: '02', title: 'Procurement Process Mapping', desc: 'Map existing freight procurement workflows and identify cost optimization opportunities.' },
+  { num: '03', title: 'Managed Procurement Execution', desc: 'Execute AI-powered freight auctions and carrier negotiations to secure optimal rates.' },
+  { num: '04', title: 'Contract Closure & Integration', desc: 'Finalize carrier contracts and integrate negotiated rates into your ERP or TMS.' },
+  { num: '05', title: 'Automation Prioritisation', desc: 'Prioritize automation opportunities based on measurable ROI and operational impact.' },
+  { num: '06', title: 'AI Agent Deployment', desc: 'Deploy LoRRI AI agents to continuously monitor, benchmark and optimize freight rates.' },
 ];
