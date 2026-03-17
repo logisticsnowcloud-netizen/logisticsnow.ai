@@ -238,43 +238,46 @@ const Home = () => {
       </section>
 
       {/* MARQUEE */}
-      <div className="relative overflow-visible py-14 bg-bg2 border-y border-border" style={{ clipPath: 'inset(-20px 0 -20px 0)' }}>
+      <div className="relative overflow-visible py-16 border-y border-border" style={{ clipPath: 'inset(-20px 0 -20px 0)', background: 'hsl(var(--bg3))' }}>
         {/* Fade edges */}
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-40 z-10"
-          style={{ background: "linear-gradient(to right, hsl(var(--bg2)), transparent)" }}
+          className="pointer-events-none absolute inset-y-0 left-0 w-48 z-10"
+          style={{ background: "linear-gradient(to right, hsl(var(--bg3)), transparent)" }}
         />
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-40 z-10"
-          style={{ background: "linear-gradient(to left, hsl(var(--bg2)), transparent)" }}
+          className="pointer-events-none absolute inset-y-0 right-0 w-48 z-10"
+          style={{ background: "linear-gradient(to left, hsl(var(--bg3)), transparent)" }}
         />
 
-        <div className="text-center mb-8">
-          <h2
-            className="font-display font-extrabold tracking-[-0.03em] leading-[1.1] heading-section"
-          >
-            Trusted by <span className="text-ln-purple">Industry Leaders</span> Worldwide
-          </h2>
-          <p className="text-muted-foreground text-sm mt-2">
+        <div className="text-center mb-10">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <div className="h-[2px] w-10 rounded-full" style={{ background: 'hsl(var(--ln-purple))' }} />
+            <h2 className="font-display font-extrabold tracking-[-0.03em] leading-[1.1] heading-section">
+              Trusted by <span className="text-ln-purple">Industry Leaders</span> Worldwide
+            </h2>
+            <div className="h-[2px] w-10 rounded-full" style={{ background: 'hsl(var(--ln-purple))' }} />
+          </div>
+          <p className="text-muted-foreground text-[14px] font-semibold mt-2 tracking-wide">
             Powering logistics for 120+ companies including 25+ Fortune 500s
           </p>
         </div>
 
         {/* Row 1 */}
-        <div className="flex gap-8 items-center animate-marquee w-max mb-5">
+        <div className="flex gap-10 items-center animate-marquee w-max mb-6">
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
               <div
                 key={i}
-                className="relative flex items-center justify-center rounded-lg bg-card/80 border border-border/40 backdrop-blur-sm hover:bg-card hover:border-primary/50 hover:shadow-[0_0_24px_hsl(var(--ln-purple)/0.2)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                style={{ width: 150, height: 75 }}
+                className="relative flex items-center justify-center rounded-xl border backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_4px_24px_hsl(var(--ln-purple)/0.15)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                style={{ width: 160, height: 80, background: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', boxShadow: '0 2px 8px hsl(var(--ln-purple) / 0.06)' }}
               >
                 {hasLogo ? (
                   <img
                     src={c.logo}
                     alt={c.name}
-                    className="max-w-[100px] max-h-[45px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                    className="max-w-[110px] max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
+                    style={{ mixBlendMode: 'multiply' }}
                   />
                 ) : (
                   <span className="font-display font-bold text-sm text-muted-foreground group-hover:text-foreground transition-colors">
@@ -293,20 +296,21 @@ const Home = () => {
         </div>
 
         {/* Row 2 - reverse */}
-        <div className="flex gap-8 items-center animate-marquee-reverse w-max">
+        <div className="flex gap-10 items-center animate-marquee-reverse w-max">
           {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
               <div
                 key={i}
-                className="relative flex items-center justify-center rounded-lg bg-card/80 border border-border/40 backdrop-blur-sm hover:bg-card hover:border-primary/50 hover:shadow-[0_0_24px_hsl(var(--ln-purple)/0.2)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                style={{ width: 150, height: 75 }}
+                className="relative flex items-center justify-center rounded-xl border backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_4px_24px_hsl(var(--ln-purple)/0.15)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
+                style={{ width: 160, height: 80, background: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', boxShadow: '0 2px 8px hsl(var(--ln-purple) / 0.06)' }}
               >
                 {hasLogo ? (
                   <img
                     src={c.logo}
                     alt={c.name}
-                    className="max-w-[100px] max-h-[45px] object-contain opacity-85 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
+                    className="max-w-[110px] max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
+                    style={{ mixBlendMode: 'multiply' }}
                   />
                 ) : (
                   <span className="font-display font-bold text-sm text-muted-foreground group-hover:text-foreground transition-colors">
