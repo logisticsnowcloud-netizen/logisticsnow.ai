@@ -78,7 +78,7 @@ const Home = () => {
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(57,49,133,0.28)";
+        ctx.fillStyle = "rgba(106,169,255,0.13)";
         ctx.fill();
       });
       pts.forEach((a, i) => {
