@@ -491,8 +491,9 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
               <p className="text-muted-foreground text-[13px] leading-[1.5] md:pt-5">
-                Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical
-                industry problem at national scale.
+                {/* Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical
+                industry problem at national scale. */}
+                A suite of proprietary AI agents built to optimize procurement, routing, pricing, and execution across complex logistics networks.
               </p>
             </ScrollReveal>
           </div>
@@ -503,42 +504,48 @@ const Home = () => {
                 tagColor: "hsl(var(--ln-green))",
                 icon: Network,
                 name: "Carrier Selection Agent",
-                desc: "Evaluates carriers, scores performance per lane, normalizes bids, and recommends optimal award strategies.",
+                // desc: "Evaluates carriers, scores performance per lane, normalizes bids, and recommends optimal award strategies.",
+                desc: "Analyzes carrier performance across lanes, normalizes bids, and recommends optimal carrier allocation strategies.",
               },
               {
                 tag: "DOCUMENT AI",
                 tagColor: "hsl(var(--ln-blue))",
                 icon: FileText,
                 name: "Document Intelligence Agent",
-                desc: "Extracts data via OCR, auto-matches LR-POD-Invoice documents, and detects discrepancies instantly.",
+                // desc: "Extracts data via OCR, auto-matches LR-POD-Invoice documents, and detects discrepancies instantly.",
+                desc: "Extracts and reconciles data across logistics documents using OCR and AI validation to automatically detect discrepancies.",
               },
               {
                 tag: "NEGOTIATION",
                 tagColor: "hsl(var(--ln-orange))",
                 icon: Handshake,
                 name: "Autonomous Negotiation Agent",
-                desc: "Negotiates with multiple LSPs in parallel, generates counter-offers, and optimizes procurement costs.",
+                // desc: "Negotiates with multiple LSPs in parallel, generates counter-offers, and optimizes procurement costs.",
+                desc: "Conducts parallel negotiations with multiple logistics service providers, generating counter-offers to optimize procurement costs.",
               },
               {
                 tag: "ROUTING",
                 tagColor: "hsl(var(--ln-purple))",
                 icon: Route,
-                name: "AI Route Optimization Engine",
-                desc: "Plans routes by distance, time, cost, and delivery windows — with dynamic re-routing capabilities.",
+                name: "Route Optimization Agent",
+                // desc: "Plans routes by distance, time, cost, and delivery windows — with dynamic re-routing capabilities.",
+                desc: "Optimizes routes across distance, time, cost, and delivery windows, with dynamic re-routing based on real-time conditions.",
               },
               {
                 tag: "CONSOLIDATION",
                 tagColor: "hsl(var(--ln-green))",
                 icon: Container,
-                name: "Load Consolidation Engine",
-                desc: "Maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios at scale.",
+                name: "Load Consolidation Agent",
+                // desc: "Maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios at scale.",
+                desc: "Optimizes load building to maximize vehicle utilization and reduce empty miles across the network.",
               },
               {
                 tag: "ESG",
                 tagColor: "hsl(var(--ln-blue))",
                 icon: Leaf,
-                name: "Carbon Tracker Agent",
-                desc: "Tracks shipment-level carbon emissions, identifies reduction opportunities, and powers ESG analytics.",
+                name: "Carbon Intelligence Agent",
+                // desc: "Tracks shipment-level carbon emissions, identifies reduction opportunities, and powers ESG analytics.",
+                desc: "Tracks shipment-level emissions and identifies carbon reduction opportunities across the logistics network.",
               },
             ].map((ai) => (
               <StaggerItem key={ai.name}>
@@ -578,8 +585,9 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-muted-foreground text-[13px] leading-[1.5]">
-                A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
-                enterprises.
+                {/* A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
+                enterprises. */}
+                A proven logistics transformation methodology that has delivered over $21M in savings for enterprise supply chains.
               </p>
             </ScrollReveal>
           </div>
