@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { CLIENTS, CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
-import { Bot, Coins, Leaf, Map, Zap, Users, DollarSign, User } from "lucide-react";
+import { Bot, Coins, Leaf, Map, Zap, Users, DollarSign, User, Network, FileText, Handshake, Route, Container } from "lucide-react";
 
 const STATS = [
   { num: "$2.5Bn+", label: "Freight Spend Analyzed", color: "#393185" },
@@ -478,73 +478,87 @@ const Home = () => {
       </section>
 
       {/* AI SUITE */}
-      <section className="px-[5vw] py-5 bg-background">
+      <section className="px-[5vw] pt-10 pb-6 bg-background">
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6 items-start">
             <ScrollReveal direction="up" delay={0.05}>
-              <div className="section-tag !mb-1">AI Suite</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
+              <div className="section-tag !mb-0.5">AI Suite</div>
+              <h2 className="font-display font-extrabold leading-[1.05] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)] mt-1">
                 Not AI as a Feature.
                 <br />
                 <span className="text-ln-purple">AI as the Foundation.</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
-              <p className="text-muted-foreground text-[13px] leading-[1.5]">
+              <p className="text-muted-foreground text-[13px] leading-[1.5] md:pt-5">
                 Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical
                 industry problem at national scale.
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
             {[
               {
                 tag: "PROCUREMENT",
                 tagColor: "hsl(var(--ln-green))",
+                icon: Network,
                 name: "Carrier Selection Agent",
                 desc: "Evaluates carriers, scores performance per lane, normalizes bids, and recommends optimal award strategies.",
               },
               {
                 tag: "DOCUMENT AI",
                 tagColor: "hsl(var(--ln-blue))",
+                icon: FileText,
                 name: "Document Intelligence Agent",
-                desc: "LR-POD-Invoice matching — extracts data via OCR, auto-matches documents, and detects discrepancies.",
+                desc: "Extracts data via OCR, auto-matches LR-POD-Invoice documents, and detects discrepancies instantly.",
               },
               {
                 tag: "NEGOTIATION",
                 tagColor: "hsl(var(--ln-orange))",
+                icon: Handshake,
                 name: "Autonomous Negotiation Agent",
-                desc: "Negotiates with multiple LSPs in parallel — generates counter-offers and optimizes procurement costs.",
+                desc: "Negotiates with multiple LSPs in parallel, generates counter-offers, and optimizes procurement costs.",
               },
               {
                 tag: "ROUTING",
                 tagColor: "hsl(var(--ln-purple))",
+                icon: Route,
                 name: "AI Route Optimization Engine",
-                desc: "Route planning considering distance, time, cost, delivery windows — with dynamic re-routing.",
+                desc: "Plans routes by distance, time, cost, and delivery windows — with dynamic re-routing capabilities.",
               },
               {
                 tag: "CONSOLIDATION",
                 tagColor: "hsl(var(--ln-green))",
+                icon: Container,
                 name: "Load Consolidation Engine",
-                desc: "Maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios.",
+                desc: "Maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios at scale.",
               },
               {
                 tag: "ESG",
                 tagColor: "hsl(var(--ln-blue))",
+                icon: Leaf,
                 name: "Carbon Tracker Agent",
-                desc: "Tracks shipment-level carbon emissions, identifies reduction opportunities & sustainability analytics.",
+                desc: "Tracks shipment-level carbon emissions, identifies reduction opportunities, and powers ESG analytics.",
               },
             ].map((ai) => (
               <StaggerItem key={ai.name}>
-                <div className="card-hover !p-4 !rounded-2xl h-full">
-                  <span
-                    className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full mb-1.5"
-                    style={{ color: ai.tagColor, background: `${ai.tagColor}15`, border: `1px solid ${ai.tagColor}30` }}
-                  >
-                    {ai.tag}
-                  </span>
-                  <div className="font-display text-[14px] font-bold mb-1">{ai.name}</div>
-                  <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{ai.desc}</div>
+                <div className="card-hover !p-3.5 !rounded-2xl h-full flex flex-col">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div
+                      className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                      style={{ background: `${ai.tagColor}15` }}
+                    >
+                      <ai.icon size={15} style={{ color: ai.tagColor }} strokeWidth={2} />
+                    </div>
+                    <span
+                      className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full"
+                      style={{ color: ai.tagColor, background: `${ai.tagColor}12`, border: `1px solid ${ai.tagColor}30` }}
+                    >
+                      {ai.tag}
+                    </span>
+                  </div>
+                  <div className="font-display text-[13.5px] font-bold mb-1">{ai.name}</div>
+                  <div className="text-[11px] text-muted-foreground leading-[1.5] line-clamp-2">{ai.desc}</div>
                 </div>
               </StaggerItem>
             ))}
