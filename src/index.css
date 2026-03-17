@@ -255,22 +255,22 @@
     border-color: hsl(var(--ln-purple));
   }
 
-  /* Marquee animation */
+  /* Marquee animation — slow & smooth */
   @keyframes marquee {
     to { transform: translateX(-50%); }
   }
   .animate-marquee {
-    animation: marquee 35s linear infinite;
+    animation: marquee 120s linear infinite;
   }
   .animate-marquee-fast {
-    animation: marquee 22s linear infinite;
+    animation: marquee 90s linear infinite;
   }
   @keyframes marquee-reverse {
     from { transform: translateX(-50%); }
     to { transform: translateX(0); }
   }
   .animate-marquee-reverse {
-    animation: marquee-reverse 38s linear infinite;
+    animation: marquee-reverse 130s linear infinite;
   }
 
   /* Orbit animations */
