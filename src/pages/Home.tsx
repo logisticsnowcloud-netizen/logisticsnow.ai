@@ -149,21 +149,30 @@ const Home = () => {
     <div>
       {/* HERO */}
       <section
-        className="flex flex-col items-center justify-center text-center px-[5vw] pt-8 pb-6 bg-background relative overflow-hidden"
-        style={{ minHeight: "calc(100vh - 120px)" }}
+        className="flex flex-col items-center justify-center text-center px-[5vw] pt-8 pb-6 relative overflow-hidden"
+        style={{ minHeight: "calc(100vh - 120px)", background: "linear-gradient(175deg, #0f1629 0%, #1a2142 40%, #162038 100%)" }}
       >
+        {/* Subtle grid */}
         <div
-          className="absolute inset-0 opacity-55 pointer-events-none"
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)",
+              "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
             backgroundSize: "52px 52px",
           }}
         />
+        {/* Radial vignette */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)",
+            background: "radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #0f1629 100%)",
+          }}
+        />
+        {/* Gradient glow overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 50% 40% at 50% 20%, rgba(106,169,255,0.08), transparent 70%)",
           }}
         />
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
