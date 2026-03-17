@@ -106,7 +106,7 @@ const Home = () => {
       window.removeEventListener("resize", resize);
       cancelAnimationFrame(animId);
     };
-  }, []);
+  }, [isDarkHero]);
 
   const CLIENT_LOGOS = [
     { name: "Apollo Tyres", logo: "/logos/apollo.jpeg" },
