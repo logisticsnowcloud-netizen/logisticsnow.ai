@@ -409,12 +409,11 @@ const Home = () => {
         </div>
       </div>
 
-      {/* VISION */}
-      <section className="px-[5vw] py-5 bg-background">
+      <section className="px-[5vw] py-10" style={{ background: "hsl(var(--bg2))" }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
             <ScrollReveal direction="up" delay={0.05}>
-              <div className="section-tag !mb-1">Our Purpose</div>
+              <div className="section-tag !mb-2">Our Purpose</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
                 The Trusted, Neutral
                 <br />
@@ -423,17 +422,18 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
               <div>
-                <p className="text-muted-foreground text-[13px] leading-[1.5]">
-                  LogisticsNow is uniquely positioned with trust, technology & data to enable your digital logistics
-                  ecosystem.
+                <p className="text-[13.5px] leading-[1.65] mb-4" style={{ color: "hsl(60,0%,35%)" }}>
+                  LogisticsNow is uniquely positioned with trust, technology, and data to power your digital logistics
+                  ecosystem — enabling smarter decisions, lower costs, and greener supply chains.
                 </p>
-                <div className="flex gap-3 mt-3">
+                <div className="flex gap-3">
                   <Link to="/product" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
                     Explore Platform →
                   </Link>
                   <Link
                     to="/product"
-                    className="btn-secondary-ln no-underline !px-5 !py-2 !text-[13px] !text-ln-purple !border-ln-purple"
+                    className="btn-secondary-ln no-underline !px-5 !py-2 !text-[13px]"
+                    style={{ color: "hsl(var(--ln-purple))", borderColor: "hsl(var(--ln-purple))" }}
                   >
                     Meet LoRRI
                   </Link>
@@ -441,16 +441,31 @@ const Home = () => {
               </div>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
-            {VISION_CARDS.map((c) => (
-              <StaggerItem key={c.title}>
-                <div className="card-hover !p-4 !rounded-2xl">
-                  <div className="text-[20px] mb-1.5">{c.icon}</div>
-                  <div className="font-display text-[14px] font-bold mb-1">{c.title}</div>
-                  <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{c.desc}</div>
-                </div>
-              </StaggerItem>
-            ))}
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            {VISION_CARDS.map((c) => {
+              const Icon = c.icon;
+              return (
+                <StaggerItem key={c.title}>
+                  <div
+                    className="group relative rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-default"
+                    style={{
+                      background: "hsl(var(--card))",
+                      border: "1px solid hsl(var(--border))",
+                      boxShadow: "0 2px 12px hsl(var(--ln-purple) / 0.05)",
+                    }}
+                  >
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mb-3"
+                      style={{ background: "hsl(var(--ln-green) / 0.1)" }}
+                    >
+                      <Icon size={20} strokeWidth={1.8} style={{ color: "hsl(var(--ln-green))" }} />
+                    </div>
+                    <div className="font-display text-[14.5px] font-bold mb-1.5">{c.title}</div>
+                    <div className="text-[12px] leading-[1.6]" style={{ color: "hsl(60,0%,38%)" }}>{c.desc}</div>
+                  </div>
+                </StaggerItem>
+              );
+            })}
           </StaggerContainer>
         </div>
       </section>
