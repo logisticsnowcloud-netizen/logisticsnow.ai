@@ -5,10 +5,10 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/Scroll
 import CtaBanner from "@/components/CtaBanner";
 
 const STATS = [
-  { num: "$2.5Bn+", label: "Supply Chain Spend Analyzed", color: "#393185" },
-  { num: "2300+", label: "Carriers incl. Global", color: "#54AF3A" },
-  { num: "$500Mn+", label: "Freight Procured on Platform", color: "#54AF3A" },
-  { num: "1Mn+", label: "Truckloads Procured", color: "#393185" },
+  { num: "$2.5Bn+", label: "Supply Chain Spend Analyzed" },
+  { num: "2300+", label: "Carrier Network Worldwide" },
+  { num: "$500Mn+", label: "Freight Procured on Platform" },
+  { num: "12–20%", label: "Average Savings Delivered" },
 ];
 
 const VISION_CARDS = [
