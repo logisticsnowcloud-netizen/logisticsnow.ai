@@ -20,7 +20,7 @@ const Footer = () => (
               LogisticsNow<span className="text-ln-green">.</span>ai
             </div>
             <p className="text-[11px] leading-[1.6] max-w-[260px] mb-3" style={{ color: 'rgba(255,255,255,.5)' }}>
-              India's national logistics intelligence grid — making every supply chain smarter, faster, and more resilient with AI.
+              India’s logistics intelligence platform helping enterprises build smarter, faster and more resilient supply chains using AI.
             </p>
             <div className="flex gap-2">
               {[
@@ -49,8 +49,8 @@ const Footer = () => (
 
           {/* Platform */}
           <div>
-            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Platform</h5>
-            {["LoRRI for Shippers", "LoRRI for Carriers"].map((l) => (
+            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Products/ Solutions</h5>
+            {["LoRRI Platform for Shippers", "LoRRI Platform for Carriers"].map((l) => (
               <a key={l} href="#" className="group flex items-center gap-1 text-[13px] mb-2 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
                 {l}
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -63,9 +63,9 @@ const Footer = () => (
             <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Company</h5>
             {[
               { label: "About Us", to: "/about" },
-              { label: "Vision", to: "#" },
-              { label: "Investors", to: "#" },
               { label: "Careers", to: "/careers" },
+              { label: "Investors", to: "#" },
+              { label: "Vision", to: "#" },
               { label: "Contact Us", to: "/contact" },
             ].map((l) => (
               <Link key={l.label} to={l.to} className="group flex items-center gap-1 text-[13px] mb-2 no-underline transition-colors duration-200 hover:!text-white" style={{ color: 'rgba(255,255,255,.55)' }}>
