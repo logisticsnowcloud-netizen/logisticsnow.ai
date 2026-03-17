@@ -14,34 +14,34 @@ const STATS = [
 
 const VISION_CARDS = [
   {
-    icon: "🤖",
+    icon: Bot,
     title: "AI-Powered Intelligence",
-    desc: "Industry-first logistics intelligence platform combining benchmarks, procurement, TMS and AI agents — all in one integrated ecosystem.",
+    desc: "The industry's first logistics intelligence platform — combining benchmarks, procurement, TMS, and AI agents in one unified ecosystem.",
   },
   {
-    icon: "💰",
-    title: "Cost Control & Savings",
-    desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops & intelligent route optimization.",
+    icon: Coins,
+    title: "Measurable Cost Savings",
+    desc: "Unlock up to 20%+ freight savings through AI-driven benchmarking, carrier synergies, backhaul optimization, and intelligent route planning.",
   },
   {
-    icon: "🌱",
+    icon: Leaf,
     title: "Sustainability at Scale",
-    desc: "Create the Global Smart Logistics Grid for green capacities. Better vehicle utilization, lower emissions per ton, efficient distribution.",
+    desc: "Drive greener logistics with optimized vehicle utilization, lower emissions per ton, and efficient distribution across the supply chain.",
   },
   {
-    icon: "🗺️",
-    title: "Enabling Reach & Service",
-    desc: "80K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
+    icon: Map,
+    title: "Unmatched Network Reach",
+    desc: "80K+ routes covered globally with deep carrier access at every plant, depot, and CFA — from local fleets to multimodal networks.",
   },
   {
-    icon: "⚡",
+    icon: Zap,
     title: "Resilience & Speed",
-    desc: "During COVID's first lockdown, LoRRI kept plants running by rapidly aligning capacities. Digital indents answered in <30 minutes.",
+    desc: "During COVID's first lockdown, LoRRI kept plants running by rapidly realigning capacities. Digital indents answered in under 30 minutes.",
   },
   {
-    icon: "😊",
-    title: "Happy Users & Ecosystem",
-    desc: "Rate, benchmark and share feedback on carriers with industry peers — driving continuous improvement across the logistics network.",
+    icon: Users,
+    title: "Thriving Ecosystem",
+    desc: "Rate, benchmark, and share carrier feedback with industry peers — driving continuous improvement across the logistics network.",
   },
 ];
 
