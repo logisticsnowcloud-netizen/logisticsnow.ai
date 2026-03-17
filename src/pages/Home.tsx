@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { CLIENTS, CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
-import { Bot, Coins, Leaf, Map, Zap, Users, DollarSign, User } from "lucide-react";
+import { Bot, Coins, Leaf, Map, Zap, Users, DollarSign, User, Network, FileText, Handshake, Route, Container } from "lucide-react";
 
 const STATS = [
   { num: "$2.5Bn+", label: "Freight Spend Analyzed", color: "#393185" },
