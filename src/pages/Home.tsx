@@ -5,42 +5,48 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/Scroll
 import CtaBanner from "@/components/CtaBanner";
 
 const STATS = [
-  { num: "$2.5Bn+", label: "Supply Chain Spend Analyzed", color: "#393185" },
-  { num: "2300+", label: "Carriers incl. Global", color: "#54AF3A" },
-  { num: "$500Mn+", label: "Freight Procured on Platform", color: "#54AF3A" },
-  { num: "1Mn+", label: "Truckloads Procured", color: "#393185" },
+  { num: "$2.5Bn+", label: "Freight Spend Analyzed", color: "#393185" },
+  { num: "2300+", label: "Global Carriers Profiles", color: "#54AF3A" },
+  { num: "$500Mn+", label: "Freight Procured", color: "#54AF3A" },
+  { num: "$21M+", label: "Freight Cost Savings", color: "#393185" },
 ];
 
 const VISION_CARDS = [
   {
     icon: "🤖",
     title: "AI-Powered Intelligence",
-    desc: "Industry-first logistics intelligence platform combining benchmarks, procurement, TMS and AI agents — all in one integrated ecosystem.",
+    desc: "Industry-first logistics platform combining freight procurement, transport management, and AI automation, all in one integrated system.",
+    // desc: "Industry-first logistics intelligence platform combining benchmarks, procurement, TMS and AI agents — all in one integrated ecosystem.",
   },
   {
     icon: "💰",
     title: "Cost Control & Savings",
-    desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops & intelligent route optimization.",
+    desc: "Deliver upto 20%+ freight savings with AI-driven benchmarking, carrier synergies, backhaul optimization, and smart routing.",
+    // desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops & intelligent route optimization.",
   },
   {
     icon: "🌱",
     title: "Sustainability at Scale",
-    desc: "Create the Global Smart Logistics Grid for green capacities. Better vehicle utilization, lower emissions per ton, efficient distribution.",
+    desc: "Build a Global Smart Logistics Grid to boost green capacity, increase vehicle utilization, and reduce emissions per ton."
+    // desc: "Create the Global Smart Logistics Grid for green capacities. Better vehicle utilization, lower emissions per ton, efficient distribution.",
   },
   {
     icon: "🗺️",
     title: "Enabling Reach & Service",
-    desc: "80K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
+    desc: "Cover 80K+ global routes with deep carrier networks at plants, depots, and distribution centers, supporting local to multimodal shipping."
+    // desc: "80K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
   },
   {
     icon: "⚡",
     title: "Resilience & Speed",
-    desc: "During COVID's first lockdown, LoRRI kept plants running by rapidly aligning capacities. Digital indents answered in <30 minutes.",
+    desc: "During COVID-19 lockdowns, LoRRI kept plants running by rapidly aligning capacity and handling digital indents within 30 minutes."
+    // desc: "During COVID's first lockdown, LoRRI kept plants running by rapidly aligning capacities. Digital indents answered in <30 minutes.",
   },
   {
     icon: "😊",
     title: "Happy Users & Ecosystem",
-    desc: "Rate, benchmark and share feedback on carriers with industry peers — driving continuous improvement across the logistics network.",
+    desc: "Rate, benchmark, and share feedback on carriers with industry peers, driving continuous improvements across the logistics network."
+    // desc: "Rate, benchmark and share feedback on carriers with industry peers — driving continuous improvement across the logistics network.",
   },
 ];
 
@@ -191,8 +197,10 @@ const Home = () => {
               className="text-muted-foreground max-w-[600px] leading-[1.5] mx-auto mb-4"
               style={{ fontSize: "clamp(13px, 1.3vw, 16px)" }}
             >
-              AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+
-              companies including 25+ Fortune 500s across 4 continents.
+              An AI decision and execution platform optimizing freight procurement, routing, and pricing across global logistics networks.
+
+              {/* AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+
+              companies including 25+ Fortune 500s across 4 continents. */}
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
@@ -256,7 +264,8 @@ const Home = () => {
             Trusted by <span className="text-ln-purple">Industry Leaders</span> Worldwide
           </h2>
           <p className="text-muted-foreground text-sm mt-2">
-            Powering logistics for 120+ companies including 25+ Fortune 500s
+            Partnering with 120+ global companies, including 25+ Fortune 500s, to power smarter logistics and supply chain innovation.
+            {/* Powering logistics for 120+ companies including 25+ Fortune 500s */}
           </p>
         </div>
 
@@ -340,8 +349,9 @@ const Home = () => {
             <ScrollReveal direction="up" delay={0.15}>
               <div>
                 <p className="text-muted-foreground text-[13px] leading-[1.5]">
-                  LogisticsNow is uniquely positioned with trust, technology & data to enable your digital logistics
-                  ecosystem.
+                  {/* LogisticsNow is uniquely positioned with trust, technology & data to enable your digital logistics
+                  ecosystem. */}
+                  LogisticsNow combines trusted expertise, advanced technology, and data to power your digital logistics ecosystem.
                 </p>
                 <div className="flex gap-3 mt-3">
                   <Link to="/product" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
