@@ -151,15 +151,36 @@ const Home = () => {
     <div>
       {/* HERO */}
       <section
-        className="flex flex-col items-center justify-center text-center px-[5vw] pt-8 pb-6 relative overflow-hidden"
-        style={{ minHeight: "calc(100vh - 120px)", background: "linear-gradient(175deg, #0f1629 0%, #1a2142 40%, #162038 100%)" }}
+        className="flex flex-col items-center justify-center text-center px-[5vw] pt-8 pb-6 relative overflow-hidden transition-all duration-700"
+        style={{
+          minHeight: "calc(100vh - 120px)",
+          background: isDarkHero
+            ? "linear-gradient(175deg, #0f1629 0%, #1a2142 40%, #162038 100%)"
+            : undefined,
+        }}
       >
-        {/* Subtle grid */}
-        <div
-          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        {/* Toggle button */}
+        <button
+          onClick={() => setHeroTheme(isDarkHero ? "light" : "dark")}
+          className="absolute top-4 right-6 z-20 flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-bold tracking-wide uppercase transition-all duration-300 hover:scale-105 cursor-pointer"
           style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
+            background: isDarkHero ? "rgba(255,255,255,0.1)" : "rgba(57,49,133,0.08)",
+            border: isDarkHero ? "1px solid rgba(255,255,255,0.2)" : "1px solid rgba(57,49,133,0.2)",
+            color: isDarkHero ? "rgba(255,255,255,0.8)" : "hsl(244,44%,36%)",
+            backdropFilter: "blur(8px)",
+          }}
+        >
+          {isDarkHero ? "☀️" : "🌙"} {isDarkHero ? "Light" : "Dark"} Hero
+        </button>
+
+        {/* Grid background */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-700"
+          style={{
+            opacity: isDarkHero ? 0.06 : 0.55,
+            backgroundImage: isDarkHero
+              ? "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)"
+              : "linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)",
             backgroundSize: "52px 52px",
           }}
         />
@@ -167,38 +188,51 @@ const Home = () => {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #0f1629 100%)",
+            background: isDarkHero
+              ? "radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #0f1629 100%)"
+              : "radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)",
           }}
         />
-        {/* Gradient glow overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse 50% 40% at 50% 20%, rgba(106,169,255,0.08), transparent 70%)",
-          }}
-        />
+        {/* Gradient glow (dark only) */}
+        {isDarkHero && (
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: "radial-gradient(ellipse 50% 40% at 50% 20%, rgba(106,169,255,0.08), transparent 70%)",
+            }}
+          />
+        )}
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
+
         <div className="relative z-[2] max-w-[1000px]">
           <ScrollReveal direction="up" delay={0}>
             <div
-              className="inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold tracking-[0.07em] uppercase mb-2"
-              style={{ background: "rgba(106,169,255,0.12)", border: "1px solid rgba(106,169,255,0.25)", color: "#6AA9FF" }}
+              className="inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold tracking-[0.07em] uppercase mb-2 transition-colors duration-500"
+              style={{
+                background: isDarkHero ? "rgba(106,169,255,0.12)" : "rgba(57,49,133,0.09)",
+                border: isDarkHero ? "1px solid rgba(106,169,255,0.25)" : "1px solid rgba(57,49,133,0.2)",
+                color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)",
+              }}
             >
               <span className="w-[6px] h-[6px] rounded-full inline-block" style={{ background: "#54AF3A" }} />
               The AI Brain for Global Logistics
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
-            <h1
-              className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero text-white"
+            <h1 className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero transition-colors duration-500"
+              style={{ color: isDarkHero ? "#fff" : undefined }}
             >
-               AI-Powered <span style={{ color: "#6AA9FF" }}>Intelligence</span> for <br /><span style={{ color: "#54AF3A" }}>Global Logistics & Procurement</span>
+               AI-Powered <span style={{ color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)" }}>Intelligence</span> for <br />
+               <span style={{ color: "#54AF3A" }}>Global Logistics & Procurement</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
             <p
-              className="max-w-[600px] leading-[1.5] mx-auto mb-4"
-              style={{ fontSize: "clamp(13px, 1.3vw, 16px)", color: "rgba(255,255,255,0.65)" }}
+              className="max-w-[600px] leading-[1.5] mx-auto mb-4 transition-colors duration-500"
+              style={{
+                fontSize: "clamp(13px, 1.3vw, 16px)",
+                color: isDarkHero ? "rgba(255,255,255,0.65)" : "hsl(60,0%,45%)",
+              }}
             >
               AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+
               companies including 25+ Fortune 500s across 4 continents.
@@ -206,20 +240,33 @@ const Home = () => {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
             <div className="flex gap-3 flex-wrap justify-center">
-              <Link
-                to="/product"
-                className="no-underline !px-7 !py-3 !text-[15px] rounded-full font-bold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
-                style={{ background: "linear-gradient(135deg, #6AA9FF, #4A8FE7)", color: "#fff", boxShadow: "0 4px 24px rgba(106,169,255,0.35)" }}
-              >
-                🚛 Try AI Logistics Copilot →
-              </Link>
-              <Link
-                to="/about"
-                className="no-underline !px-6 !py-2.5 !text-[15px] rounded-full font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
-                style={{ background: "transparent", color: "rgba(255,255,255,0.85)", border: "2px solid rgba(255,255,255,0.25)" }}
-              >
-                Learn About Us
-              </Link>
+              {isDarkHero ? (
+                <>
+                  <Link
+                    to="/product"
+                    className="no-underline !px-7 !py-3 !text-[15px] rounded-full font-bold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                    style={{ background: "linear-gradient(135deg, #6AA9FF, #4A8FE7)", color: "#fff", boxShadow: "0 4px 24px rgba(106,169,255,0.35)" }}
+                  >
+                    🚛 Try AI Logistics Copilot →
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="no-underline !px-6 !py-2.5 !text-[15px] rounded-full font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                    style={{ background: "transparent", color: "rgba(255,255,255,0.85)", border: "2px solid rgba(255,255,255,0.25)" }}
+                  >
+                    Learn About Us
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
+                    🚛 Try AI Logistics Copilot →
+                  </Link>
+                  <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[15px]">
+                    Learn About Us
+                  </Link>
+                </>
+              )}
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
@@ -228,24 +275,37 @@ const Home = () => {
                 <div
                   key={s.label}
                   className="group relative rounded-2xl p-5 text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden backdrop-blur-sm"
-                  style={{
+                  style={isDarkHero ? {
                     background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.1)",
                     boxShadow: "0 4px 30px rgba(0,0,0,0.2)",
+                  } : {
+                    background: "linear-gradient(135deg, rgba(57,49,133,0.07), rgba(57,49,133,0.03))",
+                    border: "1px solid rgba(57,49,133,0.15)",
+                    boxShadow: "0 4px 20px rgba(57,49,133,0.06)",
                   }}
                 >
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{ background: "radial-gradient(circle at 50% 0%, rgba(106,169,255,0.12), transparent 70%)" }}
+                    style={{
+                      background: isDarkHero
+                        ? "radial-gradient(circle at 50% 0%, rgba(106,169,255,0.12), transparent 70%)"
+                        : "radial-gradient(circle at 50% 0%, rgba(57,49,133,0.1), transparent 70%)",
+                    }}
                   />
                   <div className="relative z-[1]">
                     <div
                       className="font-display text-[24px] md:text-[28px] font-black tracking-[-0.03em] mb-1"
-                      style={{ color: "#6AA9FF" }}
+                      style={{ color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)" }}
                     >
                       {s.num}
                     </div>
-                    <div className="text-[10.5px] font-semibold leading-tight" style={{ color: "rgba(255,255,255,0.6)" }}>{s.label}</div>
+                    <div
+                      className="text-[10.5px] font-semibold leading-tight"
+                      style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}
+                    >
+                      {s.label}
+                    </div>
                   </div>
                 </div>
               ))}
