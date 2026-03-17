@@ -574,17 +574,18 @@ const Home = () => {
       </section>
 
       {/* METHODOLOGY */}
-      <section className="px-[5vw] py-5 bg-bg2">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 items-end">
+      <section className="px-[5vw] py-14 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--ln-purple)) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
+        <div className="max-w-[1280px] mx-auto relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 items-end">
             <ScrollReveal>
               <div className="section-tag !mb-1">6-Step Methodology</div>
-              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
+              <h2 className="font-display font-extrabold leading-[1.05] tracking-[-0.028em] text-[clamp(22px,3vw,36px)]">
                 From Data to <span className="text-ln-green">Savings</span> in 90 Days
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="text-muted-foreground text-[13px] leading-[1.5]">
+              <p className="text-muted-foreground text-[13px] leading-[1.6]">
                 {/* A proven procurement transformation methodology that has delivered $21Mn+ in savings across 120+
                 enterprises. */}
                 A proven logistics transformation methodology that has delivered over $21M in savings for enterprise supply chains.
@@ -598,12 +599,6 @@ const Home = () => {
                   <div className="absolute right-3 top-1 font-mono text-4xl font-bold text-ln-purple opacity-[0.07]">
                     {s.num}
                   </div>
-                  {/* <div
-                    className="inline-flex items-center justify-center w-7 h-7 rounded-lg text-ln-purple font-display text-xs font-extrabold mb-2"
-                    style={{ background: "rgba(57,49,133,.1)" }}
-                  >
-                    {s.num}
-                  </div> */}
                   <div className="font-display text-[14px] font-bold mb-1">{s.title}</div>
                   <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{s.desc}</div>
                 </div>
