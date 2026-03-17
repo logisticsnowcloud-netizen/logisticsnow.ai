@@ -80,7 +80,7 @@ const Home = () => {
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(106,169,255,0.13)";
+        ctx.fillStyle = isDarkHero ? "rgba(106,169,255,0.13)" : "rgba(57,49,133,0.18)";
         ctx.fill();
       });
       pts.forEach((a, i) => {
@@ -90,7 +90,9 @@ const Home = () => {
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(106,169,255,${0.04 * (1 - d / 110)})`;
+            ctx.strokeStyle = isDarkHero
+              ? `rgba(106,169,255,${0.04 * (1 - d / 110)})`
+              : `rgba(57,49,133,${0.04 * (1 - d / 110)})`;
             ctx.lineWidth = 0.7;
             ctx.stroke();
           }
