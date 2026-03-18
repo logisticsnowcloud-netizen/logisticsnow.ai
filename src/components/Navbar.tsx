@@ -19,64 +19,51 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-[190] border-b border-border transition-colors duration-300" style={{ background: 'hsl(var(--nav-bg))', boxShadow: '0 2px 20px hsl(var(--ln-purple) / 0.12)' }}>
-      <div className="flex items-center justify-between px-[5vw] h-[68px] max-w-[1400px] mx-auto">
-        <Link to="/" className="flex items-center gap-2.5 no-underline">
-          {/* <div className="w-10 h-10 rounded-[10px] gradient-primary flex items-center justify-center font-display text-lg font-extrabold" style={{ color: '#fff' }}>
-            LN
-          </div>
-          <div className="font-display text-xl font-extrabold tracking-[-0.02em] text-ln-purple">
-            LogisticsNoww<span className="text-ln-green">.</span><span className="text-ln-blue text-sm align-super">ai</span>
-          </div> */}
-          {/* <div className="w-10 h-10 rounded-[10px] gradient-primary flex items-center justify-center font-display text-lg font-extrabold" style={{ color: '#fff' }}>
-            LN
-          </div> */}
-          <div className="font-display text-xl font-extrabold tracking-[-0.02em] text-ln-purple">
-              <span style={{display: 'inline-flex'}}>
-                <img src="/logos/ln.png" alt="LogisticsNow.ai" width="200" height="800" />
-                <span style={{marginTop: '09%'}} className="text-ln-green">.</span>
-                <span style={{marginTop: '12%', marginLeft: '1%'}} className="text-ln-green text-sm align-super">ai</span>
-              </span>
-          </div>
+    <nav
+      className="sticky top-0 z-[190] border-b border-border transition-colors duration-300"
+      style={{ background: "hsl(var(--nav-bg))", boxShadow: "0 2px 20px hsl(var(--ln-purple) / 0.12)" }}
+    >
+      <div className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between gap-3 px-[4vw] sm:px-[5vw]">
+        <Link to="/" className="flex min-w-0 items-center gap-1.5 no-underline">
+          <img src="/logos/ln.png" alt="LogisticsNow" className="h-auto w-[170px] sm:w-[200px]" />
+          <span className="mt-1 text-sm font-bold text-ln-green sm:mt-2">.ai</span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-0.5">
+        <div className="hidden items-center gap-0.5 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.label}
               to={item.to}
-              className={`px-3.5 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-all duration-200 no-underline font-body ${
+              className={`rounded-lg px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition-all duration-200 no-underline font-body ${
                 path === item.to
                   ? "text-ln-purple bg-surface"
                   : "text-muted-foreground hover:text-foreground hover:bg-surface"
               }`}
             >
-              {item.label}{item.label === "News & Events" ? " ▾" : ""}
+              {item.label}
+              {item.label === "News & Events" ? " ▾" : ""}
             </Link>
           ))}
         </div>
 
-
-        {/* Mobile hamburger */}
         <button
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-transparent border-none cursor-pointer text-foreground"
+          className="flex h-10 w-10 items-center justify-center rounded-lg border-none bg-transparent text-foreground md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          type="button"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden flex flex-col gap-1 px-[5vw] pb-4 border-t border-border" style={{ background: 'hsl(var(--nav-bg))' }}>
+        <div className="flex flex-col gap-1 border-t border-border px-[5vw] pb-4 pt-3 md:hidden" style={{ background: "hsl(var(--nav-bg))" }}>
           {navItems.map((item) => (
             <Link
               key={item.label}
               to={item.to}
               onClick={() => setOpen(false)}
-              className={`px-3.5 py-3 rounded-lg text-sm font-semibold no-underline font-body ${
+              className={`rounded-lg px-3.5 py-3 text-sm font-semibold no-underline font-body ${
                 path === item.to
                   ? "text-ln-purple bg-surface"
                   : "text-muted-foreground hover:text-foreground hover:bg-surface"
@@ -85,7 +72,14 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
-          <button onClick={() => { setOpen(false); setDemoOpen(true); }} className="bg-ln-green rounded-full px-5 py-2.5 mt-2 text-[13.5px] font-bold border-none cursor-pointer font-body w-full" style={{ color: '#fff' }}>
+          <button
+            onClick={() => {
+              setOpen(false);
+              requestAnimationFrame(() => setDemoOpen(true));
+            }}
+            className="mt-2 w-full rounded-full bg-ln-green px-5 py-2.5 text-[13.5px] font-bold text-primary-foreground touch-manipulation"
+            type="button"
+          >
             Schedule Demo
           </button>
         </div>

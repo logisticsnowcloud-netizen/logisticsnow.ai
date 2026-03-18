@@ -13,7 +13,7 @@ const CtaBanner = () => {
         </h2>
         <p className="text-sm max-w-[520px] mx-auto mb-4 relative z-[1]" style={{ color: 'rgba(255,255,255,.72)' }}>See how LogisticsNow transforms freight procurement, carrier relationships and logistics intelligence.</p>
         <div className="flex gap-3 justify-center flex-wrap relative z-[1]">
-          <button onClick={() => setOpen(true)} className="btn-white-ln no-underline text-sm py-2 px-6 border-none cursor-pointer">🚛 Schedule Demo →</button>
+          <button onClick={() => setOpen(true)} className="btn-white-ln no-underline text-sm py-2 px-6 border-none cursor-pointer touch-manipulation">🚛 Schedule Demo →</button>
         </div>
         <p className="font-mono text-[11px] mt-2.5 relative z-[1]" style={{ color: 'rgba(255,255,255,.45)' }}>Onboarding in 5 days | Go-Live in 30 days</p>
       </div>

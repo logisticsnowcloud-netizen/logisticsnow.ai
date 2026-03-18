@@ -52,7 +52,7 @@ const VISION_CARDS = [
 ];
 
 const Home = () => {
-  const [heroTheme, setHeroTheme] = useState<"dark" | "light">("dark");
+  const [heroTheme, setHeroTheme] = useState<"dark" | "light">("light");
   const isDarkHero = heroTheme === "dark";
   const canvasRef = useRef<HTMLCanvasElement>(null);
 

@@ -281,3 +281,23 @@
     to { transform: rotate(-360deg); }
   }
 }
+
+@media (max-width: 640px) {
+  .section-std {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .card-hover {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .btn-primary-ln,
+  .btn-secondary-ln,
+  .btn-white-ln,
+  .btn-ghost-ln {
+    font-size: 14px;
+    padding: 0.8rem 1.25rem;
+  }
+}
