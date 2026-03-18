@@ -254,7 +254,7 @@ const ScheduleDemoDialog = ({ open, onOpenChange }: ScheduleDemoDialogProps) => 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent
-        className="w-[calc(100vw-0.75rem)] max-w-[680px] overflow-hidden border border-border/80 bg-background/95 p-0 shadow-2xl backdrop-blur-xl"
+        className="w-[calc(100vw-0.5rem)] max-w-[720px] overflow-hidden border border-border/80 bg-background/95 p-0 shadow-2xl backdrop-blur-xl"
         aria-describedby="schedule-demo-desc"
       >
         {submitted ? (
@@ -305,55 +305,55 @@ const ScheduleDemoDialog = ({ open, onOpenChange }: ScheduleDemoDialogProps) => 
           </div>
         ) : (
           <>
-            <div className="border-b border-border bg-secondary/25 px-4 py-3 sm:px-6 sm:py-4">
+            <div className="border-b border-border bg-secondary/25 px-3 py-2.5 sm:px-5 sm:py-3">
               <DialogHeader className="pr-8 text-left">
-                <div className="mb-1.5 inline-flex w-fit items-center gap-1.5 rounded-full border border-border bg-background px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-[10px]">
-                  <Sparkles className="h-3 w-3 text-primary" />
+                <div className="mb-1 inline-flex w-fit items-center gap-1.5 rounded-full border border-border bg-background px-2 py-1 text-[8px] font-semibold uppercase tracking-[0.1em] text-muted-foreground sm:text-[9px]">
+                  <Sparkles className="h-2.5 w-2.5 text-primary" />
                   Quick Guided Walkthrough
                 </div>
-                <DialogTitle className="flex items-center gap-2 font-display text-lg font-extrabold text-foreground sm:text-[1.55rem]">
-                  <CalendarDays className="h-4 w-4 text-primary sm:h-5 sm:w-5" />
+                <DialogTitle className="flex items-center gap-1.5 font-display text-base font-extrabold text-foreground sm:text-xl">
+                  <CalendarDays className="h-4 w-4 text-primary" />
                   Schedule Meeting / Demo
                 </DialogTitle>
-                <DialogDescription id="schedule-demo-desc" className="max-w-2xl text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-5">
+                <DialogDescription id="schedule-demo-desc" className="max-w-2xl text-[11px] leading-4 text-muted-foreground sm:text-xs sm:leading-5">
                   See how LoRRI can transform your logistics operations with a quick, personalized walkthrough.
                 </DialogDescription>
               </DialogHeader>
             </div>
 
-            <div className="px-4 pb-4 pt-3 sm:px-6 sm:pb-5">
-              <form onSubmit={handleSubmit} className="grid gap-2.5 sm:gap-3">
-                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+            <div className="px-3 pb-3 pt-2.5 sm:px-5 sm:pb-4">
+              <form onSubmit={handleSubmit} className="grid gap-2">
+                <div className="grid grid-cols-2 gap-2">
                   <div className="space-y-1">
-                    <Label htmlFor="demo-name" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">Name <span className="text-destructive">*</span></Label>
-                    <Input id="demo-name" className="h-9 text-[13px] sm:h-10 sm:text-sm" placeholder="Your full name" value={form.name} onChange={(event) => update("name", event.target.value)} />
+                    <Label htmlFor="demo-name" className="text-[10px] font-semibold leading-none text-muted-foreground">Name <span className="text-destructive">*</span></Label>
+                    <Input id="demo-name" className="h-8 text-xs sm:h-9 sm:text-sm" placeholder="Your full name" value={form.name} onChange={(event) => update("name", event.target.value)} />
                   </div>
                   <div className="space-y-1">
-                    <Label htmlFor="demo-email" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">Organization Email <span className="text-destructive">*</span></Label>
-                    <Input id="demo-email" type="email" className="h-9 text-[13px] sm:h-10 sm:text-sm" placeholder="you@company.com" value={form.email} onChange={(event) => update("email", event.target.value)} />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
-                  <div className="space-y-1">
-                    <Label htmlFor="demo-company" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">Company Name</Label>
-                    <Input id="demo-company" className="h-9 text-[13px] sm:h-10 sm:text-sm" placeholder="Company name" value={form.company_name} onChange={(event) => update("company_name", event.target.value)} />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="demo-designation" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">Designation</Label>
-                    <Input id="demo-designation" className="h-9 text-[13px] sm:h-10 sm:text-sm" placeholder="Your role" value={form.designation} onChange={(event) => update("designation", event.target.value)} />
+                    <Label htmlFor="demo-email" className="text-[10px] font-semibold leading-none text-muted-foreground">Organization Email <span className="text-destructive">*</span></Label>
+                    <Input id="demo-email" type="email" className="h-8 text-xs sm:h-9 sm:text-sm" placeholder="you@company.com" value={form.email} onChange={(event) => update("email", event.target.value)} />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+                <div className="grid grid-cols-2 gap-2">
                   <div className="space-y-1">
-                    <Label htmlFor="demo-phone" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">Contact Number <span className="text-destructive">*</span></Label>
-                    <Input id="demo-phone" className="h-9 text-[13px] sm:h-10 sm:text-sm" placeholder="+91-XXXXXXXXXX" value={form.contact_number} onChange={(event) => update("contact_number", event.target.value)} />
+                    <Label htmlFor="demo-company" className="text-[10px] font-semibold leading-none text-muted-foreground">Company Name</Label>
+                    <Input id="demo-company" className="h-8 text-xs sm:h-9 sm:text-sm" placeholder="Company name" value={form.company_name} onChange={(event) => update("company_name", event.target.value)} />
                   </div>
                   <div className="space-y-1">
-                    <Label htmlFor="demo-heard" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">How did you hear about us?</Label>
+                    <Label htmlFor="demo-designation" className="text-[10px] font-semibold leading-none text-muted-foreground">Designation</Label>
+                    <Input id="demo-designation" className="h-8 text-xs sm:h-9 sm:text-sm" placeholder="Your role" value={form.designation} onChange={(event) => update("designation", event.target.value)} />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="space-y-1">
+                    <Label htmlFor="demo-phone" className="text-[10px] font-semibold leading-none text-muted-foreground">Contact Number <span className="text-destructive">*</span></Label>
+                    <Input id="demo-phone" className="h-8 text-xs sm:h-9 sm:text-sm" placeholder="+91-XXXXXXXXXX" value={form.contact_number} onChange={(event) => update("contact_number", event.target.value)} />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="demo-heard" className="text-[10px] font-semibold leading-none text-muted-foreground">How did you hear about us?</Label>
                     <Select value={form.heardFrom} onValueChange={(value) => update("heardFrom", value)}>
-                      <SelectTrigger id="demo-heard" className="h-9 text-[13px] sm:h-10 sm:text-sm">
+                      <SelectTrigger id="demo-heard" className="h-8 text-xs sm:h-9 sm:text-sm">
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                       <SelectContent className="z-[320]">
@@ -367,25 +367,25 @@ const ScheduleDemoDialog = ({ open, onOpenChange }: ScheduleDemoDialogProps) => 
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+                <div className="grid grid-cols-2 gap-2">
                   <div className="space-y-1">
-                    <Label htmlFor="demo-date" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">Preferred Date <span className="text-destructive">*</span></Label>
-                    <Input id="demo-date" type="date" className="h-9 text-[13px] sm:h-10 sm:text-sm" min={getDefaultDate()} value={form.date} onChange={(event) => update("date", event.target.value)} />
+                    <Label htmlFor="demo-date" className="text-[10px] font-semibold leading-none text-muted-foreground">Preferred Date <span className="text-destructive">*</span></Label>
+                    <Input id="demo-date" type="date" className="h-8 text-xs sm:h-9 sm:text-sm" min={getDefaultDate()} value={form.date} onChange={(event) => update("date", event.target.value)} />
                   </div>
                   <div className="space-y-1">
-                    <Label htmlFor="demo-time" className="text-[10px] font-semibold text-muted-foreground sm:text-[11px]">Preferred Time <span className="text-destructive">*</span></Label>
-                    <Input id="demo-time" type="time" className="h-9 text-[13px] sm:h-10 sm:text-sm" value={form.time} onChange={(event) => update("time", event.target.value)} />
+                    <Label htmlFor="demo-time" className="text-[10px] font-semibold leading-none text-muted-foreground">Preferred Time <span className="text-destructive">*</span></Label>
+                    <Input id="demo-time" type="time" className="h-8 text-xs sm:h-9 sm:text-sm" value={form.time} onChange={(event) => update("time", event.target.value)} />
                   </div>
                 </div>
 
-                <div className="col-span-2 flex items-start gap-2.5 rounded-xl border border-border bg-secondary/35 px-3 py-2.5 sm:gap-3 sm:px-4 sm:py-3">
+                <div className="col-span-2 flex items-start gap-2 rounded-xl border border-border bg-secondary/35 px-2.5 py-2 sm:px-3 sm:py-2.5">
                   <Checkbox id="demo-newsletter" checked={form.newsletter} onCheckedChange={(checked) => update("newsletter", !!checked)} />
-                  <Label htmlFor="demo-newsletter" className="cursor-pointer text-[11px] font-normal leading-4 text-muted-foreground sm:text-xs sm:leading-5">
+                  <Label htmlFor="demo-newsletter" className="cursor-pointer text-[10px] font-normal leading-4 text-muted-foreground sm:text-[11px] sm:leading-4">
                     I would like to receive updates on latest modules and news from LoRRI.
                   </Label>
                 </div>
 
-                <Button type="submit" disabled={loading} className="col-span-2 h-10 w-full text-sm font-semibold sm:h-11">
+                <Button type="submit" disabled={loading} className="col-span-2 h-9 w-full text-xs font-semibold sm:h-10 sm:text-sm">
                   {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <CalendarDays className="mr-2 h-4 w-4" />}
                   {loading ? "Submitting..." : "Schedule Demo"}
                 </Button>
