@@ -42,6 +42,7 @@ const TRUSTED_LOGOS = [
 ];
 
 const Product = () => {
+  const [heroPillar, setHeroPillar] = useState(0);
   const [activePillar, setActivePillar] = useState(0);
   const [audience, setAudience] = useState<'mfr' | 'carrier'>('mfr');
   const [pillarPaused, setPillarPaused] = useState(false);
@@ -49,10 +50,15 @@ const Product = () => {
   const pillarIntervalRef = useRef<number | null>(null);
   const pillarProgressRef = useRef<number | null>(null);
 
-  const PILLAR_INTERVAL = 5000; // 5 seconds per tab
+  const PILLAR_INTERVAL = 5000;
 
   const advancePillar = useCallback(() => {
     setActivePillar((prev) => (prev + 1) % PILLARS.length);
+    setPillarProgress(0);
+  }, []);
+
+  useEffect(() => {
+    setActivePillar(0);
     setPillarProgress(0);
   }, []);
 
@@ -64,7 +70,7 @@ const Product = () => {
     }
 
     setPillarProgress(0);
-    const progressStep = 50; // update every 50ms
+    const progressStep = 50;
     pillarProgressRef.current = window.setInterval(() => {
       setPillarProgress((prev) => Math.min(prev + (progressStep / PILLAR_INTERVAL) * 100, 100));
     }, progressStep);
@@ -131,7 +137,6 @@ const Product = () => {
               </div>
             </ScrollReveal>
 
-            {/* ORBIT DIAGRAM */}
             <ScrollReveal direction="up" delay={0.2}>
               <div className="flex items-center justify-center relative min-h-[360px]">
                 <div className="absolute inset-0 rounded-[28px] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(57,49,133,0.12) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
@@ -152,7 +157,7 @@ const Product = () => {
                       const rad = (angles[i] * Math.PI) / 180;
                       const x2 = 180 + 135 * Math.cos(rad);
                       const y2 = 180 + 135 * Math.sin(rad);
-                      return <line key={i} x1="180" y1="180" x2={x2} y2={y2} stroke={p.color} strokeWidth="1" strokeOpacity={i === activePillar ? 0.45 : 0.15} strokeDasharray="4 6" />;
+                      return <line key={i} x1="180" y1="180" x2={x2} y2={y2} stroke={p.color} strokeWidth="1" strokeOpacity={i === heroPillar ? 0.45 : 0.15} strokeDasharray="4 6" />;
                     })}
                     <g style={{ transformOrigin: '180px 180px', animation: 'spinCW 8s linear infinite' }}>
                       <circle cx="180" cy="45" r="4" fill="#1AA6DF" opacity="0.9" style={{ filter: 'drop-shadow(0 0 8px #1AA6DF)' }} />
@@ -169,22 +174,22 @@ const Product = () => {
                   {PILLARS.map((p, i) => {
                     const angles = [-90, 0, 90, 180];
                     const rad = (angles[i] * Math.PI) / 180;
-                     const nx = 180 + 135 * Math.cos(rad);
-                     const ny = 180 + 135 * Math.sin(rad);
-                    const isActive = i === activePillar;
-                    const labelStyle: React.CSSProperties = i === 0 
+                    const nx = 180 + 135 * Math.cos(rad);
+                    const ny = 180 + 135 * Math.sin(rad);
+                    const isActive = i === heroPillar;
+                    const labelStyle: React.CSSProperties = i === 0
                       ? { top: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
-                      : i === 1 
-                      ? { left: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' }
-                      : i === 2 
-                      ? { bottom: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
-                      : { right: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' };
+                      : i === 1
+                        ? { left: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' }
+                        : i === 2
+                          ? { bottom: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
+                          : { right: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' };
                     return (
                       <div
                         key={i}
                         className="absolute w-14 h-14 z-[4] cursor-pointer -translate-x-1/2 -translate-y-1/2"
                         style={{ left: nx, top: ny }}
-                        onClick={() => setActivePillar(i)}
+                        onClick={() => setHeroPillar(i)}
                       >
                         <div className="absolute -inset-2 rounded-full transition-all duration-300" style={{ border: `2px solid ${p.color}`, opacity: isActive ? 0.75 : 0.3, boxShadow: isActive ? `0 0 20px ${p.color}` : 'none' }} />
                         <div className="w-14 h-14 rounded-full bg-card flex items-center justify-center text-[20px] transition-all duration-300" style={{ border: `2px solid ${p.color}`, boxShadow: isActive ? `0 0 28px rgba(0,0,0,.3)` : 'none' }}>
@@ -192,7 +197,7 @@ const Product = () => {
                         </div>
                         <div className="absolute -top-1 -right-1 w-[18px] h-[18px] rounded-full flex items-center justify-center text-[8px] font-extrabold font-mono" style={{ background: p.color, color: '#fff' }}>{p.num}</div>
                         <div className="absolute text-[10px] font-bold" style={{ ...labelStyle, color: p.color }}>
-                          <span style={{margin: '-2%'}}>{orbitLabels[i]}</span>
+                          <span style={{ margin: '-2%' }}>{orbitLabels[i]}</span>
                         </div>
                       </div>
                     );
