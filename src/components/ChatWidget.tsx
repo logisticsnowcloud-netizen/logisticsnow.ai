@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { generateAnswer } from "@/lib/chatbot";
-import { Send, X, Bot, MessageSquare, ChevronRight, ExternalLink } from "lucide-react";
+import { Send, X, Bot, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Message {
@@ -17,21 +17,17 @@ const ChatWidget = () => {
     {
       role: "bot",
       text: "👋 Hello! I'm the LogisticsNow Assistant. I can answer questions about LogisticsNow and LoRRI — our products, services, vision, and how to get in touch.",
-      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   useEffect(() => {
-    scrollToBottom();
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
 
   const handleSendMessage = async (text: string) => {
@@ -40,7 +36,7 @@ const ChatWidget = () => {
     const userMsg: Message = {
       role: "user",
       text,
-      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     };
 
     setMessages((prev) => [...prev, userMsg]);
@@ -52,16 +48,15 @@ const ChatWidget = () => {
       const botMsg: Message = {
         role: "bot",
         text: result.answer,
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
       };
       setMessages((prev) => [...prev, botMsg]);
 
-      // Check for demo/contact intent to redirect
       const lowerInput = text.toLowerCase();
       const lowerAnswer = result.answer.toLowerCase();
       if (
-        lowerInput.includes("demo") || 
-        lowerInput.includes("contact") || 
+        lowerInput.includes("demo") ||
+        lowerInput.includes("contact") ||
         lowerInput.includes("schedule") ||
         lowerAnswer.includes("redirecting you")
       ) {
@@ -70,13 +65,13 @@ const ChatWidget = () => {
           navigate("/contact");
         }, 2500);
       }
-    } catch (error) {
+    } catch {
       setMessages((prev) => [
         ...prev,
         {
           role: "bot",
           text: "Sorry, I encountered an error. Please try again.",
-          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         },
       ]);
     } finally {
@@ -92,16 +87,16 @@ const ChatWidget = () => {
 
   return (
     <>
-      {/* Floating Toggle Button */}
       <button
         onClick={() => {
           setIsOpen(!isOpen);
           setShowNotification(false);
         }}
-        className={`fixed bottom-7 right-7 z-[500] w-[62px] h-[62px] rounded-full flex items-center justify-center transition-all duration-300 shadow-lg hover:scale-110 active:scale-95 group ${
+        className={`group fixed bottom-4 right-4 z-[500] flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:scale-110 active:scale-95 sm:bottom-7 sm:right-7 sm:h-[62px] sm:w-[62px] ${
           isOpen ? "bg-ln-purple" : "gradient-primary"
         }`}
-        style={{ boxShadow: isOpen ? '0 8px 28px rgba(0,0,0,0.2)' : '0 8px 32px rgba(var(--ln-purple), 0.4)' }}
+        style={{ boxShadow: isOpen ? "0 8px 28px rgba(0,0,0,0.2)" : "0 8px 32px hsl(var(--ln-purple) / 0.35)" }}
+        type="button"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -111,130 +106,106 @@ const ChatWidget = () => {
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
               exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
             >
-              <X className="w-7 h-7 text-white" />
+              <X className="h-6 w-6 text-primary-foreground sm:h-7 sm:w-7" />
             </motion.div>
           ) : (
             <motion.div
               key="open"
               initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ 
-                opacity: 1, 
-                scale: 1,
-                y: [0, -4, 0],
-              }}
+              animate={{ opacity: 1, scale: 1, y: [0, -4, 0] }}
               exit={{ opacity: 0, scale: 0.5 }}
-              transition={{
-                y: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}
-              className="relative text-3xl"
+              transition={{ y: { duration: 2, repeat: Infinity, ease: "easeInOut" } }}
+              className="relative text-[28px] sm:text-3xl"
             >
               🤖
-              {showNotification && (
-                <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-500 border-2 border-white rounded-full animate-bounce" />
-              )}
+              {showNotification && <span className="absolute -right-1 -top-1 h-3.5 w-3.5 animate-bounce rounded-full border-2 border-primary-foreground bg-destructive" />}
             </motion.div>
           )}
         </AnimatePresence>
       </button>
 
-      {/* Chat Widget Window */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-[104px] right-7 z-[500] w-[390px] h-[580px] bg-white dark:bg-zinc-950 rounded-[28px] shadow-2xl overflow-hidden flex flex-col border border-border/50 backdrop-blur-xl"
-            style={{ 
-              boxShadow: '0 25px 60px rgba(0, 0, 0, 0.15)',
-              background: 'rgba(255, 255, 255, 0.98)'
-            }}
+            className="fixed bottom-[80px] right-2 z-[500] flex h-[min(580px,calc(100vh-6rem))] w-[min(390px,calc(100vw-1rem))] flex-col overflow-hidden rounded-[24px] border border-border/50 bg-card/95 shadow-2xl backdrop-blur-xl sm:bottom-[104px] sm:right-7 sm:rounded-[28px]"
+            style={{ boxShadow: "0 25px 60px rgba(0, 0, 0, 0.15)" }}
           >
-            {/* Header */}
-            <div className="p-4 gradient-primary flex items-center justify-between text-white shrink-0">
+            <div className="gradient-primary flex shrink-0 items-center justify-between p-4 text-primary-foreground">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center shadow-inner">
-                  <Bot className="w-6 h-6" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-foreground/20 shadow-inner sm:h-11 sm:w-11">
+                  <Bot className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div>
-                  <div className="font-bold text-sm">NowAssist AI</div>
-                  <div className="flex items-center gap-1.5 text-[11px] text-white/80">
-                    <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                  <div className="text-sm font-bold">NowAssist AI</div>
+                  <div className="flex items-center gap-1.5 text-[11px] text-primary-foreground/80">
+                    <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
                     Online & Ready
                   </div>
                 </div>
               </div>
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="p-2 hover:bg-white/10 rounded-full transition-colors"
-              >
-                <X className="w-5 h-5 text-white/70" />
+              <button onClick={() => setIsOpen(false)} className="rounded-full p-2 transition-colors hover:bg-primary-foreground/10" type="button">
+                <X className="h-5 w-5 text-primary-foreground/70" />
               </button>
             </div>
 
-            {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 scrollbar-thin scrollbar-thumb-zinc-200">
+            <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">
               {messages.map((m, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 10, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.3 }}
-                  className={`flex flex-col max-w-[85%] ${m.role === "bot" ? "self-start" : "self-end"}`}
+                  className={`flex max-w-[88%] flex-col ${m.role === "bot" ? "self-start" : "self-end"}`}
                 >
-                  <div 
-                    className={`px-4 py-3 rounded-2xl text-[13.5px] leading-relaxed relative ${
-                      m.role === "bot" 
-                        ? "bg-zinc-100 text-zinc-800 rounded-tl-none border border-zinc-200/50 shadow-sm"
-                        : "gradient-primary text-white rounded-tr-none shadow-md"
+                  <div
+                    className={`relative rounded-2xl px-4 py-3 text-[13px] leading-relaxed sm:text-[13.5px] ${
+                      m.role === "bot"
+                        ? "rounded-tl-none border border-border bg-secondary text-foreground shadow-sm"
+                        : "gradient-primary rounded-tr-none text-primary-foreground shadow-md"
                     }`}
                   >
                     {m.text}
                   </div>
-                  <span className={`text-[10px] mt-1.5 px-1 font-medium text-zinc-400 ${m.role === "bot" ? "text-left" : "text-right"}`}>
+                  <span className={`mt-1.5 px-1 text-[10px] font-medium text-muted-foreground ${m.role === "bot" ? "text-left" : "text-right"}`}>
                     {m.time}
                   </span>
                 </motion.div>
               ))}
 
-              {/* Loading Indicator */}
               {isLoading && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="self-start max-w-[80%] bg-zinc-100 px-4 py-3 rounded-2xl rounded-tl-none flex items-center gap-1"
+                  className="flex max-w-[80%] items-center gap-1 self-start rounded-2xl rounded-tl-none bg-secondary px-4 py-3"
                 >
-                  <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
-                  <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full animate-bounce [animation-delay:-0.15s]" />
-                  <span className="w-1.5 h-1.5 bg-zinc-400 rounded-full animate-bounce" />
+                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted-foreground [animation-delay:-0.3s]" />
+                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted-foreground [animation-delay:-0.15s]" />
+                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted-foreground" />
                 </motion.div>
               )}
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Footer / Input Area */}
-            <div className="p-4 bg-zinc-50 border-t border-zinc-100 flex flex-col gap-3">
-              {/* Suggestion Chips */}
+            <div className="flex flex-col gap-3 border-t border-border bg-secondary/40 p-3 sm:p-4">
               {messages.length < 3 && !isLoading && (
                 <div className="flex flex-wrap gap-2">
                   {suggestions.map((s, idx) => (
                     <button
                       key={idx}
                       onClick={() => handleSendMessage(s.query)}
-                      className="px-3 py-1.5 bg-white border border-zinc-200 rounded-full text-[12px] font-semibold text-zinc-600 hover:border-ln-purple hover:text-ln-purple transition-all shadow-sm flex items-center gap-1"
+                      className="flex items-center gap-1 rounded-full border border-border bg-card px-3 py-1.5 text-[11px] font-semibold text-muted-foreground shadow-sm transition-all hover:border-primary hover:text-primary sm:text-[12px]"
+                      type="button"
                     >
                       {s.label}
-                      <ChevronRight className="w-3 h-3 opacity-50" />
+                      <ChevronRight className="h-3 w-3 opacity-50" />
                     </button>
                   ))}
                 </div>
               )}
 
-              {/* Input Box */}
               <div className="flex items-center gap-2">
                 <input
                   type="text"
@@ -242,20 +213,19 @@ const ChatWidget = () => {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSendMessage(input)}
                   placeholder="Ask about LogisticsNow..."
-                  className="flex-1 bg-white border border-zinc-200 rounded-2xl px-4 py-3 text-[14px] outline-none focus:border-ln-purple/50 focus:ring-4 focus:ring-ln-purple/5 transition-all"
+                  className="flex-1 rounded-2xl border border-border bg-card px-4 py-3 text-[14px] outline-none transition-all focus:border-primary/50 focus:ring-4 focus:ring-primary/5"
                   disabled={isLoading}
                 />
                 <button
                   onClick={() => handleSendMessage(input)}
                   disabled={isLoading || !input.trim()}
-                  className="w-12 h-12 rounded-2xl gradient-primary flex items-center justify-center text-white shadow-md disabled:opacity-50 hover:scale-105 active:scale-95 transition-all shrink-0"
+                  className="gradient-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-primary-foreground shadow-md transition-all hover:scale-105 active:scale-95 disabled:opacity-50 sm:h-12 sm:w-12"
+                  type="button"
                 >
-                  <Send className="w-5 h-5" />
+                  <Send className="h-5 w-5" />
                 </button>
               </div>
-              <div className="text-center text-[10px] text-zinc-400 font-medium">
-                AI can make mistakes. Check important info.
-              </div>
+              <div className="text-center text-[10px] font-medium text-muted-foreground">AI can make mistakes. Check important info.</div>
             </div>
           </motion.div>
         )}

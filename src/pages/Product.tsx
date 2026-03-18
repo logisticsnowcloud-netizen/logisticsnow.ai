@@ -138,10 +138,10 @@ const Product = () => {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="flex items-center justify-center relative min-h-[360px]">
-                <div className="absolute inset-0 rounded-[28px] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(57,49,133,0.12) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-                <div className="relative w-[360px] h-[360px]">
-                  <svg className="absolute inset-0 overflow-visible" width="360" height="360" viewBox="0 0 360 360">
+              <div className="relative flex min-h-[300px] items-center justify-center sm:min-h-[360px]">
+                <div className="absolute inset-0 rounded-[28px] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle, rgba(57,49,133,0.12) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+                <div className="relative aspect-square w-[min(100%,320px)] sm:w-[360px]">
+                  <svg className="absolute inset-0 h-full w-full overflow-visible" viewBox="0 0 360 360">
                     <defs>
                       <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
                         <stop offset="0%" stopColor="#393185" stopOpacity="0.2" />
@@ -159,17 +159,17 @@ const Product = () => {
                       const y2 = 180 + 135 * Math.sin(rad);
                       return <line key={i} x1="180" y1="180" x2={x2} y2={y2} stroke={p.color} strokeWidth="1" strokeOpacity={i === heroPillar ? 0.45 : 0.15} strokeDasharray="4 6" />;
                     })}
-                    <g style={{ transformOrigin: '180px 180px', animation: 'spinCW 8s linear infinite' }}>
-                      <circle cx="180" cy="45" r="4" fill="#1AA6DF" opacity="0.9" style={{ filter: 'drop-shadow(0 0 8px #1AA6DF)' }} />
+                    <g style={{ transformOrigin: "180px 180px", animation: "spinCW 8s linear infinite" }}>
+                      <circle cx="180" cy="45" r="4" fill="#1AA6DF" opacity="0.9" style={{ filter: "drop-shadow(0 0 8px #1AA6DF)" }} />
                     </g>
-                    <g style={{ transformOrigin: '180px 180px', animation: 'spinCCW 14s linear infinite' }}>
-                      <circle cx="180" cy="108" r="3" fill="#54AF3A" opacity="0.7" style={{ filter: 'drop-shadow(0 0 6px #54AF3A)' }} />
+                    <g style={{ transformOrigin: "180px 180px", animation: "spinCCW 14s linear infinite" }}>
+                      <circle cx="180" cy="108" r="3" fill="#54AF3A" opacity="0.7" style={{ filter: "drop-shadow(0 0 6px #54AF3A)" }} />
                     </g>
                     <circle cx="180" cy="180" r="32" fill="rgba(57,49,133,0.2)" stroke="#393185" strokeWidth="1.5" />
                   </svg>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-[3] pointer-events-none w-16">
-                    <div className="font-display text-base font-extrabold gradient-lorri leading-[1.1] tracking-[-0.02em]">LoRRI</div>
-                    <div className="text-[7px] font-bold tracking-[0.15em] uppercase text-muted-foreground mt-0.5">AI COPILOT</div>
+                  <div className="pointer-events-none absolute left-1/2 top-1/2 z-[3] w-14 -translate-x-1/2 -translate-y-1/2 text-center sm:w-16">
+                    <div className="font-display text-sm font-extrabold leading-[1.1] tracking-[-0.02em] gradient-lorri sm:text-base">LoRRI</div>
+                    <div className="mt-0.5 text-[7px] font-bold uppercase tracking-[0.15em] text-muted-foreground">AI COPILOT</div>
                   </div>
                   {PILLARS.map((p, i) => {
                     const angles = [-90, 0, 90, 180];
@@ -178,26 +178,28 @@ const Product = () => {
                     const ny = 180 + 135 * Math.sin(rad);
                     const isActive = i === heroPillar;
                     const labelStyle: React.CSSProperties = i === 0
-                      ? { top: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
+                      ? { top: -28, left: "50%", transform: "translateX(-50%)", whiteSpace: "nowrap" }
                       : i === 1
-                        ? { left: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' }
+                        ? { left: 62, top: "50%", transform: "translateY(-50%)", whiteSpace: "nowrap" }
                         : i === 2
-                          ? { bottom: -28, left: '50%', transform: 'translateX(-50%)', whiteSpace: 'nowrap' }
-                          : { right: 62, top: '50%', transform: 'translateY(-50%)', whiteSpace: 'nowrap' };
+                          ? { bottom: -28, left: "50%", transform: "translateX(-50%)", whiteSpace: "nowrap" }
+                          : { right: 62, top: "50%", transform: "translateY(-50%)", whiteSpace: "nowrap" };
                     return (
                       <div
                         key={i}
-                        className="absolute w-14 h-14 z-[4] cursor-pointer -translate-x-1/2 -translate-y-1/2"
+                        className="absolute z-[4] h-12 w-12 cursor-pointer -translate-x-1/2 -translate-y-1/2 sm:h-14 sm:w-14"
                         style={{ left: nx, top: ny }}
                         onClick={() => setHeroPillar(i)}
                       >
-                        <div className="absolute -inset-2 rounded-full transition-all duration-300" style={{ border: `2px solid ${p.color}`, opacity: isActive ? 0.75 : 0.3, boxShadow: isActive ? `0 0 20px ${p.color}` : 'none' }} />
-                        <div className="w-14 h-14 rounded-full bg-card flex items-center justify-center text-[20px] transition-all duration-300" style={{ border: `2px solid ${p.color}`, boxShadow: isActive ? `0 0 28px rgba(0,0,0,.3)` : 'none' }}>
+                        <div className="absolute -inset-2 rounded-full transition-all duration-300" style={{ border: `2px solid ${p.color}`, opacity: isActive ? 0.75 : 0.3, boxShadow: isActive ? `0 0 20px ${p.color}` : "none" }} />
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-card text-[18px] transition-all duration-300 sm:h-14 sm:w-14 sm:text-[20px]" style={{ border: `2px solid ${p.color}`, boxShadow: isActive ? "0 0 28px rgba(0,0,0,.3)" : "none" }}>
                           {p.icon}
                         </div>
-                        <div className="absolute -top-1 -right-1 w-[18px] h-[18px] rounded-full flex items-center justify-center text-[8px] font-extrabold font-mono" style={{ background: p.color, color: '#fff' }}>{p.num}</div>
-                        <div className="absolute text-[10px] font-bold" style={{ ...labelStyle, color: p.color }}>
-                          <span style={{ margin: '-2%' }}>{orbitLabels[i]}</span>
+                        <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full font-mono text-[7px] font-extrabold text-primary-foreground sm:h-[18px] sm:w-[18px] sm:text-[8px]" style={{ background: p.color }}>
+                          {p.num}
+                        </div>
+                        <div className="absolute hidden text-[10px] font-bold sm:block" style={{ ...labelStyle, color: p.color }}>
+                          <span style={{ margin: "-2%" }}>{orbitLabels[i]}</span>
                         </div>
                       </div>
                     );
