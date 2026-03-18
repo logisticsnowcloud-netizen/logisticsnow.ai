@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useCallback, useContext, useState, ReactNode } from "react";
 
 interface ScheduleDemoContextType {
   open: boolean;
@@ -13,7 +13,19 @@ const ScheduleDemoContext = createContext<ScheduleDemoContextType>({
 export const useScheduleDemo = () => useContext(ScheduleDemoContext);
 
 export const ScheduleDemoProvider = ({ children }: { children: ReactNode }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpenState] = useState(false);
+
+  const setOpen = useCallback((nextOpen: boolean) => {
+    if (!nextOpen || typeof window === "undefined") {
+      setOpenState(nextOpen);
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      setOpenState(true);
+    });
+  }, []);
+
   return (
     <ScheduleDemoContext.Provider value={{ open, setOpen }}>
       {children}

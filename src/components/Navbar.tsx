@@ -75,9 +75,9 @@ const Navbar = () => {
           <button
             onClick={() => {
               setOpen(false);
-              setDemoOpen(true);
+              requestAnimationFrame(() => setDemoOpen(true));
             }}
-            className="mt-2 w-full rounded-full bg-ln-green px-5 py-2.5 text-[13.5px] font-bold text-primary-foreground"
+            className="mt-2 w-full rounded-full bg-ln-green px-5 py-2.5 text-[13.5px] font-bold text-primary-foreground touch-manipulation"
             type="button"
           >
             Schedule Demo
