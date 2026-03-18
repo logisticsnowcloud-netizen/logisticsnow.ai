@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between gap-3 px-[4vw] sm:px-[5vw]">
         <Link to="/" className="flex min-w-0 items-center gap-1.5 no-underline">
           <img src="/logos/ln.png" alt="LogisticsNow" className="h-auto w-[170px] sm:w-[200px]" />
-          <span className="mt-1 text-sm font-bold text-ln-green sm:mt-2">.ai</span>
+          <span className="mt-1 text-sm font-bold text-ln-green sm:mt-2" style={{marginTop: '6%', marginLeft: '-4%'}}>.ai</span>
         </Link>
 
         <div className="hidden items-center gap-0.5 md:flex">

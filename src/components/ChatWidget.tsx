@@ -139,7 +139,7 @@ const ChatWidget = () => {
                   <Bot className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold">NowAssist AI</div>
+                  <div className="text-sm font-bold">LoRRI AI Assist</div>
                   <div className="flex items-center gap-1.5 text-[11px] text-primary-foreground/80">
                     <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
                     Online & Ready
