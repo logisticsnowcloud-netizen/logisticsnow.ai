@@ -354,7 +354,7 @@ const Home = () => {
         <div className="mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
             <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-purple">Shippers &amp; Manufacturers</div>
-            <p className="text-[11px] text-muted-foreground">Demand side of the network</p>
+            <p className="text-[11px] text-muted-foreground">Enterprises optimizing logistics operations</p>
           </div>
         </div>
 
@@ -391,7 +391,7 @@ const Home = () => {
         <div className="mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
             <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-green">Carriers &amp; Logistics Partners</div>
-            <p className="text-[11px] text-muted-foreground">Supply side of the network</p>
+            <p className="text-[11px] text-muted-foreground">Network partners enabling execution at scale</p>
           </div>
         </div>
 
@@ -438,7 +438,7 @@ const Home = () => {
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
                 A Neutral Intelligence Layer for
                 <br />
-                <span className="text-ln-purple">Logistics Network</span>
+                <span className="text-ln-purple">Logistics Networks</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
