@@ -829,50 +829,72 @@ const Home = () => {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="px-[5vw] py-5 mb-16 bg-background">
+      <section className="px-[5vw] py-10 mb-8 bg-background">
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5 items-end">
             <ScrollReveal>
               <div className="section-tag !mb-1">Case Studies</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
-                Real Results, <span className="text-ln-purple">Real Clients</span>
+                Proven Savings Across <span className="text-ln-purple">Global Logistics Networks</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="text-muted-foreground text-[13px] leading-[1.5]">
-                Proven freight procurement savings across geographies, industries and transportation modes.
+                Delivered through AI-driven procurement, routing, and network optimization.
               </p>
             </ScrollReveal>
           </div>
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {CASES.map((cs, i) => (
+            {(CASES as Array<{tag: string; industry: string; client: string; story: string; spend: string; saving: string; pct: string; extra: string; timeline: string}>).map((cs) => (
               <StaggerItem key={cs.client}>
-                <div className="card-hover !p-6 !rounded-2xl h-full flex flex-col">
-                  <div className="font-mono text-[10px] font-bold tracking-[0.08em] uppercase text-ln-green mb-2 flex items-center gap-1.5">
-                    {cs.tag}
+                <div className="card-hover !p-5 !rounded-2xl h-full flex flex-col group transition-all duration-300 hover:scale-[1.02]">
+                  {/* Tag + Industry */}
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="font-mono text-[10px] font-bold tracking-[0.08em] uppercase text-ln-green">{cs.tag}</span>
+                    <span className="text-[9px] font-bold tracking-[0.08em] uppercase px-2 py-0.5 rounded-full bg-muted text-muted-foreground">{cs.industry}</span>
                   </div>
-                  <div className="font-display text-[14px] font-bold mb-3 leading-[1.3]">{cs.client}</div>
-                  <div className="grid grid-cols-2 gap-3 mb-3">
-                    <div className="p-2.5 bg-muted/50 rounded-xl text-center">
-                      <div className="text-[9px] text-muted-foreground uppercase tracking-wider mb-0.5">Spend</div>
-                      <div className="font-display text-[14px] font-bold text-foreground/70">
-                        {cs.spend}
-                      </div>
+                  {/* Client + Story */}
+                  <div className="font-display text-[13.5px] font-bold mb-1 leading-[1.3]">{cs.client}</div>
+                  <div className="text-[10.5px] text-muted-foreground/70 leading-[1.45] mb-3 italic">{cs.story}</div>
+                  {/* Metrics */}
+                  <div className="grid grid-cols-2 gap-2.5 mb-2.5">
+                    <div className="p-2 bg-muted/50 rounded-xl text-center">
+                      <div className="text-[8px] text-muted-foreground uppercase tracking-wider mb-0.5">Spend</div>
+                      <div className="font-display text-[13px] font-bold text-foreground/60">{cs.spend}</div>
                     </div>
-                    <div className="p-2.5 rounded-xl text-center border border-ln-green/20" style={{ background: "hsl(var(--ln-green) / 0.08)" }}>
-                      <div className="text-[9px] text-ln-green uppercase tracking-wider font-semibold mb-0.5">Savings ({cs.pct})</div>
-                      <div className="font-display text-[20px] font-extrabold text-ln-green leading-none">{cs.saving}</div>
+                    <div className="p-2 rounded-xl text-center relative overflow-hidden" style={{ background: "hsl(var(--ln-green) / 0.08)", border: '1px solid hsl(var(--ln-green) / 0.2)', boxShadow: '0 0 15px hsl(var(--ln-green) / 0.06)' }}>
+                      <div className="text-[8px] uppercase tracking-wider font-bold mb-0.5" style={{ color: 'hsl(var(--ln-green))' }}>Savings Achieved ({cs.pct})</div>
+                      <div className="font-display text-[22px] font-extrabold leading-none" style={{ color: 'hsl(var(--ln-green))' }}>{cs.saving}</div>
                     </div>
                   </div>
-                  {cs.extra && (
-                    <div className="text-[10px] text-muted-foreground mt-auto flex items-center gap-1">
-                      <span className="text-[10px]">📊</span> {cs.extra}
-                    </div>
-                  )}
+                  {/* Timeline + Extra */}
+                  <div className="mt-auto flex items-center justify-between gap-2">
+                    <span className="text-[9px] font-bold tracking-[0.06em] uppercase px-2 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-purple))', background: 'hsl(var(--ln-purple) / 0.06)', border: '1px solid hsl(var(--ln-purple) / 0.12)' }}>⏱ {cs.timeline}</span>
+                    {cs.extra && (
+                      <span className="text-[9px] text-muted-foreground/50 truncate">📊 {cs.extra}</span>
+                    )}
+                  </div>
                 </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          {/* Aggregation Proof + CTA */}
+          <ScrollReveal direction="up" delay={0.1}>
+            <div className="mt-6 text-center">
+              <p className="text-[12px] text-muted-foreground/60 italic mb-4">
+                Across industries, LogisticsNow consistently delivers 4–20% savings through AI-driven optimization.
+              </p>
+              <div className="flex items-center justify-center gap-3 flex-wrap">
+                <Link to="/contact" className="btn-primary-ln no-underline !px-7 !py-2.5 !text-[13px]">
+                  See How Much You Can Save →
+                </Link>
+                <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[13px]">
+                  View Detailed Case Studies
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
