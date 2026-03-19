@@ -6,12 +6,12 @@ export const CLIENTS = [
 ];
 
 export const CASES = [
-  { tag: '🇪🇺 Europe', client: 'Leading European Tyre Manufacturer', spend: '€18Mn+', saving: '€4Mn+', pct: '20%+', extra: '100+ carriers' },
-  { tag: '🇮🇳 India', client: 'Top Indian Tyre Manufacturer', spend: '$38Mn', saving: '$2.6Mn', pct: '7%+', extra: '920 MT GHG reduced · 26K+ dispatches' },
-  { tag: '🇦🇺 Australia', client: 'Fortune 500 Industrial Company (Australia)', spend: 'AUD 25Mn', saving: 'AUD 911K', pct: '~4%', extra: '' },
-  { tag: '🌏 FMCG', client: 'Indian FMCG (10yr)', spend: '$70Mn', saving: '$3Mn', pct: '4.3%+', extra: '50+ carriers · 30K+ dispatches' },
-  { tag: '🍭 FMCG', client: 'Indian FMCG Company', spend: '$26Mn', saving: '$0.6Mn', pct: '~2.5%', extra: '438 MT GHG · 85 e-auctions in <3 days' },
-  { tag: '📺 Electronics', client: 'Indian Electronics Company', spend: '$3Mn', saving: '$0.24Mn', pct: '8%', extra: '26 MT GHG · 2.5K+ dispatches' },
+  { tag: '🇪🇺 Europe', industry: 'Automotive', client: 'Leading European Tyre Manufacturer', story: 'Optimized carrier selection and pricing across 100+ lanes using AI-driven auctions', spend: '€18Mn+', saving: '€4Mn+', pct: '20%+', extra: '100+ carriers', timeline: '10 weeks' },
+  { tag: '🇮🇳 India', industry: 'Automotive', client: 'Top Indian Tyre Manufacturer', story: 'Reduced procurement inefficiencies using AI-driven reverse auctions and route optimization', spend: '$38Mn', saving: '$2.6Mn', pct: '7%+', extra: '920 MT GHG reduced · 26K+ dispatches', timeline: '12 weeks' },
+  { tag: '🇦🇺 Australia', industry: 'Industrial', client: 'Fortune 500 Industrial Company (Australia)', story: 'Consolidated fragmented carrier network with AI-powered benchmarking and negotiation', spend: 'AUD 25Mn', saving: 'AUD 911K', pct: '~4%', extra: '', timeline: '8 weeks' },
+  { tag: '🌏 FMCG', industry: 'FMCG', client: 'Indian FMCG (10yr)', story: 'Transformed decade-long procurement with AI agents managing 50+ carrier relationships', spend: '$70Mn', saving: '$3Mn', pct: '4.3%+', extra: '50+ carriers · 30K+ dispatches', timeline: '12 weeks' },
+  { tag: '🍭 FMCG', industry: 'FMCG', client: 'Indian FMCG Company', story: 'Ran 85 AI-powered e-auctions in under 3 days, replacing manual negotiation cycles', spend: '$26Mn', saving: '$0.6Mn', pct: '~2.5%', extra: '438 MT GHG · 85 e-auctions in <3 days', timeline: '8 weeks' },
+  { tag: '📺 Electronics', industry: 'Electronics', client: 'Indian Electronics Company', story: 'Automated carrier mapping and rate benchmarking across regional distribution network', spend: '$3Mn', saving: '$0.24Mn', pct: '8%', extra: '26 MT GHG · 2.5K+ dispatches', timeline: '6 weeks' },
 ];
 
 export const TESTIMONIALS = [
