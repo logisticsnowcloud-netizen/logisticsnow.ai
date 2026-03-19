@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Mail, Phone, Globe, ArrowUpRight, MapPin } from "lucide-react";
+import { Linkedin, Facebook, Instagram, Youtube, Mail, Phone, Globe, ArrowUpRight, MapPin } from "lucide-react";
 
 const Footer = () => (
   <footer className="relative overflow-hidden">
@@ -29,19 +29,27 @@ const Footer = () => (
             </p>
             <div className="flex items-center gap-2">
               <span className="text-[10px] uppercase tracking-wider font-semibold" style={{ color: 'rgba(255,255,255,.4)' }}>Follow us</span>
-              <a
-                href="https://www.linkedin.com/company/logisticsnow/?originalSubdomain=in"
-                target="_blank"
-                aria-label="LinkedIn"
-                className="w-8 h-8 rounded-md flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
-                style={{
-                  background: 'rgba(255,255,255,.06)',
-                  border: '1px solid rgba(255,255,255,.1)',
-                  color: 'rgba(255,255,255,.6)',
-                }}
-              >
-                <Linkedin size={14} />
-              </a>
+              {[
+                { icon: <Linkedin size={14} />, label: "LinkedIn", to: "https://www.linkedin.com/company/logisticsnow/?originalSubdomain=in" },
+                { icon: <Facebook size={14} />, label: "Facebook", to: "https://www.facebook.com/logisticsnow/" },
+                { icon: <Instagram size={14} />, label: "Instagram", to: "https://www.instagram.com/logisticsnowln/?hl=en" },
+                { icon: <Youtube size={14} />, label: "Youtube", to: "https://www.youtube.com/@logisticsnowpvtltd1252" },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href={s.to}
+                  target="_blank"
+                  aria-label={s.label}
+                  className="w-8 h-8 rounded-md flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  style={{
+                    background: 'rgba(255,255,255,.06)',
+                    border: '1px solid rgba(255,255,255,.1)',
+                    color: 'rgba(255,255,255,.6)',
+                  }}
+                >
+                  {s.icon}
+                </a>
+              ))}
             </div>
           </div>
 
