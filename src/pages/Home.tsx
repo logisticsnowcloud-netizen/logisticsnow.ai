@@ -20,6 +20,7 @@ import {
   GitBranch,
   FileSignature,
   Cog,
+  ChevronRight,
 } from "lucide-react";
 
 const STATS = [
