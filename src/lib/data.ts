@@ -75,10 +75,10 @@ export const VAL_DRIVERS = [
 ];
 
 export const METHODOLOGY_STEPS = [
-  { num: '01', title: 'Build Your Data Foundation', desc: 'Consolidate carrier, lane, and pricing data into a unified intelligence layer.' },
-  { num: '02', title: 'Identify Optimization Opportunities', desc: 'Analyze procurement workflows to uncover cost-saving and efficiency opportunities.' },
-  { num: '03', title: 'Execute AI-Driven Procurement', desc: 'Run AI-powered sourcing, auctions, and negotiations to secure optimal rates.' },
-  { num: '04', title: 'Integrate and Operationalize', desc: 'Seamlessly integrate optimized contracts into your TMS or ERP systems.' },
-  { num: '05', title: 'Automate and Scale Decisions', desc: 'Deploy automation to continuously improve procurement efficiency and ROI.' },
-  { num: '06', title: 'Continuously Optimize with AI', desc: 'Use AI agents to monitor performance, benchmark rates, and drive ongoing savings.' },
+  { num: '01', title: 'Build Your Data Foundation', desc: 'Consolidate carrier, lane, and pricing data into a unified intelligence layer for better decision-making.' },
+  { num: '02', title: 'Identify Optimization Opportunities', desc: 'Analyze procurement workflows to uncover cost-saving and efficiency opportunities across your network.' },
+  { num: '03', title: 'Execute AI-Driven Procurement', desc: 'Run AI-powered sourcing, auctions, and negotiations to secure optimal rates and carrier terms.' },
+  { num: '04', title: 'Integrate and Operationalize', desc: 'Seamlessly integrate optimized contracts into your TMS or ERP systems for immediate impact.' },
+  { num: '05', title: 'Automate and Scale Decisions', desc: 'Deploy AI-driven automation to continuously improve procurement efficiency and ROI.' },
+  { num: '06', title: 'Continuously Optimize with AI', desc: 'Use AI agents to monitor performance, benchmark rates, and drive ongoing savings across your network.' },
 ];
