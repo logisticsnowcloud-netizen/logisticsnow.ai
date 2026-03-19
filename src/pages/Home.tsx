@@ -456,32 +456,35 @@ const Home = () => {
               </div>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {VISION_CARDS.map((c) => {
               const Icon = c.icon;
               return (
                 <StaggerItem key={c.title}>
                   <div
-                    className="group relative rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-default"
+                    className={`group relative rounded-2xl transition-all duration-300 hover:-translate-y-1 cursor-default ${c.featured ? 'p-6 lg:row-span-1' : 'p-5'}`}
                     style={{
-                      background: "hsl(var(--card))",
-                      border: "1px solid hsl(var(--border))",
-                      boxShadow: "0 2px 12px hsl(var(--ln-purple) / 0.05)",
+                      background: c.featured ? "hsl(var(--ln-purple) / 0.06)" : "hsl(var(--card))",
+                      border: c.featured ? "1.5px solid hsl(var(--ln-purple) / 0.2)" : "1px solid hsl(var(--border))",
+                      boxShadow: c.featured ? "0 4px 20px hsl(var(--ln-purple) / 0.1)" : "0 2px 12px hsl(var(--ln-purple) / 0.05)",
                     }}
                   >
                     <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center mb-3"
-                      style={{ background: "hsl(var(--ln-green) / 0.1)" }}
+                      className={`rounded-xl flex items-center justify-center mb-2.5 ${c.featured ? 'w-11 h-11' : 'w-9 h-9'}`}
+                      style={{ background: c.featured ? "hsl(var(--ln-purple) / 0.12)" : "hsl(var(--ln-green) / 0.1)" }}
                     >
-                      <Icon size={20} strokeWidth={1.8} style={{ color: "hsl(var(--ln-green))" }} />
+                      <Icon size={c.featured ? 22 : 18} strokeWidth={1.8} style={{ color: c.featured ? "hsl(var(--ln-purple))" : "hsl(var(--ln-green))" }} />
                     </div>
-                    <div className="font-display text-[14.5px] font-bold mb-1.5">{c.title}</div>
-                    <div className="text-[12px] leading-[1.6]" style={{ color: "hsl(60,0%,38%)" }}>{c.desc}</div>
+                    <div className={`font-display font-bold mb-1 ${c.featured ? 'text-[15px]' : 'text-[13.5px]'}`}>{c.title}</div>
+                    <div className={`leading-[1.6] ${c.featured ? 'text-[12.5px]' : 'text-[11.5px]'}`} style={{ color: "hsl(60,0%,38%)" }}>{c.desc}</div>
                   </div>
                 </StaggerItem>
               );
             })}
           </StaggerContainer>
+          <p className="text-center text-[11.5px] mt-3 italic" style={{ color: "hsl(60,0%,45%)" }}>
+            Powered by continuous learning across logistics data, enabling smarter decisions with every shipment.
+          </p>
         </div>
       </section>
 
