@@ -75,10 +75,10 @@ export const VAL_DRIVERS = [
 ];
 
 export const METHODOLOGY_STEPS = [
-  { num: '01', title: 'Master Data Creation', desc: 'Organize carrier, lane and rate data into a unified intelligence layer.' },
-  { num: '02', title: 'Procurement Process Mapping', desc: 'Map existing freight procurement workflows and identify cost optimization opportunities.' },
-  { num: '03', title: 'Managed Procurement Execution', desc: 'Execute AI-powered freight auctions and carrier negotiations to secure optimal rates.' },
-  { num: '04', title: 'Contract Closure & Integration', desc: 'Finalize carrier contracts and integrate negotiated rates into your ERP or TMS.' },
-  { num: '05', title: 'Automation Prioritisation', desc: 'Prioritize automation opportunities based on measurable ROI and operational impact.' },
-  { num: '06', title: 'AI Agent Deployment', desc: 'Deploy LoRRI AI agents to continuously monitor, benchmark and optimize freight rates.' },
+  { num: '01', title: 'Build Your Data Foundation', desc: 'Consolidate carrier, lane, and pricing data into a unified intelligence layer.' },
+  { num: '02', title: 'Identify Optimization Opportunities', desc: 'Analyze procurement workflows to uncover cost-saving and efficiency opportunities.' },
+  { num: '03', title: 'Execute AI-Driven Procurement', desc: 'Run AI-powered sourcing, auctions, and negotiations to secure optimal rates.' },
+  { num: '04', title: 'Integrate and Operationalize', desc: 'Seamlessly integrate optimized contracts into your TMS or ERP systems.' },
+  { num: '05', title: 'Automate and Scale Decisions', desc: 'Deploy automation to continuously improve procurement efficiency and ROI.' },
+  { num: '06', title: 'Continuously Optimize with AI', desc: 'Use AI agents to monitor performance, benchmark rates, and drive ongoing savings.' },
 ];

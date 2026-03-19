@@ -719,61 +719,77 @@ const Home = () => {
         </div>
       </section>
 
-      {/* METHODOLOGY */}
-      <section className="px-[5vw] py-16 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)", paddingTop: '1%' }}>
+      {/* 90-DAY OPTIMIZATION JOURNEY */}
+      <section className="px-[5vw] py-14 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--ln-purple)) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
         <div className="max-w-[1280px] mx-auto relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 items-end">
+          {/* Header */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-end">
             <ScrollReveal>
-              <div className="section-tag !mb-1">6-Step Methodology</div>
+              <div className="text-[10px] font-bold tracking-[0.12em] uppercase mb-1.5 text-muted-foreground">Designed for enterprise procurement & logistics teams</div>
               <h2 className="font-display font-extrabold leading-[1.05] tracking-[-0.028em] text-[clamp(22px,3vw,36px)]">
-                From Data to <span className="text-ln-green">Savings</span> in 90 Days
+                From Data to <span className="text-ln-green">Savings</span> — Powered by AI
               </h2>
+              <div className="flex items-center gap-2 mt-2">
+                <span className="text-[20px] font-display font-extrabold text-ln-purple">$21M+</span>
+                <span className="text-[12px] text-muted-foreground">savings delivered across 120+ enterprises</span>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <div>
                 <p className="text-muted-foreground text-[13px] leading-[1.6] mb-4">
-                  {/* A proven logistics transformation methodology that has delivered over $21M in savings for enterprise supply chains. */}
-                  A proven freight procurement transformation framework that has delivered <strong>$21Mn+ in savings across 120+ global enterprises.</strong>
+                  Powered by AI agents and network intelligence, LogisticsNow transforms your procurement operations in weeks — not months.
                 </p>
-                <div className="flex gap-3">
-                  <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
-                    Talk to a Procurement Expert →
+                <div className="flex flex-col gap-1.5">
+                  <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px] w-fit">
+                    Get Your 90-Day Optimization Plan →
                   </Link>
+                  <span className="text-[10.5px] text-muted-foreground/60 italic">See how much you can save in the first 90 days</span>
                 </div>
               </div>
             </ScrollReveal>
           </div>
 
-          {/* Progress bar */}
-          {/* <div className="hidden lg:flex items-center justify-between mb-6 px-4">
-            {[1,2,3,4,5,6].map((n, i) => (
-              <div key={n} className="flex items-center flex-1 last:flex-none">
-                <div className="w-7 h-7 rounded-full flex items-center justify-center font-mono text-[11px] font-bold text-white" style={{ background: "hsl(var(--ln-purple))" }}>
-                  {String(n).padStart(2, '0')}
-                </div>
-                {i < 5 && (
-                  <div className="flex-1 h-[2px] mx-2" style={{ background: "linear-gradient(90deg, hsl(var(--ln-purple) / 0.3), hsl(var(--ln-purple) / 0.08))" }} />
-                )}
-              </div>
-            ))}
-          </div> */}
+          {/* Visual Flow Bar */}
+          <ScrollReveal direction="up" delay={0.08}>
+            <div className="hidden lg:flex items-center justify-between mb-6 px-2">
+              {(['Data', 'Insights', 'Execution', 'Integration', 'Automation', 'Optimization'] as const).map((label, i) => {
+                const colors = ['hsl(var(--ln-blue))', 'hsl(var(--ln-green))', 'hsl(var(--ln-orange))', 'hsl(var(--ln-purple))', 'hsl(var(--ln-green))', 'hsl(var(--ln-purple))'];
+                return (
+                  <div key={label} className="flex items-center flex-1 last:flex-none">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-7 h-7 rounded-full flex items-center justify-center font-mono text-[10px] font-bold text-white" style={{ background: colors[i] }}>
+                        {String(i + 1).padStart(2, '0')}
+                      </div>
+                      <span className="text-[9px] font-bold tracking-[0.06em] uppercase" style={{ color: colors[i] }}>{label}</span>
+                    </div>
+                    {i < 5 && (
+                      <div className="flex-1 h-[2px] mx-2 mt-[-12px]" style={{ background: `linear-gradient(90deg, ${colors[i]}, ${colors[i + 1]})`, opacity: 0.25 }} />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollReveal>
 
+          {/* Step Cards */}
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {(METHODOLOGY_STEPS as Array<{num: string; title: string; desc: string}>).map((s, i) => {
               const icons = [Database, GitBranch, Handshake, FileSignature, Cog, Bot];
+              const colorKeys = ['--ln-blue', '--ln-green', '--ln-orange', '--ln-purple', '--ln-green', '--ln-purple'];
               const StepIcon = icons[i];
+              const color = colorKeys[i];
               return (
                 <StaggerItem key={s.num}>
-                  <div className="card-hover !p-6 !rounded-2xl relative overflow-hidden h-full">
-                    <div className="absolute right-3 top-2 font-mono text-[42px] font-bold text-ln-purple opacity-[0.12] leading-none">
+                  <div className="card-hover !p-5 !rounded-2xl relative overflow-hidden h-full group transition-all duration-300 hover:scale-[1.02]" style={{ borderLeft: `3px solid hsl(var(${color}) / 0.3)` }}>
+                    <div className="absolute right-3 top-2 font-mono text-[38px] font-bold opacity-[0.08] leading-none" style={{ color: `hsl(var(${color}))` }}>
                       {s.num}
                     </div>
-                    <div className="w-9 h-9 rounded-xl flex items-center justify-center mb-3" style={{ background: "hsl(var(--ln-purple) / 0.1)" }}>
-                      <StepIcon size={18} className="text-ln-purple" strokeWidth={2} />
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-2.5" style={{ background: `hsl(var(${color}) / 0.1)` }}>
+                      <StepIcon size={16} style={{ color: `hsl(var(${color}))` }} strokeWidth={2} />
                     </div>
-                    <div className="font-display text-[14.5px] font-bold mb-1.5">{s.title}</div>
-                    <div className="text-[12px] text-muted-foreground leading-[1.6]">{s.desc}</div>
+                    <div className="font-display text-[14px] font-bold mb-1">{s.title}</div>
+                    <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{s.desc}</div>
                   </div>
                 </StaggerItem>
               );
