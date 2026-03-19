@@ -33,25 +33,25 @@ const VISION_CARDS = [
   {
     icon: Bot,
     title: "AI-Driven Decision Intelligence",
-    desc: "Optimize procurement, routing, and pricing using real-time data and machine learning.",
+    desc: "Make faster, smarter logistics decisions using real-time data, predictive models, and continuous learning.",
     featured: true,
   },
   {
     icon: DollarSign,
     title: "Cost Optimization at Scale",
-    desc: "Reduce freight costs through dynamic pricing, benchmarking, and network optimization.",
+    desc: "Reduce freight costs through dynamic pricing, benchmarking, and network-level optimization.",
     featured: false,
   },
   {
     icon: Map,
     title: "End-to-End Visibility",
-    desc: "Gain real-time insights across shipments, routes, and carrier performance.",
+    desc: "Gain real-time visibility across shipments, routes, and carrier performance with predictive insights.",
     featured: false,
   },
   {
     icon: Network,
     title: "Network Collaboration Platform",
-    desc: "Seamlessly connect shippers, carriers, and partners across a unified logistics network.",
+    desc: "Connect shippers, carriers, and partners in a unified, data-driven logistics network globally.",
     featured: false,
   },
 ];
@@ -483,7 +483,8 @@ const Home = () => {
             })}
           </StaggerContainer>
           <p className="text-center text-[11.5px] mt-3 italic" style={{ color: "hsl(60,0%,45%)" }}>
-            Powered by continuous learning across logistics data, enabling smarter decisions with every shipment.
+            {/* Powered by continuous learning across logistics data, enabling smarter decisions with every shipment. <br/>  */}
+            Designed to be unbiased across shippers and carriers, enabling transparent and efficient decision-making
           </p>
         </div>
       </section>
