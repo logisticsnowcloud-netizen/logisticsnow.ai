@@ -489,12 +489,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* AI SUITE */}
+      {/* AI AGENT NETWORK */}
       <section className="px-[5vw] pt-10 pb-6 bg-background">
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6 items-start">
+          {/* Header */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5 items-start">
             <ScrollReveal direction="up" delay={0.05}>
-              <div className="section-tag !mb-0.5">AI Suite</div>
+              <div className="section-tag !mb-0.5">AI Agent Network</div>
               <h2 className="font-display font-extrabold leading-[1.05] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)] mt-1">
                 Not AI as a Feature.
                 <br />
@@ -503,85 +504,148 @@ const Home = () => {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
               <p className="text-muted-foreground text-[13px] leading-[1.5] md:pt-5">
-                {/* Nine proprietary AI agents and engines built ground-up for Indian logistics — each solving a critical
-                industry problem at national scale. */}
-                A suite of proprietary AI agents built to optimize procurement, routing, pricing, and execution across complex logistics networks.
+                A coordinated system of AI agents working together to optimize procurement, routing, pricing, and execution across logistics networks.
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
-            {[
-              {
-                tag: "PROCUREMENT",
-                tagColor: "hsl(var(--ln-green))",
-                icon: Network,
-                name: "Carrier Selection Agent",
-                // desc: "Evaluates carriers, scores performance per lane, normalizes bids, and recommends optimal award strategies.",
-                desc: "Analyzes carrier performance across lanes, normalizes bids, and recommends optimal carrier allocation strategies.",
-              },
-              {
-                tag: "DOCUMENT AI",
-                tagColor: "hsl(var(--ln-blue))",
-                icon: FileText,
-                name: "Document Intelligence Agent",
-                // desc: "Extracts data via OCR, auto-matches LR-POD-Invoice documents, and detects discrepancies instantly.",
-                desc: "Extracts and reconciles data across logistics documents using OCR and AI validation to automatically detect discrepancies.",
-              },
-              {
-                tag: "NEGOTIATION",
-                tagColor: "hsl(var(--ln-orange))",
-                icon: Handshake,
-                name: "Autonomous Negotiation Agent",
-                // desc: "Negotiates with multiple LSPs in parallel, generates counter-offers, and optimizes procurement costs.",
-                desc: "Conducts parallel negotiations with multiple logistics service providers, generating counter-offers to optimize procurement costs.",
-              },
-              {
-                tag: "ROUTING",
-                tagColor: "hsl(var(--ln-purple))",
-                icon: Route,
-                name: "Route Optimization Agent",
-                // desc: "Plans routes by distance, time, cost, and delivery windows — with dynamic re-routing capabilities.",
-                desc: "Optimizes routes across distance, time, cost, and delivery windows, with dynamic re-routing based on real-time conditions.",
-              },
-              {
-                tag: "CONSOLIDATION",
-                tagColor: "hsl(var(--ln-green))",
-                icon: Container,
-                name: "Load Consolidation Agent",
-                // desc: "Maximizes vehicle utilization, minimizes empty miles, and simulates consolidation scenarios at scale.",
-                desc: "Optimizes load building to maximize vehicle utilization and reduce empty miles across the network.",
-              },
-              {
-                tag: "ESG",
-                tagColor: "hsl(var(--ln-blue))",
-                icon: Leaf,
-                name: "Carbon Intelligence Agent",
-                // desc: "Tracks shipment-level carbon emissions, identifies reduction opportunities, and powers ESG analytics.",
-                desc: "Tracks shipment-level emissions and identifies carbon reduction opportunities across the logistics network.",
-              },
-            ].map((ai) => (
-              <StaggerItem key={ai.name}>
-                <div className="card-hover !p-3.5 !rounded-2xl h-full flex flex-col">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div
-                      className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-                      style={{ background: `${ai.tagColor}15` }}
-                    >
-                      <ai.icon size={15} style={{ color: ai.tagColor }} strokeWidth={2} />
-                    </div>
-                    <span
-                      className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full"
-                      style={{ color: ai.tagColor, background: `${ai.tagColor}12`, border: `1px solid ${ai.tagColor}30` }}
-                    >
-                      {ai.tag}
-                    </span>
+
+          {/* Orchestration Flow */}
+          <ScrollReveal direction="up" delay={0.1}>
+            <div className="flex items-center justify-center gap-0 mb-5 py-2.5 px-4 rounded-xl" style={{ background: 'hsl(var(--ln-purple) / 0.04)', border: '1px solid hsl(var(--ln-purple) / 0.08)' }}>
+              {['Procurement', 'Routing', 'Execution', 'Feedback', 'Optimization'].map((step, i) => (
+                <div key={step} className="flex items-center">
+                  <div className="flex flex-col items-center">
+                    <span className="text-[10px] font-bold tracking-[0.08em] uppercase" style={{ color: i === 0 ? 'hsl(var(--ln-green))' : i === 1 ? 'hsl(var(--ln-purple))' : i === 2 ? 'hsl(var(--ln-orange))' : i === 3 ? 'hsl(var(--ln-blue))' : 'hsl(var(--ln-green))' }}>{step}</span>
                   </div>
-                  <div className="font-display text-[13.5px] font-bold mb-1">{ai.name}</div>
-                  <div className="text-[11px] text-muted-foreground leading-[1.5] line-clamp-2">{ai.desc}</div>
+                  {i < 4 && (
+                    <ChevronRight size={14} className="mx-2 text-muted-foreground/40" />
+                  )}
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          {/* Agent Categories */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Procurement Intelligence */}
+            <ScrollReveal direction="up" delay={0.1}>
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-1.5 h-5 rounded-full" style={{ background: 'hsl(var(--ln-green))' }} />
+                  <span className="text-[11px] font-bold tracking-[0.08em] uppercase text-muted-foreground">Procurement Intelligence</span>
+                </div>
+                {/* Hero Agent: Negotiation */}
+                <div
+                  className="card-hover !p-4 !rounded-2xl flex flex-col relative overflow-hidden group transition-all duration-300 hover:scale-[1.02]"
+                  style={{ border: '1.5px solid hsl(var(--ln-orange) / 0.2)', background: 'hsl(var(--ln-orange) / 0.03)' }}
+                >
+                  <div className="absolute top-2 right-2">
+                    <span className="text-[8px] font-bold tracking-[0.1em] uppercase px-1.5 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-orange))', background: 'hsl(var(--ln-orange) / 0.1)', border: '1px solid hsl(var(--ln-orange) / 0.2)' }}>🔥 Core</span>
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'hsl(var(--ln-orange) / 0.12)' }}>
+                      <Handshake size={17} style={{ color: 'hsl(var(--ln-orange))' }} strokeWidth={2} />
+                    </div>
+                    <span className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-orange))', background: 'hsl(var(--ln-orange) / 0.08)', border: '1px solid hsl(var(--ln-orange) / 0.2)' }}>NEGOTIATION</span>
+                  </div>
+                  <div className="font-display text-[14px] font-bold mb-1">Autonomous Negotiation Agent</div>
+                  <div className="text-[11px] text-muted-foreground leading-[1.55]">Automatically negotiate with multiple carriers to secure optimal pricing and terms.</div>
+                  <div className="text-[9.5px] text-muted-foreground/60 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Used in: Procurement · RFX · Auctions</div>
+                </div>
+                {/* Carrier Selection */}
+                <div className="card-hover !p-3.5 !rounded-2xl flex flex-col group transition-all duration-300 hover:scale-[1.02]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'hsl(var(--ln-green) / 0.12)' }}>
+                      <Network size={15} style={{ color: 'hsl(var(--ln-green))' }} strokeWidth={2} />
+                    </div>
+                    <span className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-green))', background: 'hsl(var(--ln-green) / 0.08)', border: '1px solid hsl(var(--ln-green) / 0.2)' }}>PROCUREMENT</span>
+                  </div>
+                  <div className="font-display text-[13.5px] font-bold mb-1">Carrier Selection Agent</div>
+                  <div className="text-[11px] text-muted-foreground leading-[1.5] line-clamp-2">Identify the best carriers using performance data, pricing benchmarks, and network intelligence.</div>
+                  <div className="text-[9.5px] text-muted-foreground/60 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Used in: Procurement · Carrier Mapping</div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Execution Intelligence */}
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-1.5 h-5 rounded-full" style={{ background: 'hsl(var(--ln-purple))' }} />
+                  <span className="text-[11px] font-bold tracking-[0.08em] uppercase text-muted-foreground">Execution Intelligence</span>
+                </div>
+                {/* Hero Agent: Route Optimization */}
+                <div
+                  className="card-hover !p-4 !rounded-2xl flex flex-col relative overflow-hidden group transition-all duration-300 hover:scale-[1.02]"
+                  style={{ border: '1.5px solid hsl(var(--ln-purple) / 0.2)', background: 'hsl(var(--ln-purple) / 0.03)' }}
+                >
+                  <div className="absolute top-2 right-2">
+                    <span className="text-[8px] font-bold tracking-[0.1em] uppercase px-1.5 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-purple))', background: 'hsl(var(--ln-purple) / 0.1)', border: '1px solid hsl(var(--ln-purple) / 0.2)' }}>🔥 Core</span>
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'hsl(var(--ln-purple) / 0.12)' }}>
+                      <Route size={17} style={{ color: 'hsl(var(--ln-purple))' }} strokeWidth={2} />
+                    </div>
+                    <span className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-purple))', background: 'hsl(var(--ln-purple) / 0.08)', border: '1px solid hsl(var(--ln-purple) / 0.2)' }}>ROUTING</span>
+                  </div>
+                  <div className="font-display text-[14px] font-bold mb-1">Route Optimization Agent</div>
+                  <div className="text-[11px] text-muted-foreground leading-[1.55]">Continuously optimize routes based on cost, time, and real-time network conditions.</div>
+                  <div className="text-[9.5px] text-muted-foreground/60 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Used in: TMS · Planning · Tracking</div>
+                </div>
+                {/* Load Consolidation */}
+                <div className="card-hover !p-3.5 !rounded-2xl flex flex-col group transition-all duration-300 hover:scale-[1.02]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'hsl(var(--ln-green) / 0.12)' }}>
+                      <Container size={15} style={{ color: 'hsl(var(--ln-green))' }} strokeWidth={2} />
+                    </div>
+                    <span className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-green))', background: 'hsl(var(--ln-green) / 0.08)', border: '1px solid hsl(var(--ln-green) / 0.2)' }}>CONSOLIDATION</span>
+                  </div>
+                  <div className="font-display text-[13.5px] font-bold mb-1">Load Consolidation Agent</div>
+                  <div className="text-[11px] text-muted-foreground leading-[1.5] line-clamp-2">Maximize vehicle utilization and reduce empty miles across your network.</div>
+                  <div className="text-[9.5px] text-muted-foreground/60 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Used in: Planning · Load Building</div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Intelligence & Automation */}
+            <ScrollReveal direction="up" delay={0.3}>
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-1.5 h-5 rounded-full" style={{ background: 'hsl(var(--ln-blue))' }} />
+                  <span className="text-[11px] font-bold tracking-[0.08em] uppercase text-muted-foreground">Intelligence & Automation</span>
+                </div>
+                {/* Document Intelligence */}
+                <div className="card-hover !p-3.5 !rounded-2xl flex flex-col group transition-all duration-300 hover:scale-[1.02]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'hsl(var(--ln-blue) / 0.12)' }}>
+                      <FileText size={15} style={{ color: 'hsl(var(--ln-blue))' }} strokeWidth={2} />
+                    </div>
+                    <span className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-blue))', background: 'hsl(var(--ln-blue) / 0.08)', border: '1px solid hsl(var(--ln-blue) / 0.2)' }}>DOCUMENT AI</span>
+                  </div>
+                  <div className="font-display text-[13.5px] font-bold mb-1">Document Intelligence Agent</div>
+                  <div className="text-[11px] text-muted-foreground leading-[1.5] line-clamp-2">Automate document processing, validation, and reconciliation across logistics workflows.</div>
+                  <div className="text-[9.5px] text-muted-foreground/60 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Used in: Invoicing · POD · Reconciliation</div>
+                </div>
+                {/* Carbon Intelligence */}
+                <div className="card-hover !p-3.5 !rounded-2xl flex flex-col group transition-all duration-300 hover:scale-[1.02]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'hsl(var(--ln-blue) / 0.12)' }}>
+                      <Leaf size={15} style={{ color: 'hsl(var(--ln-blue))' }} strokeWidth={2} />
+                    </div>
+                    <span className="inline-block text-[9px] font-bold tracking-[0.1em] uppercase px-2 py-0.5 rounded-full" style={{ color: 'hsl(var(--ln-blue))', background: 'hsl(var(--ln-blue) / 0.08)', border: '1px solid hsl(var(--ln-blue) / 0.2)' }}>ESG</span>
+                  </div>
+                  <div className="font-display text-[13.5px] font-bold mb-1">Carbon Intelligence Agent</div>
+                  <div className="text-[11px] text-muted-foreground leading-[1.5] line-clamp-2">Track emissions and identify opportunities to reduce carbon impact across shipments.</div>
+                  <div className="text-[9.5px] text-muted-foreground/60 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Used in: ESG Reporting · Analytics</div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          {/* AI Credibility Line */}
+          <p className="text-center text-[11.5px] mt-4 italic" style={{ color: "hsl(60,0%,45%)" }}>
+            Continuously learning from logistics data to improve decisions across every shipment and transaction.
+          </p>
         </div>
       </section>
 
