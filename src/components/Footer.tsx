@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Mail, Phone, Globe, ArrowUpRight, MapPin } from "lucide-react";
+import { Linkedin, Facebook, Instagram, Youtube, Mail, Phone, Globe, ArrowUpRight, MapPin } from "lucide-react";
 
 const Footer = () => (
   <footer className="relative overflow-hidden">
