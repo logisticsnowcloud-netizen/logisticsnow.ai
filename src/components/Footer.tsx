@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Youtube, MapPin, Mail, Phone, Globe, ArrowUpRight, Facebook, Instagram } from "lucide-react";
+import { Linkedin, Mail, Phone, Globe, ArrowUpRight, MapPin } from "lucide-react";
 
 const Footer = () => (
   <footer className="relative overflow-hidden">
@@ -7,7 +7,6 @@ const Footer = () => (
     <div className="h-1 w-full bg-gradient-to-r from-ln-blue via-ln-green to-ln-purple" />
 
     <div className="py-5 px-[5vw]" style={{ background: 'linear-gradient(180deg, #1a1a2e 0%, #16162a 100%)', color: 'rgba(255,255,255,.75)' }}>
-      {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: "radial-gradient(circle at 15% 85%, hsl(var(--ln-blue)) 0%, transparent 40%), radial-gradient(circle at 85% 15%, hsl(var(--ln-green)) 0%, transparent 40%)"
       }} />
@@ -16,40 +15,39 @@ const Footer = () => (
         <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-5 mb-5">
           {/* Brand */}
           <div>
-            <div className="font-display text-xl font-extrabold mb-2" style={{ color: '' }}>
-              <span className="text-ln-white">LogisticsNow</span><span className="text-ln-green">.ai</span>
+            <div className="font-display text-xl font-extrabold mb-1.5">
+              <span>LogisticsNow</span><span className="text-ln-green">.ai</span>
             </div>
-            <p className="text-[11px] leading-[1.6] max-w-[260px] mb-3" style={{ color: 'rgba(255,255,255,.5)' }}>
-              India’s logistics intelligence platform helping enterprises build smarter, faster and more resilient supply chains using AI.
+            <p className="text-[10.5px] font-semibold tracking-wide uppercase mb-1.5" style={{ color: 'hsl(var(--ln-blue))' }}>
+              AI-powered procurement &amp; logistics optimization platform
             </p>
-            <div className="flex gap-2">
-              {[
-                { icon: <Linkedin size={14} />, label: "LinkedIn", to: "https://www.linkedin.com/company/logisticsnow/?originalSubdomain=in" },
-                { icon: <Facebook size={14} />, label: "Facebook", to: "https://www.facebook.com/logisticsnow/" },
-                { icon: <Instagram size={14} />, label: "Instagram", to: "https://www.instagram.com/logisticsnowln/?hl=en" },
-                { icon: <Youtube size={14} />, label: "Youtube", to: "https://www.youtube.com/@logisticsnowpvtltd1252" },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.to}
-                  target="_blank"
-                  aria-label={s.label}
-                  className="w-8 h-8 rounded-md flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
-                  style={{
-                    background: 'rgba(255,255,255,.06)',
-                    border: '1px solid rgba(255,255,255,.1)',
-                    color: 'rgba(255,255,255,.6)',
-                  }}
-                >
-                  {s.icon}
-                </a>
-              ))}
+            <p className="text-[11px] leading-[1.6] max-w-[280px] mb-3" style={{ color: 'rgba(255,255,255,.5)' }}>
+              A global logistics intelligence platform helping enterprises build smarter, faster, and more resilient supply chains using AI.
+            </p>
+            <p className="text-[10px] mb-3" style={{ color: 'rgba(255,255,255,.35)' }}>
+              Serving enterprises across US, Europe, Middle East &amp; APAC
+            </p>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] uppercase tracking-wider font-semibold" style={{ color: 'rgba(255,255,255,.4)' }}>Follow us</span>
+              <a
+                href="https://www.linkedin.com/company/logisticsnow/?originalSubdomain=in"
+                target="_blank"
+                aria-label="LinkedIn"
+                className="w-8 h-8 rounded-md flex items-center justify-center no-underline transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                style={{
+                  background: 'rgba(255,255,255,.06)',
+                  border: '1px solid rgba(255,255,255,.1)',
+                  color: 'rgba(255,255,255,.6)',
+                }}
+              >
+                <Linkedin size={14} />
+              </a>
             </div>
           </div>
 
           {/* Platform */}
           <div>
-            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Products/ Solutions</h5>
+            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase mb-3 text-ln-green">Products / Solutions</h5>
             {[
               { label: "LoRRI Platform for Shippers", to: "https://company.lorri.in" },
               { label: "LoRRI Platform for Carriers", to: "https://transporter.lorri.in" },
@@ -96,7 +94,7 @@ const Footer = () => (
               </a>
               <div className="flex items-start gap-2 text-[13px]" style={{ color: 'rgba(255,255,255,.45)' }}>
                 <MapPin size={13} className="text-ln-green flex-shrink-0 mt-0.5" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>Global Operations | India • Middle East • Europe</span>
               </div>
             </div>
           </div>
@@ -105,12 +103,12 @@ const Footer = () => (
         {/* Bottom bar */}
         <div className="border-t pt-4 flex justify-between items-center flex-wrap gap-3" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
           <p className="text-[13px]" style={{ color: 'rgba(255,255,255,.35)' }}>
-            © 2026 LogisticsNow Technologies Pvt. Ltd. All rights reserved. 
-            {/* | Developed with <span className="text-red-400">❤</span> in India */}
+            © 2026 LogisticsNow Technologies Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 font-mono text-[11.5px]" style={{ color: 'rgba(255,255,255,.35)' }}>
-            <div className="w-[7px] h-[7px] bg-ln-green rounded-full animate-pulse" style={{ boxShadow: '0 0 8px hsl(107 50% 46%)' }} />
-            {/* All systems operational */}
+          <div className="flex items-center gap-4 text-[12px]" style={{ color: 'rgba(255,255,255,.4)' }}>
+            <Link to="/privacy" className="no-underline hover:!text-white transition-colors" style={{ color: 'rgba(255,255,255,.4)' }}>Privacy Policy</Link>
+            <Link to="/terms" className="no-underline hover:!text-white transition-colors" style={{ color: 'rgba(255,255,255,.4)' }}>Terms of Service</Link>
+            <Link to="/security" className="no-underline hover:!text-white transition-colors" style={{ color: 'rgba(255,255,255,.4)' }}>Data Security</Link>
           </div>
         </div>
       </div>
