@@ -224,15 +224,18 @@ const Home = () => {
               }}
             >
               <span className="w-[6px] h-[6px] rounded-full inline-block" style={{ background: "#54AF3A" }} />
-              The AI Brain for Global Logistics
+              {/* The AI Brain for Global Logistics */}
+              AI-Powered Decision Intelligence for Logistics
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
             <h1 className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero transition-colors duration-500"
               style={{ color: isDarkHero ? "#fff" : undefined }}
             >
-               AI-Powered <span style={{ color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)" }}>Intelligence</span> for <br />
-               <span style={{ color: "#54AF3A" }}>Global Logistics & Procurement</span>
+               {/* AI-Powered <span style={{ color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)" }}>Intelligence</span> for <br />
+               <span style={{ color: "#54AF3A" }}>Global Logistics & Procurement</span> */}
+               The <span style={{ color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)" }}>Intelligence Layer</span> for <br />
+               <span style={{ color: "#54AF3A" }}>Modern Logistics Networks</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
@@ -243,7 +246,8 @@ const Home = () => {
                 color: isDarkHero ? "rgba(255,255,255,0.65)" : "hsl(60,0%,45%)",
               }}
             >
-              An AI decision and execution platform optimizing freight procurement, routing, and pricing across global logistics networks.
+              LogisticsNow connects shippers, carriers, and data across large-scale logistics networks using AI to optimize procurement, routing, and pricing in real time.
+              {/* An AI decision and execution platform optimizing freight procurement, routing, and pricing across global logistics networks. */}
 
               {/* AI-powered freight procurement, routing intelligence and supply chain visibility — trusted by 120+
               companies including 25+ Fortune 500s across 4 continents. */}
@@ -258,23 +262,23 @@ const Home = () => {
                     className="no-underline !px-7 !py-3 !text-[15px] rounded-full font-bold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
                     style={{ background: "linear-gradient(135deg, #6AA9FF, #4A8FE7)", color: "#fff", boxShadow: "0 4px 24px rgba(106,169,255,0.35)" }}
                   >
-                    🚛 Try AI Logistics Copilot →
+                    Explore the Platform →
                   </Link>
                   <Link
                     to="/about"
                     className="no-underline !px-6 !py-2.5 !text-[15px] rounded-full font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
                     style={{ background: "transparent", color: "rgba(255,255,255,0.85)", border: "2px solid rgba(255,255,255,0.25)" }}
                   >
-                    Learn About Us
+                    Book a Demo
                   </Link>
                 </>
               ) : (
                 <>
                   <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
-                    🚛 Try AI Logistics Copilot →
+                    Explore the Platform →
                   </Link>
                   <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[15px]">
-                    Learn About Us
+                    Book a Demo
                   </Link>
                 </>
               )}
