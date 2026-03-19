@@ -1,15 +1,32 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { CLIENTS, CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
+import { CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
-import { Bot, Coins, Leaf, Map, Zap, Users, DollarSign, User, Network, FileText, Handshake, Route, Container, Database, GitBranch, FileSignature, Cog, ChevronRight } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Bot,
+  Leaf,
+  Map,
+  Zap,
+  DollarSign,
+  User,
+  Network,
+  FileText,
+  Handshake,
+  Route,
+  Container,
+  Database,
+  GitBranch,
+  FileSignature,
+  Cog,
+} from "lucide-react";
 
 const STATS = [
-  { num: "$2.5Bn+", label: "Freight Spend Analyzed", color: "#393185" },
-  { num: "2300+", label: "Global Carriers Profiles", color: "#54AF3A" },
-  { num: "$500Mn+", label: "Freight Procured", color: "#54AF3A" },
-  { num: "$21M+", label: "Freight Cost Savings", color: "#393185" },
+  { num: "$2.5Bn+", label: "Freight Spend Analyzed" },
+  { num: "2300+", label: "Global Carriers Profiles" },
+  { num: "$500Mn+", label: "Freight Procured" },
+  { num: "$21M+", label: "Freight Cost Savings" },
 ];
 
 const VISION_CARDS = [
@@ -17,38 +34,71 @@ const VISION_CARDS = [
     icon: Bot,
     title: "AI-Powered Intelligence",
     desc: "Industry-first logistics platform combining freight procurement, transport management, and AI automation, all in one integrated system.",
-    // desc: "Industry-first logistics intelligence platform combining benchmarks, procurement, TMS and AI agents — all in one integrated ecosystem.",
   },
   {
     icon: DollarSign,
     title: "Cost Control & Savings",
     desc: "Deliver upto 20%+ freight savings with AI-driven benchmarking, carrier synergies, backhaul optimization, and smart routing.",
-    // desc: "Enable up to 20%+ freight savings through AI-powered benchmarking, carrier synergies, backhaul loops & intelligent route optimization.",
   },
   {
     icon: Leaf,
     title: "Sustainability at Scale",
-    desc: "Build a Global Smart Logistics Grid to boost green capacity, increase vehicle utilization, and reduce emissions per ton."
-    // desc: "Create the Global Smart Logistics Grid for green capacities. Better vehicle utilization, lower emissions per ton, efficient distribution.",
+    desc: "Build a Global Smart Logistics Grid to boost green capacity, increase vehicle utilization, and reduce emissions per ton.",
   },
   {
     icon: Map,
     title: "Enabling Reach & Service",
-    desc: "Cover 80K+ global routes with deep carrier networks at plants, depots, and distribution centers, supporting local to multimodal shipping."
-    // desc: "80K+ routes covered globally. Carrier depth at every plant, depot and CFA location — from local to national to multimodal network.",
+    desc: "Cover 80K+ global routes with deep carrier networks at plants, depots, and distribution centers, supporting local to multimodal shipping.",
   },
   {
     icon: Zap,
     title: "Resilience & Speed",
-    desc: "During COVID-19 lockdowns, LoRRI kept plants running by rapidly aligning capacity and handling digital indents within 30 minutes."
-    // desc: "During COVID's first lockdown, LoRRI kept plants running by rapidly aligning capacities. Digital indents answered in <30 minutes.",
+    desc: "During COVID-19 lockdowns, LoRRI kept plants running by rapidly aligning capacity and handling digital indents within 30 minutes.",
   },
   {
     icon: User,
     title: "Happy Users & Ecosystem",
-    desc: "Rate, benchmark, and share feedback on carriers with industry peers, driving continuous improvements across the logistics network."
-    // desc: "Rate, benchmark and share feedback on carriers with industry peers — driving continuous improvement across the logistics network.",
+    desc: "Rate, benchmark, and share feedback on carriers with industry peers, driving continuous improvements across the logistics network.",
   },
+];
+
+const CLIENT_LOGOS = [
+  { name: "Apollo Tyres", logo: "/logos/apollo.jpeg", insight: "Tyre manufacturing • Enterprise freight network" },
+  { name: "CEAT", logo: "/logos/ceat.png", insight: "Tyre manufacturing • High-volume lane procurement" },
+  { name: "Perfetti Van Melle", logo: "/logos/perfetti.png", insight: "FMCG • Pan-India distribution" },
+  { name: "Saint-Gobain", logo: "/logos/saint-gobain.png", insight: "Industrial manufacturing • Plant-to-distributor logistics" },
+  { name: "General Mills", logo: "/logos/general-mills.png", insight: "FMCG • Multi-node supply chain" },
+  { name: "Kimberly-Clark", logo: "/logos/kimberly-clark.png", insight: "Consumer goods • National distribution" },
+  { name: "Jyothy Labs", logo: "/logos/jyothy-labs.png", insight: "FMCG • Large-scale primary and secondary movement" },
+  { name: "Hidromas", logo: "/logos/hidromas.png", insight: "Industrial manufacturing • Export logistics" },
+  { name: "Onida MIRC Electronics", logo: "/logos/mirc.png", insight: "Electronics • Regional distribution" },
+  { name: "Bajaj Electricals", logo: "/logos/bajaj.png", insight: "Consumer durables • Omnichannel logistics" },
+  { name: "Schreiber Foods", logo: "/logos/schreiber.png", insight: "Food manufacturing • Temperature-sensitive supply chain" },
+  { name: "Shell", logo: "/logos/shell.png", insight: "Energy • Complex distribution operations" },
+  { name: "Kimbal", logo: "/logos/kimbal.png", insight: "Industrial products • Managed freight operations" },
+  { name: "Pernod Ricard", logo: "/logos/pernod.png", insight: "FMCG • Global supply chain" },
+  { name: "Paper Boat", logo: "/logos/paperboat.jpeg", insight: "Beverage • Agile outbound logistics" },
+  { name: "Sundrop", logo: "/logos/sundrop.png", insight: "FMCG • National food distribution" },
+  { name: "Vredestein", logo: "/logos/vredestein.jpg", insight: "Tyres • Channel and dealer logistics" },
+  { name: "Zydus Wellness", logo: "/logos/zydus.jpeg", insight: "Consumer health • Nationwide distribution" },
+];
+
+const CLIENT_LOGOS_2 = [
+  { name: "CJ Darcl", logo: "/logos/cjdarcl.png", insight: "Integrated transport partner" },
+  { name: "CEVA Logistics", logo: "/logos/ceva.png", insight: "Global logistics partner" },
+  { name: "DHL", logo: "/logos/dhl.png", insight: "Global supply chain partner" },
+  { name: "DSV", logo: "/logos/dsv.png", insight: "Multimodal logistics partner" },
+  { name: "FM Logistics", logo: "/logos/fm.png", insight: "Contract logistics partner" },
+  { name: "Fiege", logo: "/logos/fiege.png", insight: "Warehousing and transport partner" },
+  { name: "Maersk", logo: "/logos/Maersk.png", insight: "Global logistics partner" },
+  { name: "RCI Logistics", logo: "/logos/rci.jpeg", insight: "Regional transport partner" },
+  { name: "Rhenus Logistics", logo: "/logos/rhenus.png", insight: "Global freight partner" },
+  { name: "Sennder", logo: "/logos/sennder.png", insight: "Digital road freight partner" },
+  { name: "SCC India", logo: "/logos/scc.jpeg", insight: "Logistics services partner" },
+  { name: "TCI Freight", logo: "/logos/tci.png", insight: "Domestic freight partner" },
+  { name: "TOLL", logo: "/logos/toll.png", insight: "Integrated logistics partner" },
+  { name: "Western Carriers", logo: "/logos/wc.png", insight: "Multi-vertical logistics partner" },
+  { name: "Quehenberger", logo: "/logos/quehenberger.png", insight: "European logistics partner" },
 ];
 
 const Home = () => {
@@ -115,63 +165,20 @@ const Home = () => {
     };
   }, [isDarkHero]);
 
-  const CLIENT_LOGOS = [
-    { name: "Apollo Tyres", logo: "/logos/apollo.jpeg" },
-    { name: "CEAT", logo: "/logos/ceat.png" },
-    { name: "Perfetti Van Melle", logo: "/logos/perfetti.png" },
-    { name: "Saint-Gobain", logo: "/logos/saint-gobain.png" },
-    { name: "General Mills", logo: "/logos/general-mills.png" },
-    { name: "Kimberly-Clark", logo: "/logos/kimberly-clark.png" },
-    { name: "Jyothy Labs", logo: "/logos/jyothy-labs.png" },
-    { name: "Hidromas", logo: "/logos/hidromas.png" },
-    { name: "Onida MIRC Electronics", logo: "/logos/mirc.png" },
-    { name: "Bajaj Electricals", logo: "/logos/bajaj.png" },
-    { name: "Schreiber Foods", logo: "/logos/schreiber.png" },
-    { name: "Shell", logo: "/logos/shell.png" },
-    { name: "Kimbal", logo: "/logos/kimbal.png" },
-    { name: "Pernod Ricard", logo: "/logos/pernod.png" },
-    { name: "Paper Boat", logo: "/logos/paperboat.jpeg" },
-    { name: "Sundrop", logo: "/logos/sundrop.png" },
-    { name: "Vredestein", logo: "/logos/vredestein.jpg" },
-    { name: "Zydus Wellness", logo: "/logos/zydus.jpeg" },
-  ];
-  const CLIENT_LOGOS_2 = [
-    { name: "CJ Darcl", logo: "/logos/cjdarcl.png" },
-    // { name: "CCI Group", logo: "/cci.png" },
-    { name: "CEVA Logistics", logo: "/logos/ceva.png" },
-    { name: "DHL", logo: "/logos/dhl.png" },
-    { name: "DSV ", logo: "/logos/dsv.png" },
-    // { name: "Delhivery", logo: "/delhivery.png" },
-    { name: "FM Logistics", logo: "/logos/fm.png" },
-    { name: "Fiege", logo: "/logos/fiege.png" },
-    { name: "Maersk", logo: "/logos/Maersk.png" },
-    { name: "RCI Logistics", logo: "/logos/rci.jpeg" },
-    { name: "Rhenus Logistics", logo: "/logos/rhenus.png" },
-    { name: "Sennder", logo: "/logos/sennder.png" },
-    { name: "SCC India", logo: "/logos/scc.jpeg" },
-    { name: "TCI Freight", logo: "/logos/tci.png" },
-    { name: "TOLL", logo: "/logos/toll.png" },
-    { name: "Western Carriers ", logo: "/logos/wc.png" },
-    { name: "Quehenberger", logo: "/logos/quehenberger.png" },
-  ];
-  const caseColors = ["#393185", "#54AF3A", "#1AA6DF", "#393185", "#54AF3A", "#1AA6DF"];
-
   return (
     <div>
       {/* HERO */}
       <section
-        className="flex flex-col items-center justify-center text-center px-[5vw] pt-8 pb-6 relative overflow-hidden transition-all duration-700"
+        className="relative flex min-h-[calc(100vh-120px)] flex-col items-center justify-center overflow-hidden px-[5vw] pb-6 pt-8 text-center transition-all duration-700"
         style={{
-          minHeight: "calc(100vh - 120px)",
           background: isDarkHero
             ? "linear-gradient(175deg, #0f1629 0%, #1a2142 40%, #162038 100%)"
             : undefined,
         }}
       >
-        {/* Toggle button */}
         <button
           onClick={() => setHeroTheme(isDarkHero ? "light" : "dark")}
-          className="absolute top-4 right-6 z-20 flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-bold tracking-wide uppercase transition-all duration-300 hover:scale-105 cursor-pointer"
+          className="absolute right-6 top-4 z-20 flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105"
           style={{
             background: isDarkHero ? "rgba(255,255,255,0.1)" : "rgba(57,49,133,0.08)",
             border: isDarkHero ? "1px solid rgba(255,255,255,0.2)" : "1px solid rgba(57,49,133,0.2)",
@@ -182,9 +189,8 @@ const Home = () => {
           {isDarkHero ? "☀️" : "🌙"} {isDarkHero ? "Light" : "Dark"} Hero
         </button>
 
-        {/* Grid background */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-700"
+          className="pointer-events-none absolute inset-0 transition-opacity duration-700"
           style={{
             opacity: isDarkHero ? 0.06 : 0.55,
             backgroundImage: isDarkHero
@@ -193,30 +199,26 @@ const Home = () => {
             backgroundSize: "52px 52px",
           }}
         />
-        {/* Radial vignette */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="pointer-events-none absolute inset-0"
           style={{
             background: isDarkHero
               ? "radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #0f1629 100%)"
               : "radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, hsl(var(--background)) 100%)",
           }}
         />
-        {/* Gradient glow (dark only) */}
         {isDarkHero && (
           <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: "radial-gradient(ellipse 50% 40% at 50% 20%, rgba(106,169,255,0.08), transparent 70%)",
-            }}
+            className="pointer-events-none absolute inset-0"
+            style={{ background: "radial-gradient(ellipse 50% 40% at 50% 20%, rgba(106,169,255,0.08), transparent 70%)" }}
           />
         )}
-        <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
+        <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 h-full w-full" />
 
         <div className="relative z-[2] max-w-[1000px]">
           <ScrollReveal direction="up" delay={0}>
             <div
-              className="inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold tracking-[0.07em] uppercase mb-2 transition-colors duration-500"
+              className="mb-2 inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold uppercase tracking-[0.07em] transition-colors duration-500"
               style={{
                 background: isDarkHero ? "rgba(106,169,255,0.12)" : "rgba(57,49,133,0.09)",
                 border: isDarkHero ? "1px solid rgba(106,169,255,0.25)" : "1px solid rgba(57,49,133,0.2)",
@@ -229,7 +231,8 @@ const Home = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}>
-            <h1 className="font-display font-extrabold leading-[1.05] tracking-[-0.035em] mb-2 heading-hero transition-colors duration-500"
+            <h1
+              className="heading-hero mb-2 font-display font-extrabold leading-[1.05] tracking-[-0.035em] transition-colors duration-500"
               style={{ color: isDarkHero ? "#fff" : undefined }}
             >
                {/* AI-Powered <span style={{ color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)" }}>Intelligence</span> for <br />
@@ -240,7 +243,7 @@ const Home = () => {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}>
             <p
-              className="max-w-[600px] leading-[1.5] mx-auto mb-4 transition-colors duration-500"
+              className="mx-auto mb-4 max-w-[600px] leading-[1.5] transition-colors duration-500"
               style={{
                 fontSize: "clamp(13px, 1.3vw, 16px)",
                 color: isDarkHero ? "rgba(255,255,255,0.65)" : "hsl(60,0%,45%)",
@@ -254,19 +257,19 @@ const Home = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
-            <div className="flex gap-3 flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center gap-3">
               {isDarkHero ? (
                 <>
                   <Link
                     to="/product"
-                    className="no-underline !px-7 !py-3 !text-[15px] rounded-full font-bold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-2 rounded-full no-underline !px-7 !py-3 !text-[15px] font-bold transition-all duration-300 hover:scale-105"
                     style={{ background: "linear-gradient(135deg, #6AA9FF, #4A8FE7)", color: "#fff", boxShadow: "0 4px 24px rgba(106,169,255,0.35)" }}
                   >
                     Explore the Platform →
                   </Link>
                   <Link
                     to="/about"
-                    className="no-underline !px-6 !py-2.5 !text-[15px] rounded-full font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-2 rounded-full no-underline !px-6 !py-2.5 !text-[15px] font-semibold transition-all duration-300 hover:scale-105"
                     style={{ background: "transparent", color: "rgba(255,255,255,0.85)", border: "2px solid rgba(255,255,255,0.25)" }}
                   >
                     Book a Demo
@@ -285,11 +288,11 @@ const Home = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[860px] w-full relative z-[2] mt-7 mx-auto">
+            <div className="relative z-[2] mx-auto mt-7 grid w-full max-w-[860px] grid-cols-2 gap-4 md:grid-cols-4">
               {STATS.map((s) => (
                 <div
                   key={s.label}
-                  className="group relative rounded-2xl p-5 text-center transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden backdrop-blur-sm"
+                  className="group relative overflow-hidden rounded-2xl p-5 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-105"
                   style={isDarkHero ? {
                     background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.1)",
@@ -301,7 +304,7 @@ const Home = () => {
                   }}
                 >
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     style={{
                       background: isDarkHero
                         ? "radial-gradient(circle at 50% 0%, rgba(106,169,255,0.12), transparent 70%)"
@@ -309,16 +312,10 @@ const Home = () => {
                     }}
                   />
                   <div className="relative z-[1]">
-                    <div
-                      className="font-display text-[24px] md:text-[28px] font-black tracking-[-0.03em] mb-1"
-                      style={{ color: isDarkHero ? "#6AA9FF" : "hsl(244,44%,36%)" }}
-                    >
+                    <div className="mb-1 font-display text-[24px] font-black tracking-[-0.03em] text-ln-purple md:text-[28px]">
                       {s.num}
                     </div>
-                    <div
-                      className="text-[10.5px] font-semibold leading-tight"
-                      style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}
-                    >
+                    <div className="text-[10.5px] font-semibold leading-tight" style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}>
                       {s.label}
                     </div>
                   </div>
@@ -329,113 +326,126 @@ const Home = () => {
         </div>
       </section>
 
-      {/* MARQUEE */}
-      <div className="relative overflow-visible py-16 border-y border-border" style={{ clipPath: 'inset(-20px 0 -20px 0)', background: 'hsl(var(--bg3))' }}>
-        {/* Fade edges */}
-        <div
-          className="pointer-events-none absolute inset-y-0 left-0 w-48 z-10"
-          style={{ background: "linear-gradient(to right, hsl(var(--bg3)), transparent)" }}
-        />
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 w-48 z-10"
-          style={{ background: "linear-gradient(to left, hsl(var(--bg3)), transparent)" }}
-        />
+      <div className="relative overflow-visible border-y border-border py-6" style={{ clipPath: "inset(-20px 0 -20px 0)", background: "hsl(var(--bg3))" }}>
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48" style={{ background: "linear-gradient(to right, hsl(var(--bg3)), transparent)" }} />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-48" style={{ background: "linear-gradient(to left, hsl(var(--bg3)), transparent)" }} />
 
-        <div className="text-center mb-10">
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <div className="h-[2px] w-10 rounded-full" style={{ background: 'hsl(var(--ln-purple))' }} />
-            <h2 className="font-display font-extrabold tracking-[-0.03em] leading-[1.1] heading-section">
-              Trusted by <span className="text-ln-purple">Industry Leaders</span> Worldwide
-            </h2>
-            <div className="h-[2px] w-10 rounded-full" style={{ background: 'hsl(var(--ln-purple))' }} />
+        <div className="mx-auto mb-4 max-w-4xl px-[5vw] text-center">
+          <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-ln-purple shadow-sm">
+            <Network className="h-3 w-3" />
+            Two-sided logistics network
           </div>
-          <p className="text-muted-foreground text-[14px] font-semibold mt-2 tracking-wide">
-            Powering logistics for 120+ companies including 25+ Fortune 500s
+          <div className="mb-1.5 flex items-center justify-center gap-3">
+            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
+            <h2 className="heading-section font-display font-extrabold leading-[1.1] tracking-[-0.03em]">
+              A Network Trusted by Global <span className="text-ln-purple">Shippers and Carriers</span>
+            </h2>
+            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
+          </div>
+          <p className="text-[12px] font-semibold tracking-wide text-foreground">
+            Supporting 120+ enterprises and 2300+ carriers across complex logistics networks
+          </p>
+          <p className="mt-1 inline-flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
+            <Network className="h-3.5 w-3.5 text-ln-green" />
+            Enabling seamless collaboration between shippers, carriers, and logistics partners
           </p>
         </div>
 
-        {/* Row 1 */}
-        <div className="flex gap-10 items-center animate-marquee w-max mb-6">
+        <div className="mb-1.5 px-[5vw]">
+          <div className="mx-auto max-w-[1280px]">
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-purple">Shippers &amp; Manufacturers</div>
+            <p className="text-[11px] text-muted-foreground">Demand side of the network</p>
+          </div>
+        </div>
+
+        <div className="mb-4 flex w-max items-center gap-8 animate-marquee">
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
-              <div
-                key={i}
-                className="relative flex items-center justify-center rounded-xl border backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_4px_24px_hsl(var(--ln-purple)/0.15)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                style={{ width: 160, height: 80, background: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', boxShadow: '0 2px 8px hsl(var(--ln-purple) / 0.06)' }}
-              >
-                {hasLogo ? (
-                  <img
-                    src={c.logo}
-                    alt={c.name}
-                    className="max-w-[110px] max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
-                    style={{ mixBlendMode: 'multiply' }}
-                  />
-                ) : (
-                  <span className="font-display font-bold text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    {c.name}
-                  </span>
-                )}
-                {/* Tooltip */}
-                <div className="absolute -top-9 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50"
-                  style={{ background: "hsl(var(--ln-purple))", color: "#fff" }}
-                >
-                  {c.name}
-                </div>
-              </div>
+              <Tooltip key={`shipper-${i}`}>
+                <TooltipTrigger asChild>
+                  <div className="group relative flex h-[64px] w-[140px] cursor-pointer items-center justify-center rounded-lg border border-border bg-card/95 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_20px_hsl(var(--ln-purple)/0.15)]">
+                    {hasLogo ? (
+                      <img
+                        src={c.logo}
+                        alt={c.name}
+                        className="max-h-[38px] max-w-[100px] object-contain opacity-95 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
+                        style={{ mixBlendMode: "multiply" }}
+                      />
+                    ) : (
+                      <span className="font-display text-xs font-bold text-muted-foreground transition-colors group-hover:text-foreground">
+                        {c.name}
+                      </span>
+                    )}
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent side="top" className="max-w-[240px] rounded-xl border-border bg-card px-3 py-2 text-card-foreground shadow-lg">
+                  <div className="text-sm font-semibold">{c.name}</div>
+                  <div className="mt-1 text-xs leading-relaxed text-muted-foreground">{c.insight}</div>
+                </TooltipContent>
+              </Tooltip>
             );
           })}
         </div>
 
-        {/* Row 2 - reverse */}
-        <div className="flex gap-10 items-center animate-marquee-reverse w-max">
+        <div className="mb-1.5 px-[5vw]">
+          <div className="mx-auto max-w-[1280px]">
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-green">Carriers &amp; Logistics Partners</div>
+            <p className="text-[11px] text-muted-foreground">Supply side of the network</p>
+          </div>
+        </div>
+
+        <div className="flex w-max items-center gap-8 animate-marquee-reverse">
           {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
-              <div
-                key={i}
-                className="relative flex items-center justify-center rounded-xl border backdrop-blur-sm hover:border-primary/50 hover:shadow-[0_4px_24px_hsl(var(--ln-purple)/0.15)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer"
-                style={{ width: 160, height: 80, background: 'hsl(var(--card))', borderColor: 'hsl(var(--border))', boxShadow: '0 2px 8px hsl(var(--ln-purple) / 0.06)' }}
-              >
-                {hasLogo ? (
-                  <img
-                    src={c.logo}
-                    alt={c.name}
-                    className="max-w-[110px] max-h-[48px] object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"
-                    style={{ mixBlendMode: 'multiply' }}
-                  />
-                ) : (
-                  <span className="font-display font-bold text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    {c.name}
-                  </span>
-                )}
-                {/* Tooltip */}
-                <div className="absolute -bottom-9 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md text-[11px] font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50"
-                  style={{ background: "hsl(var(--ln-purple))", color: "#fff" }}
-                >
-                  {c.name}
-                </div>
-              </div>
+              <Tooltip key={`partner-${i}`}>
+                <TooltipTrigger asChild>
+                  <div className="group relative flex h-[56px] w-[128px] cursor-pointer items-center justify-center rounded-lg border border-border/80 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_18px_hsl(var(--ln-purple)/0.12)]">
+                    {hasLogo ? (
+                      <img
+                        src={c.logo}
+                        alt={c.name}
+                        className="max-h-[32px] max-w-[90px] object-contain opacity-80 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
+                        style={{ mixBlendMode: "multiply" }}
+                      />
+                    ) : (
+                      <span className="font-display text-xs font-bold text-muted-foreground transition-colors group-hover:text-foreground">
+                        {c.name}
+                      </span>
+                    )}
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" className="max-w-[240px] rounded-xl border-border bg-card px-3 py-2 text-card-foreground shadow-lg">
+                  <div className="text-sm font-semibold">{c.name}</div>
+                  <div className="mt-1 text-xs leading-relaxed text-muted-foreground">{c.insight}</div>
+                </TooltipContent>
+              </Tooltip>
             );
           })}
         </div>
+
+        <p className="mx-auto mt-3 max-w-3xl px-[5vw] text-center text-[11px] font-medium text-muted-foreground">
+          Managing multi-million dollar freight operations across diverse industries
+        </p>
       </div>
 
       <section className="px-[5vw] py-10" style={{ background: "hsl(var(--bg2))", paddingTop: '1%' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
             <ScrollReveal direction="up" delay={0.05}>
-              <div className="section-tag !mb-2">Our Purpose</div>
+              <div className="section-tag !mb-2">What We Deliver</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
-                The Trusted, Neutral
+                A Neutral Intelligence Layer for
                 <br />
-                <span className="text-ln-purple">Logistics Intelligence Platform</span>
+                <span className="text-ln-purple">Logistics Network</span>
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.15}>
               <div>
                 <p className="text-[13.5px] leading-[1.65] mb-4" style={{ color: "hsl(60,0%,35%)" }}>
-                  LogisticsNow combines trusted expertise, advanced technology, and data to power your digital logistics ecosystem.
+                  {/* LogisticsNow combines trusted expertise, advanced technology, and data to power your digital logistics ecosystem. */}
+                  LogisticsNow brings together data, AI, and execution to help enterprises optimize cost, improve visibility, and scale logistics operations.
                 </p>
                 <div className="flex gap-3">
                   <Link to="/product" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px]">
