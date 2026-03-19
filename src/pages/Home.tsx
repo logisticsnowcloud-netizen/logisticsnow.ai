@@ -32,33 +32,27 @@ const STATS = [
 const VISION_CARDS = [
   {
     icon: Bot,
-    title: "AI-Powered Intelligence",
-    desc: "Industry-first logistics platform combining freight procurement, transport management, and AI automation, all in one integrated system.",
+    title: "AI-Driven Decision Intelligence",
+    desc: "Optimize procurement, routing, and pricing using real-time data and machine learning.",
+    featured: true,
   },
   {
     icon: DollarSign,
-    title: "Cost Control & Savings",
-    desc: "Deliver upto 20%+ freight savings with AI-driven benchmarking, carrier synergies, backhaul optimization, and smart routing.",
-  },
-  {
-    icon: Leaf,
-    title: "Sustainability at Scale",
-    desc: "Build a Global Smart Logistics Grid to boost green capacity, increase vehicle utilization, and reduce emissions per ton.",
+    title: "Cost Optimization at Scale",
+    desc: "Reduce freight costs through dynamic pricing, benchmarking, and network optimization.",
+    featured: false,
   },
   {
     icon: Map,
-    title: "Enabling Reach & Service",
-    desc: "Cover 80K+ global routes with deep carrier networks at plants, depots, and distribution centers, supporting local to multimodal shipping.",
+    title: "End-to-End Visibility",
+    desc: "Gain real-time insights across shipments, routes, and carrier performance.",
+    featured: false,
   },
   {
-    icon: Zap,
-    title: "Resilience & Speed",
-    desc: "During COVID-19 lockdowns, LoRRI kept plants running by rapidly aligning capacity and handling digital indents within 30 minutes.",
-  },
-  {
-    icon: User,
-    title: "Happy Users & Ecosystem",
-    desc: "Rate, benchmark, and share feedback on carriers with industry peers, driving continuous improvements across the logistics network.",
+    icon: Network,
+    title: "Network Collaboration Platform",
+    desc: "Seamlessly connect shippers, carriers, and partners across a unified logistics network.",
+    featured: false,
   },
 ];
 
