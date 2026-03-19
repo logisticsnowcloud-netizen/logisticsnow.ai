@@ -319,54 +319,54 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="relative overflow-visible border-y border-border py-16" style={{ clipPath: "inset(-20px 0 -20px 0)", background: "hsl(var(--bg3))" }}>
+      <div className="relative overflow-visible border-y border-border py-6" style={{ clipPath: "inset(-20px 0 -20px 0)", background: "hsl(var(--bg3))" }}>
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48" style={{ background: "linear-gradient(to right, hsl(var(--bg3)), transparent)" }} />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-48" style={{ background: "linear-gradient(to left, hsl(var(--bg3)), transparent)" }} />
 
-        <div className="mx-auto mb-10 max-w-4xl px-[5vw] text-center">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-ln-purple shadow-sm">
-            <Network className="h-3.5 w-3.5" />
+        <div className="mx-auto mb-4 max-w-4xl px-[5vw] text-center">
+          <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-ln-purple shadow-sm">
+            <Network className="h-3 w-3" />
             Two-sided logistics network
           </div>
-          <div className="mb-3 flex items-center justify-center gap-3">
-            <div className="h-[2px] w-10 rounded-full bg-ln-purple" />
+          <div className="mb-1.5 flex items-center justify-center gap-3">
+            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
             <h2 className="heading-section font-display font-extrabold leading-[1.1] tracking-[-0.03em]">
               A Network Trusted by Global <span className="text-ln-purple">Shippers and Carriers</span>
             </h2>
-            <div className="h-[2px] w-10 rounded-full bg-ln-purple" />
+            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
           </div>
-          <p className="mt-2 text-[14px] font-semibold tracking-wide text-foreground">
+          <p className="text-[12px] font-semibold tracking-wide text-foreground">
             Supporting 120+ enterprises and 2300+ carriers across complex logistics networks
           </p>
-          <p className="mt-3 inline-flex max-w-3xl items-center justify-center gap-2 text-[13px] text-muted-foreground">
-            <Network className="h-4 w-4 text-ln-green" />
+          <p className="mt-1 inline-flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
+            <Network className="h-3.5 w-3.5 text-ln-green" />
             Enabling seamless collaboration between shippers, carriers, and logistics partners
           </p>
         </div>
 
-        <div className="mb-3 px-[5vw]">
+        <div className="mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
-            <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-ln-purple">Shippers &amp; Manufacturers</div>
-            <p className="mt-1 text-sm text-muted-foreground">Demand side of the network</p>
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-purple">Shippers &amp; Manufacturers</div>
+            <p className="text-[11px] text-muted-foreground">Demand side of the network</p>
           </div>
         </div>
 
-        <div className="mb-8 flex w-max items-center gap-10 animate-marquee">
+        <div className="mb-4 flex w-max items-center gap-8 animate-marquee">
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
               <Tooltip key={`shipper-${i}`}>
                 <TooltipTrigger asChild>
-                  <div className="group relative flex h-[88px] w-[168px] cursor-pointer items-center justify-center rounded-xl border border-border bg-card/95 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_6px_28px_hsl(var(--ln-purple)/0.15)]">
+                  <div className="group relative flex h-[64px] w-[140px] cursor-pointer items-center justify-center rounded-lg border border-border bg-card/95 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_20px_hsl(var(--ln-purple)/0.15)]">
                     {hasLogo ? (
                       <img
                         src={c.logo}
                         alt={c.name}
-                        className="max-h-[52px] max-w-[118px] object-contain opacity-95 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
+                        className="max-h-[38px] max-w-[100px] object-contain opacity-95 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
                         style={{ mixBlendMode: "multiply" }}
                       />
                     ) : (
-                      <span className="font-display text-sm font-bold text-muted-foreground transition-colors group-hover:text-foreground">
+                      <span className="font-display text-xs font-bold text-muted-foreground transition-colors group-hover:text-foreground">
                         {c.name}
                       </span>
                     )}
@@ -381,29 +381,29 @@ const Home = () => {
           })}
         </div>
 
-        <div className="mb-3 px-[5vw]">
+        <div className="mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
-            <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-ln-green">Carriers &amp; Logistics Partners</div>
-            <p className="mt-1 text-sm text-muted-foreground">Supply side of the network</p>
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-green">Carriers &amp; Logistics Partners</div>
+            <p className="text-[11px] text-muted-foreground">Supply side of the network</p>
           </div>
         </div>
 
-        <div className="flex w-max items-center gap-10 animate-marquee-reverse">
+        <div className="flex w-max items-center gap-8 animate-marquee-reverse">
           {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
               <Tooltip key={`partner-${i}`}>
                 <TooltipTrigger asChild>
-                  <div className="group relative flex h-[76px] w-[152px] cursor-pointer items-center justify-center rounded-xl border border-border/80 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_6px_24px_hsl(var(--ln-purple)/0.12)]">
+                  <div className="group relative flex h-[56px] w-[128px] cursor-pointer items-center justify-center rounded-lg border border-border/80 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_18px_hsl(var(--ln-purple)/0.12)]">
                     {hasLogo ? (
                       <img
                         src={c.logo}
                         alt={c.name}
-                        className="max-h-[44px] max-w-[104px] object-contain opacity-80 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
+                        className="max-h-[32px] max-w-[90px] object-contain opacity-80 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
                         style={{ mixBlendMode: "multiply" }}
                       />
                     ) : (
-                      <span className="font-display text-sm font-bold text-muted-foreground transition-colors group-hover:text-foreground">
+                      <span className="font-display text-xs font-bold text-muted-foreground transition-colors group-hover:text-foreground">
                         {c.name}
                       </span>
                     )}
@@ -418,7 +418,7 @@ const Home = () => {
           })}
         </div>
 
-        <p className="mx-auto mt-8 max-w-3xl px-[5vw] text-center text-[13px] font-medium text-muted-foreground">
+        <p className="mx-auto mt-3 max-w-3xl px-[5vw] text-center text-[11px] font-medium text-muted-foreground">
           Managing multi-million dollar freight operations across diverse industries
         </p>
       </div>
