@@ -719,14 +719,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 90-DAY OPTIMIZATION JOURNEY */}
+      {/* 6-STEP METHODOLOGY */}
       <section className="px-[5vw] py-14 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--ln-purple)) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
         <div className="max-w-[1280px] mx-auto relative">
           {/* Header */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-end">
             <ScrollReveal>
-              <div className="text-[10px] font-bold tracking-[0.12em] uppercase mb-1.5 text-muted-foreground">Designed for enterprise procurement & logistics teams</div>
+              <div className="section-tag !mb-1">6-Step Methodology</div>
+              <div className="text-[10px] font-bold tracking-[0.1em] uppercase mb-1.5 text-muted-foreground/60">Designed for enterprise procurement & logistics teams</div>
               <h2 className="font-display font-extrabold leading-[1.05] tracking-[-0.028em] text-[clamp(22px,3vw,36px)]">
                 From Data to <span className="text-ln-green">Savings</span> — Powered by AI
               </h2>
@@ -752,16 +753,17 @@ const Home = () => {
 
           {/* Visual Flow Bar */}
           <ScrollReveal direction="up" delay={0.08}>
-            <div className="hidden lg:flex items-center justify-between mb-6 px-2">
+            <div className="hidden lg:flex items-center justify-between mb-1.5 px-2">
               {(['Data', 'Insights', 'Execution', 'Integration', 'Automation', 'Optimization'] as const).map((label, i) => {
                 const colors = ['hsl(var(--ln-blue))', 'hsl(var(--ln-green))', 'hsl(var(--ln-orange))', 'hsl(var(--ln-purple))', 'hsl(var(--ln-green))', 'hsl(var(--ln-purple))'];
+                const isHighlight = i === 2 || i === 5;
                 return (
                   <div key={label} className="flex items-center flex-1 last:flex-none">
                     <div className="flex flex-col items-center gap-1">
-                      <div className="w-7 h-7 rounded-full flex items-center justify-center font-mono text-[10px] font-bold text-white" style={{ background: colors[i] }}>
+                      <div className={`rounded-full flex items-center justify-center font-mono font-bold text-white ${isHighlight ? 'w-8 h-8 text-[11px]' : 'w-7 h-7 text-[10px]'}`} style={{ background: colors[i], boxShadow: isHighlight ? `0 0 12px ${colors[i]}` : undefined }}>
                         {String(i + 1).padStart(2, '0')}
                       </div>
-                      <span className="text-[9px] font-bold tracking-[0.06em] uppercase" style={{ color: colors[i] }}>{label}</span>
+                      <span className={`font-bold tracking-[0.06em] uppercase ${isHighlight ? 'text-[10px]' : 'text-[9px]'}`} style={{ color: colors[i] }}>{label}</span>
                     </div>
                     {i < 5 && (
                       <div className="flex-1 h-[2px] mx-2 mt-[-12px]" style={{ background: `linear-gradient(90deg, ${colors[i]}, ${colors[i + 1]})`, opacity: 0.25 }} />
@@ -769,6 +771,10 @@ const Home = () => {
                   </div>
                 );
               })}
+            </div>
+            <div className="flex items-center justify-between mb-5">
+              <p className="text-[10.5px] text-muted-foreground/50 italic hidden lg:block">Each stage is powered by AI agents that continuously improve decisions across your logistics network.</p>
+              <span className="text-[9px] font-bold tracking-[0.08em] uppercase px-2.5 py-1 rounded-full hidden lg:inline-block" style={{ color: 'hsl(var(--ln-purple))', background: 'hsl(var(--ln-purple) / 0.08)', border: '1px solid hsl(var(--ln-purple) / 0.15)' }}>Typical timeline: 8–12 weeks</span>
             </div>
           </ScrollReveal>
 
@@ -779,22 +785,46 @@ const Home = () => {
               const colorKeys = ['--ln-blue', '--ln-green', '--ln-orange', '--ln-purple', '--ln-green', '--ln-purple'];
               const StepIcon = icons[i];
               const color = colorKeys[i];
+              const isHero = i === 2;
+              const isSecondary = i === 5;
               return (
                 <StaggerItem key={s.num}>
-                  <div className="card-hover !p-5 !rounded-2xl relative overflow-hidden h-full group transition-all duration-300 hover:scale-[1.02]" style={{ borderLeft: `3px solid hsl(var(${color}) / 0.3)` }}>
+                  <div
+                    className={`card-hover !p-5 !rounded-2xl relative overflow-hidden h-full group transition-all duration-300 hover:scale-[1.02] ${isHero ? 'ring-1' : ''}`}
+                    style={{
+                      borderLeft: `3px solid hsl(var(${color}) / ${isHero ? '0.6' : isSecondary ? '0.45' : '0.3'})`,
+                      background: isHero ? `hsl(var(${color}) / 0.04)` : isSecondary ? `hsl(var(${color}) / 0.02)` : undefined,
+                      ...(isHero ? { boxShadow: `0 0 20px hsl(var(${color}) / 0.08)`, borderColor: `hsl(var(${color}) / 0.3)` } : {}),
+                    }}
+                  >
+                    {isHero && (
+                      <div className="absolute top-2 right-2">
+                        <span className="text-[8px] font-bold tracking-[0.1em] uppercase px-1.5 py-0.5 rounded-full" style={{ color: `hsl(var(${color}))`, background: `hsl(var(${color}) / 0.1)`, border: `1px solid hsl(var(${color}) / 0.2)` }}>⚡ Key Stage</span>
+                      </div>
+                    )}
                     <div className="absolute right-3 top-2 font-mono text-[38px] font-bold opacity-[0.08] leading-none" style={{ color: `hsl(var(${color}))` }}>
                       {s.num}
                     </div>
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-2.5" style={{ background: `hsl(var(${color}) / 0.1)` }}>
-                      <StepIcon size={16} style={{ color: `hsl(var(${color}))` }} strokeWidth={2} />
+                    <div className={`rounded-lg flex items-center justify-center mb-2.5 ${isHero ? 'w-9 h-9' : 'w-8 h-8'}`} style={{ background: `hsl(var(${color}) / 0.1)` }}>
+                      <StepIcon size={isHero ? 18 : 16} style={{ color: `hsl(var(${color}))` }} strokeWidth={2} />
                     </div>
-                    <div className="font-display text-[14px] font-bold mb-1">{s.title}</div>
+                    <div className={`font-display font-bold mb-1 ${isHero ? 'text-[15px]' : 'text-[14px]'}`}>{s.title}</div>
                     <div className="text-[11.5px] text-muted-foreground leading-[1.55]">{s.desc}</div>
                   </div>
                 </StaggerItem>
               );
             })}
           </StaggerContainer>
+
+          {/* Bottom CTA + Emotional Payoff */}
+          <ScrollReveal direction="up" delay={0.15}>
+            <div className="mt-8 text-center">
+              <p className="font-display text-[15px] font-bold mb-3 text-foreground/80">Transform procurement from a cost center into a strategic advantage.</p>
+              <Link to="/contact" className="btn-primary-ln no-underline !px-8 !py-3 !text-[13px] inline-block">
+                Get Your 90-Day Optimization Plan →
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
