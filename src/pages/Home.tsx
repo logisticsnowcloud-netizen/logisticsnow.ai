@@ -262,9 +262,9 @@ const Home = () => {
                   >
                     Explore the Platform →
                   </Link>
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center gap-2 rounded-full no-underline !px-6 !py-2.5 !text-[15px] font-semibold transition-all duration-300 hover:scale-105"
+                   <Link
+                     to="/about"
+                     className="inline-flex items-center gap-2 rounded-full no-underline !px-5 !py-2 sm:!px-6 sm:!py-2.5 !text-[13px] sm:!text-[15px] font-semibold transition-all duration-300 hover:scale-105"
                     style={{ background: "transparent", color: "rgba(255,255,255,0.85)", border: "2px solid rgba(255,255,255,0.25)" }}
                   >
                     Book a Demo
