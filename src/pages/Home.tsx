@@ -364,7 +364,7 @@ const Home = () => {
                       <img
                         src={c.logo}
                         alt={c.name}
-                        className="max-h-[38px] max-w-[100px] object-contain opacity-95 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
+                       className="max-h-[28px] max-w-[80px] sm:max-h-[38px] sm:max-w-[100px] object-contain opacity-95 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
                         style={{ mixBlendMode: "multiply" }}
                       />
                     ) : (
