@@ -255,9 +255,9 @@ const Home = () => {
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {isDarkHero ? (
                 <>
-                  <Link
-                    to="/product"
-                    className="inline-flex items-center gap-2 rounded-full no-underline !px-7 !py-3 !text-[15px] font-bold transition-all duration-300 hover:scale-105"
+                   <Link
+                     to="/product"
+                     className="inline-flex items-center gap-2 rounded-full no-underline !px-5 !py-2.5 sm:!px-7 sm:!py-3 !text-[13px] sm:!text-[15px] font-bold transition-all duration-300 hover:scale-105"
                     style={{ background: "linear-gradient(135deg, #6AA9FF, #4A8FE7)", color: "#fff", boxShadow: "0 4px 24px rgba(106,169,255,0.35)" }}
                   >
                     Explore the Platform →
