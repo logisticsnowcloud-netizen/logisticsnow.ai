@@ -310,8 +310,8 @@ const Home = () => {
                      <div className="mb-0.5 font-display text-[18px] sm:text-[24px] font-black tracking-[-0.03em] text-ln-purple md:text-[28px]">
                        {s.num}
                     </div>
-                    <div className="text-[10.5px] font-semibold leading-tight" style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}>
-                      {s.label}
+                     <div className="text-[9px] sm:text-[10.5px] font-semibold leading-tight" style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}>
+                       {s.label}
                     </div>
                   </div>
                 </div>
