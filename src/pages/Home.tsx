@@ -271,11 +271,11 @@ const Home = () => {
                   </Link>
                 </>
               ) : (
-                <>
-                  <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
-                    Explore the Platform →
-                  </Link>
-                  <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[15px]">
+                 <>
+                   <Link to="/product" className="btn-primary-ln no-underline !px-5 !py-2.5 sm:!px-7 sm:!py-3 !text-[13px] sm:!text-[15px]">
+                     Explore the Platform →
+                   </Link>
+                   <Link to="/about" className="btn-secondary-ln no-underline !px-5 !py-2 sm:!px-6 sm:!py-2.5 !text-[13px] sm:!text-[15px]">
                     Book a Demo
                   </Link>
                 </>
