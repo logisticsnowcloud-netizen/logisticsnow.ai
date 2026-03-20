@@ -164,7 +164,7 @@ const Home = () => {
     <div>
       {/* HERO */}
       <section
-        className="relative flex min-h-[calc(100vh-120px)] flex-col items-center justify-center overflow-hidden px-[5vw] pb-6 pt-8 text-center transition-all duration-700"
+        className="relative flex min-h-[calc(100vh-120px)] flex-col items-center justify-center overflow-hidden px-[5vw] pb-4 pt-6 sm:pb-6 sm:pt-8 text-center transition-all duration-700"
         style={{
           background: isDarkHero
             ? "linear-gradient(175deg, #0f1629 0%, #1a2142 40%, #162038 100%)"
