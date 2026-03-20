@@ -545,7 +545,7 @@ const Home = () => {
           </ScrollReveal>
 
           {/* Agent Categories */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {/* Procurement Intelligence */}
             <ScrollReveal direction="up" delay={0.1}>
               <div className="space-y-2.5">
