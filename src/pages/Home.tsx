@@ -425,7 +425,7 @@ const Home = () => {
         </p>
       </div>
 
-      <section className="px-[5vw] py-10" style={{ background: "hsl(var(--bg2))", paddingTop: '1%' }}>
+      <section className="px-[5vw] py-6 sm:py-10" style={{ background: "hsl(var(--bg2))", paddingTop: '1%' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
             <ScrollReveal direction="up" delay={0.05}>
