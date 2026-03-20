@@ -287,7 +287,7 @@ const Home = () => {
               {STATS.map((s) => (
                 <div
                   key={s.label}
-                  className="group relative overflow-hidden rounded-2xl p-5 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                  className="group relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-5 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-105"
                   style={isDarkHero ? {
                     background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.1)",
