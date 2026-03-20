@@ -779,7 +779,7 @@ const Home = () => {
           </ScrollReveal>
 
           {/* Step Cards */}
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
             {(METHODOLOGY_STEPS as Array<{num: string; title: string; desc: string}>).map((s, i) => {
               const icons = [Database, GitBranch, Handshake, FileSignature, Cog, Bot];
               const colorKeys = ['--ln-blue', '--ln-green', '--ln-orange', '--ln-purple', '--ln-green', '--ln-purple'];
