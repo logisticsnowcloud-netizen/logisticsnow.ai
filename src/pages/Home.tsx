@@ -359,7 +359,7 @@ const Home = () => {
             return (
               <Tooltip key={`shipper-${i}`}>
                 <TooltipTrigger asChild>
-                  <div className="group relative flex h-[64px] w-[140px] cursor-pointer items-center justify-center rounded-lg border border-border bg-card/95 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_20px_hsl(var(--ln-purple)/0.15)]">
+                  <div className="group relative flex h-[50px] w-[110px] sm:h-[64px] sm:w-[140px] cursor-pointer items-center justify-center rounded-lg border border-border bg-card/95 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_20px_hsl(var(--ln-purple)/0.15)]">
                     {hasLogo ? (
                       <img
                         src={c.logo}
