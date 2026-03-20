@@ -6,7 +6,7 @@ const CtaBanner = () => {
 
   return (
     <ScrollReveal direction="none" duration={0.8}>
-      <div className="gradient-cta py-5 px-[5vw] text-center relative overflow-hidden">
+      <div className="gradient-cta py-4 sm:py-5 px-[5vw] text-center relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(84,175,58,.15), transparent 60%)' }} />
         <h2 className="font-display font-extrabold tracking-[-0.025em] mb-2 relative z-[1] text-2xl md:text-3xl" style={{ color: '#fff' }}>
           Ready to Join the <span className="text-ln-green">Logistics Intelligence Revolution?</span>
