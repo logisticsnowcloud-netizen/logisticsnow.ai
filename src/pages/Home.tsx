@@ -720,7 +720,7 @@ const Home = () => {
       </section>
 
       {/* 6-STEP METHODOLOGY */}
-      <section className="px-[5vw] py-14 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
+      <section className="px-[5vw] py-8 sm:py-14 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--ln-purple)) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
         <div className="max-w-[1280px] mx-auto relative">
           {/* Header */}
