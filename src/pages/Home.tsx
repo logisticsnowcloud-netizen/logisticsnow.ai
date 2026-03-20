@@ -844,7 +844,7 @@ const Home = () => {
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {(CASES as Array<{tag: string; industry: string; client: string; story: string; spend: string; saving: string; pct: string; extra: string; timeline: string}>).map((cs) => (
               <StaggerItem key={cs.client}>
                 <div className="card-hover !p-3 !rounded-xl h-full flex flex-col group transition-all duration-300 hover:scale-[1.02]">

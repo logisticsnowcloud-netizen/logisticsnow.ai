@@ -14,7 +14,7 @@ const Footer = () => (
       <div className="relative z-10 max-w-[1280px] mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-4 sm:gap-5 mb-5">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <div className="font-display text-xl font-extrabold mb-1.5">
               <span>LogisticsNow</span><span className="text-ln-green">.ai</span>
             </div>
