@@ -307,8 +307,8 @@ const Home = () => {
                     }}
                   />
                   <div className="relative z-[1]">
-                    <div className="mb-1 font-display text-[24px] font-black tracking-[-0.03em] text-ln-purple md:text-[28px]">
-                      {s.num}
+                     <div className="mb-0.5 font-display text-[18px] sm:text-[24px] font-black tracking-[-0.03em] text-ln-purple md:text-[28px]">
+                       {s.num}
                     </div>
                     <div className="text-[10.5px] font-semibold leading-tight" style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}>
                       {s.label}
