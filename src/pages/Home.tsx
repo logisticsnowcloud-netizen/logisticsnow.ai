@@ -283,7 +283,7 @@ const Home = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="relative z-[2] mx-auto mt-7 grid w-full max-w-[860px] grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="relative z-[2] mx-auto mt-4 sm:mt-7 grid w-full max-w-[860px] grid-cols-2 gap-2 sm:gap-4 md:grid-cols-4">
               {STATS.map((s) => (
                 <div
                   key={s.label}
