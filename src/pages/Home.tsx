@@ -427,7 +427,7 @@ const Home = () => {
 
       <section className="px-[5vw] py-6 sm:py-10" style={{ background: "hsl(var(--bg2))", paddingTop: '1%' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6 items-center">
             <ScrollReveal direction="up" delay={0.05}>
               <div className="section-tag !mb-2">What We Deliver</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
