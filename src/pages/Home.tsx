@@ -330,14 +330,14 @@ const Home = () => {
             <Network className="h-3 w-3" />
             Two-sided logistics network
           </div>
-          <div className="mb-1.5 flex items-center justify-center gap-3">
-            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
-            <h2 className="heading-section font-display font-extrabold leading-[1.1] tracking-[-0.03em]">
+          <div className="mb-1.5 flex items-center justify-center gap-2 sm:gap-3">
+            <div className="hidden sm:block h-[2px] w-8 rounded-full bg-ln-purple" />
+            <h2 className="heading-section font-display font-extrabold leading-[1.1] tracking-[-0.03em] text-[clamp(18px,3vw,38px)]">
               A Network Trusted by Global <span className="text-ln-purple">Shippers and Carriers</span>
             </h2>
-            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
+            <div className="hidden sm:block h-[2px] w-8 rounded-full bg-ln-purple" />
           </div>
-          <p className="text-[12px] font-semibold tracking-wide text-foreground">
+          <p className="text-[11px] sm:text-[12px] font-semibold tracking-wide text-foreground">
             Supporting 120+ enterprises and 2300+ carriers across complex logistics networks
           </p>
           <p className="mt-1 inline-flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
