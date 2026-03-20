@@ -173,7 +173,7 @@ const Home = () => {
       >
         <button
           onClick={() => setHeroTheme(isDarkHero ? "light" : "dark")}
-          className="absolute right-6 top-4 z-20 flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105"
+          className="absolute right-3 top-2 sm:right-6 sm:top-4 z-20 flex cursor-pointer items-center gap-1.5 sm:gap-2 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-[9px] sm:text-[11px] font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105"
           style={{
             background: isDarkHero ? "rgba(255,255,255,0.1)" : "rgba(57,49,133,0.08)",
             border: isDarkHero ? "1px solid rgba(255,255,255,0.2)" : "1px solid rgba(57,49,133,0.2)",
