@@ -491,7 +491,7 @@ const Home = () => {
       </section>
 
       {/* AI DECISION ENGINE */}
-      <section className="px-[5vw] pt-10 pb-6 bg-background">
+      <section className="px-[5vw] pt-6 sm:pt-10 pb-4 sm:pb-6 bg-background">
         <div className="max-w-[1280px] mx-auto">
           {/* Header */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5 items-start">
