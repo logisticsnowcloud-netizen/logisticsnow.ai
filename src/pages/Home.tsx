@@ -529,7 +529,7 @@ const Home = () => {
                          <span className="text-[8px] sm:text-[10px] font-bold tracking-[0.08em] uppercase whitespace-nowrap" style={{ color: colors[i] }}>{step}</span>
                       </div>
                       {i < 4 && (
-                        <div className="flex items-center mx-2">
+                        <div className="flex items-center mx-1 sm:mx-2">
                           <div className="w-8 h-[1.5px] rounded-full" style={{ background: `linear-gradient(90deg, ${colors[i]}, ${colors[i + 1]})`, opacity: 0.3 }} />
                           <ChevronRight size={12} className="text-muted-foreground/30 -ml-1" />
                         </div>
