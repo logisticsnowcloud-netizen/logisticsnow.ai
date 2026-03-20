@@ -321,7 +321,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="relative overflow-visible border-y border-border py-6" style={{ clipPath: "inset(-20px 0 -20px 0)", background: "hsl(var(--bg3))" }}>
+      <div className="relative overflow-visible border-y border-border py-4 sm:py-6" style={{ clipPath: "inset(-20px 0 -20px 0)", background: "hsl(var(--bg3))" }}>
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48" style={{ background: "linear-gradient(to right, hsl(var(--bg3)), transparent)" }} />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-48" style={{ background: "linear-gradient(to left, hsl(var(--bg3)), transparent)" }} />
 
