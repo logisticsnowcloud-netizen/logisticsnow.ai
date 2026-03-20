@@ -390,7 +390,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex w-max items-center gap-8 animate-marquee-reverse">
+        <div className="flex w-max items-center gap-4 sm:gap-8 animate-marquee-reverse">
           {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
