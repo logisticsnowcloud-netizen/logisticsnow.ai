@@ -396,7 +396,7 @@ const Home = () => {
             return (
               <Tooltip key={`partner-${i}`}>
                 <TooltipTrigger asChild>
-                  <div className="group relative flex h-[56px] w-[128px] cursor-pointer items-center justify-center rounded-lg border border-border/80 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_18px_hsl(var(--ln-purple)/0.12)]">
+                  <div className="group relative flex h-[44px] w-[100px] sm:h-[56px] sm:w-[128px] cursor-pointer items-center justify-center rounded-lg border border-border/80 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_18px_hsl(var(--ln-purple)/0.12)]">
                     {hasLogo ? (
                       <img
                         src={c.logo}
