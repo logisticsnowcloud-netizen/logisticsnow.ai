@@ -12,7 +12,7 @@ const Footer = () => (
       }} />
 
       <div className="relative z-10 max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-5 mb-5">
+        <div className="grid grid-cols-2 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-4 sm:gap-5 mb-5">
           {/* Brand */}
           <div>
             <div className="font-display text-xl font-extrabold mb-1.5">
