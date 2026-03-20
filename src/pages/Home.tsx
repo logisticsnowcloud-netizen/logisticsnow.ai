@@ -252,7 +252,7 @@ const Home = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {isDarkHero ? (
                 <>
                   <Link
