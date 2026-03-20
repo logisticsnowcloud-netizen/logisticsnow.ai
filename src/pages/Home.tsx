@@ -210,7 +210,7 @@ const Home = () => {
         )}
         <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 h-full w-full" />
 
-        <div className="relative z-[2] max-w-[1000px]">
+        <div className="relative z-[2] max-w-[1000px] w-full">
           <ScrollReveal direction="up" delay={0}>
             <div
               className="mb-2 inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold uppercase tracking-[0.07em] transition-colors duration-500"
