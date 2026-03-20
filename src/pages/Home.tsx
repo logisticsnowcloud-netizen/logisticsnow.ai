@@ -519,7 +519,7 @@ const Home = () => {
                   <div className="absolute h-full w-[30%] rounded-full animate-[flowPulse_4s_ease-in-out_infinite]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--ln-purple) / 0.3), hsl(var(--ln-green) / 0.3), transparent)' }} />
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-0 relative z-10">
+              <div className="flex items-center justify-center gap-0 relative z-10 overflow-x-auto">
                 {['Procurement', 'Routing', 'Execution', 'Feedback', 'Optimization'].map((step, i) => {
                   const colors = ['hsl(var(--ln-green))', 'hsl(var(--ln-purple))', 'hsl(var(--ln-orange))', 'hsl(var(--ln-blue))', 'hsl(var(--ln-green))'];
                   return (
