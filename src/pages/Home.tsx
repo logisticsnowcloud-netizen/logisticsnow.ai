@@ -525,8 +525,8 @@ const Home = () => {
                   return (
                     <div key={step} className="flex items-center">
                       <div className="flex flex-col items-center">
-                        <div className="w-2 h-2 rounded-full mb-1" style={{ background: colors[i], boxShadow: `0 0 8px ${colors[i]}` }} />
-                        <span className="text-[10px] font-bold tracking-[0.08em] uppercase" style={{ color: colors[i] }}>{step}</span>
+                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mb-1" style={{ background: colors[i], boxShadow: `0 0 8px ${colors[i]}` }} />
+                         <span className="text-[8px] sm:text-[10px] font-bold tracking-[0.08em] uppercase whitespace-nowrap" style={{ color: colors[i] }}>{step}</span>
                       </div>
                       {i < 4 && (
                         <div className="flex items-center mx-2">
