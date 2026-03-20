@@ -724,7 +724,7 @@ const Home = () => {
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--ln-purple)) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
         <div className="max-w-[1280px] mx-auto relative">
           {/* Header */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4 items-end">
             <ScrollReveal>
               <div className="section-tag !mb-1">6-Step Methodology</div>
               <div className="text-[10px] font-bold tracking-[0.1em] uppercase mb-1.5 text-muted-foreground/60">Designed for enterprise procurement & logistics teams</div>
