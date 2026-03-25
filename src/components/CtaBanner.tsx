@@ -6,12 +6,12 @@ const CtaBanner = () => {
 
   return (
     <ScrollReveal direction="none" duration={0.8}>
-      <div className="gradient-cta py-5 px-[5vw] text-center relative overflow-hidden">
+      <div className="gradient-cta py-4 sm:py-5 px-[5vw] text-center relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(84,175,58,.15), transparent 60%)' }} />
-        <h2 className="font-display font-extrabold tracking-[-0.025em] mb-2 relative z-[1] text-2xl md:text-3xl" style={{ color: '#fff' }}>
+        <h2 className="font-display font-extrabold tracking-[-0.025em] mb-2 relative z-[1] text-xl sm:text-2xl md:text-3xl" style={{ color: '#fff' }}>
           Ready to Join the <span className="text-ln-green">Logistics Intelligence Revolution?</span>
         </h2>
-        <p className="text-sm max-w-[520px] mx-auto mb-4 relative z-[1]" style={{ color: 'rgba(255,255,255,.72)' }}>See how LogisticsNow transforms freight procurement, carrier relationships and logistics intelligence.</p>
+        <p className="text-xs sm:text-sm max-w-[520px] mx-auto mb-3 sm:mb-4 relative z-[1]" style={{ color: 'rgba(255,255,255,.72)' }}>Unlock measurable cost savings, smarter procurement, and AI-driven logistics optimization in weeks — not months.</p>
         <div className="flex gap-3 justify-center flex-wrap relative z-[1]">
           <button onClick={() => setOpen(true)} className="btn-white-ln no-underline text-sm py-2 px-6 border-none cursor-pointer touch-manipulation">🚛 Schedule Demo →</button>
         </div>

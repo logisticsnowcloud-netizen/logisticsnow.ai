@@ -164,7 +164,7 @@ const Home = () => {
     <div>
       {/* HERO */}
       <section
-        className="relative flex min-h-[calc(100vh-120px)] flex-col items-center justify-center overflow-hidden px-[5vw] pb-6 pt-8 text-center transition-all duration-700"
+        className="relative flex min-h-[calc(100vh-120px)] flex-col items-center justify-center overflow-hidden px-[5vw] pb-4 pt-6 sm:pb-6 sm:pt-8 text-center transition-all duration-700"
         style={{
           background: isDarkHero
             ? "linear-gradient(175deg, #0f1629 0%, #1a2142 40%, #162038 100%)"
@@ -173,7 +173,7 @@ const Home = () => {
       >
         <button
           onClick={() => setHeroTheme(isDarkHero ? "light" : "dark")}
-          className="absolute right-6 top-4 z-20 flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-[11px] font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105"
+          className="absolute right-3 top-2 sm:right-6 sm:top-4 z-20 flex cursor-pointer items-center gap-1.5 sm:gap-2 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-[9px] sm:text-[11px] font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105"
           style={{
             background: isDarkHero ? "rgba(255,255,255,0.1)" : "rgba(57,49,133,0.08)",
             border: isDarkHero ? "1px solid rgba(255,255,255,0.2)" : "1px solid rgba(57,49,133,0.2)",
@@ -210,7 +210,7 @@ const Home = () => {
         )}
         <canvas ref={canvasRef} className="pointer-events-none absolute inset-0 h-full w-full" />
 
-        <div className="relative z-[2] max-w-[1000px]">
+        <div className="relative z-[2] max-w-[1000px] w-full">
           <ScrollReveal direction="up" delay={0}>
             <div
               className="mb-2 inline-flex items-center gap-2 rounded-full px-[16px] py-[5px] text-[11px] font-bold uppercase tracking-[0.07em] transition-colors duration-500"
@@ -252,30 +252,30 @@ const Home = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {isDarkHero ? (
                 <>
-                  <Link
-                    to="/product"
-                    className="inline-flex items-center gap-2 rounded-full no-underline !px-7 !py-3 !text-[15px] font-bold transition-all duration-300 hover:scale-105"
+                   <Link
+                     to="/product"
+                     className="inline-flex items-center gap-2 rounded-full no-underline !px-5 !py-2.5 sm:!px-7 sm:!py-3 !text-[13px] sm:!text-[15px] font-bold transition-all duration-300 hover:scale-105"
                     style={{ background: "linear-gradient(135deg, #6AA9FF, #4A8FE7)", color: "#fff", boxShadow: "0 4px 24px rgba(106,169,255,0.35)" }}
                   >
                     Explore the Platform →
                   </Link>
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center gap-2 rounded-full no-underline !px-6 !py-2.5 !text-[15px] font-semibold transition-all duration-300 hover:scale-105"
+                   <Link
+                     to="/about"
+                     className="inline-flex items-center gap-2 rounded-full no-underline !px-5 !py-2 sm:!px-6 sm:!py-2.5 !text-[13px] sm:!text-[15px] font-semibold transition-all duration-300 hover:scale-105"
                     style={{ background: "transparent", color: "rgba(255,255,255,0.85)", border: "2px solid rgba(255,255,255,0.25)" }}
                   >
                     Book a Demo
                   </Link>
                 </>
               ) : (
-                <>
-                  <Link to="/product" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
-                    Explore the Platform →
-                  </Link>
-                  <Link to="/about" className="btn-secondary-ln no-underline !px-6 !py-2.5 !text-[15px]">
+                 <>
+                   <Link to="/product" className="btn-primary-ln no-underline !px-5 !py-2.5 sm:!px-7 sm:!py-3 !text-[13px] sm:!text-[15px]">
+                     Explore the Platform →
+                   </Link>
+                   <Link to="/about" className="btn-secondary-ln no-underline !px-5 !py-2 sm:!px-6 sm:!py-2.5 !text-[13px] sm:!text-[15px]">
                     Book a Demo
                   </Link>
                 </>
@@ -283,11 +283,11 @@ const Home = () => {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.45}>
-            <div className="relative z-[2] mx-auto mt-7 grid w-full max-w-[860px] grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="relative z-[2] mx-auto mt-4 sm:mt-7 grid w-full max-w-[860px] grid-cols-2 gap-2 sm:gap-4 md:grid-cols-4">
               {STATS.map((s) => (
                 <div
                   key={s.label}
-                  className="group relative overflow-hidden rounded-2xl p-5 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                  className="group relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-5 text-center backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:scale-105"
                   style={isDarkHero ? {
                     background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.1)",
@@ -307,11 +307,11 @@ const Home = () => {
                     }}
                   />
                   <div className="relative z-[1]">
-                    <div className="mb-1 font-display text-[24px] font-black tracking-[-0.03em] text-ln-purple md:text-[28px]">
-                      {s.num}
+                     <div className="mb-0.5 font-display text-[18px] sm:text-[24px] font-black tracking-[-0.03em] text-ln-purple md:text-[28px]">
+                       {s.num}
                     </div>
-                    <div className="text-[10.5px] font-semibold leading-tight" style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}>
-                      {s.label}
+                     <div className="text-[9px] sm:text-[10.5px] font-semibold leading-tight" style={{ color: isDarkHero ? "rgba(255,255,255,0.6)" : "hsl(60,0%,45%)" }}>
+                       {s.label}
                     </div>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="relative overflow-visible border-y border-border py-6" style={{ clipPath: "inset(-20px 0 -20px 0)", background: "hsl(var(--bg3))" }}>
+      <div className="relative overflow-visible border-y border-border py-4 sm:py-6" style={{ clipPath: "inset(-20px 0 -20px 0)", background: "hsl(var(--bg3))" }}>
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-48" style={{ background: "linear-gradient(to right, hsl(var(--bg3)), transparent)" }} />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-48" style={{ background: "linear-gradient(to left, hsl(var(--bg3)), transparent)" }} />
 
@@ -330,14 +330,14 @@ const Home = () => {
             <Network className="h-3 w-3" />
             Two-sided logistics network
           </div>
-          <div className="mb-1.5 flex items-center justify-center gap-3">
-            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
-            <h2 className="heading-section font-display font-extrabold leading-[1.1] tracking-[-0.03em]">
+          <div className="mb-1.5 flex items-center justify-center gap-2 sm:gap-3">
+            <div className="hidden sm:block h-[2px] w-8 rounded-full bg-ln-purple" />
+            <h2 className="heading-section font-display font-extrabold leading-[1.1] tracking-[-0.03em] text-[clamp(18px,3vw,38px)]">
               A Network Trusted by Global <span className="text-ln-purple">Shippers and Carriers</span>
             </h2>
-            <div className="h-[2px] w-8 rounded-full bg-ln-purple" />
+            <div className="hidden sm:block h-[2px] w-8 rounded-full bg-ln-purple" />
           </div>
-          <p className="text-[12px] font-semibold tracking-wide text-foreground">
+          <p className="text-[11px] sm:text-[12px] font-semibold tracking-wide text-foreground">
             Supporting 120+ enterprises and 2300+ carriers across complex logistics networks
           </p>
           <p className="mt-1 inline-flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
@@ -353,18 +353,18 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mb-4 flex w-max items-center gap-8 animate-marquee">
+        <div className="mb-4 flex w-max items-center gap-4 sm:gap-8 animate-marquee">
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
               <Tooltip key={`shipper-${i}`}>
                 <TooltipTrigger asChild>
-                  <div className="group relative flex h-[64px] w-[140px] cursor-pointer items-center justify-center rounded-lg border border-border bg-card/95 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_20px_hsl(var(--ln-purple)/0.15)]">
+                  <div className="group relative flex h-[50px] w-[110px] sm:h-[64px] sm:w-[140px] cursor-pointer items-center justify-center rounded-lg border border-border bg-card/95 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_20px_hsl(var(--ln-purple)/0.15)]">
                     {hasLogo ? (
                       <img
                         src={c.logo}
                         alt={c.name}
-                        className="max-h-[38px] max-w-[100px] object-contain opacity-95 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
+                       className="max-h-[28px] max-w-[80px] sm:max-h-[38px] sm:max-w-[100px] object-contain opacity-95 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
                         style={{ mixBlendMode: "multiply" }}
                       />
                     ) : (
@@ -390,18 +390,18 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex w-max items-center gap-8 animate-marquee-reverse">
+        <div className="flex w-max items-center gap-4 sm:gap-8 animate-marquee-reverse">
           {[...CLIENT_LOGOS_2, ...CLIENT_LOGOS_2].map((c, i) => {
             const hasLogo = c.logo && c.logo.length > 7;
             return (
               <Tooltip key={`partner-${i}`}>
                 <TooltipTrigger asChild>
-                  <div className="group relative flex h-[56px] w-[128px] cursor-pointer items-center justify-center rounded-lg border border-border/80 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_18px_hsl(var(--ln-purple)/0.12)]">
+                  <div className="group relative flex h-[44px] w-[100px] sm:h-[56px] sm:w-[128px] cursor-pointer items-center justify-center rounded-lg border border-border/80 bg-card/80 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_4px_18px_hsl(var(--ln-purple)/0.12)]">
                     {hasLogo ? (
                       <img
                         src={c.logo}
                         alt={c.name}
-                        className="max-h-[32px] max-w-[90px] object-contain opacity-80 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
+                         className="max-h-[24px] max-w-[70px] sm:max-h-[32px] sm:max-w-[90px] object-contain opacity-80 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100"
                         style={{ mixBlendMode: "multiply" }}
                       />
                     ) : (
@@ -425,9 +425,9 @@ const Home = () => {
         </p>
       </div>
 
-      <section className="px-[5vw] py-10" style={{ background: "hsl(var(--bg2))", paddingTop: '1%' }}>
+      <section className="px-[5vw] py-6 sm:py-10" style={{ background: "hsl(var(--bg2))", paddingTop: '1%' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6 items-center">
             <ScrollReveal direction="up" delay={0.05}>
               <div className="section-tag !mb-2">What We Deliver</div>
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)]">
@@ -457,7 +457,7 @@ const Home = () => {
               </div>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {VISION_CARDS.map((c) => {
               const Icon = c.icon;
               return (
@@ -491,10 +491,10 @@ const Home = () => {
       </section>
 
       {/* AI DECISION ENGINE */}
-      <section className="px-[5vw] pt-10 pb-6 bg-background">
+      <section className="px-[5vw] pt-6 sm:pt-10 pb-4 sm:pb-6 bg-background">
         <div className="max-w-[1280px] mx-auto">
           {/* Header */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 sm:mb-5 items-start">
             <ScrollReveal direction="up" delay={0.05}>
               <div className="section-tag !mb-0.5 !font-black !tracking-[0.12em]">AI Decision Engine</div>
               <h2 className="font-display font-extrabold leading-[1.05] tracking-[-0.028em] text-[clamp(20px,2.5vw,32px)] mt-1">
@@ -519,18 +519,18 @@ const Home = () => {
                   <div className="absolute h-full w-[30%] rounded-full animate-[flowPulse_4s_ease-in-out_infinite]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--ln-purple) / 0.3), hsl(var(--ln-green) / 0.3), transparent)' }} />
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-0 relative z-10">
+              <div className="flex items-center justify-center gap-0 relative z-10 overflow-x-auto">
                 {['Procurement', 'Routing', 'Execution', 'Feedback', 'Optimization'].map((step, i) => {
                   const colors = ['hsl(var(--ln-green))', 'hsl(var(--ln-purple))', 'hsl(var(--ln-orange))', 'hsl(var(--ln-blue))', 'hsl(var(--ln-green))'];
                   return (
                     <div key={step} className="flex items-center">
                       <div className="flex flex-col items-center">
-                        <div className="w-2 h-2 rounded-full mb-1" style={{ background: colors[i], boxShadow: `0 0 8px ${colors[i]}` }} />
-                        <span className="text-[10px] font-bold tracking-[0.08em] uppercase" style={{ color: colors[i] }}>{step}</span>
+                         <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mb-1" style={{ background: colors[i], boxShadow: `0 0 8px ${colors[i]}` }} />
+                         <span className="text-[8px] sm:text-[10px] font-bold tracking-[0.08em] uppercase whitespace-nowrap" style={{ color: colors[i] }}>{step}</span>
                       </div>
                       {i < 4 && (
-                        <div className="flex items-center mx-2">
-                          <div className="w-8 h-[1.5px] rounded-full" style={{ background: `linear-gradient(90deg, ${colors[i]}, ${colors[i + 1]})`, opacity: 0.3 }} />
+                        <div className="flex items-center mx-1 sm:mx-2">
+                          <div className="w-4 sm:w-8 h-[1.5px] rounded-full" style={{ background: `linear-gradient(90deg, ${colors[i]}, ${colors[i + 1]})`, opacity: 0.3 }} />
                           <ChevronRight size={12} className="text-muted-foreground/30 -ml-1" />
                         </div>
                       )}
@@ -545,7 +545,7 @@ const Home = () => {
           </ScrollReveal>
 
           {/* Agent Categories */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {/* Procurement Intelligence */}
             <ScrollReveal direction="up" delay={0.1}>
               <div className="space-y-2.5">
@@ -720,11 +720,11 @@ const Home = () => {
       </section>
 
       {/* 6-STEP METHODOLOGY */}
-      <section className="px-[5vw] py-14 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
+      <section className="px-[5vw] py-8 sm:py-14 relative overflow-hidden" style={{ background: "hsl(var(--ln-purple) / 0.04)" }}>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--ln-purple)) 1px, transparent 0)", backgroundSize: "40px 40px" }} />
         <div className="max-w-[1280px] mx-auto relative">
           {/* Header */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4 items-end">
             <ScrollReveal>
               <div className="section-tag !mb-1">6-Step Methodology</div>
               <div className="text-[10px] font-bold tracking-[0.1em] uppercase mb-1.5 text-muted-foreground/60">Designed for enterprise procurement & logistics teams</div>
@@ -779,7 +779,7 @@ const Home = () => {
           </ScrollReveal>
 
           {/* Step Cards */}
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
             {(METHODOLOGY_STEPS as Array<{num: string; title: string; desc: string}>).map((s, i) => {
               const icons = [Database, GitBranch, Handshake, FileSignature, Cog, Bot];
               const colorKeys = ['--ln-blue', '--ln-green', '--ln-orange', '--ln-purple', '--ln-green', '--ln-purple'];
@@ -818,9 +818,9 @@ const Home = () => {
 
           {/* Bottom CTA + Emotional Payoff */}
           <ScrollReveal direction="up" delay={0.15}>
-            <div className="mt-8 text-center">
-              <p className="font-display text-[15px] font-bold mb-3 text-foreground/80">Transform procurement from a cost center into a strategic advantage.</p>
-              <Link to="/contact" className="btn-primary-ln no-underline !px-8 !py-3 !text-[13px] inline-block">
+            <div className="mt-5 sm:mt-8 text-center">
+              <p className="font-display text-[13px] sm:text-[15px] font-bold mb-2 sm:mb-3 text-foreground/80">Transform procurement from a cost center into a strategic advantage.</p>
+              <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 sm:!px-8 sm:!py-3 !text-[12px] sm:!text-[13px] inline-block">
                 Get Your 90-Day Optimization Plan →
               </Link>
             </div>
@@ -844,7 +844,7 @@ const Home = () => {
               </p>
             </ScrollReveal>
           </div>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {(CASES as Array<{tag: string; industry: string; client: string; story: string; spend: string; saving: string; pct: string; extra: string; timeline: string}>).map((cs) => (
               <StaggerItem key={cs.client}>
                 <div className="card-hover !p-3 !rounded-xl h-full flex flex-col group transition-all duration-300 hover:scale-[1.02]">

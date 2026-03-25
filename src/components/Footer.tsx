@@ -12,9 +12,9 @@ const Footer = () => (
       }} />
 
       <div className="relative z-10 max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-5 mb-5">
+        <div className="grid grid-cols-2 md:grid-cols-[2.2fr_1fr_1fr_1fr] gap-4 sm:gap-5 mb-5">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <div className="font-display text-xl font-extrabold mb-1.5">
               <span>LogisticsNow</span><span className="text-ln-green">.ai</span>
             </div>
@@ -109,11 +109,11 @@ const Footer = () => (
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t pt-4 flex justify-between items-center flex-wrap gap-3" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
-          <p className="text-[13px]" style={{ color: 'rgba(255,255,255,.35)' }}>
+        <div className="border-t pt-4 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
+          <p className="text-[11px] sm:text-[13px] text-center sm:text-left" style={{ color: 'rgba(255,255,255,.35)' }}>
             © 2026 LogisticsNow Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-[12px]" style={{ color: 'rgba(255,255,255,.4)' }}>
+          <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-[12px]" style={{ color: 'rgba(255,255,255,.4)' }}>
             <Link to="/privacy" className="no-underline hover:!text-white transition-colors" style={{ color: 'rgba(255,255,255,.4)' }}>Privacy Policy</Link>
             <Link to="/terms" className="no-underline hover:!text-white transition-colors" style={{ color: 'rgba(255,255,255,.4)' }}>Terms of Service</Link>
             <Link to="/security" className="no-underline hover:!text-white transition-colors" style={{ color: 'rgba(255,255,255,.4)' }}>Data Security</Link>
