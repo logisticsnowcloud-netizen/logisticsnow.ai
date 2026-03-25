@@ -111,7 +111,7 @@ const Footer = () => (
         {/* Bottom bar */}
         <div className="border-t pt-4 flex justify-between items-center flex-wrap gap-3" style={{ borderColor: 'rgba(255,255,255,.08)' }}>
           <p className="text-[13px]" style={{ color: 'rgba(255,255,255,.35)' }}>
-            © 2026 LogisticsNow Technologies Pvt. Ltd. All rights reserved.
+            © 2026 LogisticsNow Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-[12px]" style={{ color: 'rgba(255,255,255,.4)' }}>
             <Link to="/privacy" className="no-underline hover:!text-white transition-colors" style={{ color: 'rgba(255,255,255,.4)' }}>Privacy Policy</Link>
