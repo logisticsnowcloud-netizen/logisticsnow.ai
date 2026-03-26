@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { Calendar, CalendarDays, CheckCircle2, Download, Loader2, Sparkles } from "lucide-react";
 
 interface ScheduleDemoDialogProps {
@@ -216,6 +215,8 @@ const ScheduleDemoDialog = ({ open, onOpenChange }: ScheduleDemoDialogProps) => 
 
     setLoading(true);
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
+
       const { error: dbError } = await supabase.from("demo_requests").insert({
         name: form.name.trim(),
         email: form.email.trim(),
@@ -234,7 +235,8 @@ const ScheduleDemoDialog = ({ open, onOpenChange }: ScheduleDemoDialogProps) => 
       setSubmittedData({ date: form.date, time: form.time });
       setSubmitted(true);
       toast({ title: "Demo Request Sent!", description: "Add it to your calendar below." });
-    } catch {
+    } catch (error) {
+      console.error("Failed to submit demo request", error);
       toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
     } finally {
       setLoading(false);
