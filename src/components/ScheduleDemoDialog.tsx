@@ -215,6 +215,8 @@ const ScheduleDemoDialog = ({ open, onOpenChange }: ScheduleDemoDialogProps) => 
 
     setLoading(true);
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
+
       const { error: dbError } = await supabase.from("demo_requests").insert({
         name: form.name.trim(),
         email: form.email.trim(),
@@ -233,7 +235,8 @@ const ScheduleDemoDialog = ({ open, onOpenChange }: ScheduleDemoDialogProps) => 
       setSubmittedData({ date: form.date, time: form.time });
       setSubmitted(true);
       toast({ title: "Demo Request Sent!", description: "Add it to your calendar below." });
-    } catch {
+    } catch (error) {
+      console.error("Failed to submit demo request", error);
       toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
     } finally {
       setLoading(false);
