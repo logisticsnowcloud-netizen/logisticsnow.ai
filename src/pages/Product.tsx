@@ -4,7 +4,7 @@ import { PILLARS, MFR_FEATURES, CARRIER_FEATURES, VAL_DRIVERS } from "@/lib/data
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
 import PlatformWalkthrough from "@/components/PlatformWalkthrough";
-import AiDemo from "@/components/AiDemo";
+import { useScheduleDemo } from "@/hooks/useScheduleDemo";
 
 const PROD_STATS = [
   { n: '$2.5Bn+', l: 'Spend Analyzed', c: '#393185' },
@@ -41,6 +41,33 @@ const TRUSTED_LOGOS = [
   { name: 'Vredestein', src: '/logo/Vredestein.png' },
 ];
 
+const HOW_IT_WORKS_STEPS = [
+  { num: '01', title: 'Upload Lanes / RFQs', desc: 'Import your shipping lanes, volumes, and requirements in minutes', icon: '📤', color: '#393185' },
+  { num: '02', title: 'AI Benchmarks Pricing', desc: 'Instant market rate benchmarking using 2B+ data points across global lanes', icon: '📊', color: '#1AA6DF' },
+  { num: '03', title: 'Run Auctions / Sourcing', desc: 'Automated carrier sourcing with AI-powered auction management', icon: '⚡', color: '#54AF3A' },
+  { num: '04', title: 'AI Allocates Carriers', desc: 'Smart carrier recommendation and allocation based on performance, cost & reliability', icon: '🤖', color: '#fb923c' },
+  { num: '05', title: 'Track Execution', desc: 'Real-time shipment tracking with proactive exception management', icon: '📍', color: '#393185' },
+  { num: '06', title: 'Reconcile & Pay', desc: 'Automated invoice reconciliation and faster carrier payments', icon: '💳', color: '#1AA6DF' },
+];
+
+const AI_CAPABILITIES = [
+  { icon: '🎯', title: 'Lane-Level Pricing Prediction', desc: 'Predicts lane-level pricing using 2B+ historical and real-time data points', color: '#393185' },
+  { icon: '📉', title: 'Overpriced Lane Detection', desc: 'Identifies underpriced vs overpriced lanes — so you never overpay', color: '#ef4444' },
+  { icon: '🏆', title: 'Carrier Shortlisting', desc: 'Auto-shortlists top 5 carriers per lane based on performance, price & reliability', color: '#54AF3A' },
+  { icon: '🤝', title: 'Negotiation Simulations', desc: 'Runs AI-powered negotiation scenarios to find optimal pricing strategies', color: '#1AA6DF' },
+  { icon: '📡', title: '24/7 Market Monitoring', desc: 'Autonomous agents monitor freight markets round-the-clock for rate changes & opportunities', color: '#fb923c' },
+  { icon: '📋', title: 'Demand Forecasting', desc: 'Predicts shipment volumes and capacity needs before they happen', color: '#393185' },
+];
+
+const COMPARISON_DATA = [
+  { category: 'Rate Intelligence', traditional: 'Static rates from brokers', lorri: 'Dynamic AI benchmarks from 2B+ data points' },
+  { category: 'Carrier Sourcing', traditional: 'Manual RFQs over weeks', lorri: 'AI-driven sourcing in hours' },
+  { category: 'Visibility', traditional: 'Fragmented spreadsheets', lorri: 'Real-time unified intelligence' },
+  { category: 'Pricing', traditional: 'Gut-feel negotiations', lorri: 'Data-backed predictive pricing' },
+  { category: 'Procurement Cycle', traditional: '2–4 weeks per cycle', lorri: '2–3 days end-to-end' },
+  { category: 'Invoice Reconciliation', traditional: 'Manual, error-prone', lorri: 'Automated & instant' },
+];
+
 const Product = () => {
   const [heroPillar, setHeroPillar] = useState(0);
   const [activePillar, setActivePillar] = useState(0);
@@ -49,6 +76,7 @@ const Product = () => {
   const [pillarProgress, setPillarProgress] = useState(0);
   const pillarIntervalRef = useRef<number | null>(null);
   const pillarProgressRef = useRef<number | null>(null);
+  const { setOpen } = useScheduleDemo();
 
   const PILLAR_INTERVAL = 5000;
 
@@ -114,13 +142,13 @@ const Product = () => {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[10.5px] font-bold tracking-[0.09em] uppercase mb-3" style={{ background: 'rgba(26,166,223,.10)', border: '1px solid rgba(26,166,223,.25)', color: '#1AA6DF' }}>
                   <span className="w-[7px] h-[7px] rounded-full" style={{ background: '#1AA6DF', boxShadow: '0 0 8px #1AA6DF' }} />
-                  AI Copilot for Global Logistics
+                  Procurement Infrastructure for Logistics
                 </div>
                 <h1 className="font-display font-extrabold leading-[1.03] tracking-[-0.035em] mb-3 heading-hero">
-                  AI Intelligence Layer<br />for <span className="text-ln-green">Global Supply Chains</span>
+                  The Operating System<br />for <span className="text-ln-green">Logistics Procurement</span>
                 </h1>
                 <p className="text-[13.5px] text-muted-foreground leading-[1.6] max-w-[460px] mb-3">
-                  Predict freight rates, analyze global trade flows, and automate logistics decisions — all powered by <strong className="text-foreground">LoRRI AI</strong>, the industry's first end-to-end logistics intelligence platform.
+                  From benchmarking and sourcing to execution and payments — LoRRI uses AI to run your entire logistics procurement lifecycle. Powered by <strong className="text-foreground">2B+ data points</strong> across global supply chains.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-3">
                   {PROD_STATS.map((s) => (
@@ -131,8 +159,8 @@ const Product = () => {
                   ))}
                 </div>
                 <div className="flex gap-3.5 flex-wrap">
-                  <button className="btn-primary-ln !px-5 !py-2.5 !text-[13px]">🤖 Try AI Demo ↓</button>
-                  <button className="btn-secondary-ln !px-5 !py-2.5 !text-[13px]">🚀 Explore Platform →</button>
+                  <button onClick={() => setOpen(true)} className="btn-primary-ln !px-5 !py-2.5 !text-[13px]">📅 Schedule Demo →</button>
+                  <button onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} className="btn-secondary-ln !px-5 !py-2.5 !text-[13px]">🚀 How It Works ↓</button>
                 </div>
               </div>
             </ScrollReveal>
@@ -211,8 +239,28 @@ const Product = () => {
         </div>
       </div>
 
+      {/* ═══════════════ ENTERPRISE TRUST STRIP ═══════════════ */}
+      <div className="bg-bg2 border-y border-border py-4 px-[5vw]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10">
+            {[
+              { icon: '🔒', label: 'SOC2 Ready' },
+              { icon: '🔐', label: 'Enterprise-Grade Security' },
+              { icon: '🌍', label: 'Multi-Region Compliant' },
+              { icon: '🏢', label: 'Trusted by Fortune 500 Supply Chains' },
+              { icon: '📜', label: 'GDPR Compliant' },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-2 text-[12px] font-semibold text-muted-foreground">
+                <span className="text-base">{item.icon}</span>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* ═══════════════ PROBLEM → SOLUTION ═══════════════ */}
-      <section className="section-std bg-bg2 relative overflow-hidden">
+      <section className="section-std bg-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 60% at 80% 30%, rgba(251,146,60,0.06), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
@@ -224,7 +272,7 @@ const Product = () => {
                   The Problem
                 </div>
                 <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-3 heading-section">
-                  Logistics Data is <span style={{ color: '#ef4444' }}>Broken</span>
+                  Logistics Procurement is <span style={{ color: '#ef4444' }}>Broken</span>
                 </h2>
                 <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
                   Global logistics data is fragmented across silos, freight pricing is unpredictable, and supply chain decisions are painfully slow.
@@ -255,15 +303,15 @@ const Product = () => {
               <div>
                 <div className="section-tag">The Solution</div>
                 <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-3 heading-section">
-                  LoRRI AI — Your <span className="text-ln-green">Logistics Copilot</span>
+                  From RFQ to Payment —<br /><span className="text-ln-green">Fully Automated</span>
                 </h2>
                 <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
-                  LoRRI AI combines real-time trade data, predictive analytics, and autonomous agents to give logistics teams instant intelligence.
+                  LoRRI automates your entire logistics procurement lifecycle — from benchmarking and sourcing to execution and payments — powered by real-time intelligence.
                 </p>
                 <div className="space-y-2.5">
                   {[
                     { icon: '🧠', solve: 'Unified Intelligence', desc: 'All freight data in one platform — benchmarks, rates & carrier insights', color: '#393185' },
-                    { icon: '📈', solve: 'Predictive Pricing', desc: 'AI-powered rate forecasting across routes and markets', color: '#1AA6DF' },
+                    { icon: '📈', solve: 'Predictive Pricing', desc: 'AI predicts lane-level pricing using 2B+ data points', color: '#1AA6DF' },
                     { icon: '⚡', solve: 'Instant Procurement', desc: 'From RFQ to award in hours — not weeks', color: '#54AF3A' },
                     { icon: '🤖', solve: 'Autonomous AI Agents', desc: 'Agents that monitor, negotiate and optimize 24/7', color: '#fb923c' },
                   ].map((item) => (
@@ -284,8 +332,86 @@ const Product = () => {
         </div>
       </section>
 
-      {/* ═══════════════ PLATFORM WALKTHROUGH ═══════════════ */}
+      {/* ═══════════════ HOW LORRI WORKS ═══════════════ */}
+      <section id="how-it-works" className="section-std bg-bg2 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 70% at 50% 30%, rgba(57,49,133,0.06), transparent)' }} />
+        <div className="max-w-[1280px] mx-auto relative z-[1]">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-8">
+              <div className="section-tag mx-auto">How It Works</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+                From Upload to Payment in <span className="text-ln-green">6 Steps</span>
+              </h2>
+              <p className="text-muted-foreground text-body-lg mt-2 max-w-[560px] mx-auto">
+                LoRRI replaces your entire logistics procurement workflow — end to end — with AI-powered automation.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="relative">
+            {/* Connecting line */}
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-[2px] -translate-y-1/2" style={{ background: 'linear-gradient(90deg, #393185, #1AA6DF, #54AF3A, #fb923c, #393185, #1AA6DF)' }} />
+
+            <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {HOW_IT_WORKS_STEPS.map((step) => (
+                <StaggerItem key={step.num}>
+                  <div className="relative bg-card border border-border rounded-[16px] p-5 hover:shadow-lg transition-all duration-300 group">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg shrink-0" style={{ background: `${step.color}15`, border: `2px solid ${step.color}40` }}>
+                        {step.icon}
+                      </div>
+                      <div className="font-mono text-[11px] font-bold tracking-[0.1em] uppercase" style={{ color: step.color }}>
+                        Step {step.num}
+                      </div>
+                    </div>
+                    <div className="font-display text-[16px] font-bold mb-1.5">{step.title}</div>
+                    <div className="text-[12.5px] text-muted-foreground leading-[1.6]">{step.desc}</div>
+                    {/* Arrow connector for desktop */}
+                    <div className="hidden lg:block absolute -right-2 top-1/2 -translate-y-1/2 z-[2] text-muted-foreground/30 text-lg">
+                      {step.num !== '06' && '→'}
+                    </div>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════ WHAT AI ACTUALLY DOES ═══════════════ */}
       <section className="section-std bg-background relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 60% at 20% 40%, rgba(84,175,58,0.06), transparent)' }} />
+        <div className="max-w-[1280px] mx-auto relative z-[1]">
+          <ScrollReveal direction="up">
+            <div className="mb-6">
+              <div className="section-tag">AI That Delivers</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+                What Our AI <span className="text-ln-green">Actually Does</span>
+              </h2>
+              <p className="text-muted-foreground text-body-lg mt-2 max-w-[560px]">
+                No buzzwords. Here's exactly how LoRRI's AI works for your logistics procurement — with real, measurable outcomes.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {AI_CAPABILITIES.map((cap) => (
+              <StaggerItem key={cap.title}>
+                <div className="bg-card border border-border rounded-[14px] p-5 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center text-[20px] mb-3" style={{ background: `${cap.color}12`, border: `1px solid ${cap.color}25` }}>
+                    {cap.icon}
+                  </div>
+                  <div className="font-display text-[15px] font-bold mb-1.5">{cap.title}</div>
+                  <div className="text-[12.5px] text-muted-foreground leading-[1.65]">{cap.desc}</div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ═══════════════ PLATFORM WALKTHROUGH ═══════════════ */}
+      <section className="section-std bg-bg2 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 80% at 50% 20%, rgba(57,49,133,0.08), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -316,9 +442,9 @@ const Product = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/contact" className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
+                <button onClick={() => setOpen(true)} className="btn-primary-ln no-underline !px-7 !py-3 !text-[15px]">
                   Schedule a Live Demo →
-                </Link>
+                </button>
               </div>
             </ScrollReveal>
 
@@ -329,8 +455,8 @@ const Product = () => {
         </div>
       </section>
 
-      {/* ═══════════════ DATA CREDIBILITY ═══════════════ */}
-      <section className="py-[28px] px-[5vw] bg-bg2 relative overflow-hidden">
+      {/* ═══════════════ DATA CREDIBILITY — BLOOMBERG TERMINAL ═══════════════ */}
+      <section className="py-[28px] px-[5vw] bg-background relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 70% at 30% 50%, rgba(26,166,223,0.06), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
           <ScrollReveal direction="up">
@@ -339,8 +465,8 @@ const Product = () => {
               <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
                 The <span className="text-ln-green">Bloomberg Terminal</span> for Logistics
               </h2>
-              <p className="text-left text-muted-foreground text-body-lg mt-2">
-                Powered by the world's largest logistics intelligence dataset — real data, real insights, real decisions.
+              <p className="text-left text-muted-foreground text-body-lg mt-2 max-w-[560px]">
+                Unlike traditional TMS or brokers, LoRRI gives you real-time market intelligence — powered by the world's largest logistics dataset.
               </p>
             </div>
           </ScrollReveal>
@@ -357,6 +483,35 @@ const Product = () => {
               </StaggerItem>
             ))}
           </StaggerContainer>
+
+          {/* Comparison Table: Traditional vs LoRRI */}
+          <ScrollReveal direction="up" delay={0.1}>
+            <div className="bg-card border border-border rounded-[16px] overflow-hidden mb-6">
+              <div className="px-5 py-3 border-b border-border">
+                <div className="font-display text-[15px] font-bold">Traditional Logistics vs LoRRI</div>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-[13px]">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left px-5 py-3 font-bold text-muted-foreground text-[11px] uppercase tracking-[0.08em]">Capability</th>
+                      <th className="text-left px-5 py-3 font-bold text-[11px] uppercase tracking-[0.08em]" style={{ color: '#ef4444' }}>Traditional</th>
+                      <th className="text-left px-5 py-3 font-bold text-[11px] uppercase tracking-[0.08em]" style={{ color: '#54AF3A' }}>LoRRI AI</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {COMPARISON_DATA.map((row, i) => (
+                      <tr key={row.category} className={i < COMPARISON_DATA.length - 1 ? 'border-b border-border/50' : ''}>
+                        <td className="px-5 py-3 font-semibold">{row.category}</td>
+                        <td className="px-5 py-3 text-muted-foreground">{row.traditional}</td>
+                        <td className="px-5 py-3 font-semibold" style={{ color: '#54AF3A' }}>{row.lorri}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </ScrollReveal>
 
           {/* Trusted By Logos */}
           <ScrollReveal direction="up" delay={0.2}>
@@ -382,49 +537,52 @@ const Product = () => {
         </div>
       </section>
 
-      {/* ═══════════════ AI DEMO ═══════════════ */}
-      {/* <section className="section-std bg-background relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 60% at 70% 40%, rgba(84,175,58,0.06), transparent)' }} />
+      {/* ═══════════════ ROI SECTION ═══════════════ */}
+      <section className="section-std bg-bg2 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 50% 60% at 70% 50%, rgba(84,175,58,0.08), transparent)' }} />
         <div className="max-w-[1280px] mx-auto relative z-[1]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            <ScrollReveal direction="up">
-              <div>
-                <div className="section-tag">Interactive AI Demo</div>
-                <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] mb-3 heading-section">
-                  Try the <span className="text-ln-green">AI Supply Chain Analyzer</span>
-                </h2>
-                <p className="text-muted-foreground text-body-lg mb-4 max-w-[480px]">
-                  Experience LoRRI's intelligence firsthand — powered by <strong className="text-foreground">real AI</strong>. Enter any trade route and get live freight intelligence.
-                </p>
-                <div className="space-y-3 mb-4">
-                  {[
-                    { icon: '📈', title: 'Freight Rate Forecasting', desc: 'Predict rate changes across routes and markets before they happen' },
-                    { icon: '🌐', title: 'Trade Flow Analysis', desc: 'Analyze commodity flows, identify risks and discover new markets' },
-                    { icon: '🤖', title: 'AI Agent Monitoring', desc: 'Autonomous agents that monitor freight markets 24/7 for opportunities' },
-                  ].map((item) => (
-                    <div key={item.title} className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-lg flex items-center justify-center text-base shrink-0" style={{ background: 'rgba(84,175,58,0.08)', border: '1px solid rgba(84,175,58,0.15)' }}>
-                        {item.icon}
-                      </div>
-                      <div>
-                        <div className="font-display text-[14px] font-bold">{item.title}</div>
-                        <div className="text-[12.5px] text-muted-foreground">{item.desc}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </ScrollReveal>
+          <ScrollReveal direction="up">
+            <div className="text-center mb-6">
+              <div className="section-tag mx-auto">Business Impact</div>
+              <h2 className="font-display font-extrabold leading-[1.07] tracking-[-0.028em] heading-section">
+                What This Means for <span className="text-ln-green">Your Business</span>
+              </h2>
+              <p className="text-muted-foreground text-body-lg mt-2 max-w-[560px] mx-auto">
+                If you manage ₹100 Cr+ in logistics spend, here's the measurable impact LoRRI delivers from day one.
+              </p>
+            </div>
+          </ScrollReveal>
 
-            <ScrollReveal direction="up" delay={0.15}>
-              <AiDemo />
-            </ScrollReveal>
-          </div>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { metric: '₹8–20 Cr', label: 'Annual Savings', desc: 'On a ₹100 Cr logistics spend through AI-optimized sourcing', icon: '💰', color: '#54AF3A' },
+              { metric: '3 Weeks → 3 Days', label: 'Procurement Cycle', desc: 'Reduce procurement cycle time by 85% with automated workflows', icon: '⚡', color: '#1AA6DF' },
+              { metric: '15–25%', label: 'Fill Rate Improvement', desc: 'Better carrier matching leads to higher fill rates and fewer empty miles', icon: '📈', color: '#393185' },
+              { metric: '60%', label: 'Manual Ops Reduction', desc: 'Automate repetitive procurement tasks and free up your team', icon: '🤖', color: '#fb923c' },
+            ].map((item) => (
+              <StaggerItem key={item.label}>
+                <div className="bg-card border border-border rounded-[16px] p-5 text-center hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="text-[28px] mb-2">{item.icon}</div>
+                  <div className="font-display text-[22px] font-extrabold mb-1" style={{ color: item.color }}>{item.metric}</div>
+                  <div className="font-display text-[14px] font-bold mb-1.5">{item.label}</div>
+                  <div className="text-[12px] text-muted-foreground leading-[1.6]">{item.desc}</div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <ScrollReveal direction="up" delay={0.2}>
+            <div className="text-center mt-6">
+              <button onClick={() => setOpen(true)} className="btn-primary-ln !px-8 !py-3 !text-[15px]">
+                📅 Calculate Your ROI — Schedule Demo →
+              </button>
+            </div>
+          </ScrollReveal>
         </div>
-      </section> */}
+      </section>
 
       {/* ═══════════════ AUDIENCE TOGGLE ═══════════════ */}
-      <section className="section-std bg-bg2">
+      <section className="section-std bg-background">
         <div className="max-w-[1280px] mx-auto">
           <ScrollReveal>
             <div className="section-tag">One Platform, Two Ecosystems</div>
@@ -432,7 +590,7 @@ const Product = () => {
               Built for Both Sides of <span className="text-ln-green">Logistics</span>
             </h2>
             <p className="text-muted-foreground text-body-lg mb-4 max-w-[580px]">
-              One unified platform serving manufacturers and carriers with tailored experiences.
+              One unified platform with tailored experiences — driving value for both shippers and carriers.
             </p>
             <div className="inline-flex mt-6 bg-surface border border-border rounded-full p-1 gap-1">
               <button
@@ -440,7 +598,7 @@ const Product = () => {
                 className={`px-7 py-2.5 rounded-full text-sm font-bold border-none cursor-pointer transition-all duration-300 font-body ${audience === 'mfr' ? 'text-white' : 'text-muted-foreground bg-transparent'}`}
                 style={audience === 'mfr' ? { background: 'linear-gradient(135deg,#393185,#1AA6DF)', boxShadow: '0 4px 16px rgba(57,49,133,.4)' } : {}}
               >
-                🏭 Manufacturers / Shippers
+                🏭 Shippers
               </button>
               <button
                 onClick={() => setAudience('carrier')}
@@ -451,7 +609,49 @@ const Product = () => {
               </button>
             </div>
           </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6" key={audience}>
+
+          {/* Sharper value props based on audience */}
+          <div className="mt-4 mb-2">
+            <ScrollReveal direction="up">
+              <div className="flex flex-wrap gap-3">
+                {audience === 'mfr' ? (
+                  <>
+                    {[
+                      { icon: '💰', label: 'Cost Savings', desc: 'Save 8–20% on logistics spend' },
+                      { icon: '🎛️', label: 'Full Control', desc: 'Own your procurement data & decisions' },
+                      { icon: '👁️', label: 'Total Visibility', desc: 'Real-time spend & performance analytics' },
+                    ].map((v) => (
+                      <div key={v.label} className="flex items-center gap-2.5 bg-card border border-border rounded-full px-4 py-2">
+                        <span className="text-base">{v.icon}</span>
+                        <div>
+                          <span className="font-display text-[13px] font-bold">{v.label}</span>
+                          <span className="text-[11px] text-muted-foreground ml-1.5">{v.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    {[
+                      { icon: '📦', label: 'More Loads', desc: 'Access enterprise shipper demand' },
+                      { icon: '🚛', label: 'Better Utilization', desc: 'AI-matched loads reduce empty miles' },
+                      { icon: '💳', label: 'Faster Payments', desc: 'Get paid 10x faster with LoRRI Pay' },
+                    ].map((v) => (
+                      <div key={v.label} className="flex items-center gap-2.5 bg-card border border-border rounded-full px-4 py-2">
+                        <span className="text-base">{v.icon}</span>
+                        <div>
+                          <span className="font-display text-[13px] font-bold">{v.label}</span>
+                          <span className="text-[11px] text-muted-foreground ml-1.5">{v.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                )}
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4" key={audience}>
             {features.map((f) => (
               <StaggerItem key={f.title}>
                 <div className="card-hover">
@@ -464,6 +664,28 @@ const Product = () => {
           </StaggerContainer>
         </div>
       </section>
+
+      {/* ═══════════════ DESIGNED FOR STRIP ═══════════════ */}
+      <div className="bg-bg2 border-y border-border py-5 px-[5vw]">
+        <div className="max-w-[1280px] mx-auto text-center">
+          <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-muted-foreground mb-3">
+            Designed For
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              '🏢 Enterprise Shippers',
+              '📋 Procurement Leaders',
+              '🔗 Supply Chain Teams',
+              '🏭 Manufacturing Companies',
+              '🚛 3PL & LSP Partners',
+            ].map((item) => (
+              <div key={item} className="px-4 py-2 rounded-full bg-card border border-border text-[13px] font-semibold">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ═══════════════ 4 PILLARS ═══════════════ */}
       <section className="py-[24px] px-[5vw] bg-background">
