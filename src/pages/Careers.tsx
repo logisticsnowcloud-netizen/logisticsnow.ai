@@ -5,7 +5,6 @@ import CtaBanner from "@/components/CtaBanner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 
 type Job = {
   id: string;
@@ -209,6 +208,8 @@ const ApplyModal = ({ job, open, onClose }: { job: Job | null; open: boolean; on
 
     setSubmitting(true);
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
+
       // Upload resume if provided
       let resumePath = "";
       if (file) {

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
 const PRESET_SCENARIOS = [
@@ -47,6 +46,7 @@ const AiDemo = () => {
     setResults(null);
 
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
       const { data, error } = await supabase.functions.invoke("ai-logistics-analyzer", {
         body: { product, origin, destination },
       });
