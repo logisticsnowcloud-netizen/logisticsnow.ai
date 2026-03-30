@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
+import { useScheduleDemo } from "@/hooks/useScheduleDemo";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   Bot,
@@ -100,6 +101,7 @@ const Home = () => {
   const [heroTheme, setHeroTheme] = useState<"dark" | "light">("light");
   const isDarkHero = heroTheme === "dark";
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { setOpen } = useScheduleDemo();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -346,10 +348,10 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="mb-1.5 px-[5vw]">
+        <div className="relative z-20 mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
-            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-purple">Shippers &amp; Manufacturers</div>
-            <p className="text-[11px] text-muted-foreground">Enterprises optimizing logistics operations</p>
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-purple" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Shippers &amp; Manufacturers</div>
+            <p className="text-[11px] text-muted-foreground" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Enterprises optimizing logistics operations</p>
           </div>
         </div>
 
@@ -383,10 +385,10 @@ const Home = () => {
           })}
         </div>
 
-        <div className="mb-1.5 px-[5vw]">
+        <div className="relative z-20 mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
-            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-green">Carriers &amp; Logistics Partners</div>
-            <p className="text-[11px] text-muted-foreground">Network partners enabling execution at scale</p>
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-green" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Carriers &amp; Logistics Partners</div>
+            <p className="text-[11px] text-muted-foreground" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Network partners enabling execution at scale</p>
           </div>
         </div>
 
@@ -742,9 +744,9 @@ const Home = () => {
                   Powered by AI agents and network intelligence, LogisticsNow transforms your procurement operations in weeks — not months.
                 </p>
                 <div className="flex flex-col gap-1.5">
-                  <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px] w-fit">
+                  <button onClick={() => setOpen(true)} className="btn-primary-ln !px-6 !py-2.5 !text-[13px] w-fit cursor-pointer border-none">
                     Get Your 90-Day Optimization Plan →
-                  </Link>
+                  </button>
                   <span className="text-[10.5px] text-muted-foreground/60 italic">See how much you can save in the first 90 days</span>
                 </div>
               </div>
@@ -820,9 +822,9 @@ const Home = () => {
           <ScrollReveal direction="up" delay={0.15}>
             <div className="mt-5 sm:mt-8 text-center">
               <p className="font-display text-[13px] sm:text-[15px] font-bold mb-2 sm:mb-3 text-foreground/80">Transform procurement from a cost center into a strategic advantage.</p>
-              <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 sm:!px-8 sm:!py-3 !text-[12px] sm:!text-[13px] inline-block">
+              <button onClick={() => setOpen(true)} className="btn-primary-ln !px-6 !py-2.5 sm:!px-8 sm:!py-3 !text-[12px] sm:!text-[13px] inline-block cursor-pointer border-none">
                 Get Your 90-Day Optimization Plan →
-              </Link>
+              </button>
             </div>
           </ScrollReveal>
         </div>
@@ -885,9 +887,9 @@ const Home = () => {
               Across industries, LogisticsNow consistently delivers 4–20% savings through AI-driven optimization.
             </p>
             <div className="flex items-center justify-center gap-3 flex-wrap">
-              <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2 !text-[12px]">
+              <button onClick={() => setOpen(true)} className="btn-primary-ln !px-6 !py-2 !text-[12px] cursor-pointer border-none">
                 See How Much You Can Save →
-              </Link>
+              </button>
               <Link to="/about" className="btn-secondary-ln no-underline !px-5 !py-2 !text-[12px]">
                 View Detailed Case Studies
               </Link>
