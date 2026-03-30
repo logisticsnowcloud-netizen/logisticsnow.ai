@@ -820,9 +820,9 @@ const Home = () => {
           <ScrollReveal direction="up" delay={0.15}>
             <div className="mt-5 sm:mt-8 text-center">
               <p className="font-display text-[13px] sm:text-[15px] font-bold mb-2 sm:mb-3 text-foreground/80">Transform procurement from a cost center into a strategic advantage.</p>
-              <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 sm:!px-8 sm:!py-3 !text-[12px] sm:!text-[13px] inline-block">
+              <button onClick={() => setOpen(true)} className="btn-primary-ln !px-6 !py-2.5 sm:!px-8 sm:!py-3 !text-[12px] sm:!text-[13px] inline-block cursor-pointer border-none">
                 Get Your 90-Day Optimization Plan →
-              </Link>
+              </button>
             </div>
           </ScrollReveal>
         </div>
