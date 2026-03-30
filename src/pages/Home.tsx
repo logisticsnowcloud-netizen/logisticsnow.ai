@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { CASES, TESTIMONIALS, METHODOLOGY_STEPS } from "@/lib/data";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import CtaBanner from "@/components/CtaBanner";
+import { useScheduleDemo } from "@/hooks/useScheduleDemo";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   Bot,
