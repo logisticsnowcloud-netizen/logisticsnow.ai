@@ -25,7 +25,7 @@ const Footer = () => (
               A global logistics intelligence platform helping enterprises build smarter, faster, and more resilient supply chains using AI.
             </p>
             <p className="text-[10px] mb-3" style={{ color: 'rgba(255,255,255,.35)' }}>
-              Serving enterprises across US, Europe, Middle East &amp; APAC
+              Serving enterprises across US, Europe &amp; APAC
             </p>
             <div className="flex items-center gap-2">
               <span className="text-[10px] uppercase tracking-wider font-semibold" style={{ color: 'rgba(255,255,255,.4)' }}>Follow us</span>
@@ -102,7 +102,7 @@ const Footer = () => (
               </a>
               <div className="flex items-start gap-2 text-[13px]" style={{ color: 'rgba(255,255,255,.45)' }}>
                 <MapPin size={13} className="text-ln-green flex-shrink-0 mt-0.5" />
-                <span>Global Operations | India • Middle East • Europe</span>
+                <span>Global Operations | India • USA • Europe</span>
               </div>
             </div>
           </div>

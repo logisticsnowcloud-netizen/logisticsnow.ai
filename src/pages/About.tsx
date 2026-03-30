@@ -12,7 +12,7 @@ const JOURNEY = [
 
 const WHY_US = [
   { icon: '🤝', title: 'Independent & Conflict-Free Network', desc: 'Unlike traditional logistics platforms, LogisticsNow does not operate assets — enabling unbiased optimization across carriers and networks.', proof: '🏛️ Shell · Flipkart · Carnegie Mellon University Alumni', proofBg: 'rgba(57,49,133,.07)', proofColor: '#393185', strip: 'linear-gradient(90deg,#393185,#1AA6DF)' },
-  { icon: '🌍', title: 'Global Freight Intelligence Network', desc: 'A intelligence platform analyzing billions in freight spend across thousands of routes and networks worldwide — spanning US, Europe, Middle East & APAC.', proof: '📊 $2.5Bn+ · 80K+ routes · 4+ continents', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
+  { icon: '🌍', title: 'Global Freight Intelligence Network', desc: 'A intelligence platform analyzing billions in freight spend across thousands of routes and networks worldwide — spanning USA, Europe & APAC.', proof: '📊 $2.5Bn+ · 80K+ routes · 4+ continents', proofBg: 'rgba(84,175,58,.07)', proofColor: '#54AF3A', strip: 'linear-gradient(90deg,#54AF3A,#1AA6DF)' },
   { icon: '🧠', title: 'Self-Learning Logistics AI', desc: 'Proprietary AI models that continuously learn from cross-enterprise network effects, identifying cost optimization opportunities and improving logistics performance over time.', proof: '💰 $21Mn+ savings · 20%+ reduction', proofBg: 'rgba(26,166,223,.06)', proofColor: '#1AA6DF', strip: 'linear-gradient(90deg,#1AA6DF,#393185)' },
 ];
 
@@ -52,9 +52,9 @@ const About = () => (
                 LogisticsNow helps enterprises optimize logistics procurement and operations using AI-driven analytics and real-time freight intelligence. 
                 Our platform enables organizations to reduce freight costs, improve procurement decisions, and drive more efficient supply chain performance.
               </p>
-              <p className="text-foreground font-semibold leading-[1.6] mb-5 max-w-[500px]" style={{ fontSize: 'clamp(13px, 1.4vw, 14.5px)' }}>
+              {/* <p className="text-foreground font-semibold leading-[1.6] mb-5 max-w-[500px]" style={{ fontSize: 'clamp(13px, 1.4vw, 14.5px)' }}>
                 LogisticsNow is building the world's first neutral, AI-powered logistics intelligence layer connecting shippers, carriers, and networks globally.
-              </p>
+              </p> */}
               <div className="flex gap-3 flex-wrap">
                 <Link to="/product" className="btn-primary-ln !px-6 !py-2.5 !text-[13.5px]">Explore Our Platform →</Link>
                 <a href="#our-vision" className="inline-flex items-center gap-2 text-ln-purple font-bold text-[13.5px] no-underline rounded-full px-5 py-2" style={{ border: '2px solid #393185' }}>See the AI in Action</a>
@@ -80,7 +80,7 @@ const About = () => (
               {/* Global Presence */}
               <div className="flex items-center justify-center gap-2 p-2.5 bg-background border border-border rounded-xl">
                 <span className="text-[14px]">🌍</span>
-                <span className="text-[11px] font-semibold text-muted-foreground tracking-wide">US &nbsp;|&nbsp; Europe &nbsp;|&nbsp; Middle East &nbsp;|&nbsp; India</span>
+                <span className="text-[11px] font-semibold text-muted-foreground tracking-wide">US &nbsp;|&nbsp; Europe &nbsp;|&nbsp; India</span>
               </div>
             </div>
           </ScrollReveal>
