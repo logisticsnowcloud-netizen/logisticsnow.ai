@@ -383,10 +383,10 @@ const Home = () => {
           })}
         </div>
 
-        <div className="mb-1.5 px-[5vw]">
+        <div className="relative z-20 mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
-            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-green">Carriers &amp; Logistics Partners</div>
-            <p className="text-[11px] text-muted-foreground">Network partners enabling execution at scale</p>
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-green" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Carriers &amp; Logistics Partners</div>
+            <p className="text-[11px] text-muted-foreground" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Network partners enabling execution at scale</p>
           </div>
         </div>
 
