@@ -101,6 +101,7 @@ const Home = () => {
   const [heroTheme, setHeroTheme] = useState<"dark" | "light">("light");
   const isDarkHero = heroTheme === "dark";
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { setOpen } = useScheduleDemo();
 
   useEffect(() => {
     const canvas = canvasRef.current;
