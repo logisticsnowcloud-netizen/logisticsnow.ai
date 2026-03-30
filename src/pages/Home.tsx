@@ -742,9 +742,9 @@ const Home = () => {
                   Powered by AI agents and network intelligence, LogisticsNow transforms your procurement operations in weeks — not months.
                 </p>
                 <div className="flex flex-col gap-1.5">
-                  <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2.5 !text-[13px] w-fit">
+                  <button onClick={() => setOpen(true)} className="btn-primary-ln !px-6 !py-2.5 !text-[13px] w-fit cursor-pointer border-none">
                     Get Your 90-Day Optimization Plan →
-                  </Link>
+                  </button>
                   <span className="text-[10.5px] text-muted-foreground/60 italic">See how much you can save in the first 90 days</span>
                 </div>
               </div>
