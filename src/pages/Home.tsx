@@ -346,10 +346,10 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="mb-1.5 px-[5vw]">
+        <div className="relative z-20 mb-1.5 px-[5vw]">
           <div className="mx-auto max-w-[1280px]">
-            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-purple">Shippers &amp; Manufacturers</div>
-            <p className="text-[11px] text-muted-foreground">Enterprises optimizing logistics operations</p>
+            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-ln-purple" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Shippers &amp; Manufacturers</div>
+            <p className="text-[11px] text-muted-foreground" style={{ transform: 'translateZ(0)', willChange: 'auto', backfaceVisibility: 'hidden' }}>Enterprises optimizing logistics operations</p>
           </div>
         </div>
 
