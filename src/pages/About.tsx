@@ -57,7 +57,7 @@ const About = () => (
               </p> */}
               <div className="flex gap-3 flex-wrap">
                 <Link to="/product" className="btn-primary-ln !px-6 !py-2.5 !text-[13.5px]">Explore Our Platform →</Link>
-                <a href="#our-vision" className="inline-flex items-center gap-2 text-ln-purple font-bold text-[13.5px] no-underline rounded-full px-5 py-2" style={{ border: '2px solid #393185' }}>See the AI in Action</a>
+                
               </div>
             </div>
           </ScrollReveal>

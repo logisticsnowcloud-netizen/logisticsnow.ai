@@ -885,9 +885,9 @@ const Home = () => {
               Across industries, LogisticsNow consistently delivers 4–20% savings through AI-driven optimization.
             </p>
             <div className="flex items-center justify-center gap-3 flex-wrap">
-              <Link to="/contact" className="btn-primary-ln no-underline !px-6 !py-2 !text-[12px]">
+              <button onClick={() => setOpen(true)} className="btn-primary-ln !px-6 !py-2 !text-[12px] cursor-pointer border-none">
                 See How Much You Can Save →
-              </Link>
+              </button>
               <Link to="/about" className="btn-secondary-ln no-underline !px-5 !py-2 !text-[12px]">
                 View Detailed Case Studies
               </Link>
